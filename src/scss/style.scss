@@ -1,0 +1,17 @@
+@use 'sass:math';
+@import 'config/fonts';
+@import 'config/vars';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+@import 'config/reset';
+
+
+
+
+// @import 'libs/aos';
+// @import 'libs/swiper';
+
+
+@import 'config/scrollbar';
+@import 'components/header';
+@import 'components/footer';
