@@ -139,9 +139,9 @@ sup {
 }
 
 [class*=__container] {
-  max-width: 1450;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 0 15;
+  padding: 0 15px;
 }
 
 [class*=-ibg] {

@@ -1,7 +1,7 @@
 [class*='__container'] {
-   max-width: $maxWidthContainer;
+   max-width: $maxWidthContainer+px;
    margin: 0 auto;
-   padding: 0 $mainOffset;
+   padding: 0 $mainOffset+px;
 }
 
 // Стили отзывчивых картинок (IBG) ============================================
