@@ -1,7 +1,7 @@
 [class*='__container'] {
-   max-width: rem($maxWidthContainer);
+   max-width: $maxWidthContainer;
    margin: 0 auto;
-   padding: 0 rem($mainOffset);
+   padding: 0 $mainOffset;
 }
 
 // Стили отзывчивых картинок (IBG) ============================================
@@ -25,7 +25,7 @@
 }
 
 body {
-   background-color: $jetBlack;
+   background-color: $whiteColor;
 }
 
 .wrapper {

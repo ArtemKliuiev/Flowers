@@ -138,6 +138,53 @@ sup {
   color: inherit;
 }
 
+[class*=__container] {
+  max-width: 1450;
+  margin: 0 auto;
+  padding: 0 15;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
+}
+
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
+}
+
+.page {
+  position: relative;
+  flex: 1 1 auto;
+}
+.page [data-observ] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(2);
+  background: transparent;
+  pointer-events: none;
+}
+
 * {
   scrollbar-width: rem(8);
   scrollbar-color: #000 #d6d6d6;
@@ -159,10 +206,6 @@ sup {
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: #000;
-}
-
-.page {
-  background: red;
 }
 
 .page {
