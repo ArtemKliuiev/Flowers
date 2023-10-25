@@ -1,8 +1,205 @@
 .footer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
 
-}
+  &-title {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 15px;
+    font-family: AguafinaScript, sans-serif;
+  }
 
+  &__map {
+    position: relative;
 
-.page{
-  background-color: red;
+    iframe {
+      pointer-events: none;
+    }
+
+    .map__contacts {
+      position: absolute;
+      top: 0;
+      right: 219px;
+      max-width: 380px;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../images/footer/footer-bg.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 174px 72.5px 25px 72.5px;
+      filter: drop-shadow(4px 0px 10px rgba(0, 0, 0, 0.15)) drop-shadow(-4px 0px 10px rgba(0, 0, 0, 0.15));
+
+      .contacts {
+        &__tel {
+          margin-bottom: 25px;
+
+          .tel {
+            &__link {
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+              margin-left: 20px;
+              font-family: AguafinaScript;
+
+              a:last-child {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+
+        &__skype {
+          margin-bottom: 25px;
+
+          .skype {
+            &__title {
+              gap: 19px;
+            }
+
+            &__link {
+              font-family: AguafinaScript;
+              margin-left: 44px;
+            }
+          }
+        }
+
+        &__mail {
+          margin-bottom: 41px;
+
+          .mail {
+            &__link {
+              font-family: AguafinaScript;
+              margin-left: 89px;
+            }
+          }
+
+        }
+
+        &__social {
+          display: flex;
+          gap: 21px;
+
+          .social {
+            background-color: var(--956D84, #956D84);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+
+            &:hover {
+              background-color: var(--956D84, #674b5a);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__links {
+    background: #333;
+    padding-top: 42px;
+    padding-bottom: 36px;
+    margin-top: 75px;
+
+    .links {
+      &__menu {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 12px;
+        gap: 103px;
+        margin-bottom: 39px;
+
+        .menu {
+          max-width: 215px;
+
+          &__category,
+          &__link a {
+            color: var(--ffffff, #FFF);
+            font-family: Acme, sans-serif;
+          }
+
+          &__category {
+            font-family: Actor, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-bottom: 35px;
+          }
+
+          &__link a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            
+            &:hover{
+              color: var(--956D84, #956D84);
+            }
+          }
+
+          &__link {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            justify-content: center;
+            height: 123px;
+          }
+        }
+      }
+
+      &__last-line {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-top: 20px;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: #956D84;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .last-line {
+          &__protection-of-rights {
+            color: var(--ffffff, #FFF);
+            font-family: Acme, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+          }
+
+          &__payment-methods {
+            display: flex;
+            gap: 37px;
+
+            p {
+              color: var(--ffffff, #FFF);
+              font-family: Acme, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              margin-top: 10px;
+              letter-spacing: 0.3px;
+            }
+
+            .payment-methods__images {
+              display: flex;
+              align-items: center;
+              gap: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
