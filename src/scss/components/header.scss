@@ -142,13 +142,18 @@
    &__header {
       display: flex;
       align-items: center;
+      cursor: pointer;
    }
 
    &__header-title {
       margin-right: 10px;
       color: $whiteColor;
-      //font-family: Acme;
+      font-family: Acme, sans-serif;
       line-height: 112.5%;
+
+      &:hover {
+         color: $cheryColor;
+      }
    }
 
    &__selected-item {
@@ -198,6 +203,8 @@
    &__header-title--device-type--mobile {
       display: none;
    }
+
+   &.open {}
 }
 
 .favorite-amount {}
@@ -226,13 +233,24 @@
 
    &__sign-in {
       &--device-type--desktop {
+         padding-right: 10px;
+         margin-right: 10px;
+         border-right: 1px solid $cheryColor;
          color: $whiteColor;
          font-size: 16px;
          line-height: 112.5%;
+
+         &:hover {
+            color: $cheryColor;
+         }
       }
 
       &--device-type--mobile {
          display: none;
+
+         &:hover {
+            color: $cheryColor;
+         }
       }
    }
 
@@ -240,6 +258,10 @@
       color: $whiteColor;
       font-size: 16px;
       line-height: 112.5%;
+
+      &:hover {
+         color: $cheryColor;
+      }
    }
 }
 

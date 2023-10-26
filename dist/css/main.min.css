@@ -304,11 +304,16 @@ body {
 .drop-down__header {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .drop-down__header-title {
   margin-right: 10px;
   color: #fff;
+  font-family: Acme, sans-serif;
   line-height: 112.5%;
+}
+.drop-down__header-title:hover {
+  color: #956D84;
 }
 .drop-down__selected-item {
   position: relative;
@@ -346,7 +351,6 @@ body {
 .drop-down__header-title--device-type--mobile {
   display: none;
 }
-
 .account {
   display: flex;
   align-items: center;
@@ -365,17 +369,29 @@ body {
   display: none;
 }
 .account__sign-in--device-type--desktop {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #956D84;
   color: #fff;
   font-size: 16px;
   line-height: 112.5%;
 }
+.account__sign-in--device-type--desktop:hover {
+  color: #956D84;
+}
 .account__sign-in--device-type--mobile {
   display: none;
+}
+.account__sign-in--device-type--mobile:hover {
+  color: #956D84;
 }
 .account__registration {
   color: #fff;
   font-size: 16px;
   line-height: 112.5%;
+}
+.account__registration:hover {
+  color: #956D84;
 }
 
 .bottom-header {
