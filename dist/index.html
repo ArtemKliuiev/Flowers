@@ -12,12 +12,448 @@
   <body>
     <div class="wrapper">
       <header class="header">
-  <div class="wrapper">
-    <div class="__container">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-      nesciunt quam, perspiciatis nulla voluptatibus culpa unde aliquid
-      blanditiis delectus nobis! Vitae voluptatibus dolor quas eligendi neque
-      natus ad possimus nihil.
+  <div class="header__top-header top-header">
+    <div class="top-header__bg"></div>
+    <div class="top-header__container">
+      <div class="top-header__options-list">
+        <div class="top-header__list-item top-header__list-item--type--currency">
+          <div class="drop-down top-header__drop-down">
+            <div class="drop-down__header">
+              <div class="drop-down__header-title">Валюта</div>
+              <div class="drop-down__selected-item">Грн</div>
+              <div class="drop-down__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3" viewBox="0 0 7 3" fill="none">
+                  <path d="M3.5 3L0.468911 -5.70966e-07L6.53109 -4.09935e-08L3.5 3Z" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            <div class="drop-down__list">
+              <div class="drop-down__item">Грн</div>
+              <div class="drop-down__item">USD</div>
+              <div class="drop-down__item">Eur</div>
+            </div>
+          </div>
+        </div>
+        <div class="top-header__list-item top-header__list-item--type--lang">
+          <div class="drop-down top-header__drop-down">
+            <div class="drop-down__header">
+              <div class="drop-down__header-title">Язык</div>
+              <div class="drop-down__selected-item">RU</div>
+              <div class="drop-down__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3" viewBox="0 0 7 3" fill="none">
+                  <path d="M3.5 3L0.468911 -5.70966e-07L6.53109 -4.09935e-08L3.5 3Z" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            <div class="drop-down__list">
+              <div class="drop-down__item">UA</div>
+              <div class="drop-down__item">RU</div>
+              <div class="drop-down__item">EN</div>
+            </div>
+          </div>
+        </div>
+        <div class="top-header__list-item top-header__list-item--type--city">
+          <div class="drop-down top-header__drop-down">
+            <div class="drop-down__header">
+              <div class="drop-down__header-title drop-down__header-title--device-type--desktop">
+                Город
+              </div>
+              <div class="drop-down__header-title drop-down__header-title--device-type--mobile">
+                Выбрать город
+              </div>
+              <div class="drop-down__selected-item">Киев</div>
+              <div class="drop-down__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3" viewBox="0 0 7 3" fill="none">
+                  <path d="M3.5 3L0.468911 -5.70966e-07L6.53109 -4.09935e-08L3.5 3Z" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            <div class="drop-down__list">
+              <div class="drop-down__item">Киев</div>
+              <div class="drop-down__item">Одесса</div>
+              <div class="drop-down__item">Львов</div>
+            </div>
+          </div>
+        </div>
+        <div class="top-header__list-item top-header__list-item--type--favorite">
+          <div class="top-header__list-item-icon-box">
+            <div class="top-header__list-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                <path d="M9 16C8.74374 16 8.49669 15.9072 8.30415 15.7388C7.577 15.1035 6.87593 14.5065 6.2574 13.9799L6.25424 13.9772C4.44081 12.4332 2.87485 11.0998 1.78528 9.7863C0.567307 8.31791 0 6.92567 0 5.40473C0 3.92701 0.507156 2.56372 1.42795 1.56581C2.35973 0.556101 3.63826 0 5.02844 0C6.06747 0 7.01903 0.328199 7.8566 0.975406C8.2793 1.3021 8.66245 1.70192 9 2.16828C9.33769 1.70192 9.7207 1.3021 10.1435 0.975406C10.9811 0.328199 11.9327 0 12.9717 0C14.3617 0 15.6404 0.556101 16.5722 1.56581C17.493 2.56372 18 3.92701 18 5.40473C18 6.92567 17.4328 8.31791 16.2149 9.78616C15.1253 11.0998 13.5595 12.433 11.7463 13.9769C11.1267 14.5043 10.4245 15.1023 9.69571 15.739C9.50331 15.9072 9.25612 16 9 16ZM5.02844 1.05348C3.93626 1.05348 2.93294 1.48897 2.20303 2.27983C1.46228 3.08263 1.05428 4.19236 1.05428 5.40473C1.05428 6.68391 1.53012 7.82794 2.59703 9.11412C3.62823 10.3574 5.16206 11.6633 6.938 13.1755L6.9413 13.1782C7.56216 13.7069 8.26598 14.3062 8.99849 14.9461C9.7354 14.3049 10.4403 13.7047 11.0624 13.1752C12.8382 11.663 14.3719 10.3574 15.4031 9.11412C16.4699 7.82794 16.9457 6.68391 16.9457 5.40473C16.9457 4.19236 16.5377 3.08263 15.797 2.27983C15.0672 1.48897 14.0637 1.05348 12.9717 1.05348C12.1716 1.05348 11.437 1.30758 10.7884 1.80866C10.2104 2.25541 9.80777 2.82016 9.5717 3.21531C9.4503 3.41852 9.23662 3.53981 9 3.53981C8.76338 3.53981 8.5497 3.41852 8.4283 3.21531C8.19237 2.82016 7.78972 2.25541 7.21156 1.80866C6.56296 1.30758 5.82838 1.05348 5.02844 1.05348Z" fill="#956D84"/>
+              </svg>
+            </div>
+            <div class="favorite-amount top-header__favorite-amount">
+              <p>0</p>
+            </div>
+          </div>
+          <div class="top-header__item-title">Закладки</div>
+        </div>
+        <div class="top-header__list-item top-header__list-item--type--delivery">
+          <div class="top-header__list-item-icon-box">
+            <div class="top-header__list-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <g clip-path="url(#clip0_0_674)">
+                  <path d="M5.1332 15.0334C4.52571 15.0334 4.0332 15.526 4.0332 16.1334C4.0332 16.7409 4.52567 17.2334 5.1332 17.2334C5.74074 17.2334 6.2332 16.741 6.2332 16.1334C6.23252 15.5262 5.74044 15.0341 5.1332 15.0334ZM5.1332 16.5001C4.93069 16.5001 4.76655 16.336 4.76655 16.1334C4.76655 15.9309 4.93069 15.7668 5.1332 15.7668C5.33571 15.7668 5.49986 15.9309 5.49986 16.1334C5.49964 16.3359 5.33563 16.4999 5.1332 16.5001Z" fill="#956D84"/>
+                  <path d="M16.8676 15.0334C16.2601 15.0334 15.7676 15.526 15.7676 16.1334C15.7676 16.7409 16.2601 17.2334 16.8676 17.2334C17.4751 17.2334 17.9676 16.741 17.9676 16.1334C17.9669 15.5262 17.4748 15.0341 16.8676 15.0334ZM16.8676 16.5001C16.6651 16.5001 16.5009 16.336 16.5009 16.1334C16.5009 15.9309 16.6651 15.7668 16.8676 15.7668C17.0701 15.7668 17.2342 15.9309 17.2342 16.1334C17.2341 16.3359 17.07 16.4999 16.8676 16.5001Z" fill="#956D84"/>
+                  <path d="M21.7205 9.81411L19.1947 6.96958C18.9854 6.73394 18.6852 6.5994 18.37 6.60005H15.0333V4.40005C15.0327 3.79281 14.5406 3.30069 13.9333 3.30005H1.1C0.492766 3.30069 0.000644567 3.79281 3.58087e-08 4.40005V13.9334C-4.29329e-05 14.0306 0.038586 14.1239 0.107379 14.1927C0.176129 14.2615 0.269414 14.3001 0.366695 14.3001H0.733348V15.4001C0.733992 16.0073 1.22611 16.4994 1.83335 16.5001H2.59596C2.77668 17.7625 3.85804 18.7001 5.13335 18.7001C6.40866 18.7001 7.49001 17.7625 7.67074 16.5001H14.3293C14.5101 17.7625 15.5914 18.7001 16.8667 18.7001C18.1421 18.7001 19.2234 17.7625 19.4041 16.5001H20.9C21.5072 16.4994 21.9994 16.0073 22 15.4001V10.5453C21.9997 10.2755 21.9003 10.0153 21.7205 9.81411ZM0.733348 13.5667V4.40005C0.733562 4.19762 0.897574 4.03357 1.1 4.0334H13.9333C14.1358 4.03361 14.2998 4.19762 14.3 4.40005V13.5667H0.733348ZM2.59596 15.7667H1.83335C1.63092 15.7665 1.46687 15.6025 1.4667 15.4V14.3H3.34056C2.93777 14.6937 2.67605 15.2092 2.59596 15.7667ZM5.13335 17.9667C4.12083 17.9667 3.3 17.1459 3.3 16.1334C3.3 15.1208 4.12083 14.3 5.13335 14.3C6.14586 14.3 6.9667 15.1209 6.9667 16.1334C6.96549 17.1454 6.14535 17.9655 5.13335 17.9667ZM8.8 15.7667H7.6707C7.5906 15.2092 7.32892 14.6937 6.92613 14.3H8.8V15.7667ZM12.1 15.7667H9.53335V14.3H12.1V15.7667ZM14.3293 15.7667H12.8333V14.3H15.0739C14.6711 14.6937 14.4094 15.2092 14.3293 15.7667ZM16.8667 17.9667C15.8541 17.9667 15.0333 17.1459 15.0333 16.1334C15.0333 15.1208 15.8541 14.3 16.8667 14.3C17.8792 14.3 18.7 15.1208 18.7 16.1334C18.6988 17.1454 17.8787 17.9655 16.8667 17.9667ZM21.2667 15.4C21.2664 15.6025 21.1024 15.7665 20.9 15.7667H19.404C19.2212 14.5054 18.1411 13.569 16.8667 13.5667H15.0333V7.3334H16.5V11C16.5006 11.6073 16.9928 12.0994 17.6 12.1H21.2667V15.4ZM21.2667 11.3667H17.6C17.3976 11.3665 17.2335 11.2025 17.2333 11V7.3334H18.37C18.4753 7.3328 18.5758 7.3774 18.6459 7.45586L21.1727 10.3015C21.2328 10.3685 21.2663 10.4552 21.2667 10.5453V11.3667H21.2667Z" fill="#956D84"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_674">
+                    <rect width="22" height="22" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <a href="" class="top-header__item-title">Доставка и оплата</a>
+        </div>
+        <div class="top-header__list-item top-header__list-item--type--contacts">
+          <div class="top-header__list-item-icon-box">
+            <div class="top-header__list-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M1.32297 1.21015L1.19647 1.37156C0.987877 1.63772 0.81158 1.94721 0.679691 2.28325C0.556693 2.60783 0.482099 2.91203 0.448074 3.21321L0.447735 3.21621C0.143441 5.73878 1.27004 8.09887 4.60735 11.4362C4.60736 11.4362 4.60736 11.4362 4.60737 11.4363M1.32297 1.21015L4.32452 11.7191L4.60737 11.4363M1.32297 1.21015L1.84342 0.686708C1.84353 0.686591 1.84365 0.686474 1.84377 0.686357C2.20879 0.321601 2.77228 0.326554 3.0983 0.652438C3.09832 0.652457 3.09833 0.652477 3.09835 0.652496L5.5747 3.1294C5.90146 3.45655 5.90628 4.01994 5.54162 4.3847L5.54149 4.38483L5.13018 4.79665L5.12979 4.79703L4.29279 5.63279L4.07639 5.84887L4.22816 6.11437C4.26412 6.17726 4.30046 6.24301 4.33974 6.31406C4.34628 6.3259 4.3529 6.33788 4.35962 6.35002L4.35995 6.3506L4.36487 6.35946C4.80516 7.15219 5.42607 8.27011 6.60165 9.44558C7.77791 10.6227 8.89777 11.2433 9.69086 11.6827C9.77715 11.7312 9.85932 11.7769 9.9388 11.8207L10.2021 11.9658L10.4147 11.7532L11.6624 10.5058L11.6625 10.5057C12.0262 10.1418 12.5898 10.1457 12.9175 10.4717C12.9177 10.4718 12.9178 10.4719 12.9179 10.4721L15.3934 12.9479C15.3935 12.9479 15.3936 12.948 15.3937 12.9481C15.7199 13.2756 15.7245 13.8384 15.3621 14.2032L14.8022 14.7515L14.6749 14.8511C14.4083 15.0597 14.0984 15.2359 13.7652 15.3661C13.4544 15.4867 13.1509 15.5624 12.8341 15.6005C12.7126 15.6129 9.11681 15.9454 4.60737 11.4363M1.32297 1.21015L4.60737 11.4363M4.70963 6.15638C4.70306 6.1445 4.69653 6.13269 4.69003 6.12094C4.65084 6.05003 4.61293 5.98145 4.57542 5.91584L4.70963 6.15638Z" stroke="#956D84" stroke-width="0.8"/>
+              </svg>
+            </div>
+          </div>
+          <a href="" class="top-header__item-title">Контакты</a>
+        </div>
+      </div>
+      <div class="account top-header__account">
+        <div class="account__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.6569 10.3431C12.7855 9.47181 11.7484 8.82678 10.6168 8.43631C11.8288 7.60159 12.625 6.20463 12.625 4.625C12.625 2.07478 10.5502 0 8 0C5.44978 0 3.375 2.07478 3.375 4.625C3.375 6.20463 4.17122 7.60159 5.38319 8.43631C4.25163 8.82678 3.2145 9.47181 2.34316 10.3431C0.832156 11.8542 0 13.8631 0 16H1.25C1.25 12.278 4.27803 9.25 8 9.25C11.722 9.25 14.75 12.278 14.75 16H16C16 13.8631 15.1678 11.8542 13.6569 10.3431ZM8 8C6.13903 8 4.625 6.486 4.625 4.625C4.625 2.764 6.13903 1.25 8 1.25C9.86097 1.25 11.375 2.764 11.375 4.625C11.375 6.486 9.86097 8 8 8Z" fill="#956D84"/>
+          </svg>
+        </div>
+        <div class="account__title">Личный кабинет</div>
+        <div class="account__link-block">
+          <a href="" class="account__sign-in account__sign-in--device-type--desktop">
+            Вход
+          </a>
+          <a href="" class="account__sign-in account__sign-in--device-type--mobile">
+            Войти
+          </a>
+          <a href="" class="account__registration"> Регистрация </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-header header__bottom-header">
+    <div class="bottom-header__container">
+      <div class="bottom-header__logo-block">
+        <div class="bottom-header__burger-box">
+          <img src="images/header/burger.svg" alt="burger">
+        </div>
+        <div class="bottom-header__logo-box">
+          <img src="images/logo.png" alt="Logotype" class="bottom-header__logo">
+        </div>
+        <div class="bottom-header__basket">
+          <div class="bottom-header__basket-icon">
+            <img src="images/header/basket.svg" alt="basket">
+          </div>
+          <div class="basket-amount top-header__basket-amount">0</div>
+        </div>
+      </div>
+      <div class="bottom-header__nav-block">
+        <div class="bottom-header__search-block">
+          <div class="search-drop-down bottom-header__search-by-categories-block">
+            <div class="search-drop-down__header">
+              <div class="search-drop-down__header-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                  <path d="M5 4.71436L0.669873 0.428641L9.33013 0.428642L5 4.71436Z" fill="#828282"/>
+                </svg>
+              </div>
+              <div class="search-drop-down__input-block">
+                <label for="search-by-categories" class="search-drop-down__label">
+                  Поиск по категориям
+                </label>
+                <input type="text" id="search-by-categories" name="search-by-categories" class="search-drop-down__input">
+              </div>
+            </div>
+            <div class="search-drop-down__list">
+              <div class="search-drop-down__item">Все букеты</div>
+              <div class="search-drop-down__item">Розы</div>
+              <div class="search-drop-down__item">Цветы в коробке</div>
+              <div class="search-drop-down__item">Композиции</div>
+              <div class="search-drop-down__item">Подарки</div>
+              <div class="search-drop-down__item">Подарочные корзины</div>
+              <div class="search-drop-down__item">Букеты невесты</div>
+              <div class="search-drop-down__item">Вкусные букеты</div>
+            </div>
+          </div>
+          <div class="search-drop-down bottom-header__search-by-product-block">
+            <div class="search-drop-down__header">
+              <div class="search-drop-down__input-block">
+                <label for="search-by-product" class="search-drop-down__label">
+                  Поиск по товарам
+                </label>
+                <input type="text" id="search-by-product" name="search-by-product" class="search-drop-down__input">
+              </div>
+              <div class="search-drop-down__loupe-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+                  <path d="M18.0071 18.8222L12.744 13.5591C13.7423 12.3267 14.3432 10.76 14.3432 9.05417C14.3432 5.09977 11.126 1.88257 7.17156 1.88257C3.21716 1.88257 0 5.09977 0 9.05417C0 13.0086 3.2172 16.2258 7.1716 16.2258C8.87742 16.2258 10.4442 15.6248 11.6766 14.6266L16.9396 19.8897C17.0871 20.0371 17.326 20.0371 17.4735 19.8897L18.0071 19.356C18.1545 19.2086 18.1545 18.9696 18.0071 18.8222ZM7.1716 14.7159C4.04952 14.7159 1.50982 12.1762 1.50982 9.05417C1.50982 5.93208 4.04952 3.39239 7.1716 3.39239C10.2937 3.39239 12.8334 5.93208 12.8334 9.05417C12.8334 12.1762 10.2937 14.7159 7.1716 14.7159Z" fill="#956D84"/>
+                </svg>
+              </div>
+            </div>
+            <div class="search-drop-down__list">
+              <div class="search-drop-down__item">Все букеты</div>
+              <div class="search-drop-down__item">Розы</div>
+              <div class="search-drop-down__item">Цветы в коробке</div>
+              <div class="search-drop-down__item">Композиции</div>
+              <div class="search-drop-down__item">Подарки</div>
+              <div class="search-drop-down__item">Подарочные корзины</div>
+              <div class="search-drop-down__item">Букеты невесты</div>
+              <div class="search-drop-down__item">Вкусные букеты</div>
+            </div>
+          </div>
+        </div>
+        <ul class="menu bottom-header__menu">
+          <li class="pull-down menu__item menu__item--type--categories">
+            <div class="pull-down__header">
+              <div class="pull-down__title">Каталог товаров</div>
+              <div class="pull-down__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                  <path d="M5 5L0.669873 0.714286L9.33013 0.714287L5 5Z" fill="#333333"/>
+                </svg>
+              </div>
+            </div>
+            <ul class="pull-down__list categories-list">
+  <li class="pull-down categories-list__category" data-category="">
+    <div class="pull-down__header">
+      <div class="pull-down__title">Розы</div>
+      <div class="pull-down__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
+          <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <ul class="pull-down__list">
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+    </ul>
+  </li>
+  <li class="pull-down categories-list__category" data-category="">
+    <div class="pull-down__header">
+      <div class="pull-down__title">Розы</div>
+      <div class="pull-down__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
+          <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <ul class="pull-down__list">
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+    </ul>
+  </li>
+  <li class="pull-down categories-list__category" data-category="">
+    <div class="pull-down__header">
+      <div class="pull-down__title">Розы</div>
+      <div class="pull-down__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
+          <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <ul class="pull-down__list">
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+    </ul>
+  </li>
+  <li class="pull-down categories-list__category" data-category="">
+    <div class="pull-down__header">
+      <div class="pull-down__title">Розы</div>
+      <div class="pull-down__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
+          <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <ul class="pull-down__list">
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+    </ul>
+  </li>
+  <li class="pull-down categories-list__category" data-category="">
+    <div class="pull-down__header">
+      <div class="pull-down__title">Розы</div>
+      <div class="pull-down__arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
+          <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+    <ul class="pull-down__list">
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+      <li class="pull-down__item categories-list__sub-category" data-sub-category="white-rose">
+        Белые розы
+      </li>
+    </ul>
+  </li>
+</ul>
+
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Форум</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Акции</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Новости</a>
+          </li>
+          <li class="pull-down menu__item menu__item--type--information">
+            <div class="pull-down__header">
+              <div class="pull-down__title">Информация</div>
+              <div class="pull-down__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+                  <path d="M5 5L0.669873 0.714286L9.33013 0.714287L5 5Z" fill="#333333"/>
+                </svg>
+              </div>
+            </div>
+            <ul class="pull-down__list">
+              <li class="pull-down__item">
+                <a href="#">О НАС </a>
+              </li>
+              <li class="pull-down__item">
+                <a href="#">ДОСТАВКА И ОПЛАТА</a>
+              </li>
+              <li class="pull-down__item">
+                <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-header__info-block">
+        <div class="bottom-header__social-block">
+          <a href="#" class="bottom-header__social">
+            <img src="images/header/viber.svg" alt="viber" class="bottom-header__social-icon">
+          </a>
+          <a href="#" class="bottom-header__social">
+            <img src="images/header/insta.svg" alt="instagram" class="bottom-header__social-icon">
+          </a>
+          <a href="#" class="bottom-header__social">
+            <img src="images/header/telegram.svg" alt="telegram" class="bottom-header__social-icon">
+          </a>
+          <a href="#" class="bottom-header__social">
+            <img src="images/header/facebook.svg" alt="facebook" class="bottom-header__social-icon">
+          </a>
+        </div>
+        <a href="tel:" class="bottom-header__phone"></a>
+        <div class="bottom-header__account-info-block">
+          <div class="bottom-header__favorite">
+            <div class="bottom-header__list-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                <path d="M9 16C8.74374 16 8.49669 15.9072 8.30415 15.7388C7.577 15.1035 6.87593 14.5065 6.2574 13.9799L6.25424 13.9772C4.44081 12.4332 2.87485 11.0998 1.78528 9.7863C0.567307 8.31791 0 6.92567 0 5.40473C0 3.92701 0.507156 2.56372 1.42795 1.56581C2.35973 0.556101 3.63826 0 5.02844 0C6.06747 0 7.01903 0.328199 7.8566 0.975406C8.2793 1.3021 8.66245 1.70192 9 2.16828C9.33769 1.70192 9.7207 1.3021 10.1435 0.975406C10.9811 0.328199 11.9327 0 12.9717 0C14.3617 0 15.6404 0.556101 16.5722 1.56581C17.493 2.56372 18 3.92701 18 5.40473C18 6.92567 17.4328 8.31791 16.2149 9.78616C15.1253 11.0998 13.5595 12.433 11.7463 13.9769C11.1267 14.5043 10.4245 15.1023 9.69571 15.739C9.50331 15.9072 9.25612 16 9 16ZM5.02844 1.05348C3.93626 1.05348 2.93294 1.48897 2.20303 2.27983C1.46228 3.08263 1.05428 4.19236 1.05428 5.40473C1.05428 6.68391 1.53012 7.82794 2.59703 9.11412C3.62823 10.3574 5.16206 11.6633 6.938 13.1755L6.9413 13.1782C7.56216 13.7069 8.26598 14.3062 8.99849 14.9461C9.7354 14.3049 10.4403 13.7047 11.0624 13.1752C12.8382 11.663 14.3719 10.3574 15.4031 9.11412C16.4699 7.82794 16.9457 6.68391 16.9457 5.40473C16.9457 4.19236 16.5377 3.08263 15.797 2.27983C15.0672 1.48897 14.0637 1.05348 12.9717 1.05348C12.1716 1.05348 11.437 1.30758 10.7884 1.80866C10.2104 2.25541 9.80777 2.82016 9.5717 3.21531C9.4503 3.41852 9.23662 3.53981 9 3.53981C8.76338 3.53981 8.5497 3.41852 8.4283 3.21531C8.19237 2.82016 7.78972 2.25541 7.21156 1.80866C6.56296 1.30758 5.82838 1.05348 5.02844 1.05348Z" fill="#956D84"/>
+              </svg>
+            </div>
+            <div class="favorite-amount bottom-header__favorite-amount">0</div>
+          </div>
+          <div class="bottom-header__basket">
+            <div class="bottom-header__basket-icon">
+              <img src="images/header/basket.svg" alt="basket">
+            </div>
+            <div class="basket-amount bottom-header__basket-amount">0</div>
+          </div>
+          <div class="bottom-header__basket-sum">₴ 1 520</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
