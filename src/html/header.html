@@ -28,7 +28,7 @@
             <div class="drop-down__list">
               <div class="drop-down__item">Грн</div>
               <div class="drop-down__item">USD</div>
-              <div class="drop-down__item">Eur</div>
+              <div class="drop-down__item">EUR</div>
             </div>
           </div>
         </div>
@@ -260,6 +260,7 @@
                   id="search-by-categories"
                   name="search-by-categories"
                   class="search-drop-down__input"
+                  placeholder="Поиск по категориям"
                 />
               </div>
             </div>
@@ -285,6 +286,7 @@
                   id="search-by-product"
                   name="search-by-product"
                   class="search-drop-down__input"
+                  placeholder="Поиск по товарам"
                 />
               </div>
               <div class="search-drop-down__loupe-icon">
@@ -411,10 +413,12 @@
             />
           </a>
         </div>
-        <a href="tel:" class="bottom-header__phone"></a>
+        <a href="tel:+380671112211" class="bottom-header__phone"
+          >+38 (067) 111 22 11</a
+        >
         <div class="bottom-header__account-info-block">
           <div class="bottom-header__favorite">
-            <div class="bottom-header__list-item-icon">
+            <div class="bottom-header__favorite-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -428,13 +432,15 @@
                 />
               </svg>
             </div>
-            <div class="bottom-header__favorite-amount favorite-amount">0</div>
+            <div class="bottom-header__amount favorite-amount">
+              <p>0</p>
+            </div>
           </div>
           <div class="bottom-header__basket">
             <div class="bottom-header__basket-icon">
               <img src="@img/header/basket.svg" alt="basket" />
             </div>
-            <div class="bottom-header__basket-amount basket-amount">0</div>
+            <div class="bottom-header__amount basket-amount"><p>0</p></div>
           </div>
           <div class="bottom-header__basket-sum">₴ 1 520</div>
         </div>
