@@ -131,6 +131,8 @@
    &__list-item-icon {
       width: 18px;
       height: 16px;
+      stroke: $cheryColor;
+      fill: transparent;
 
       svg {
          display: block;
@@ -241,6 +243,7 @@
    &__arrow {
       width: 7px;
       height: 4px;
+      fill: $whiteColor;
 
       svg {
          display: block;

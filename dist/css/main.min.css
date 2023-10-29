@@ -336,6 +336,8 @@ body {
 .top-header__list-item-icon {
   width: 18px;
   height: 16px;
+  stroke: #956D84;
+  fill: transparent;
 }
 .top-header__list-item-icon svg {
   display: block;
@@ -411,6 +413,7 @@ body {
 .drop-down__arrow {
   width: 7px;
   height: 4px;
+  fill: #fff;
 }
 .drop-down__arrow svg {
   display: block;
@@ -1040,4 +1043,8 @@ body {
 
 .page {
   background: #fff;
+}
+
+.svg-container {
+  display: none;
 }
