@@ -1,9 +1,19 @@
 .categories-list {
    display: none;
 
-   &__category {}
+   &__category {
+      padding: 12px 14px 12px 14px;
+      transition: $standartTrans;
 
-   &__sub-category {}
+      &:hover {
+         background: $cheryColor;
+         color: $whiteColor;
+      }
+   }
+
+   &__sub-category {
+      display: none;
+   }
 }
 
 .pull-down {
