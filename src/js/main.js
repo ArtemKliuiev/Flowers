@@ -1,8 +1,7 @@
 import Test from './modules/test';
-
+import headerDropdown from './modules/headerDropdown';
 
 "use strict"
-
 
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');
