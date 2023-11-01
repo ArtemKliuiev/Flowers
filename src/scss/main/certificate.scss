@@ -1,0 +1,91 @@
+
+.certificate {
+  // .certificate__wrapper
+
+  &__desktop {
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__wrapper-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+
+  &__wrapper-left {
+
+  }
+
+  // .certificate__wrapper-card
+
+  &__wrapper-card {
+  }
+
+  // .certificate__wrapper-big-card
+
+  &__wrapper-big-card {
+  }
+
+  // .certificate__wrapper-img
+
+  &__wrapper-img {
+    position: relative;
+  }
+
+  // .certificate__wrapper-img-text
+
+  &__wrapper-img-text {
+    color: #333;
+    font-family: Actor;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    max-width: 250px;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  // .certificate__wrapper-img-big-text
+
+  &__wrapper-img-big-text {
+    line-height: 50px;
+    top: 22px;
+    left: 264px;
+    max-width: 365px;
+  }
+
+  // .certificate__wrapper-img-bg
+
+  &__wrapper-img-bg {
+    position: relative;
+    display: inline-block;
+  }
+
+  // .certificate__wrapper-img-flowers
+
+  &__wrapper-img-flowers {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

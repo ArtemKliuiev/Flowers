@@ -79,6 +79,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "swiper": "^8.4.5"
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "swiper": "^8.4.7"
   }
 }

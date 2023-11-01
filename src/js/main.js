@@ -1,5 +1,6 @@
 import Test from './modules/test';
 import headerDropdown from './modules/headerDropdown';
+import certificateSwiper from './modules/swiper';
 
 "use strict"
 
