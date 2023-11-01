@@ -1,0 +1,215 @@
+@import 'style';
+
+.page {
+    background: $whiteColor;
+    position: relative;
+    width: 100%;
+
+    &__bg {
+        img {
+            position: absolute;
+        }
+
+        .bg {
+            &__first {
+                left: 0;
+                top: -33px;
+
+                @media (max-width:1760px) {
+                    left: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__second {
+                right: 0;
+                top: 150px;
+
+                @media (max-width:1760px) {
+                    right: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__third {
+                left: 0;
+                top: 661px;
+
+                @media (max-width:1760px) {
+                    left: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__fourth {
+                right: 0;
+                top: 690px;
+
+                @media (max-width:1760px) {
+                    right: -110px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.bread-crumbs {
+    display: flex;
+    gap: 30px;
+    font-family: Aguafina Script, sans-serif;
+    margin-top: 39px;
+    margin-bottom: 33px;
+    background: transparent;
+
+    a {
+        color: $gray3Color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+
+        &:not(:last-child) {
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width:768px) {
+        display: none;
+    }
+}
+
+.title {
+    background: transparent;
+
+    h1 {
+        color: $mainDarkColor;
+        text-align: center;
+        font-family: Actor, sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: 2.3px;
+        margin-bottom: 89px;
+
+        @media (max-width:768px) {
+            font-size: 24px;
+            margin-top: 22px;
+            margin-bottom: 41px;
+        }
+    }
+}
+
+@import 'components/flowers-grid';
+
+.about-us {
+    margin-bottom: 89px;
+
+    &__top-block {
+        display: flex;
+        gap: 41px;
+        min-height: 635px;
+        margin-bottom: 20px;
+
+        .flowers-grid {
+            margin-top: 10px;
+        }
+    }
+
+    &__last-block {
+        display: flex;
+        gap: 41px;
+        min-height: 635px;
+        margin-top: 36px;
+
+        .flowers-grid {
+            margin-top: 10px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-family: Aclonica, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        gap: 30px;
+    }
+
+    .text__block {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: -7px;
+        margin-bottom: -7px;
+
+        li {
+            position: relative;
+            padding-left: 36px;
+
+            &::before {
+                content: '⬤';
+                color: $cheryColor;
+                position: absolute;
+                left: 0;
+                height: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        counter-reset: num;
+
+        li {
+            &::before {
+                content: counter(num);
+                counter-increment: num;
+                padding-right: 21px;
+            }
+        }
+    }
+
+    h2 {
+        color: $cheryColor;
+        font-family: Acme, sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        margin-top: 45px;
+        margin-bottom: 48px;
+        letter-spacing: 1.4px;
+    }
+}
+
+//font-family: 'AbyssinicaSIL', serif;
+//font-family: 'Aclonica', sans-serif;
+//font-family: 'Acme', sans-serif;
+//font-family: 'Actor', sans-serif;
+//font-family: 'Aguafina Script', cursive;

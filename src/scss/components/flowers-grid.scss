@@ -1,0 +1,11 @@
+.flowers-grid{
+    display: flex;
+    gap: 19px;
+    height: 580px;
+
+    &__colum-right{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
