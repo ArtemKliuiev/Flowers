@@ -253,7 +253,7 @@ body {
 .top-header {
   position: relative;
   width: 100%;
-  height: 3.5714rem;
+  height: 50px;
 }
 .top-header__bg {
   position: absolute;
@@ -687,7 +687,7 @@ body {
 .bottom-header__phone {
   color: #333;
   font-family: Acme, sans-serif;
-  font-size: 1.1429rem;
+  font-size: 16px;
   line-height: 112.5%;
   padding-left: 30px;
 }
