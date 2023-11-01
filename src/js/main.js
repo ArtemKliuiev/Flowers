@@ -1,4 +1,3 @@
-import Test from './modules/test';
 import headerDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
 
@@ -26,4 +25,4 @@ titles.forEach(item => item.addEventListener('click', () => {
         activeContent.classList.add('active');
         activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
     }
-}))
+}));

@@ -8,6 +8,13 @@
     }
   }
 
+  &__mobile {
+    display: none;
+    @media(max-width: 1024px) {
+      display: block;
+    }
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -45,6 +52,12 @@
 
   &__wrapper-img {
     position: relative;
+
+    img {
+      @media(max-width: 1024px) {
+        width: 100%;
+      }
+    }
   }
 
   // .certificate__wrapper-img-text
@@ -79,6 +92,10 @@
   &__wrapper-img-bg {
     position: relative;
     display: inline-block;
+
+    @media(max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   // .certificate__wrapper-img-flowers
@@ -87,5 +104,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media(max-width: 1024px) {
+      width: 100%;
+    }
   }
 }
