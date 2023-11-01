@@ -1,6 +1,5 @@
-import Test from './modules/test';
-
-
+import TestFirebase from './testFirebase';
+const test = new TestFirebase()
 "use strict"
 
 
