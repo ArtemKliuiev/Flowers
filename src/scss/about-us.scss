@@ -52,10 +52,36 @@
 
             &__fourth {
                 right: 0;
-                top: 690px;
+                top: 1080px;
 
                 @media (max-width:1760px) {
                     right: -110px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__fiveth{
+                left: 0;
+                top: 1578px;
+
+                @media (max-width:1760px) {
+                    left: -110px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__sixth{
+                right: 0;
+                top: 1800px;
+
+                @media (max-width:1760px) {
+                    right: -150px;
                 }
 
                 @media (max-width:1515px) {
@@ -107,6 +133,7 @@
             font-size: 24px;
             margin-top: 22px;
             margin-bottom: 41px;
+            letter-spacing: 1px;
         }
     }
 }
@@ -124,6 +151,18 @@
 
         .flowers-grid {
             margin-top: 10px;
+
+            @media (max-width:1240px) {
+                width: 100%;   
+            }
+        }
+
+        @media (max-width:1300px) {
+            align-items: center;
+        }
+
+        @media (max-width:1240px) {
+            flex-direction: column;
         }
     }
 
@@ -135,6 +174,18 @@
 
         .flowers-grid {
             margin-top: 10px;
+
+            @media (max-width:1240px) {
+                width: 100%;   
+            }
+        }
+
+        @media (max-width:1300px) {
+            align-items: center;
+        }
+
+        @media (max-width:1240px) {
+            flex-direction: column-reverse;
         }
     }
 
