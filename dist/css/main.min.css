@@ -668,7 +668,11 @@ body {
 }
 .bottom-header__basket-icon img {
   max-width: 375px;
-  width: 21px;
+}
+@media (max-width: 375px) {
+  .bottom-header__basket-icon img {
+    width: 21px;
+  }
 }
 .bottom-header__nav-block {
   margin-right: 118px;
@@ -1397,6 +1401,9 @@ body {
   gap: 28px;
 }
 
+.certificate {
+  margin-bottom: 100px;
+}
 @media (max-width: 1024px) {
   .certificate__desktop {
     display: none;

@@ -496,8 +496,10 @@
     }
 
     img {
-      max-width: 375px;
-      width: 21px;
+      max-width: 375px;     
+      @media(max-width: 375px) {
+        width: 21px;
+      }
     }
   }
 
