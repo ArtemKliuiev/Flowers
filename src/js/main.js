@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 // import TestFirebase from './testFirebase';
 // const test = new TestFirebase()
 "use strict"
+=======
+import headerDropdown from './modules/headerDropdown';
+import certificateSwiper from './modules/swiper';
+>>>>>>> 05dac5dd3a18d27f42c310d7f5749cc8f95839cb
 
+"use strict"
 
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');
@@ -25,4 +31,4 @@ titles.forEach(item => item.addEventListener('click', () => {
         activeContent.classList.add('active');
         activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
     }
-}))
+}));
