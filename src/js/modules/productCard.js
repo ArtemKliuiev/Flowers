@@ -1,7 +1,47 @@
-<div class="product-card">
+import firebase from './firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
+const seasonCardWrapper = document.querySelectorAll('.season__wrapper');
+
+export default class TestFirebase {
+  constructor() {
+    this.db = firebase.getFirestore();
+    this.loadCards();
+  }
+  async loadCards() {
+    const allCards = query(
+      collection(this.db, 'products'),
+      where('price', '!=', null)
+    );
+    const filterSale = query(
+      collection(this.db, 'products'),
+      where('sale', '!=', null)
+    );
+    const filterSeason = query(
+      collection(this.db, 'products'),
+      where('sale', '==', null),
+      where('present', '==', null)
+    );
+    const filterPresent = query(
+      collection(this.db, 'products'),
+      where('present', '==', '')
+    );
+
+    const querySnapshot = await getDocs(filterSale);
+    querySnapshot.forEach((doc) => {
+      const product = doc.data();
+      const { name, stars, price, sale, img } = product;
+      console.log(img.default);
+      console.log(name);
+      console.log(stars);
+      let template = `
+            <div class="product-card">
     <div class="product-card__top">
+    <div class="product-card__img">
+    <img src="${img.default}" alt="" />
+</div>
         <div class="product-card__top-sales">
-            <p class="product-card__top-sale">-19%</p>
+            <p class="product-card__top-sale">-${sale}%</p>
         </div>
         <div class="product-card__top-like">
             <svg xmlns="http://www.w3.org/2000/svg" width="33" height="30" viewBox="0 0 33 30" fill="none">
@@ -12,4 +52,12 @@
             TOP
         </div>
     </div>
-</div>
+</div>`;
+      productCardWrapper.forEach((slide) => {
+        slide.insertAdjacentHTML('beforeend', template);
+      });
+    });
+  }
+}
+
+const test = new TestFirebase();
