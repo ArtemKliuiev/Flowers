@@ -1,5 +1,5 @@
 // import TestFirebase from './testFirebase';
-// const test = new TestFirebase()
+// const test = new TestFirebase();
 "use strict"
 
 
