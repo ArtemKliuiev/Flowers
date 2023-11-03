@@ -1,7 +1,7 @@
 import headerDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
-import TestFirebase from './testFirebase';
+// import TestFirebase from './testFirebase';
 // const test = new TestFirebase()
 
 const titles = document.querySelectorAll('.accordion__title');
