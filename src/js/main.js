@@ -1,5 +1,8 @@
 import headerDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
+// import TestFirebase from './testFirebase';
+// const test = new TestFirebase()
+"use strict"
 
 "use strict"
 

@@ -1453,7 +1453,7 @@ body {
 }
 .page__bg .bg__fourth {
   right: 0;
-  top: 690px;
+  top: 1080px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__fourth {
@@ -1462,6 +1462,34 @@ body {
 }
 @media (max-width: 1515px) {
   .page__bg .bg__fourth {
+    display: none;
+  }
+}
+.page__bg .bg__fiveth {
+  left: 0;
+  top: 1578px;
+}
+@media (max-width: 1760px) {
+  .page__bg .bg__fiveth {
+    left: -110px;
+  }
+}
+@media (max-width: 1515px) {
+  .page__bg .bg__fiveth {
+    display: none;
+  }
+}
+.page__bg .bg__sixth {
+  right: 0;
+  top: 1800px;
+}
+@media (max-width: 1760px) {
+  .page__bg .bg__sixth {
+    right: -150px;
+  }
+}
+@media (max-width: 1515px) {
+  .page__bg .bg__sixth {
     display: none;
   }
 }
@@ -1499,91 +1527,147 @@ body {
   font-family: Actor, sans-serif;
   font-size: 48px;
   font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 87px;
+  letter-spacing: 2.3px;
+  margin-bottom: 89px;
 }
 @media (max-width: 768px) {
   .title h1 {
     font-size: 24px;
     margin-top: 22px;
     margin-bottom: 41px;
+    letter-spacing: 1px;
   }
 }
 
-.forum-accordion {
-  font-family: Aclonica, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 29px;
-  letter-spacing: 0.69px;
-  background: transparent;
-  margin-bottom: 99px;
+.flowers-grid {
+  display: grid;
+  gap: 19px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 280px 280px;
 }
-@media (max-width: 768px) {
-  .forum-accordion {
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin-bottom: 37px;
+@media (max-width: 600px) {
+  .flowers-grid {
+    gap: 10px;
+    grid-template-rows: 137px 137px;
   }
 }
-.forum-accordion__top-text {
-  color: #333;
-  margin-bottom: 35px;
+.flowers-grid__img-first {
+  grid-row: 1/3;
 }
-@media (max-width: 768px) {
-  .forum-accordion__top-text {
-    margin-bottom: 25px;
+@media (max-width: 1240px) {
+  .flowers-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
-.forum-accordion__accordions .accordion {
-  margin-bottom: 21px;
+
+.about-us {
+  margin-bottom: 89px;
 }
-.forum-accordion__accordions .accordion__title {
+.about-us__top-block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #956D84;
-  height: 77px;
-  padding: 20px 48px 20px 65px;
-  color: var(--ffffff, #FFF);
-  font-size: 24px;
+  gap: 41px;
+  min-height: 635px;
+  margin-bottom: 20px;
 }
-@media (max-width: 768px) {
-  .forum-accordion__accordions .accordion__title {
-    padding: 20px 16px 20px 36px;
-    font-size: 16px;
+.about-us__top-block .flowers-grid {
+  margin-top: 10px;
+}
+@media (max-width: 1240px) {
+  .about-us__top-block .flowers-grid {
+    width: 100%;
   }
 }
-.forum-accordion__accordions .accordion__content {
-  box-sizing: content-box;
-  justify-content: space-around;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
-}
-.forum-accordion__accordions .accordion__content.active {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  transition: all 0.5s;
-  padding-bottom: 38px;
-  padding-top: 32px;
-}
-@media (max-width: 768px) {
-  .forum-accordion__accordions .accordion__content.active {
-    padding-bottom: 3px;
-    padding-top: 24px;
-    letter-spacing: 0.2px;
+@media (max-width: 1300px) {
+  .about-us__top-block {
+    align-items: center;
   }
 }
-.forum-accordion__last-text {
-  margin-top: 51px;
-}
-@media (max-width: 768px) {
-  .forum-accordion__last-text {
-    margin-top: 25px;
+@media (max-width: 1240px) {
+  .about-us__top-block {
+    flex-direction: column;
   }
+}
+.about-us__last-block {
+  display: flex;
+  gap: 41px;
+  min-height: 635px;
+  margin-top: 36px;
+}
+.about-us__last-block .flowers-grid {
+  margin-top: 10px;
+}
+@media (max-width: 1240px) {
+  .about-us__last-block .flowers-grid {
+    width: 100%;
+  }
+}
+@media (max-width: 1300px) {
+  .about-us__last-block {
+    align-items: center;
+  }
+}
+@media (max-width: 1240px) {
+  .about-us__last-block {
+    flex-direction: column-reverse;
+  }
+}
+.about-us__text {
+  display: flex;
+  flex-direction: column;
+  font-family: Aclonica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  gap: 30px;
+}
+.about-us .text__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+.about-us .text__block:last-child {
+  margin-bottom: 0;
+}
+.about-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -7px;
+  margin-bottom: -7px;
+}
+.about-us ul li {
+  position: relative;
+  padding-left: 36px;
+}
+.about-us ul li::before {
+  content: "⬤";
+  color: #956D84;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  font-size: 16px;
+}
+.about-us ol {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  counter-reset: num;
+}
+.about-us ol li::before {
+  content: counter(num);
+  counter-increment: num;
+  padding-right: 21px;
+}
+.about-us h2 {
+  color: #956D84;
+  font-family: Acme, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 45px;
+  margin-bottom: 48px;
+  letter-spacing: 1.4px;
 }
