@@ -1,10 +1,8 @@
 import headerDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
-// import TestFirebase from './testFirebase';
+import stockSwiper from './modules/swiper';
+import TestFirebase from './testFirebase';
 // const test = new TestFirebase()
-"use strict"
-
-"use strict"
 
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');

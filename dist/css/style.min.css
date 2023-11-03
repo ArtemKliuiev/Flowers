@@ -920,7 +920,7 @@ body {
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
   overflow: auto;
   transition: all 280ms ease-in-out 0ms;
-  z-index: 1;
+  z-index: 2;
   display: block;
 }
 .search-drop-down__list::-webkit-scrollbar {
