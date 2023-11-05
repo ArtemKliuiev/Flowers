@@ -1470,7 +1470,7 @@ body {
   display: flex;
   gap: 30px;
   font-family: Aguafina Script, sans-serif;
-  margin-top: 39px;
+  margin-top: 9px;
   margin-bottom: 33px;
   background: transparent;
 }
@@ -1554,6 +1554,9 @@ body {
     padding: 20px 16px 20px 36px;
     font-size: 16px;
   }
+}
+.forum-accordion__accordions .accordion__title.active svg {
+  transform: rotate(180deg);
 }
 .forum-accordion__accordions .accordion__content {
   box-sizing: content-box;

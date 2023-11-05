@@ -1,0 +1,88 @@
+
+.delivery-info {
+    font-family: Acme, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+
+    @media (max-width:768px) {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+    }
+
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: $mainDarkColor;
+        margin-bottom: 42px;
+
+        @media (max-width:768px) {
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .advantages__text:last-child {
+            color: $cheryColor;
+            font-family: Actor, sans-serif;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 47px;
+
+        @media (max-width:768px) {
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 37px;
+
+        &::before {
+            content: '⬤';
+            color: $cheryColor;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            font-size: 16px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: $mainDarkColor;
+        margin-bottom: 93px;
+
+        @media (max-width:768px) {
+            gap: 19px;
+            margin-bottom: 33px;
+        }
+
+        .contacts__title {
+            color: $cheryColor;
+            font-family: Actor, sans-serif;
+        }
+
+        .contacts__contact:nth-child(3) {
+            @media (max-width:768px) {
+                max-width: 155px;
+            }
+
+            a:last-child {
+                @media (max-width:768px) {
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+}

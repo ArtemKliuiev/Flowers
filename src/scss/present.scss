@@ -1,0 +1,210 @@
+@import 'style';
+
+.page {
+    background: $whiteColor;
+    position: relative;
+    width: 100%;
+
+    &__bg {
+        img {
+            position: absolute;
+        }
+
+        .bg {
+            &__first {
+                left: 0;
+                top: -33px;
+
+                @media (max-width:1760px) {
+                    left: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__second {
+                right: 0;
+                top: 150px;
+
+                @media (max-width:1760px) {
+                    right: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__third {
+                left: 0;
+                top: 661px;
+
+                @media (max-width:1760px) {
+                    left: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__fourth {
+                right: 0;
+                top: 690px;
+
+                @media (max-width:1760px) {
+                    right: -110px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@import 'present/bread-crumbs';
+
+@import 'present/title';
+
+.present-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(456px, 1fr));
+    grid-template-rows: 396px 396px;
+    gap: 23px 20px;
+    padding-right: 14px;
+    margin-bottom: 78px;
+
+    @media (max-width:1024px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 396px 396px 396px 396px;
+        padding-right: 0;
+        gap: 13px;
+    }
+
+    @media (max-width:768px) {
+        grid-template-rows: 271px 271px 271px 271px;
+        margin-bottom: 58px;
+    }
+
+    &__card {
+        p {
+            color: $mainDarkColor;
+            font-family: Actor, sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 50px;
+            letter-spacing: 1.4px;
+
+            @media (max-width:768px) {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 25px;
+                letter-spacing: 1px;
+            }
+
+            span {
+                color: $cheryColor;
+            }
+        }
+
+        &_first {
+            background-image: url(../images/present/present-1.jpg);
+            background-size: cover;
+            background-position: left;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+
+            p {
+                padding-top: 55px;
+                max-width: 426px;
+                margin-left: auto;
+                padding-right: 40px;
+
+                @media (max-width:768px) {
+                    padding-top: 44px;
+                    max-width: 426px;
+                    padding-left: 51px;
+                    padding-right: 10px;
+                }
+
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        &_second {
+            background-image: url(../images/present/present-2.jpg);
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+
+            p {
+                padding-top: 122px;
+                padding-left: 32px;
+                max-width: 449px;
+                opacity: 0.5;
+
+                @media (max-width:768px) {
+                    padding-top: 50px;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        &_third {
+            background-image: url(../images/present/present-3.jpg);
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+
+            p {
+                padding-top: 50px;
+                padding-left: 32px;
+                max-width: 404px;
+
+                @media (max-width:768px) {
+                    padding-top: 38px;
+                    padding-left: 15px;
+                    padding-right: 94px;
+                }
+            }
+        }
+
+        &_fourth {
+            background-image: url(../images/present/present-4.jpg);
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+
+            p {
+                padding-top: 147px;
+                padding-left: 34px;
+                max-width: 497px;
+
+                @media (max-width:768px) {
+                    padding-top: 42px;
+                    padding-left: 17px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+//font-family: 'AbyssinicaSIL', serif;
+//font-family: 'Aclonica', sans-serif;
+//font-family: 'Acme', sans-serif;
+//font-family: 'Actor', sans-serif;
+//font-family: 'Aguafina Script', cursive;

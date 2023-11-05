@@ -1,0 +1,20 @@
+.title {
+    background: transparent;
+
+    h1 {
+        color: $mainDarkColor;
+        text-align: center;
+        font-family: Actor, sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: 2.3px;
+        margin-bottom: 89px;
+
+        @media (max-width:768px) {
+            font-size: 24px;
+            margin-top: 22px;
+            margin-bottom: 41px;
+            letter-spacing: 1px;
+        }
+    }
+}
