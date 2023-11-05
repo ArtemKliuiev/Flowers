@@ -5,12 +5,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDH9L4r0Zr6BUptfcdBcr0OgY_OHs9sX1o",
-  authDomain: "flowers-1a297.firebaseapp.com",
-  projectId: "flowers-1a297",
-  storageBucket: "flowers-1a297.appspot.com",
-  messagingSenderId: "705338550855",
-  appId: "1:705338550855:web:4a2f095824a761bbfc1f62"
+    apiKey: "AIzaSyDO8MiN9PG7tKA9mFASAZd3l3ZSZkSZkpY",
+    authDomain: "our-flowers.firebaseapp.com",
+    projectId: "our-flowers",
+    storageBucket: "our-flowers.appspot.com",
+    messagingSenderId: "1059937229113",
+    appId: "1:1059937229113:web:2f1bd4d3f5809db0fdb0e8"
 };
 
 class Firebase {
@@ -39,3 +39,4 @@ class Firebase {
   const firebase = new Firebase();
   
   export default firebase;
+

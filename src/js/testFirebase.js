@@ -7,9 +7,9 @@ export default class TestFirebase {
         this.loadCards();
     }
     async loadCards(){
-        const querySnapshot = await getDocs(collection(this.db, "Cards-test"));
+        const querySnapshot = await getDocs(collection(this.db, "products"));
         querySnapshot.forEach((doc) => {
-
+          //Тут мы поочереди получаем каждый елемент колекции
           console.log(doc.id, " => ", doc.data());
         });
     }
