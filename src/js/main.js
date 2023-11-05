@@ -3,6 +3,7 @@ import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
 import TestFirebase from './modules/productCard';
 
+
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');
 
