@@ -1,6 +1,6 @@
 // import TestFirebase from './testFirebase';
 // const test = new TestFirebase();
-"use strict"
+// "use strict"
 
 
 const titles = document.querySelectorAll('.accordion__title');
