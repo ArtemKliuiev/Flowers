@@ -1,4 +1,5 @@
 .stock {
+  position: relative;
   &__title {
     color: #333;
     text-align: center;
@@ -6,10 +7,15 @@
     font-size: 48px;
     font-weight: 400;
     line-height: 18px;
+    margin-bottom: 74px;
   }
 
   &__swiper-buttons {
     display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   &__swiper-button-next {
@@ -21,4 +27,5 @@
     width: 16px;
     height: 27px;
   }
+  
 }
