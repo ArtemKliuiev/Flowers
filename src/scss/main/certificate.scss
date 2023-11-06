@@ -1,5 +1,5 @@
 .certificate {
-  margin-bottom: 100px;
+  margin-bottom: 152px;
   // .certificate__wrapper
 
   &__desktop {
@@ -163,7 +163,7 @@
   &__card-bg {
     svg {
       position: absolute;
-      top: 0;
+      top: -1px;
       right: 0;
     }
   }
