@@ -14,6 +14,7 @@ export const webpackConfig = (isMode) => {
     entry: {
       // app: path.join(paths.src, 'js/app.js'),
       main: path.join(paths.src, 'js/main.js'),
+      catalog: path.join(paths.src, 'js/catalog.js'),
     },
 
     mode: isMode ? 'development' : 'production',
