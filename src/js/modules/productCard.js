@@ -1,4 +1,3 @@
-
 import firebase from './firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
@@ -35,7 +34,7 @@ export default class productsStock {
 
       let star = '';
       for (let i = 0; i < stars; i++) {
-        star += `<path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F8E582"/>` ;
+        star += `<path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F8E582"/>`;
       }
 
       let template = `
@@ -61,12 +60,12 @@ export default class productsStock {
       </div>
       <div class="product-card__bottom">
           <div class="product-card__bottom-stars">
-          `
-          for (let i = 0; i < stars; i++) {
-            template += `
-              <img src="./images/main/stock/Star.svg" alt="star">` ;
-            }
-          template += `
+          `;
+      for (let i = 0; i < stars; i++) {
+        template += `
+              <img src="./images/main/stock/Star.svg" alt="star">`;
+      }
+      template += `
           </div>
           <div class="product-card__bottom-name-price">
               <div class="product-card__bottom-name">
@@ -78,16 +77,15 @@ export default class productsStock {
               </div>
           </div>
           <div class="product-card__bottom-buttons">
-              <div class="product-card__bottom-button-desktop">
-                <a href="#">
+          <a href="#" class="product-card__bottom-button-desktop">
+              
                   Заказать
                   <img src="./images/main/stock/button-branch.png" alt="button-branch">
-                </a>
-              </div>    
+              
+              </a>    
           <a href="#">
               <div class="product-card__bottom-button-mobile">
-                  <img src="./images/main/stock/button-mobile.png" alt="button-branch">
-                  
+                  <img src="./images/main/stock/button-mobile.png" alt="button-branch"> 
               </div>
           </a>
           <a href="#">
@@ -95,8 +93,7 @@ export default class productsStock {
           </a>
           </div>
       </div>
-  </div>`
-          ;
+  </div>`;
       productCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
       });
