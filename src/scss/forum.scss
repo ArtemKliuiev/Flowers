@@ -13,7 +13,7 @@
         .bg {
             &__first {
                 left: 0;
-                top: -33px;
+                top: -63px;
 
                 @media (max-width:1760px) {
                     left: -50px;
@@ -26,7 +26,7 @@
 
             &__second {
                 right: 0;
-                top: 150px;
+                top: 118px;
 
                 @media (max-width:1760px) {
                     right: -50px;
@@ -39,7 +39,7 @@
 
             &__third {
                 left: 0;
-                top: 661px;
+                bottom: -263px;
 
                 @media (max-width:1760px) {
                     left: -50px;
@@ -52,7 +52,7 @@
 
             &__fourth {
                 right: 0;
-                top: 690px;
+                bottom: -265px;
 
                 @media (max-width:1760px) {
                     right: -110px;

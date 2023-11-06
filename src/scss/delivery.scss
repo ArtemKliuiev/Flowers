@@ -13,10 +13,10 @@
         .bg {
             &__first {
                 left: 0;
-                top: -33px;
+                top: -63px;
 
                 @media (max-width:1760px) {
-                    left: -70px;
+                    left: -50px;
                 }
 
                 @media (max-width:1515px) {
@@ -26,7 +26,11 @@
 
             &__second {
                 right: 0;
-                top: 150px;
+                top: 118px;
+
+                @media (max-width:1760px) {
+                    right: -50px;
+                }
 
                 @media (max-width:1515px) {
                     display: none;
@@ -35,10 +39,23 @@
 
             &__third {
                 left: 0;
-                top: 661px;
+                bottom: -263px;
 
                 @media (max-width:1760px) {
-                    left: -70px;
+                    left: -50px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
+
+            &__fourth {
+                right: 0;
+                bottom: -265px;
+
+                @media (max-width:1760px) {
+                    right: -110px;
                 }
 
                 @media (max-width:1515px) {

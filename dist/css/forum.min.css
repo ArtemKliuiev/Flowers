@@ -1906,7 +1906,7 @@ body {
 }
 .page__bg .bg__first {
   left: 0;
-  top: -33px;
+  top: -63px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__first {
@@ -1920,7 +1920,7 @@ body {
 }
 .page__bg .bg__second {
   right: 0;
-  top: 150px;
+  top: 118px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__second {
@@ -1934,7 +1934,7 @@ body {
 }
 .page__bg .bg__third {
   left: 0;
-  top: 661px;
+  bottom: -263px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__third {
@@ -1948,7 +1948,7 @@ body {
 }
 .page__bg .bg__fourth {
   right: 0;
-  top: 690px;
+  bottom: -265px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__fourth {
