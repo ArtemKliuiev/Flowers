@@ -1,5 +1,4 @@
 import Swiper, { Navigation, Pagination, Autoplay, Scrollbar } from "swiper";
-// import "swiper/swiper-bundle.min.css";
 Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
 
 function certificateSwiper() {
@@ -11,3 +10,19 @@ function certificateSwiper() {
       
 }
 certificateSwiper();
+
+
+function stockSwiper() {
+
+    let swiper = new Swiper(".stock-swiper", {
+        pagination: {
+          el: ".stock__swiper-pagination",
+        },
+        navigation: {
+          nextEl: '.stock__swiper-button-next',
+          prevEl: '.stock__swiper-button-prev',
+        },
+      });
+      
+}
+stockSwiper();
