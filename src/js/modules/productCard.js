@@ -32,10 +32,11 @@ export default class productsStock {
     querySnapshot.forEach((doc) => {
       const product = doc.data();
       const { name, stars, price, sale, img, oldPrice } = product;
-      console.log(img.default);
-      console.log(name);
-      console.log(stars);
-      console.log(oldPrice);
+
+      let star = '';
+      for (let i = 0; i < stars; i++) {
+        star += `<path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F8E582"/>` ;
+      }
 
       let template = `
       <div class="product-card">
@@ -60,14 +61,12 @@ export default class productsStock {
       </div>
       <div class="product-card__bottom">
           <div class="product-card__bottom-stars">
-          ${stars}
-              <svg xmlns="http://www.w3.org/2000/svg" width="74" height="15" viewBox="0 0 74 15" fill="none">
-                  <path d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z" fill="#F8E582"/>
-                  <path d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z" fill="#F8E582"/>
-                  <path d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z" fill="#F8E582"/>
-                  <path d="M51.5 0L53.1839 5.18237H58.6329L54.2245 8.38525L55.9084 13.5676L51.5 10.3647L47.0916 13.5676L48.7755 8.38525L44.3671 5.18237H49.8161L51.5 0Z" fill="#F8E582"/>
-                  <path d="M66.5 0L68.1839 5.18237H73.6329L69.2245 8.38525L70.9084 13.5676L66.5 10.3647L62.0916 13.5676L63.7755 8.38525L59.3671 5.18237H64.8161L66.5 0Z" fill="#F8E582"/>
-                  </svg>
+          `
+          for (let i = 0; i < stars; i++) {
+            template += `
+              <img src="./images/main/stock/Star.svg" alt="star">` ;
+            }
+          template += `
           </div>
           <div class="product-card__bottom-name-price">
               <div class="product-card__bottom-name">
@@ -78,25 +77,26 @@ export default class productsStock {
                   <div class="product-card__bottom-price">${price} грн</div>
               </div>
           </div>
-          <a href="#">
+          <div class="product-card__bottom-buttons">
               <div class="product-card__bottom-button-desktop">
+                <a href="#">
                   Заказать
                   <img src="./images/main/stock/button-branch.png" alt="button-branch">
-              </div>
-          </a>
+                </a>
+              </div>    
           <a href="#">
               <div class="product-card__bottom-button-mobile">
-                  <img src="./images/main/stock/button-branch.png" alt="button-branch">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
-                      <path d="M6.9949 12.7059H6.99589C6.99672 12.7059 6.99755 12.7058 6.99838 12.7058H18.5303C18.8142 12.7058 19.0638 12.5177 19.1418 12.245L21.686 3.35098C21.7408 3.15924 21.7024 2.9531 21.5823 2.79394C21.4621 2.63479 21.2741 2.54115 21.0745 2.54115H5.52801L5.07333 0.497477C5.00857 0.2068 4.7505 0 4.45235 0H0.636051C0.284732 0 0 0.284391 0 0.635288C0 0.986186 0.284732 1.27058 0.636051 1.27058H3.94219C4.02269 1.63272 6.11801 11.0505 6.2386 11.5924C5.56263 11.8858 5.0884 12.559 5.0884 13.3411C5.0884 14.3919 5.94442 15.2469 6.99656 15.2469H18.5303C18.8816 15.2469 19.1663 14.9625 19.1663 14.6116C19.1663 14.2607 18.8816 13.9763 18.5303 13.9763H6.99656C6.6459 13.9763 6.36051 13.6913 6.36051 13.3411C6.36051 12.9913 6.64491 12.7068 6.9949 12.7059ZM20.2312 3.81173L18.0504 11.4352H7.50672L5.81059 3.81173H20.2312Z" fill="white"/>
-                      </svg>
+                  <img src="./images/main/stock/button-mobile.png" alt="button-branch">
+                  
               </div>
           </a>
           <a href="#">
               <div class="product-card__bottom-order">Быстрый заказ</div>
           </a>
+          </div>
       </div>
-  </div>`;
+  </div>`
+          ;
       productCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
       });

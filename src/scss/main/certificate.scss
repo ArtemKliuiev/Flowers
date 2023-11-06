@@ -1,5 +1,8 @@
 .certificate {
   margin-bottom: 152px;
+  @media (max-width: 575px) {
+    margin-bottom: 63px;
+  }
   // .certificate__wrapper
 
   &__desktop {
@@ -356,4 +359,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
 }

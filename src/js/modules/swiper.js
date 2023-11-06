@@ -4,7 +4,7 @@ Swiper.use([Navigation, Pagination, Autoplay, Scrollbar]);
 function certificateSwiper() {
     let swiper = new Swiper(".certificateSwiper", {
         pagination: {
-          el: ".swiper-pagination",
+          el: ".certificate__swiper-pagination",
         },
       });
       
@@ -21,6 +21,27 @@ function stockSwiper() {
         navigation: {
           nextEl: '.stock__swiper-button-next',
           prevEl: '.stock__swiper-button-prev',
+        },
+        
+
+        breakpoints: {
+          320: {
+            slidesPerView: 0.5,
+          },
+          375: {
+            slidesPerView: 0.5,
+          },
+          768: {
+            slidesPerView: 0.5,
+          },
+          991: {
+            slidesPerView: 0.75,
+
+          },
+          1440: {
+            slidesPerView: 1,
+          }
+          
         },
       });
       
