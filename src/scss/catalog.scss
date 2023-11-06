@@ -1,11 +1,14 @@
 @import 'style';
 @import 'catalog/link-row';
+@import 'catalog/left-menu';
 
 // 375px, 576px, 768px, 1024px, 1420px, 1650px, 1920px
 
 
+
 .catalog {
-    height: 1000px;
+    height: 100%;
+    margin-bottom: 100px;
     &__link-row {
         margin: 9px 0 34px 0;
         @media (max-width: 768px) {
@@ -18,7 +21,7 @@
         text-align: center;
         font-size: 48px;
         font-weight: 400;
-        margin-bottom: 40px;
+        margin-bottom: 67px;
         @media (max-width: 768px) {
             font-size: 24px;
             letter-spacing: 0.7px;
@@ -33,7 +36,7 @@
     &__menu{
         width: 100%;
         height: 100%;
-        background-color: red;
+        // background-color: red;
         grid-column: 1;
         grid-row: 1/4;
     }
