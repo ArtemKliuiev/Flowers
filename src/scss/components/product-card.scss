@@ -5,24 +5,44 @@
   background: #fff;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
   position: relative;
-  @media (max-width: 1420px) {
-    width: unset;
-    max-width: 340px;
+
+  @media(max-width: 768px) {
+    &:nth-child(5) {
+      display: none;
+    }
+    &:nth-child(6) {
+      display: none;
+    }
+    &:nth-child(7) {
+      display: none;
+    }
+    &:nth-child(8) {
+      display: none;
+    }
   }
+
+  @media(max-width: 740px) {
+    width: 257px;
+  }
+
   @media (max-width: 575px) {
     min-height: 276px;
+    width: 140px;
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    @media(max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @media (max-width: 768px) {
       padding-bottom: 42px;
     }
     @media (max-width: 575px) {
-      gap: 9px;
+      row-gap: 9px;
+      column-gap: 9px;
     }
   }
   // .product-card__top
@@ -99,6 +119,7 @@
     position: absolute;
     top: 32px;
     right: 24px;
+    cursor: pointer;
     @media (max-width: 575px) {
       top: 9px;
       right: 5px;
@@ -150,6 +171,10 @@
 
   &__bottom {
     padding: 16px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 308px);
     @media (max-width: 575px) {
       padding: 6px 10px;
       display: flex;
@@ -180,11 +205,11 @@
   &__bottom-name-price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 38px;
 
     @media (max-width: 1420px) {
       flex-direction: column;
-      align-items: center;
     }
     @media (max-width: 575px) {
       padding-bottom: 0;
@@ -275,10 +300,18 @@
     margin: 0 auto;
     position: relative;
     margin-bottom: 14px;
+    transition: all 0.2s ease;
 
     img {
       position: absolute;
       right: 0;
+    }
+
+    @media (min-width: 998px) {
+      &:hover {
+        background: #a16969;
+        color: $blackColor;
+      }
     }
 
     @media (max-width: 1420px) {
