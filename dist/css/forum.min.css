@@ -2295,7 +2295,7 @@ body {
 }
 .page__bg .bg__first {
   left: 0;
-  top: -33px;
+  top: -63px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__first {
@@ -2309,7 +2309,7 @@ body {
 }
 .page__bg .bg__second {
   right: 0;
-  top: 150px;
+  top: 118px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__second {
@@ -2323,7 +2323,7 @@ body {
 }
 .page__bg .bg__third {
   left: 0;
-  top: 661px;
+  bottom: -263px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__third {
@@ -2337,7 +2337,7 @@ body {
 }
 .page__bg .bg__fourth {
   right: 0;
-  top: 690px;
+  bottom: -265px;
 }
 @media (max-width: 1760px) {
   .page__bg .bg__fourth {
@@ -2354,7 +2354,7 @@ body {
   display: flex;
   gap: 30px;
   font-family: Aguafina Script, sans-serif;
-  margin-top: 39px;
+  margin-top: 9px;
   margin-bottom: 33px;
   background: transparent;
 }
@@ -2438,6 +2438,9 @@ body {
     padding: 20px 16px 20px 36px;
     font-size: 16px;
   }
+}
+.forum-accordion__accordions .accordion__title.active svg {
+  transform: rotate(180deg);
 }
 .forum-accordion__accordions .accordion__content {
   box-sizing: content-box;
