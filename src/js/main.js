@@ -3,6 +3,7 @@ import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
 import seasonSwiper from './modules/swiper';
 import presentSwiper from './modules/swiper';
+import forumSwiper from './modules/swiper';
 import productsStock from './modules/stockProduct';
 import productsSeason from './modules/seasonProduct';
 import productsPresent from './modules/presentProduct';
