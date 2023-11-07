@@ -33,7 +33,7 @@
       column-gap: 9px;
     }
   }
-  
+
   &__swiper-buttons {
     display: flex;
     gap: 30px;
@@ -52,3 +52,27 @@
     }
   }
 }
+
+.present__swiper-pagination .swiper-pagination-bullet {
+    background: #956d84 !important;
+    opacity: 1 !important;
+    width: 4px !important;
+    height: 4px !important;
+  }
+  
+  .present__swiper-pagination .swiper-pagination-bullet-active {
+    background: #956d84 !important;
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #956d84;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
