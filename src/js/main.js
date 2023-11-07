@@ -1,7 +1,11 @@
 import headerDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
-import productsStock from './modules/productCard';
+import seasonSwiper from './modules/swiper';
+import presentSwiper from './modules/swiper';
+import productsStock from './modules/stockProduct';
+import productsSeason from './modules/seasonProduct';
+import productsPresent from './modules/presentProduct';
 
 
 const titles = document.querySelectorAll('.accordion__title');
