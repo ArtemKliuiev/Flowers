@@ -1,6 +1,9 @@
 .season {
   position: relative;
   margin-bottom: 162px;
+  @media(max-width: 575px) {
+    margin-bottom: 42px;
+  }
 
   &__title {
     color: #333;

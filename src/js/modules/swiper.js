@@ -51,3 +51,13 @@ function presentSwiper() {
   });
 }
 presentSwiper();
+
+function forumSwiper() {
+  let swiper = new Swiper('.forum-swiper', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.forum__swiper-pagination',
+    },
+  });
+}
+forumSwiper();
