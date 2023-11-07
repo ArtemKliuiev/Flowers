@@ -1,0 +1,24 @@
+.bread-crumbs {
+    display: flex;
+    gap: 30px;
+    font-family: Aguafina Script, sans-serif;
+    margin-top: 9px;
+    margin-bottom: 33px;
+    background: transparent;
+
+    a {
+        color: $gray3Color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+
+        &:not(:last-child){
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width:768px) {
+        display: none;
+    }
+}
