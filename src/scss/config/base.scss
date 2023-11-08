@@ -1,51 +1,54 @@
 [class*='__container'] {
-   max-width: $maxWidthContainer+px;
-   margin: 0 auto;
-   padding: 0 $mainOffset+px;
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 $mainOffset + px;
 }
 
 // Стили отзывчивых картинок (IBG) ============================================
 [class*='-ibg'] {
-   position: relative;
+  position: relative;
 
-   img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-   }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
 }
 
 [class*='-ibg_contain'] {
-   img {
-      object-fit: contain;
-   }
+  img {
+    object-fit: contain;
+  }
 }
 
 body {
-   background-color: $whiteColor;
+  background-color: $whiteColor;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
-   display: flex;
-   flex-direction: column;
-   min-height: 100%;
-   overflow: clip;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
 }
 
 .page {
-   position: relative;
-   flex: 1 1 auto;
+  position: relative;
+  flex: 1 1 auto;
 
-   [data-observ] {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: rem(2);
-      background: transparent;
-      pointer-events: none;
-   }
+  [data-observ] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background: transparent;
+    pointer-events: none;
+  }
 }

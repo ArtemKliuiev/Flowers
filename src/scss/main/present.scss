@@ -54,6 +54,25 @@
       display: block;
     }
   }
+
+  &__flowers-right-top {
+    position: absolute;
+    right: -680px;
+    top: -249px;
+  }
+
+  &__flowers-right-bottom {
+    position: absolute;
+    right: -645px;
+    bottom: -362px;
+  }
+
+  &__flowers-left {
+    position: absolute;
+    left: -634px;
+    top: 361px;
+  }
+
 }
 
 .present__swiper-pagination .swiper-pagination-bullet {

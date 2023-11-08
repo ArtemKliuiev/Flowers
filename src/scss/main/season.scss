@@ -53,6 +53,24 @@
       display: block;
     }
   }
+
+  &__flowers-right {
+    position: absolute;
+    right: -680px;
+    top: 207px;
+  }
+
+  &__flowers-left-top {
+    position: absolute;
+    left: -634px;
+    top: -245px;
+  }
+
+  &__flowers-left-bottom {
+    position: absolute;
+    left: -643px;
+    bottom: -295px;
+  }
 }
 
 .season__swiper-pagination .swiper-pagination-bullet {
