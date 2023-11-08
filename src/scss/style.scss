@@ -19,3 +19,19 @@
 @import 'components/product-card';
 @import 'main/certificate';
 @import 'main/stock';
+
+//about-us
+@import 'about-us/bread-crumbs';
+@import 'about-us/title';
+@import 'components/flowers-grid';
+@import 'about-us/about-us';
+
+//delivery
+@import 'delivery/bread-crumbs';
+@import 'delivery/title';
+@import 'delivery/delivery-info';
+
+//forum
+@import 'forum/bread-crumbs';
+@import 'forum/title';
+@import 'forum/forum-accordion';
