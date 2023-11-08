@@ -2169,6 +2169,280 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.season {
+  position: relative;
+  margin-bottom: 162px;
+}
+@media (max-width: 575px) {
+  .season {
+    margin-bottom: 42px;
+  }
+}
+.season__title {
+  color: #333;
+  text-align: center;
+  font-family: Actor;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 74px;
+  padding-top: 15px;
+}
+@media (max-width: 575px) {
+  .season__title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+.season__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+@media (max-width: 768px) {
+  .season__wrapper {
+    padding-bottom: 42px;
+  }
+}
+@media (max-width: 575px) {
+  .season__wrapper {
+    row-gap: 9px;
+    column-gap: 9px;
+  }
+}
+.season__swiper-buttons {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .season__swiper-buttons {
+    display: none;
+  }
+}
+.season__swiper-pagination {
+  display: none;
+}
+@media (max-width: 768px) {
+  .season__swiper-pagination {
+    display: block;
+  }
+}
+
+.season__swiper-pagination .swiper-pagination-bullet {
+  background: #956d84 !important;
+  opacity: 1 !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.season__swiper-pagination .swiper-pagination-bullet-active {
+  background: #956d84 !important;
+  position: relative;
+}
+.season__swiper-pagination .swiper-pagination-bullet-active::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #956d84;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.present {
+  position: relative;
+  margin-bottom: 173px;
+}
+.present__title {
+  color: #333;
+  text-align: center;
+  font-family: Actor;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 74px;
+  padding-top: 15px;
+}
+@media (max-width: 575px) {
+  .present__title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+.present__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+@media (max-width: 768px) {
+  .present__wrapper {
+    padding-bottom: 42px;
+  }
+}
+@media (max-width: 575px) {
+  .present__wrapper {
+    row-gap: 9px;
+    column-gap: 9px;
+  }
+}
+.present__swiper-buttons {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .present__swiper-buttons {
+    display: none;
+  }
+}
+.present__swiper-pagination {
+  display: none;
+}
+@media (max-width: 768px) {
+  .present__swiper-pagination {
+    display: block;
+  }
+}
+
+.present__swiper-pagination .swiper-pagination-bullet {
+  background: #956d84 !important;
+  opacity: 1 !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.present__swiper-pagination .swiper-pagination-bullet-active {
+  background: #956d84 !important;
+  position: relative;
+}
+.present__swiper-pagination .swiper-pagination-bullet-active::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #956d84;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-btn {
+  cursor: pointer;
+}
+
+.forum {
+  position: relative;
+  margin-bottom: 35px;
+}
+.forum__title {
+  color: #000;
+  text-align: center;
+  font-family: Actor;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.forum__our-news-wrapper {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.forum__our-news-wrapper p {
+  color: #956d84;
+  text-align: center;
+  font-family: Acme;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px; /* 112.5% */
+}
+.forum__card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.forum__card {
+  max-width: 460px;
+  height: 640px;
+}
+.forum__card-bottom {
+  width: 460px;
+  height: 371px;
+  background: #956d84;
+  padding: 28px 14px;
+  position: relative;
+  bottom: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.forum__card-title {
+  color: #fff;
+  font-family: Acme;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 427px;
+  padding-bottom: 32px;
+}
+.forum__card-text {
+  color: #fff;
+  font-family: Aclonica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 422px;
+}
+.forum__card-img {
+  text-align: center;
+  position: relative;
+  top: 80px;
+  z-index: 2;
+}
+.forum__swiper-pagination {
+  display: none;
+}
+@media (max-width: 768px) {
+  .forum__swiper-pagination {
+    display: block;
+  }
+}
+
+.forum__swiper-pagination .swiper-pagination-bullet {
+  background: #956d84 !important;
+  opacity: 1 !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.forum__swiper-pagination .swiper-pagination-bullet-active {
+  background: #956d84 !important;
+  position: relative;
+}
+.forum__swiper-pagination .swiper-pagination-bullet-active::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #956d84;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .bread-crumbs {
   display: flex;
   gap: 30px;
@@ -2820,280 +3094,6 @@ body {
     padding-left: 17px;
     padding-right: 20px;
   }
-}
-
-.season {
-  position: relative;
-  margin-bottom: 162px;
-}
-@media (max-width: 575px) {
-  .season {
-    margin-bottom: 42px;
-  }
-}
-.season__title {
-  color: #333;
-  text-align: center;
-  font-family: Actor;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 18px;
-  margin-bottom: 74px;
-  padding-top: 15px;
-}
-@media (max-width: 575px) {
-  .season__title {
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-}
-.season__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 20px;
-  column-gap: 20px;
-}
-@media (max-width: 768px) {
-  .season__wrapper {
-    padding-bottom: 42px;
-  }
-}
-@media (max-width: 575px) {
-  .season__wrapper {
-    row-gap: 9px;
-    column-gap: 9px;
-  }
-}
-.season__swiper-buttons {
-  display: flex;
-  gap: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-@media (max-width: 768px) {
-  .season__swiper-buttons {
-    display: none;
-  }
-}
-.season__swiper-pagination {
-  display: none;
-}
-@media (max-width: 768px) {
-  .season__swiper-pagination {
-    display: block;
-  }
-}
-
-.season__swiper-pagination .swiper-pagination-bullet {
-  background: #956d84 !important;
-  opacity: 1 !important;
-  width: 4px !important;
-  height: 4px !important;
-}
-
-.season__swiper-pagination .swiper-pagination-bullet-active {
-  background: #956d84 !important;
-  position: relative;
-}
-.season__swiper-pagination .swiper-pagination-bullet-active::after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #956d84;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.present {
-  position: relative;
-  margin-bottom: 173px;
-}
-.present__title {
-  color: #333;
-  text-align: center;
-  font-family: Actor;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 18px;
-  margin-bottom: 74px;
-  padding-top: 15px;
-}
-@media (max-width: 575px) {
-  .present__title {
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-}
-.present__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 20px;
-  column-gap: 20px;
-}
-@media (max-width: 768px) {
-  .present__wrapper {
-    padding-bottom: 42px;
-  }
-}
-@media (max-width: 575px) {
-  .present__wrapper {
-    row-gap: 9px;
-    column-gap: 9px;
-  }
-}
-.present__swiper-buttons {
-  display: flex;
-  gap: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-@media (max-width: 768px) {
-  .present__swiper-buttons {
-    display: none;
-  }
-}
-.present__swiper-pagination {
-  display: none;
-}
-@media (max-width: 768px) {
-  .present__swiper-pagination {
-    display: block;
-  }
-}
-
-.present__swiper-pagination .swiper-pagination-bullet {
-  background: #956d84 !important;
-  opacity: 1 !important;
-  width: 4px !important;
-  height: 4px !important;
-}
-
-.present__swiper-pagination .swiper-pagination-bullet-active {
-  background: #956d84 !important;
-  position: relative;
-}
-.present__swiper-pagination .swiper-pagination-bullet-active::after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #956d84;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.swiper-btn {
-  cursor: pointer;
-}
-
-.forum {
-  position: relative;
-  margin-bottom: 35px;
-}
-.forum__title {
-  color: #000;
-  text-align: center;
-  font-family: Actor;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.forum__our-news-wrapper {
-  display: flex;
-  gap: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.forum__our-news-wrapper p {
-  color: #956d84;
-  text-align: center;
-  font-family: Acme;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px; /* 112.5% */
-}
-.forum__card-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.forum__card {
-  max-width: 460px;
-  height: 640px;
-}
-.forum__card-bottom {
-  width: 460px;
-  height: 371px;
-  background: #956d84;
-  padding: 28px 14px;
-  position: relative;
-  bottom: 118px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-.forum__card-title {
-  color: #fff;
-  font-family: Acme;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 25px;
-  max-width: 427px;
-  padding-bottom: 32px;
-}
-.forum__card-text {
-  color: #fff;
-  font-family: Aclonica;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  max-width: 422px;
-}
-.forum__card-img {
-  text-align: center;
-  position: relative;
-  top: 80px;
-  z-index: 2;
-}
-.forum__swiper-pagination {
-  display: none;
-}
-@media (max-width: 768px) {
-  .forum__swiper-pagination {
-    display: block;
-  }
-}
-
-.forum__swiper-pagination .swiper-pagination-bullet {
-  background: #956d84 !important;
-  opacity: 1 !important;
-  width: 4px !important;
-  height: 4px !important;
-}
-
-.forum__swiper-pagination .swiper-pagination-bullet-active {
-  background: #956d84 !important;
-  position: relative;
-}
-.forum__swiper-pagination .swiper-pagination-bullet-active::after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #956d84;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .page {
