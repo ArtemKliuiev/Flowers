@@ -1,0 +1,109 @@
+.forum {
+  position: relative;
+  margin-bottom: 35px;
+
+  &__title {
+    color: #000;
+    text-align: center;
+    font-family: Actor;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__our-news-wrapper {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    p {
+      color: #956d84;
+      text-align: center;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px; /* 112.5% */
+    }
+  }
+
+  &__card-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    max-width: 460px;
+    height: 640px;
+  }
+
+  &__card-bottom {
+    width: 460px;
+    height: 371px;
+    background: #956d84;
+    padding: 28px 14px;
+    position: relative;
+    bottom: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__card-title {
+    color: #fff;
+    font-family: Acme;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+    max-width: 427px;
+    padding-bottom: 32px;
+  }
+
+  &__card-text {
+    color: #fff;
+    font-family: Aclonica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 422px;
+  }
+
+  &__card-img {
+    text-align: center;
+    position: relative;
+    top: 80px;
+    z-index: 2;
+  }
+  
+  &__swiper-pagination {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.forum__swiper-pagination .swiper-pagination-bullet {
+    background: #956d84 !important;
+    opacity: 1 !important;
+    width: 4px !important;
+    height: 4px !important;
+  }
+  
+  .forum__swiper-pagination .swiper-pagination-bullet-active {
+    background: #956d84 !important;
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #956d84;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
