@@ -1,7 +1,6 @@
 import firebase from './firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
-const seasonCardWrapper = document.querySelectorAll('.season__wrapper');
 
 export default class productsStock {
   constructor() {

@@ -1,6 +1,9 @@
 .present {
   position: relative;
   margin-bottom: 173px;
+  @media (max-width: 575px) {
+    margin-bottom: 83px;
+  }
 
   &__title {
     color: #333;
