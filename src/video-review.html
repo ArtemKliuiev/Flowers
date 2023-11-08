@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'Видео отчеты', 'srcStyle': 'video-review' })
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html')
+        <main class="page">
+            <div class="page__bg">
+                <img src="images/present/bg-1.svg" class="bg__first">
+                <img src="images/present/bg-2.svg" class="bg__second">
+                <img src="images/present/bg-3.svg" class="bg__third">
+            </div>
+            <div class="page__container">
+                @@include('html/video-review/bread-crumbs.html')
+                @@include('html/video-review/title.html')
+                @@include('html/video-review/video-review-slider.html')
+            </div>
+        </main>
+        @@include('html/footer.html')
+    </div>
+</body>
+<script src="js/main.min.js"></script>
+
+</html>
