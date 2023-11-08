@@ -1029,6 +1029,49 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+  position: relative;
+}
+.footer__bg .bg-first {
+  position: absolute;
+  bottom: 157px;
+  left: 0;
+  z-index: 2;
+}
+@media (max-width: 1765px) {
+  .footer__bg .bg-first {
+    left: -85px;
+  }
+}
+@media (max-width: 1625px) {
+  .footer__bg .bg-first {
+    left: -135px;
+  }
+}
+@media (max-width: 1525px) {
+  .footer__bg .bg-first {
+    display: none;
+  }
+}
+.footer__bg .bg-second {
+  position: absolute;
+  right: 0;
+  bottom: 74px;
+  z-index: 2;
+}
+@media (max-width: 1765px) {
+  .footer__bg .bg-second {
+    right: -85px;
+  }
+}
+@media (max-width: 1625px) {
+  .footer__bg .bg-second {
+    right: -135px;
+  }
+}
+@media (max-width: 1525px) {
+  .footer__bg .bg-second {
+    display: none;
+  }
 }
 .footer-title {
   display: flex;
@@ -1039,15 +1082,6 @@ body {
 .footer__map {
   position: relative;
   padding-bottom: 75px;
-  background-image: url("../images/footer/first-line-bg.png");
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (max-width: 1920px) {
-  .footer__map {
-    background-size: inherit;
-  }
 }
 @media (max-width: 835px) {
   .footer__map {
@@ -1207,15 +1241,6 @@ body {
   padding-top: 42px;
   padding-bottom: 36px;
   position: relative;
-  background-image: url("../images/footer/last-line-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-}
-@media (max-width: 1920px) {
-  .footer__links {
-    background-size: inherit;
-  }
 }
 @media (max-width: 1100px) {
   .footer__links.links__main {
@@ -2373,6 +2398,179 @@ body {
 @media (max-width: 768px) {
   .forum-accordion__last-text {
     margin-top: 25px;
+  }
+}
+
+.bread-crumbs {
+  display: flex;
+  gap: 30px;
+  font-family: Aguafina Script, sans-serif;
+  margin-top: 9px;
+  margin-bottom: 33px;
+  background: transparent;
+}
+.bread-crumbs a {
+  color: #828282;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
+.bread-crumbs a:not(:last-child) {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .bread-crumbs {
+    display: none;
+  }
+}
+
+.title {
+  background: transparent;
+}
+.title h1 {
+  color: #333;
+  text-align: center;
+  font-family: Actor, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 77px;
+}
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 44px;
+    letter-spacing: 1px;
+    line-height: 19px;
+  }
+}
+
+.present-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(456px, 1fr));
+  grid-template-rows: 396px 396px;
+  gap: 23px 20px;
+  padding-right: 14px;
+  margin-bottom: 78px;
+}
+@media (max-width: 1024px) {
+  .present-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 396px 396px 396px 396px;
+    padding-right: 0;
+    gap: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .present-grid {
+    grid-template-rows: 271px 271px 271px 271px;
+    margin-bottom: 58px;
+  }
+}
+.present-grid__card p {
+  color: #333;
+  font-family: Actor, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 1.4px;
+}
+@media (max-width: 768px) {
+  .present-grid__card p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+}
+.present-grid__card p span {
+  color: #956D84;
+}
+.present-grid__card_first {
+  background-image: url(../images/present/present-1.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.present-grid__card_first p {
+  padding-top: 55px;
+  max-width: 426px;
+  margin-left: auto;
+  padding-right: 40px;
+}
+@media (max-width: 768px) {
+  .present-grid__card_first p {
+    padding-top: 44px;
+    max-width: 426px;
+    padding-left: 51px;
+    padding-right: 10px;
+  }
+}
+.present-grid__card_first p span {
+  color: white;
+}
+.present-grid__card_second {
+  background-image: url(../images/present/present-2.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.present-grid__card_second p {
+  padding-top: 122px;
+  padding-left: 32px;
+  max-width: 449px;
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .present-grid__card_second p {
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+}
+.present-grid__card_third {
+  background-image: url(../images/present/present-3.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.present-grid__card_third p {
+  padding-top: 50px;
+  padding-left: 32px;
+  max-width: 404px;
+}
+@media (max-width: 768px) {
+  .present-grid__card_third p {
+    padding-top: 38px;
+    padding-left: 15px;
+    padding-right: 94px;
+  }
+}
+.present-grid__card_fourth {
+  background-image: url(../images/present/present-4.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.present-grid__card_fourth p {
+  padding-top: 147px;
+  padding-left: 34px;
+  max-width: 497px;
+}
+@media (max-width: 768px) {
+  .present-grid__card_fourth p {
+    padding-top: 42px;
+    padding-left: 17px;
+    padding-right: 20px;
   }
 }
 
