@@ -49,6 +49,19 @@
                     display: none;
                 }
             }
+
+            &__fourth{
+                left: 0;
+                top: 906px;
+
+                @media (max-width:1760px) {
+                    left: -105px;
+                }
+
+                @media (max-width:1515px) {
+                    display: none;
+                }
+            }
         }
     }
 }
