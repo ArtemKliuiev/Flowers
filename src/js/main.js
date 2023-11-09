@@ -4,11 +4,14 @@ import stockSwiper from './modules/swiper';
 import seasonSwiper from './modules/swiper';
 import presentSwiper from './modules/swiper';
 import forumSwiper from './modules/swiper';
-import productsStock from './modules/stockProduct';
-import productsSeason from './modules/seasonProduct';
-import productsPresent from './modules/presentProduct';
-import burger from './modules/burger';
-import menuSwitch from "./modules/menu/menuSwitch"
+import productLike from "./modules/like/like";
+import productsStock from './modules/products/stockProduct';
+import productsSeason from './modules/products/seasonProduct';
+import productsPresent from './modules/products/presentProduct';
+import burger from './modules/menu/burger';
+import menuSwitch from "./modules/menu/menuSwitch";
+
+
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');
 
@@ -34,3 +37,19 @@ titles.forEach((item) =>
     }
   })
 );
+
+async function go() {
+
+  const stockProduct = new productsStock();
+  const seasonProduct = new productsSeason();
+  const presentProduct = new productsPresent();
+
+  await stockProduct.loadCards();
+  await seasonProduct.loadCards();
+  await presentProduct.loadCards();
+
+  let likeProduct = await productLike();
+
+}
+
+go();
