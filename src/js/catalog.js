@@ -1,6 +1,7 @@
 
 class Catalog{
     constructor(){
+        this.menuLeft = document.querySelector('.left-menu');
         this.itemsFiler = document.querySelectorAll('.left-menu__menu-item');
         this.itemsSortAdaptive = document.querySelectorAll('.left-menu__adaptive-sort-item');
         this.tabs();
@@ -29,6 +30,7 @@ class Catalog{
                 document.querySelectorAll('.left-menu__adaptive-sort-item').forEach(item => {
                     item.classList.remove('left-menu__adaptive-sort-item_active');     
                 });
+                this.menuLeft.classList.add('left-menu_sort-active');
                 item.classList.add('left-menu__adaptive-sort-item_active')
             })
         })
