@@ -165,7 +165,7 @@
     p {
       height: 0.8571rem;
       color: #414141;
-      font-family: AbyssinicaSIL;
+      font-family: PTSans;
       font-size: 0.8571rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -749,15 +749,17 @@
     }
 
     p {
-      width: 0.3571rem;
-      height: 0.5714rem;
       color: #fff;
-      font-family: AbyssinicaSIL;
+      font-family: PTSans;
       font-size: 0.5714rem;
       font-weight: 700;
       text-transform: uppercase;
       text-align: center;
       line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       @media (max-width: 375px) {
         font-size: 9px;
