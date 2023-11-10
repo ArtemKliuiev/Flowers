@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/catalog.min.css?_v=20231110105656">
+  <link rel="stylesheet" href="css/catalog.min.css?_v=20231110125716">
   <title>Flowers</title>
 </head>
 
@@ -497,11 +497,13 @@
         <div class="left-menu__adaptive-title">Фильтр</div>
         <div class="left-menu__adaptive-back"></div>
     </div>
-    <button class="left-menu__adaptive-delete-filters">Скинуть фильтр</button>
+    <div class="left-menu__button">
+        <button class="btn left-menu__adaptive-delete-filters">Скинуть фильтр</button>
+    </div>
     <ul class="left-menu__adaptive-sort">
         <li class="left-menu__adaptive-sort-item">
             <span class="left-menu__sort-item-title">Кому</span>
-            <span class="left-menu__sort-item-info">Маме</span>
+            <span class="left-menu__sort-item-info"></span>
             <ul class="left-menu__sort-item-menu">
                 <li class="left-menu__sort-item-menu-title">Кому</li>
                 <li class="left-menu__sort-item-menu-point">Бабушке</li>
@@ -519,7 +521,7 @@
         </li>
         <li class="left-menu__adaptive-sort-item">
             <span class="left-menu__sort-item-title">По цвету</span>
-            <span class="left-menu__sort-item-info">Розовые розы </span>
+            <span class="left-menu__sort-item-info"></span>
             <ul class="left-menu__sort-item-menu">
                 <li class="left-menu__sort-item-menu-title">По цвету</li>
                 <li class="left-menu__sort-item-menu-point">Белые розы</li>
@@ -534,7 +536,7 @@
         </li>
         <li class="left-menu__adaptive-sort-item">
             <span class="left-menu__sort-item-title">Повод</span>
-            <span class="left-menu__sort-item-info">8 марта</span>
+            <span class="left-menu__sort-item-info"></span>
             <ul class="left-menu__sort-item-menu">
                 <li class="left-menu__sort-item-menu-title">Повод</li>
                 <li class="left-menu__sort-item-menu-point">День Рождения</li>
@@ -859,10 +861,45 @@
         </li>
     </ul>
 </nav>
-                    <div class="cards catalog__sort">
-    <div class="cards__sort sort">
+<button class="button-for-left-menu">Фильтр</button>
+                    <div class="catalog__sort sort">
+
+
+
+
+
+    <div class="drop-1 dropdown">
+    <div class="click-zone dropdown__btn">
+        <span class="click-zone dropdown__btn-info">
+            <span class="click-zone dropdown__prev-info">Кому</span>
+            <span class="click-zone dropdown__this-item"></span>
+            <svg class="click-zone dropdown__arrow"><use class="click-zone" xlink:href="../images/Sprite.svg#full-down-arrow"></use></svg> 
+        </span>
     </div>
+    <ul class="dropdown__list">
+        <li>Маме</li><li>Бабушке</li><li>Начальнице</li><li>Ребенку</li><li>Бизнес партнеру</li>
+    </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>            
+
+
+
+
                     <div class="catalog__cards"></div>
                 </section>
             </section>
@@ -1295,5 +1332,5 @@
 
     </div>
   </body>
-  <script src="js/catalog.min.js?_v=20231110105656"></script>
+  <script src="js/catalog.min.js?_v=20231110125716"></script>
 </html>
