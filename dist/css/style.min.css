@@ -3208,8 +3208,6 @@ body {
     padding-top: 42px;
     padding-left: 17px;
     padding-right: 20px;
-<<<<<<< HEAD
-=======
   }
 }
 
@@ -3435,6 +3433,5 @@ body {
 @media (max-width: 587px) {
   .video-review__prew-btn svg, .video-review__next-btn svg {
     width: 45px;
->>>>>>> vlada-dev
   }
 }
