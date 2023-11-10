@@ -23,5 +23,28 @@
 @import 'main/present';
 @import 'main/forum';
 
-@import 'components/mainMenu/mainMenu.scss';
-@import 'components/categoryMenu/categoryMenu.scss';
+//about-us
+@import 'about-us/bread-crumbs';
+@import 'about-us/title';
+@import 'components/flowers-grid';
+@import 'about-us/about-us';
+
+//delivery
+@import 'delivery/bread-crumbs';
+@import 'delivery/title';
+@import 'delivery/delivery-info';
+
+//forum
+@import 'forum/bread-crumbs';
+@import 'forum/title';
+@import 'forum/forum-accordion';
+
+//present
+@import 'present/bread-crumbs';
+@import 'present/title';
+@import 'present/present-grid';
+
+//video-review
+@import 'video-review/bread-crumbs';
+@import 'video-review/title';
+@import 'video-review/video-review-page';

@@ -1,57 +1,5 @@
-@charset "UTF-8";
-@font-face {
-  font-family: AbyssinicaSIL;
-  font-display: swap;
-  src: url("../fonts/AbyssinicaSIL-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Aclonica;
-  font-display: swap;
-  src: url("../fonts/Aclonica-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: AguafinaScript;
-  font-display: swap;
-  src: url("../fonts/AguafinaScript-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Acme;
-  font-display: swap;
-  src: url("../fonts/Acme-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Actor;
-  font-display: swap;
-  src: url("../fonts/Actor-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: PTSans;
-  font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-/* Шаблоны (заготовки)
-* @extend %имя шаблона;
-*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  color: #000;
-}
 
+<<<<<<< HEAD
 *:before,
 *:after {
   box-sizing: border-box;
@@ -3086,3 +3034,5 @@ body._lock {
     display: none;
   }
 }
+=======
+>>>>>>> dde058af291e96c95f768e85639c4c113be5b271
