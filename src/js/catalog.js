@@ -14,7 +14,6 @@ class Catalog{
         this.deletFilter();
     }
     adaptiveFilter(){
-        console.log(this.leftMenuBtn)
         this.leftMenuBtn.addEventListener('click', () => {
             this.menuLeft.classList.add('left-menu_active');
             document.body.style.overflow = 'hidden';

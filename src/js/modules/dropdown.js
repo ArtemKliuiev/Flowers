@@ -15,7 +15,6 @@ export default class Dropdown {
     }
     dropMain(){
         document.addEventListener('click', (e) => {
-            console.log(e)
             if(e.target.classList[0] !== this.click.classList[0]){
                 this.drop.classList.remove("dropdown_active");
             }else{
