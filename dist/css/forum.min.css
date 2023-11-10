@@ -1029,7 +1029,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
-<<<<<<< HEAD
   position: relative;
 }
 .footer__bg .bg-first {
@@ -1073,8 +1072,6 @@ body {
   .footer__bg .bg-second {
     display: none;
   }
-=======
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 }
 .footer-title {
   display: flex;
@@ -1085,18 +1082,6 @@ body {
 .footer__map {
   position: relative;
   padding-bottom: 75px;
-<<<<<<< HEAD
-=======
-  background-image: url("../images/footer/first-line-bg.png");
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (max-width: 1920px) {
-  .footer__map {
-    background-size: inherit;
-  }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 }
 @media (max-width: 835px) {
   .footer__map {
@@ -1256,18 +1241,6 @@ body {
   padding-top: 42px;
   padding-bottom: 36px;
   position: relative;
-<<<<<<< HEAD
-=======
-  background-image: url("../images/footer/last-line-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-}
-@media (max-width: 1920px) {
-  .footer__links {
-    background-size: inherit;
-  }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 }
 @media (max-width: 1100px) {
   .footer__links.links__main {
@@ -2287,14 +2260,11 @@ body {
   position: relative;
   margin-bottom: 173px;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .present {
     margin-bottom: 83px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .present__title {
   color: #333;
   text-align: center;
@@ -2381,14 +2351,11 @@ body {
   position: relative;
   margin-bottom: 35px;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum {
     margin-bottom: 77px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__title {
   color: #000;
   text-align: center;
@@ -2397,8 +2364,6 @@ body {
   font-weight: 400;
   line-height: 18px;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum__title {
     font-size: 24px;
@@ -2427,16 +2392,11 @@ body {
     text-decoration-line: underline;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__our-news-wrapper {
   display: flex;
   gap: 30px;
   position: absolute;
-<<<<<<< HEAD
-  top: 0;
-=======
   top: 13px;
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
   right: 0;
 }
 .forum__our-news-wrapper p {
@@ -2449,13 +2409,6 @@ body {
 }
 .forum__card-wrapper {
   display: flex;
-<<<<<<< HEAD
-  justify-content: space-between;
-}
-.forum__card {
-  max-width: 460px;
-  height: 640px;
-=======
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -2487,7 +2440,6 @@ body {
     width: 287px;
     height: 324px;
   }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 }
 .forum__card-bottom {
   width: 460px;
@@ -2500,8 +2452,6 @@ body {
   flex-direction: column;
   justify-content: end;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum__card-bottom {
     width: 287px;
@@ -2509,7 +2459,6 @@ body {
     padding: 9px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__card-title {
   color: #fff;
   font-family: Acme;
@@ -2519,8 +2468,6 @@ body {
   max-width: 427px;
   padding-bottom: 32px;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum__card-title {
     font-size: 14px;
@@ -2529,7 +2476,6 @@ body {
     line-height: 18px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__card-text {
   color: #fff;
   font-family: Aclonica;
@@ -2538,8 +2484,6 @@ body {
   line-height: 18px;
   max-width: 422px;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum__card-text {
     font-size: 12px;
@@ -2547,15 +2491,12 @@ body {
     line-height: 15px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__card-img {
   text-align: center;
   position: relative;
   top: 80px;
   z-index: 2;
 }
-<<<<<<< HEAD
-=======
 @media (max-width: 575px) {
   .forum__card-img {
     top: 6px;
@@ -2567,7 +2508,6 @@ body {
     height: 214px;
   }
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 .forum__swiper-pagination {
   display: none;
 }
@@ -2576,8 +2516,6 @@ body {
     display: block;
   }
 }
-<<<<<<< HEAD
-=======
 .forum__our-arrow-wrapper {
   display: flex;
   position: relative;
@@ -2590,7 +2528,6 @@ body {
   position: absolute;
   right: 6px;
 }
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 
 .forum__swiper-pagination .swiper-pagination-bullet {
   background: #956d84 !important;
@@ -2615,7 +2552,12 @@ body {
   transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
+@media (max-width: 575px) {
+  .forum__swiper-pagination {
+    bottom: 54px !important;
+  }
+}
+
 .bread-crumbs {
   display: flex;
   gap: 30px;
@@ -2968,76 +2910,6 @@ body {
 @media (max-width: 768px) {
   .delivery-info__contacts .contacts__contact:nth-child(3) a:last-child {
     margin-left: 35px;
-=======
-@media (max-width: 575px) {
-  .forum__swiper-pagination {
-    bottom: 54px !important;
-  }
-}
-
-.page {
-  background: #fff;
-  position: relative;
-  width: 100%;
-}
-.page__bg img {
-  position: absolute;
-}
-.page__bg .bg__first {
-  left: 0;
-  top: -63px;
-}
-@media (max-width: 1760px) {
-  .page__bg .bg__first {
-    left: -50px;
-  }
-}
-@media (max-width: 1515px) {
-  .page__bg .bg__first {
-    display: none;
-  }
-}
-.page__bg .bg__second {
-  right: 0;
-  top: 118px;
-}
-@media (max-width: 1760px) {
-  .page__bg .bg__second {
-    right: -50px;
-  }
-}
-@media (max-width: 1515px) {
-  .page__bg .bg__second {
-    display: none;
-  }
-}
-.page__bg .bg__third {
-  left: 0;
-  bottom: -263px;
-}
-@media (max-width: 1760px) {
-  .page__bg .bg__third {
-    left: -50px;
-  }
-}
-@media (max-width: 1515px) {
-  .page__bg .bg__third {
-    display: none;
-  }
-}
-.page__bg .bg__fourth {
-  right: 0;
-  bottom: -265px;
-}
-@media (max-width: 1760px) {
-  .page__bg .bg__fourth {
-    right: -110px;
-  }
-}
-@media (max-width: 1515px) {
-  .page__bg .bg__fourth {
-    display: none;
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
   }
 }
 
@@ -3164,7 +3036,6 @@ body {
   .forum-accordion__last-text {
     margin-top: 25px;
   }
-<<<<<<< HEAD
 }
 
 .bread-crumbs {
@@ -3403,6 +3274,4 @@ body {
   .page__bg .bg__fourth {
     display: none;
   }
-=======
->>>>>>> b65a06c2e028239adaf628bc80013aec2fdfe518
 }
