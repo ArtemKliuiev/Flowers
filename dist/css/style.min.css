@@ -3208,5 +3208,233 @@ body {
     padding-top: 42px;
     padding-left: 17px;
     padding-right: 20px;
+<<<<<<< HEAD
+=======
+  }
+}
+
+.bread-crumbs {
+  display: flex;
+  gap: 30px;
+  font-family: Aguafina Script, sans-serif;
+  margin-top: 9px;
+  margin-bottom: 33px;
+  background: transparent;
+}
+.bread-crumbs a {
+  color: #828282;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
+.bread-crumbs a:not(:last-child) {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .bread-crumbs {
+    display: none;
+  }
+}
+
+.title {
+  background: transparent;
+}
+.title h1 {
+  color: #333;
+  text-align: center;
+  font-family: Actor, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 57px;
+}
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 44px;
+    letter-spacing: 1px;
+    line-height: 19px;
+  }
+}
+
+.video-review__catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 0px 18px;
+}
+@media (max-width: 587px) {
+  .video-review__catalog {
+    gap: 0px 18px;
+    margin-bottom: 29px;
+  }
+}
+.video-review__catalog .catalog__item {
+  margin-top: 63px;
+}
+@media (max-width: 587px) {
+  .video-review__catalog .catalog__item {
+    margin-top: 31px;
+  }
+}
+@media (max-width: 1163px) {
+  .video-review__catalog .catalog__item:last-child {
+    display: none;
+  }
+}
+@media (max-width: 1163px) {
+  .video-review__catalog .catalog__item:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 587px) {
+  .video-review__catalog .catalog__item:nth-child(6) {
+    display: none;
+  }
+}
+.video-review__video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  padding: 0 20px;
+}
+.video-review__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  padding: 0 20px;
+}
+.video-review__video .video-review_bg {
+  width: 100%;
+}
+.video-review__video .play {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 587px) {
+  .video-review__video .play {
+    width: 70px;
+  }
+}
+.video-review__about {
+  width: 100%;
+  height: 351px;
+  background-color: #956D84;
+  margin-top: -202px;
+  padding: 45px 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+@media (max-width: 587px) {
+  .video-review__about {
+    height: 300px;
+    margin-top: -176px;
+    padding: 35px 6px;
+  }
+}
+.video-review__about .about__date {
+  color: white;
+  font-family: Aclonica;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 1381px) {
+  .video-review__about .about__date {
+    font-size: 12px;
+  }
+}
+.video-review__about .about__who-send {
+  color: white;
+  text-align: center;
+  font-family: Acme, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 287px;
+  letter-spacing: 0.6px;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+@media (max-width: 1381px) {
+  .video-review__about .about__who-send {
+    font-size: 18px;
+  }
+}
+@media (max-width: 587px) {
+  .video-review__about .about__who-send {
+    padding: 0 30px;
+    padding-top: 18px;
+  }
+}
+.video-review__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 15px;
+  margin-bottom: 100px;
+}
+@media (max-width: 587px) {
+  .video-review__pagination {
+    gap: 20px;
+  }
+}
+.video-review__pagination-items {
+  font-family: AguafinaScript;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+@media (max-width: 587px) {
+  .video-review__pagination-items {
+    font-size: 16px;
+    gap: 0;
+  }
+}
+.video-review__pagination-items .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 4px;
+  color: #BDBDBD;
+}
+@media (max-width: 587px) {
+  .video-review__pagination-items .pagination {
+    width: 38px;
+    height: 38px;
+  }
+}
+.video-review__pagination-items .pagination.active {
+  background-color: #D6C5CF;
+  color: white;
+}
+@media (max-width: 587px) {
+  .video-review__pagination-items .pagination:last-child {
+    display: none;
+  }
+}
+@media (max-width: 587px) {
+  .video-review__pagination-items .pagination:nth-child(6) {
+    display: none;
+  }
+}
+@media (max-width: 587px) {
+  .video-review__prew-btn svg, .video-review__next-btn svg {
+    width: 45px;
+>>>>>>> vlada-dev
   }
 }
