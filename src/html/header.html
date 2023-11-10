@@ -207,9 +207,7 @@
   <div class="header__bottom-header bottom-header">
     <div class="bottom-header__container">
       <div class="bottom-header__logo-block">
-        <div class="bottom-header__burger-box">
-          <img src="@img/header/burger.svg" alt="burger" />
-        </div>
+        <div class="bottom-header__burger-box"><span></span></div>
         <div class="bottom-header__logo-box">
           <img src="@img/logo.png" alt="Logotype" class="bottom-header__logo" />
         </div>
@@ -395,7 +393,10 @@
             </ul>
           </li>
         </ul>
+        @@include('./component/mainMenu/mainMenu.html')
+        @@include('./component/categoryMenu/categoryMenu.html')
       </div>
+
       <div class="bottom-header__info-block">
         <div class="bottom-header__info-block-wrapper">
           <div class="bottom-header__social-block">

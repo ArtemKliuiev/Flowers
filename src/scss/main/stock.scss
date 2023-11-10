@@ -47,6 +47,24 @@
     width: 16px;
     height: 27px;
   }
+
+  &__flowers-right-top {
+    position: absolute;
+    top: 910px;
+    right: 0;
+  }
+
+  &__flowers-right-bottom {
+    position: absolute;
+    right: 0;
+    top: 1719px;
+  }
+
+  &__flowers-left {
+    position: absolute;
+    left: 0;
+    top: 1421px;
+  }
   
 }
 

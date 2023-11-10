@@ -144,6 +144,18 @@
       width: 100%;
     }
   }
+
+  &__flowers-right {
+    position: absolute;
+    right: 0;
+    top: 41px;
+  }
+
+  &__flowers-left {
+    position: absolute;
+    left: 0;
+    top: 456px;
+  }
 }
 
 .bottom-sertificate {

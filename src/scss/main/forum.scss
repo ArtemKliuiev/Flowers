@@ -1,9 +1,9 @@
 .forum {
   position: relative;
-  margin-bottom: 35px;
-  @media(max-width: 575px) {
+  margin-bottom: 80px;
+  @media (max-width: 575px) {
     margin-bottom: 77px;
-  } 
+  }
 
   &__title {
     color: #000;
@@ -30,14 +30,13 @@
       display: block;
       p {
         color: #956d84;
-      text-align: center;
-      font-family: Actor;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 18px;
-      text-decoration-line: underline;
+        text-align: center;
+        font-family: Actor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        text-decoration-line: underline;
       }
-      
     }
   }
 
@@ -47,6 +46,7 @@
     position: absolute;
     top: 13px;
     right: 0;
+    z-index: 2;
 
     p {
       color: #956d84;
@@ -175,6 +175,12 @@
     position: absolute;
     right: 6px;
   }
+
+  &__flowers-right {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+  }
 }
 
 .forum__swiper-pagination .swiper-pagination-bullet {
@@ -202,8 +208,7 @@
 }
 
 .forum__swiper-pagination {
-  @media(max-width: 575px) {
+  @media (max-width: 575px) {
     bottom: 54px !important;
-  } 
-  
+  }
 }
