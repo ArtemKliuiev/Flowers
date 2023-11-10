@@ -1,6 +1,5 @@
 .certificate {
   margin-bottom: 152px;
-  position: relative;
   @media (max-width: 575px) {
     margin-bottom: 63px;
   }
@@ -148,13 +147,13 @@
 
   &__flowers-right {
     position: absolute;
-    right: -596px;
+    right: 0;
     top: 41px;
   }
 
   &__flowers-left {
     position: absolute;
-    left: -585px;
+    left: 0;
     top: 456px;
   }
 }

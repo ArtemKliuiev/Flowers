@@ -5,7 +5,6 @@ const presentCardWrapper = document.querySelectorAll('.present__wrapper');
 export default class productsPresent {
   constructor() {
     this.db = firebase.getFirestore();
-    this.loadCards();
   }
   async loadCards() {
     const allCards = query(

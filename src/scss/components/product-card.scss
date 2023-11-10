@@ -66,6 +66,8 @@
 
     img {
       height: 280px;
+      max-width: 345px;
+      object-fit: contain;
 
       @media (max-width: 1420px) {
         max-width: 100%;

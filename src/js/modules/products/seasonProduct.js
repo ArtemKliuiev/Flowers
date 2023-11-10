@@ -5,7 +5,6 @@ const seasonCardWrapper = document.querySelectorAll('.season__wrapper');
 export default class productsSeason {
   constructor() {
     this.db = firebase.getFirestore();
-    this.loadCards();
   }
   async loadCards() {
     const allCards = query(

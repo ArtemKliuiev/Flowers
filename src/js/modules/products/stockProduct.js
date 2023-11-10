@@ -3,11 +3,9 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
 
 
-
   export default class productsStock {
     constructor() {
       this.db = firebase.getFirestore();
-      this.loadCards();
     }
     async loadCards() {
       const allCards = query(
