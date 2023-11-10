@@ -927,6 +927,25 @@
   }
 
   &__item--type--categories {
+    &:hover {
+      .pull-down__list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        pointer-events: unset;
+      }
+    }
+  }
+
+  &__item--type--information {
+    &:hover {
+      .pull-down__list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        pointer-events: unset;
+      }
+    }
   }
 
   &__link {
@@ -934,9 +953,4 @@
       color: $cheryColor;
     }
   }
-
-  &__item--type--information {
-  }
 }
-
-

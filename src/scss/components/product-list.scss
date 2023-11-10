@@ -1,17 +1,7 @@
 .categories-list {
-   overflow: hidden;
-   visibility: hidden;
-   opacity: 0;
-   pointer-events: none;
-      
   &__category {
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
-
-    &:hover {
-      background: $cheryColor;
-      color: $whiteColor;
-    }
   }
 }
 
@@ -23,14 +13,16 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+      .pull-down__arrow {
+         transform: rotateZ(180deg);
+       }
+    }
   }
 
   &__title {
     margin: 0rem 0.3571rem 0rem 0rem;
-
-    &:hover {
-      color: $cheryColor;
-    }
   }
 
   &__arrow {
@@ -49,14 +41,17 @@
     top: calc(100%); // + 10px
     right: -5px;
     max-width: 100%;
-    min-width: max-content;
-    max-height: 0;
+    min-width: 240px;
     padding: 0px 0px 0px 0px;
     background: $whiteColor;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
     transition: $standartTrans;
     z-index: 1;
     display: block;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
 
     &::-webkit-scrollbar {
       width: 0em;
@@ -77,30 +72,20 @@
     }
   }
 
-  &.open,
-  &:hover {
-    .pull-down {
-      &__arrow {
-        transform-origin: center 30%;
-        transform: rotateZ(180deg);
-      }
-
-      &__list {
-        max-height: 145px;
-        //padding: 17px 23px 15px 14px;
-      }
-    }
-  }
   &__secondary-list {
     padding: 17px 0;
     min-width: 240px;
     position: absolute;
-    left: 110px;
+    left: 100%;
     border: 1px solid #956d84;
     background: #ffff;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
   }
   &__secondary-list-item {
     min-height: 40px;
@@ -113,6 +98,26 @@
     font-size: 16px;
     text-align: left;
     font-weight: 400;
-    line-height: 18px; /* 112.5% */
+    line-height: 18px;
+    cursor: pointer;
+    &:hover {
+      background-color: #956d84;
+      color: #fff;
+    }
+  }
+}
+
+#menuHover {
+  &:hover {
+    background-color: #956d84;
+    .pull-down__title {
+      color: #fff;
+    }
+    .pull-down__secondary-list {
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
+      pointer-events: auto;
+    }
   }
 }
