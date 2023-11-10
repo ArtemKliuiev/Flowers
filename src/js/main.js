@@ -7,7 +7,7 @@ import forumSwiper from './modules/swiper';
 import productsStock from './modules/stockProduct';
 import productsSeason from './modules/seasonProduct';
 import productsPresent from './modules/presentProduct';
-
+import videoCover from './modules/video-play';
 
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');
