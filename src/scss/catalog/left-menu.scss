@@ -1,7 +1,5 @@
 // 375px, 576px, 768px, 1024px, 1420px, 1650px, 1920px
-html{
-    overflow: hidden;
-}
+
 .left-menu {
     overflow: auto;
     position: relative;
@@ -50,13 +48,10 @@ html{
             transform: rotate(45deg);
         }
     }
-    &__adaptive-delete-filters {
+    &__button{
         display: none;
         width: 122px;
         height: 35px;
-        border-radius: 5px;
-        background: #956D84;
-        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
         margin: 20px 0 24px 14px;
         @media (max-width: 768px) {
             display: block;
@@ -70,17 +65,17 @@ html{
     }
     &__sort-item-menu {
         margin-top: 72px;
-        display: none;
         position: fixed;
         z-index: 1;
         background-color: $whiteColor;
         top: 0;
-        left: 50%;
+        opacity: 0;
+        transition: opacity 1s ease 0s;
+        left: -200%;
         transform: translateX(-50%);
         width: 91%;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
         border: 1px solid #956D84;
-
     }
     &__sort-item-menu-title {
         color: $cheryColor;
@@ -108,7 +103,8 @@ html{
         &_active{
             .left-menu {
                 &__sort-item-menu {
-                    display: block;
+                    opacity: 1;
+                    left: 50%;
                 }
             }
         }
@@ -261,17 +257,34 @@ html{
         width: 100%;
         height: 100%;
         top: 0;
-        left: 0;
+        left: -200%;
+        transition: all 300ms ease 0s;
+    }
+    &_active{
+        @media (max-width: 768px) {
+            left: 0;
+        }
     }
     &_sort-active{
+        overflow: hidden;
         &::before{
             content: '';
             position: absolute;
+            z-index: 1;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.43);
         }
     }
 }
-
+.button-for-left-menu{
+    display: none;
+    height: 100%;
+    background-color: #956D84;
+    line-height: 100%;
+    text-align: center;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
 
