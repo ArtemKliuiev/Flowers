@@ -2214,6 +2214,25 @@ body._lock {
   align-items: center;
 }
 
+#categoryMenu {
+  transition: all 0.4s;
+  position: static;
+  top: -100%;
+}
+#categoryMenu._active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  height: 100%;
+  overflow: auto;
+}
+#categoryMenu .mobile-menu__body {
+  justify-content: unset;
+}
+
 .certificate {
   margin-bottom: 152px;
 }

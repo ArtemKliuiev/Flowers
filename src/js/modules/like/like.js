@@ -4,8 +4,6 @@ async function productLike() {
   const headerLike = document.querySelector('.top-header__favorite-amount p');
   const bottomHeaderLike = document.querySelector('.bottom-header__favorite-amount p');
   const bottomHeaderLikeMobile = document.querySelector('.bottom-header__favorite-amount-mobile p');
-  const test = document.querySelectorAll('.product-card__top-sales');
-  console.log(test);
   
   likeEl.forEach((like) => {
     like.addEventListener('click', () => {
