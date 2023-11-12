@@ -461,7 +461,7 @@
         border-radius: 10px;
       }
       &._active {
-        z-index: 100;
+        z-index: 6;
         position: absolute;
         right: 28px;
         top: 30px;
@@ -626,8 +626,6 @@
     flex: 1 1 70.7317%;
   }
 
-  &__menu {
-  }
 
   &__info-block {
     margin-top: 10px;
@@ -927,93 +925,30 @@
   }
 
   &__item--type--categories {
+    &:hover {
+      .pull-down__list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        pointer-events: unset;
+      }
+    }
+  }
+
+  &__item--type--information {
+    &:hover {
+      .pull-down__list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        pointer-events: unset;
+      }
+    }
   }
 
   &__link {
     &:hover {
       color: $cheryColor;
-    }
-  }
-
-  &__item--type--information {
-  }
-}
-
-.pull-down {
-  position: relative;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  &__title {
-    margin: 0rem 0.3571rem 0rem 0rem;
-
-    &:hover {
-      color: $cheryColor;
-    }
-  }
-
-  &__arrow {
-    width: 0.7143rem;
-    height: 0.4081rem;
-
-    svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__list {
-    position: absolute;
-    top: calc(100%); // + 10px
-    right: -5px;
-    max-width: 100%;
-    min-width: max-content;
-    max-height: 0;
-    padding: 0px 0px 0px 0px;
-    background: $whiteColor;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    transition: $standartTrans;
-    z-index: 1;
-    display: block; //!!!!!
-
-    &::-webkit-scrollbar {
-      width: 0em;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
-    }
-  }
-
-  &__list-item {
-    padding: 12px 14px 12px 14px;
-    transition: $standartTrans;
-
-    &:hover {
-      background: $cheryColor;
-      color: $whiteColor;
-    }
-  }
-
-  &.open,
-  &:hover {
-    .pull-down {
-      &__arrow {
-        transform-origin: center 30%;
-        transform: rotateZ(180deg);
-      }
-
-      &__list {
-        max-height: 145px;
-        //padding: 17px 23px 15px 14px;
-      }
     }
   }
 }
