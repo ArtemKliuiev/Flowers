@@ -1,4 +1,5 @@
 import headerDropdown from './modules/headerDropdown';
+import headerDropdownMobile from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
 import seasonSwiper from './modules/swiper';

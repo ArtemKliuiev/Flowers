@@ -381,3 +381,27 @@
   z-index: 10;
   text-align: center;
 }
+
+.flowers-right {
+  @media(max-width: 1765px) {
+    right: -85px !important;
+  }
+  @media(max-width: 1625px) {
+    right: -135px !important;
+  }
+  @media(max-width: 1525px) {
+    display: none;
+  }
+}
+
+.flowers-left {
+  @media(max-width: 1765px) {
+    left: -85px !important;
+  }
+  @media(max-width: 1625px) {
+    left: -135px !important;
+  }
+  @media(max-width: 1525px) {
+    display: none;
+  }
+}
