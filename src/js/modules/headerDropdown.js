@@ -15,3 +15,26 @@ function headerDropdown() {
 }
 
 headerDropdown();
+
+function headerDropdownMobile() {
+  const dropdownItems = document.querySelectorAll('.mobile-menu-dropdowns__item--witharrow');
+    dropdownItems.forEach((dropdownItem) => {
+      const arrow = dropdownItem.querySelector('svg');
+      const dropdown = dropdownItem.querySelector('.mobile-menu-dropdowns__body-second');
+
+      dropdownItem.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(dropdown) {
+          dropdown.classList.toggle('active');
+          arrow.classList.toggle('active');
+
+          dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+          });
+        }
+        
+      })
+    })
+
+}
+headerDropdownMobile();

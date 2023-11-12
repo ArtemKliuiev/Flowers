@@ -64,6 +64,7 @@
     background: #333;
     min-height: 72px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 28px 0 19px;
     span {
@@ -77,6 +78,14 @@
     flex-direction: column;
     gap: 73px;
     padding-top: 20px;
+  }
+
+  &__close {
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    top: 4px;
+    right: 2px;
   }
 }
 
@@ -119,6 +128,18 @@
     display: flex;
     flex-direction: column;
   }
+  &__body-second {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item-second--witharrow {
+    font-size: 14px;
+    color: grey;
+  }
   &__item {
     &--contact {
       a {
@@ -152,6 +173,14 @@
       background: unset;
       border-bottom: 1px solid #d7d6d6a8;
     }
+
+    button svg {
+      transform: rotateZ(90deg);
+
+      &.active {
+        transform: rotateZ(270deg);
+      }
+    }
   }
 }
 
@@ -170,3 +199,4 @@
     }
   }
 }
+
