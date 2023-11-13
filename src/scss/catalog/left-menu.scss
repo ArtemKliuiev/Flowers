@@ -280,10 +280,7 @@
 .button-for-left-menu{
     display: none;
     height: 100%;
-    background-color: #956D84;
-    line-height: 100%;
-    text-align: center;
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         display: block;
     }
 }

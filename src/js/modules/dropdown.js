@@ -1,8 +1,7 @@
 export default class Dropdown {
-    constructor(id){
-        this.drop = document.querySelector(id);
+    constructor(className){
+        this.drop = document.querySelector(className);
         this.btn = this.drop.querySelector('.dropdown__btn');
-        this.click = this.drop.querySelector('.click-zone');
         this.list = this.drop.querySelector('.dropdown__list');
         this.items = this.drop.querySelectorAll('li');
         this.dropThisItem = this.drop.querySelector('.dropdown__this-item');
@@ -11,19 +10,21 @@ export default class Dropdown {
         this.observer(this.btn, this.list);
     }
     startValue(){
-        this.dropThisItem.innerHTML = this.items[0].textContent
+        this.dropThisItem.textContent = this.items[0].textContent
     }
     dropMain(){
         document.addEventListener('click', (e) => {
-            if(e.target.classList[0] !== this.click.classList[0]){
+            if (!this.drop.contains(e.target)) {
                 this.drop.classList.remove("dropdown_active");
-            }else{
-                this.drop.classList.toggle("dropdown_active");
             }
+        });
+        this.btn.addEventListener('click', () => {
+            this.drop.classList.toggle("dropdown_active");
         })
         this.items.forEach(item => {
             item.addEventListener('click', () => {
-                this.dropThisItem.innerHTML = item.innerHTML
+                this.dropThisItem.textContent = item.innerHTML
+                this.drop.classList.remove("dropdown_active");
             })
         });
     }

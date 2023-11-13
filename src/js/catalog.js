@@ -7,7 +7,10 @@ class Catalog{
         this.leftMenuBtn = document.querySelector('.button-for-left-menu');
         this.deletFilterBtn = document.querySelector('.left-menu__adaptive-delete-filters');
         this.exitApativeLeftMenu = document.querySelector('.left-menu__adaptive-back');
-        this.dropdown = new Dropdown('.drop-1');
+        this.dropdown = new Dropdown('.drop-person');
+        this.dropdown = new Dropdown('.drop-color');
+        this.dropdown = new Dropdown('.drop-reason');
+        this.dropdown = new Dropdown('.drop-sort');
         this.adaptiveFilter()
         this.tabsFilter();
         this.tabsSortAdaptive();
