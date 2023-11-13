@@ -1,26 +1,24 @@
 <div class="@@parents-class sort">
-
-
-
-
-
-    @@include('../component/dropdowm.html', {
-        'class': 'drop-1',
-        'prev': 'Кому',
-        'li':'<li>Маме</li><li>Бабушке</li><li>Начальнице</li><li>Ребенку</li><li>Бизнес партнеру</li>'
-    })
-
-
-
-
-
-
-
-
-
-
-
-
+        @@include('../component/dropdowm.html', {
+            'class': 'drop-person sort__drop',
+            'prev': 'Кому',
+            'li':'<li>Маме</li><li>Бабушке</li><li>Начальнице</li><li>Ребенку</li><li>Ребенку</li><li>Бизнес партнеру</li>'
+        })
+        @@include('../component/dropdowm.html', {
+            'class': 'drop-color sort__drop',
+            'prev': 'По цвету',
+            'li':'<li>Красные розы</li><li>Белые розы</li><li>Кремовые розы</li><li>Синие/голубые розы</li><li>Оранжевые розы</li><li>Розовые розы</li><li>Жёлтые розы</li><li>Черные розы</li>'
+        })
+        @@include('../component/dropdowm.html', {
+            'class': 'drop-reason sort__drop',
+            'prev': 'Повод',
+            'li':'<li>8 марта</li><li>Свадьба</li><li>Юбилей</li><li>День Матери</li><li>День Влюбленных</li><li>Новоселье</li><li>Выпускной</li><li>Извинения</li>'
+        })
+        @@include('../component/dropdowm.html', {
+            'class': 'drop-sort sort__drop sort__drop-sort',
+            'prev': 'Сортировака',
+            'li':'<li>Популярность</li><li>Цена</li><li>Новинки</li><li>Акции</li>'
+        })
 </div>            
 
 

@@ -23,12 +23,38 @@
         span{
             position: relative;
         }
+        @media (max-width:768px) {
+            border-radius: 5px;
+            border: 1px solid $cheryColor;
+        }
+    }
+    &__btn-info{
+        display: flex;
+        align-items: center;
+        padding-right: 30px;
+        @media (max-width:768px) {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+        }
     }
     &__this-item{
+        white-space: nowrap;
+        display: inline-block;
+        max-width: 140px;
+        overflow: hidden;
         color: $mainDarkColor;
         font-size: 18px;
         font-weight: 400;
         text-decoration-line: underline;
+        @media (max-width:1420px) {
+            max-width: 180px;
+        }
+        @media (max-width:768px) {
+            text-decoration-line: none;
+            color: $cheryColor;
+            font-size: 14px;
+        }
     }
     &__wrapper{
         max-width: 200px;
@@ -42,33 +68,33 @@
         font-weight: 400;
         line-height: 18px;
         margin-right: 13px;
+        @media (max-width:768px) {
+            display: none;
+        }
     }
     &__arrow{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: -18px;
+        right: 12px;
         width: 10px;
         max-height: 6px;
         transition: all 200ms ease 0s;
+        @media (max-width:768px) {
+            display: none;
+        }
     }
     &__list {
         transition: opacity 0s ease 0s;
         position: absolute;
-        top: 64px;
-        left: 0;
         z-index: -10;
         opacity: 0;
         width: 100%;
-        min-width: 240px;
         color: black ;
         max-height: 300px;
         overflow: auto;
         border: 1px solid $cheryColor;
         background: $whiteColor;
-        @media (max-width:768px) {
-            min-width: 150px;
-        }
     }
     li{
         cursor: pointer;
