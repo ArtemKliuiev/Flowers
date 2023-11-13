@@ -20,6 +20,8 @@
 @import 'components/product-list';
 @import 'components/mainMenu/mainMenu';
 @import 'components/categoryMenu/categoryMenu';
+
+//main
 @import 'main/certificate';
 @import 'main/stock';
 @import 'main/season';
@@ -51,3 +53,6 @@
 @import 'video-review/bread-crumbs';
 @import 'video-review/title';
 @import 'video-review/video-review-page';
+
+//order
+@import 'order/order';
