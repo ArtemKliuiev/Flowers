@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/catalog.min.css?_v=20231112190135">
+  <link rel="stylesheet" href="css/catalog.min.css?_v=20231113181246">
   <title>Flowers</title>
 </head>
 
@@ -141,9 +141,11 @@
     <div class="bottom-header__container">
       <div class="bottom-header__logo-block">
         <div class="bottom-header__burger-box"><span></span></div>
-        <div class="bottom-header__logo-box">
-          <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Logotype" class="bottom-header__logo"></picture>
-        </div>
+        <a href="./index.html">
+          <div class="bottom-header__logo-box">
+            <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Logotype" class="bottom-header__logo"></picture>
+          </div>
+        </a>
         <div class="bottom-header__icon-wrapper">
           <a href="#">
             <div class="bottom-header__search">
@@ -1482,37 +1484,62 @@
         </li>
     </ul>
 </nav>
-<button class="button-for-left-menu">Фильтр</button>
+<button class="btn button-for-left-menu">Фильтр</button>
                     <div class="catalog__sort sort">
-
-
-
-
-
-    <div class="drop-1 dropdown">
-    <div class="click-zone dropdown__btn">
-        <span class="click-zone dropdown__btn-info">
-            <span class="click-zone dropdown__prev-info">Кому</span>
-            <span class="click-zone dropdown__this-item"></span>
-            <svg class="click-zone dropdown__arrow"><use class="click-zone" xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
+        <div class="dropdown sort__drop drop-person">
+    <div class="dropdown__btn">
+        <span class="dropdown__btn-info">
+            <span class="dropdown__prev-info">Кому</span>
+            <span class="dropdown__this-item"></span>
+            <svg class="dropdown__arrow"><use class="click-zone" xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
         </span>
     </div>
     <ul class="dropdown__list">
-        <li>Маме</li><li>Бабушке</li><li>Начальнице</li><li>Ребенку</li><li>Бизнес партнеру</li>
+        <li>Маме</li><li>Бабушке</li><li>Начальнице</li><li>Ребенку</li><li>Ребенку</li><li>Бизнес партнеру</li>
     </ul>
 </div>
 
 
+        <div class="dropdown sort__drop drop-color">
+    <div class="dropdown__btn">
+        <span class="dropdown__btn-info">
+            <span class="dropdown__prev-info">По цвету</span>
+            <span class="dropdown__this-item"></span>
+            <svg class="dropdown__arrow"><use class="click-zone" xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
+        </span>
+    </div>
+    <ul class="dropdown__list">
+        <li>Красные розы</li><li>Белые розы</li><li>Кремовые розы</li><li>Синие/голубые розы</li><li>Оранжевые розы</li><li>Розовые розы</li><li>Жёлтые розы</li><li>Черные розы</li>
+    </ul>
+</div>
 
 
+        <div class="dropdown sort__drop drop-reason">
+    <div class="dropdown__btn">
+        <span class="dropdown__btn-info">
+            <span class="dropdown__prev-info">Повод</span>
+            <span class="dropdown__this-item"></span>
+            <svg class="dropdown__arrow"><use class="click-zone" xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
+        </span>
+    </div>
+    <ul class="dropdown__list">
+        <li>8 марта</li><li>Свадьба</li><li>Юбилей</li><li>День Матери</li><li>День Влюбленных</li><li>Новоселье</li><li>Выпускной</li><li>Извинения</li>
+    </ul>
+</div>
 
 
-
-
-
-
-
-
+        <div class="dropdown sort__drop drop-sort sort__drop-sort">
+    <div class="dropdown__btn">
+        <span class="dropdown__btn-info">
+            <span class="dropdown__prev-info">Сортировака</span>
+            <span class="dropdown__this-item"></span>
+            <svg class="dropdown__arrow"><use class="click-zone" xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
+        </span>
+    </div>
+    <ul class="dropdown__list">
+        <li>Популярность</li><li>Цена</li><li>Новинки</li><li>Акции</li>
+    </ul>
+</div>
 
 
 </div>            
@@ -1952,5 +1979,5 @@
 
     </div>
   </body>
-  <script src="js/catalog.min.js?_v=20231112190135"></script>
+  <script src="js/catalog.min.js?_v=20231113181246"></script>
 </html>
