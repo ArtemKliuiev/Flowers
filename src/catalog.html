@@ -14,9 +14,11 @@
                 <section class="catalog__main">
                     @@include('html/catalog/left-menu.html', {'parents-class': 'catalog__menu'})
                     @@include('html/catalog/sort.html', {'parents-class': 'catalog__sort'})
-                    <div class="catalog__cards"></div>
+                    @@include('html/catalog/cards.html', {'parents-class': 'catalog__cards'})
                 </section>
+                @@include('html/catalog/bottom-info.html', {'parents-class': 'catalog__bottom-info'})
             </section>
+            @@include('html/catalog/background.html')
         </div>
       </main>
       @@include('html/footer.html') @@include('html/svg-sprite.html')
