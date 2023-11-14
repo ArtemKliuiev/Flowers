@@ -1,0 +1,360 @@
+.basket {
+  margin-top: 9px;
+  margin-bottom: 127px;
+  // .basket__nav
+
+  &__nav {
+    display: flex;
+    gap: 37px;
+    margin-bottom: 47px;
+    a {
+      color: #828282;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+
+      &:last-child {
+        text-decoration-line: none;
+      }
+    }
+  }
+
+  // .basket__title
+
+  &__title {
+    color: #333;
+    text-align: center;
+    font-family: Actor;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 100px;
+  }
+
+  // .basket__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .basket__wrapper-left
+
+  &__wrapper-left {
+  }
+
+  // .basket__wrapper-text
+
+  &__wrapper-text {
+    display: flex;
+    padding-left: 170px;
+    gap: 145px;
+    margin-bottom: 11px;
+    p {
+      color: #bdbdbd;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-card
+
+  &__wrapper-card {
+  }
+
+  &__card-center-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+  }
+
+  // .basket__card
+
+  &__card {
+    border: 1px solid #828282;
+    padding: 26px 70px 26px 26px;
+    display: flex;
+    width: 980px;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+
+  // .basket__card-img
+
+  &__card-img {
+    img {
+      width: 83px;
+      height: 104px;
+    }
+  }
+
+  // .basket__card-name
+
+  &__card-name {
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__card-price
+
+  &__card-price {
+  }
+
+  // .basket__card-new-price
+
+  &__card-new-price {
+    color: #333;
+    font-family: Acme;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  // .basket__card-old-price
+
+  &__card-old-price {
+    color: #bdbdbd;
+    font-family: Acme;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-line: line-through;
+  }
+
+  // .basket__card-num-wrapper
+
+  &__card-num-wrapper {
+    width: 94px;
+    height: 42px;
+    border: 1px solid #956d84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  // .basket__card-arrow-left
+
+  &__card-arrow-left {
+    cursor: pointer;
+  }
+
+  // .basket__card-num
+
+  &__card-num {
+    p {
+      color: #333;
+      font-family: AguafinaScript;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__card-arrow-right
+
+  &__card-arrow-right {
+    cursor: pointer;
+  }
+
+  // .basket__card-all-price
+
+  &__card-all-price {
+    display: flex;
+    align-items: center;
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__card-del-wrapper
+
+  &__card-del-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  // .basket__card-del
+
+  &__card-del {
+    cursor: pointer;
+  }
+
+  &__like {
+    top: 42px;
+    right: -40px;
+    // position: static;
+
+    // &_active {
+    //   position: static;
+    // }
+  }
+
+  // .basket__right-nav
+
+  &__right-nav {
+    display: flex;
+    gap: 23px;
+    justify-content: flex-end;
+    margin-bottom: 11px;
+
+    a {
+      color: #bdbdbd;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+    }
+  }
+
+
+  &__wrapper-right-content {
+    width: 415px;
+    border: 1px solid #828282;
+    padding: 59px 85px 30px 73px;
+  }
+
+  // .basket__wrapper-right-title
+
+  &__wrapper-right-title {
+    color: #956d84;
+    font-family: Actor;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 70px;
+  }
+
+  // .basket__wrapper-right-inner
+
+  &__wrapper-right-inner {
+  }
+
+  // .basket__wrapper-right-prices
+
+  &__wrapper-right-prices {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    p {
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-products
+
+  &__wrapper-right-products {
+    p {
+      color: #bdbdbd;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-stock
+
+  &__wrapper-right-stock {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 58px;
+    p {
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-all
+
+  &__wrapper-right-all {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-all-text
+
+  &__wrapper-right-all-text {
+    color: #333;
+    font-family: Acme;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__flowers-right {
+    position: absolute;
+    right: 0;
+    top: 352px;
+
+    @media(max-width: 1765px) {
+        right: -50px;
+      }
+      @media(max-width: 1625px) {
+        right: -85px;
+      }
+      @media(max-width: 1525px) {
+        display: none;
+      }
+  }
+  &__flowers-left-top {
+    position: absolute;
+    left: 0;
+    top: -64px;
+
+    @media(max-width: 1765px) {
+        left: -30px;
+      }
+      @media(max-width: 1625px) {
+        left: -50px;
+      }
+      @media(max-width: 1525px) {
+        display: none;
+      }
+  }
+  &__flowers-left-bottom {
+    position: absolute;
+    left: 0;
+    top: 828px;
+
+    @media(max-width: 1765px) {
+        left: -30px;
+      }
+      @media(max-width: 1625px) {
+        left: -50px;
+      }
+      @media(max-width: 1525px) {
+        display: none;
+      }
+  }
+}
