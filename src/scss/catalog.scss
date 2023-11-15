@@ -1,5 +1,6 @@
 @import 'style';
 @import 'components/button';
+@import 'catalog/background';
 @import 'catalog/link-row';
 @import 'catalog/left-menu';
 @import 'catalog/sort';
@@ -30,6 +31,7 @@
         @media (max-width: 768px) {
             font-size: 24px;
             letter-spacing: 0.7px;
+            margin-bottom: 51px;
         }
     }
     &__main{
@@ -41,6 +43,7 @@
         }
         @media (max-width: 768px) {
             grid-template: 45px 12px auto / 1fr 10px 1fr;
+            margin-bottom: 57px;
         }
     }
     &__menu{
@@ -61,5 +64,8 @@
         height: 100%;
         grid-column: 3;
         grid-row: 3;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 54px;
     }
 }

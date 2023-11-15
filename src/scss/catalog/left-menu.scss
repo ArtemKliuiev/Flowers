@@ -118,7 +118,9 @@
 
 
 
-    &__menu {}
+    &__menu {
+        background-color: $whiteColor;
+    }
     &__menu-item {
         transition: all 1s ease 0s;
         @media (max-width: 768px) {
@@ -155,7 +157,7 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/eb983a0150e114f516905a91fec409f262089204/images/catalog/filter-arrow.svg);
+            background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/eb983a0150e114f516905a91fec409f262089204/images/catalog/filter-arrow.svg);//исправить пути
             transition: all 0.3s ease 0s;
             width: 17.6664px;;
             height: 8.1px;
@@ -167,7 +169,7 @@
             }
         }
         @media (max-width: 768px) {
-            box-sizing: content-box;
+            box-sizing: content-box; //убрать
             color: $cheryColor;
             font-size: 16px;
             padding: 26px 0 23px 15px;

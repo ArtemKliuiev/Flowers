@@ -29,7 +29,7 @@ class Catalog{
         });
     }
     tabsFilter(){
-        function removeActive(el){
+        function removeActive(el){                         //active - модификатор
             document.querySelectorAll('.left-menu__menu-item-title-active').forEach(item => {
                 const title = item.querySelector('.left-menu__menu-item-title');
                 if(el !== title){
@@ -45,7 +45,8 @@ class Catalog{
             })
         })
     }
-    tabsSortAdaptive(){
+    
+    tabsSortAdaptive(){//Рефакторинг функции
         const menuLeft = this.menuLeft;
         menuLeft.addEventListener('click', (e) => {
             if(e.target.classList[0] === 'left-menu__adaptive-back'){
@@ -91,11 +92,16 @@ class Catalog{
         let currentPoint = 0;
         function opacityArrow(index){
             if(index === 0){
+                //вынести в класс модификатор
                 letfBtn.style.opacity = '0.5'
                 letfBtn.style.cursor = 'auto'
+                rightBtn.style.opacity = '1'
+                rightBtn.style.cursor = 'pointer'
             }else if (index >= 6){
                 rightBtn.style.opacity = '0.5'
                 rightBtn.style.cursor = 'auto'
+                letfBtn.style.opacity = '1'
+                letfBtn.style.cursor = 'pointer'
             }else{
                 letfBtn.style.opacity = '1'
                 letfBtn.style.cursor = 'pointer'
