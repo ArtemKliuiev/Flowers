@@ -169,12 +169,34 @@
   &__our-arrow-left {
     position: absolute;
     right: 12px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &__our-arrow-center {
     position: absolute;
     right: 6px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
   }
+
+  &__our-arrow-right {
+    position: absolute;
+    right: 0;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+
 
   &__flowers-right {
     position: absolute;

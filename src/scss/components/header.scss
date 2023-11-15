@@ -249,6 +249,8 @@
 
     svg {
       display: block;
+      width: 7px;
+      height: 4px;
     }
 
     path {
@@ -626,7 +628,6 @@
     flex: 1 1 70.7317%;
   }
 
-
   &__info-block {
     margin-top: 10px;
     @media (max-width: 1350px) {
@@ -888,6 +889,11 @@
 
   &__loupe-icon {
     margin: 0rem 1.2857rem 0rem 0rem;
+
+    svg {
+      width: 19px;
+      height: 19px;
+    }
   }
 
   &.open,

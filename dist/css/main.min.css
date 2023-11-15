@@ -559,6 +559,8 @@ body._lock {
 }
 .drop-down__arrow svg {
   display: block;
+  width: 7px;
+  height: 4px;
 }
 .drop-down__arrow path {
   width: 7px;
@@ -1158,6 +1160,10 @@ body._lock {
 .search-drop-down__loupe-icon {
   margin: 0rem 1.2857rem 0rem 0rem;
 }
+.search-drop-down__loupe-icon svg {
+  width: 19px;
+  height: 19px;
+}
 .search-drop-down.open .search-drop-down__arrow, .search-drop-down:hover .search-drop-down__arrow {
   transform-origin: center 30%;
   transform: rotateZ(180deg);
@@ -1702,6 +1708,8 @@ body._lock {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
 }
 @media (max-width: 575px) {
   .product-card__top-sales svg {
@@ -1731,6 +1739,10 @@ body._lock {
     top: 9px;
     right: 5px;
   }
+}
+.product-card__top-like svg {
+  width: 33px;
+  height: 30px;
 }
 @media (max-width: 575px) {
   .product-card__top-like svg {
@@ -1806,6 +1818,10 @@ body._lock {
   .product-card__bottom-stars {
     padding-bottom: 0;
   }
+}
+.product-card__bottom-stars svg {
+  width: 74px;
+  height: 15px;
 }
 @media (max-width: 575px) {
   .product-card__bottom-stars img {
@@ -1925,6 +1941,10 @@ body._lock {
 }
 .product-card__bottom-button-mobile {
   display: none;
+}
+.product-card__bottom-button-mobile svg {
+  width: 22px;
+  height: 16px;
 }
 @media (max-width: 575px) {
   .product-card__bottom-button-mobile {
@@ -2217,6 +2237,8 @@ body._lock {
 }
 .mobile-menu-dropdowns__item button svg {
   transform: rotateZ(90deg);
+  width: 7px;
+  height: 14px;
 }
 .mobile-menu-dropdowns__item button svg.active {
   transform: rotateZ(270deg);
@@ -2419,11 +2441,15 @@ body._lock {
   position: absolute;
   top: -1px;
   right: 0;
+  width: 448px;
+  height: 219px;
 }
 .bottom-sertificate__card-bg-right svg {
   position: absolute;
   top: 0;
   left: 0;
+  width: 451px;
+  height: 219px;
 }
 .bottom-sertificate__card-title-left {
   color: #333;
@@ -2447,6 +2473,10 @@ body._lock {
   position: absolute;
   top: 27px;
   right: 35px;
+}
+.bottom-sertificate__card-photo-left svg {
+  width: 100px;
+  height: 100px;
 }
 .bottom-sertificate__card-branch-left img {
   position: absolute;
@@ -2477,6 +2507,10 @@ body._lock {
   text-align: center;
   padding-top: 18px;
   padding-bottom: 6px;
+}
+.bottom-sertificate__card-photo-center svg {
+  width: 100px;
+  height: 100px;
 }
 .bottom-sertificate__card-branch-center-left {
   position: absolute;
@@ -2516,6 +2550,15 @@ body._lock {
   position: absolute;
   top: 28px;
   left: 32px;
+}
+.bottom-sertificate__card-photo-right {
+  position: absolute;
+  top: 27px;
+  left: 35px;
+}
+.bottom-sertificate__card-photo-right svg {
+  width: 100px;
+  height: 100px;
 }
 .bottom-sertificate__card-branch-right img {
   position: absolute;
@@ -2566,6 +2609,8 @@ body._lock {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
 }
 
 .swiper-pagination-bullet {
@@ -2591,7 +2636,10 @@ body._lock {
   transform: translate(-50%, -50%);
 }
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 10px;
   left: 0;
   width: 100%;
@@ -2884,6 +2932,10 @@ body._lock {
     display: none;
   }
 }
+.present__swiper-button-prev svg {
+  width: 16px;
+  height: 28px;
+}
 .present__swiper-pagination {
   display: none;
 }
@@ -3113,9 +3165,25 @@ body._lock {
   position: absolute;
   right: 12px;
 }
+.forum__our-arrow-left svg {
+  width: 15px;
+  height: 15px;
+}
 .forum__our-arrow-center {
   position: absolute;
   right: 6px;
+}
+.forum__our-arrow-center svg {
+  width: 15px;
+  height: 15px;
+}
+.forum__our-arrow-right {
+  position: absolute;
+  right: 0;
+}
+.forum__our-arrow-right svg {
+  width: 15px;
+  height: 15px;
 }
 .forum__flowers-right {
   position: absolute;
@@ -4195,6 +4263,8 @@ body._lock {
   top: 17px;
   right: 20px;
   background: #fff;
+  width: 24px;
+  height: 24px;
 }
 .order__form-data input {
   padding: 20px 25px 20px 35px;
@@ -4319,6 +4389,10 @@ body._lock {
   .order__form-left-top-inner p {
     left: 33px;
   }
+}
+.order__form-left-top-inner svg {
+  width: 10px;
+  height: 5px;
 }
 .order__form-left-bottom {
   display: flex;
@@ -4871,6 +4945,8 @@ body._lock {
 }
 .basket__card-arrow-left {
   cursor: pointer;
+  width: 7px;
+  height: 14px;
 }
 .basket__card-num p {
   color: #333;
@@ -4881,6 +4957,8 @@ body._lock {
 }
 .basket__card-arrow-right {
   cursor: pointer;
+  width: 7px;
+  height: 11px;
 }
 .basket__card-all-price {
   display: flex;
@@ -4900,10 +4978,14 @@ body._lock {
 }
 .basket__card-del {
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 .basket__like {
   top: 42px;
   right: -40px;
+  width: 21px;
+  height: 19px;
 }
 .basket__right-nav {
   display: flex;
@@ -4918,6 +5000,10 @@ body._lock {
   font-weight: 400;
   line-height: 18px;
   text-decoration-line: underline;
+}
+.basket__right-nav svg {
+  width: 7px;
+  height: 12px;
 }
 .basket__wrapper-right-content {
   width: 415px;

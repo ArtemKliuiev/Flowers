@@ -6,7 +6,7 @@
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     &:nth-child(5) {
       display: none;
     }
@@ -21,7 +21,7 @@
     }
   }
 
-  @media(max-width: 740px) {
+  @media (max-width: 740px) {
     width: 257px;
   }
 
@@ -95,6 +95,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
       @media (max-width: 575px) {
         width: 32px;
         height: 32px;
@@ -122,13 +124,15 @@
     top: 32px;
     right: 24px;
     cursor: pointer;
-    
+
     @media (max-width: 575px) {
       top: 9px;
       right: 5px;
     }
 
     svg {
+      width: 33px;
+      height: 30px;
       @media (max-width: 575px) {
         width: 14px;
         height: 12px;
@@ -206,6 +210,11 @@
     padding-bottom: 18px;
     @media (max-width: 575px) {
       padding-bottom: 0;
+    }
+
+    svg {
+      width: 74px;
+      height: 15px;
     }
 
     img {
@@ -341,6 +350,11 @@
 
   &__bottom-button-mobile {
     display: none;
+
+    svg {
+      width: 22px;
+      height: 16px;
+    }
     @media (max-width: 575px) {
       display: block;
     }

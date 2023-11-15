@@ -176,6 +176,8 @@
 
     button svg {
       transform: rotateZ(90deg);
+      width: 7px;
+      height: 14px;
 
       &.active {
         transform: rotateZ(270deg);
@@ -199,4 +201,3 @@
     }
   }
 }
-
