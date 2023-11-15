@@ -48,6 +48,13 @@
     }
   }
 
+  &__swiper-button-prev {
+    svg {
+      width: 16px;
+      height: 28px;
+    }
+  }
+
   &__swiper-pagination {
     display: none;
     @media (max-width: 768px) {

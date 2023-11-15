@@ -180,6 +180,8 @@
       position: absolute;
       top: -1px;
       right: 0;
+      width: 448px;
+      height: 219px;
     }
   }
   &__card-bg-right {
@@ -187,6 +189,8 @@
       position: absolute;
       top: 0;
       left: 0;
+      width: 451px;
+      height: 219px;
     }
   }
 
@@ -213,6 +217,11 @@
     position: absolute;
     top: 27px;
     right: 35px;
+
+    svg {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__card-branch-left {
@@ -250,6 +259,11 @@
     text-align: center;
     padding-top: 18px;
     padding-bottom: 6px;
+
+    svg {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__card-branch-center-left {
@@ -296,6 +310,17 @@
     left: 32px;
   }
 
+  &__card-photo-right {
+    position: absolute;
+    top: 27px;
+    left: 35px;
+
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
   &__card-branch-right {
     img {
       position: absolute;
@@ -328,7 +353,7 @@
     font-weight: 400;
     line-height: 15px;
 
-    @media(max-width: 400px) {
+    @media (max-width: 400px) {
       font-size: 10px;
     }
   }
@@ -346,12 +371,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 46px;
+      height: 46px;
     }
   }
 }
 
 .swiper-pagination-bullet {
-  background: #fff !important; 
+  background: #fff !important;
   opacity: 1 !important;
   width: 4px !important;
   height: 4px !important;
@@ -373,7 +400,10 @@
   }
 }
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 10px;
   left: 0;
   width: 100%;
@@ -383,25 +413,25 @@
 }
 
 .flowers-right {
-  @media(max-width: 1765px) {
+  @media (max-width: 1765px) {
     right: -85px !important;
   }
-  @media(max-width: 1625px) {
+  @media (max-width: 1625px) {
     right: -135px !important;
   }
-  @media(max-width: 1525px) {
+  @media (max-width: 1525px) {
     display: none;
   }
 }
 
 .flowers-left {
-  @media(max-width: 1765px) {
+  @media (max-width: 1765px) {
     left: -85px !important;
   }
-  @media(max-width: 1625px) {
+  @media (max-width: 1625px) {
     left: -135px !important;
   }
-  @media(max-width: 1525px) {
+  @media (max-width: 1525px) {
     display: none;
   }
 }
