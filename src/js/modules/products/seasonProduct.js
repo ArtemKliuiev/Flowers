@@ -28,7 +28,7 @@ export default class productsSeason {
     const querySnapshot = await getDocs(filterSeason);
     querySnapshot.forEach((doc) => {
       const product = doc.data();
-      const { name, stars, price, sale, img, oldPrice } = product;
+      const { name, stars, price, img, id} = product;
 
       let star = '';
       for (let i = 0; i < stars; i++) {
@@ -36,7 +36,7 @@ export default class productsSeason {
       }
 
       let template = `
-      <div class="product-card">
+      <div data-id='${id}' class="product-card">
       <div class="product-card__top">
           <div class="product-card__img">
               <img src="${img.default}" alt="flowers">

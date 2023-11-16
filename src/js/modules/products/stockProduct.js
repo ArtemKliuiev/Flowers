@@ -29,7 +29,7 @@ const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
       const querySnapshot = await getDocs(filterSale);
       querySnapshot.forEach((doc) => {
         const product = doc.data();
-        const { name, stars, price, sale, img, oldPrice } = product;
+        const { name, stars, price, sale, img, oldPrice, id } = product;
   
         let star = '';
         for (let i = 0; i < stars; i++) {
@@ -37,7 +37,7 @@ const productCardWrapper = document.querySelectorAll('.product-card__wrapper');
         }
   
         let template = `
-        <div class="product-card">
+        <div data-id='${id}' class="product-card">
         <div class="product-card__top">
             <div class="product-card__img">
                 <img src="${img.default}" alt="flowers">

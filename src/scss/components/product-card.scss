@@ -330,6 +330,7 @@
     img {
       position: absolute;
       right: 0;
+      pointer-events: none;
     }
 
     @media (min-width: 998px) {
@@ -357,6 +358,10 @@
     }
     @media (max-width: 575px) {
       display: block;
+    }
+
+    img {
+      pointer-events: none;
     }
   }
 

@@ -11,6 +11,7 @@ import productsSeason from './modules/products/seasonProduct';
 import productsPresent from './modules/products/presentProduct';
 import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
+import basket from './modules/basket';
 
 
 const titles = document.querySelectorAll('.accordion__title');
@@ -50,6 +51,7 @@ async function go() {
   await presentProduct.loadCards();
 
   let likeProduct = await productLike();
+  let basketEl = await basket();
 
 }
 
