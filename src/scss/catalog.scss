@@ -1,5 +1,6 @@
 @import 'style';
 @import 'components/button';
+@import 'components/pagination';
 @import 'catalog/background';
 @import 'catalog/link-row';
 @import 'catalog/left-menu';
@@ -43,7 +44,7 @@
         }
         @media (max-width: 768px) {
             grid-template: 45px 12px auto / 1fr 10px 1fr;
-            margin-bottom: 57px;
+            margin-bottom: 0px;
         }
     }
     &__menu{
@@ -64,6 +65,10 @@
         height: 100%;
         grid-column: 3;
         grid-row: 3;
+        @media (max-width: 768px) {
+            grid-column: 1/4;
+            grid-row: 3;
+        }
     }
     @media (max-width: 768px) {
         margin-bottom: 54px;

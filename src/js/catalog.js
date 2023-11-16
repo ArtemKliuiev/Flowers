@@ -1,4 +1,10 @@
 import Dropdown from './modules/dropdown';
+import pagination from './modules/pagination';
+
+pagination(22);
+
+
+
 class Catalog{
     constructor(){
         this.menuLeft = document.querySelector('.left-menu');
@@ -11,7 +17,6 @@ class Catalog{
         this.dropdown = new Dropdown('.drop-color');
         this.dropdown = new Dropdown('.drop-reason');
         this.dropdown = new Dropdown('.drop-sort');
-        this.pagination();
         this.adaptiveFilter()
         this.tabsFilter();
         this.tabsSortAdaptive();
@@ -84,60 +89,6 @@ class Catalog{
                 input.checked = false;
             });
         })
-    }
-    pagination(){
-        const letfBtn = document.querySelector('.cards__pagination-arrow_left');
-        const rightBtn = document.querySelector('.cards__pagination-arrow_right');
-        const allBtn = document.querySelectorAll('.cards__pagination-point');
-        let currentPoint = 0;
-        function opacityArrow(index){
-            if(index === 0){
-                //вынести в класс модификатор
-                letfBtn.style.opacity = '0.5'
-                letfBtn.style.cursor = 'auto'
-                rightBtn.style.opacity = '1'
-                rightBtn.style.cursor = 'pointer'
-            }else if (index >= 6){
-                rightBtn.style.opacity = '0.5'
-                rightBtn.style.cursor = 'auto'
-                letfBtn.style.opacity = '1'
-                letfBtn.style.cursor = 'pointer'
-            }else{
-                letfBtn.style.opacity = '1'
-                letfBtn.style.cursor = 'pointer'
-                rightBtn.style.opacity = '1'
-                rightBtn.style.cursor = 'pointer'
-            }
-        }
-        function removeActive(){
-            document.querySelectorAll('.cards__pagination-point_active').forEach(item => {
-                item.classList.remove('cards__pagination-point_active')
-            })
-        }
-        function addActive(index){
-            removeActive();
-            allBtn[index].classList.add('cards__pagination-point_active');
-            opacityArrow(index);
-        }
-        letfBtn.addEventListener('click', () => {
-            if(currentPoint > 0){
-                currentPoint--;
-                addActive(currentPoint);   
-            }
-        });
-        rightBtn.addEventListener('click', () => {
-            if(currentPoint < 6){
-                currentPoint++;
-                addActive(currentPoint);
-            }
-        });
-        allBtn.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                currentPoint = index;
-                addActive(index);
-            })
-        });
-        addActive(currentPoint);
     }
 }
 const catalog = new Catalog();

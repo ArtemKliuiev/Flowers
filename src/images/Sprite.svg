@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+<svg style="width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
 <symbol id="delivery" width="22" height="22" viewBox="0 0 22 22">
 <g clip-path="url(#clip0_0_674)">
 <g id="Group">
@@ -269,11 +269,11 @@
 <path d="M6.74815 6.30693L1.46799 0.287337C1.1321 -0.0957794 0.587529 -0.0957794 0.25181 0.287337C-0.0839366 0.670113 -0.0839366 1.29094 0.25181 1.67368L4.92394 7.0001L0.251945 12.3263C-0.0838008 12.7093 -0.0838008 13.33 0.251945 13.7128C0.587692 14.0957 1.13224 14.0957 1.46812 13.7128L6.74829 7.69312C6.91616 7.50164 7 7.25095 7 7.00013C7 6.74919 6.916 6.49832 6.74815 6.30693Z" fill="#333333"/>
 </symbol>
 
-<symbol id="pagination-arrow-right" width="61" height="60" viewBox="0 0 61 60">
+<symbol id="pagination-arrow-right" viewBox="0 0 61 60">
   <path d="M25.1422 15L21.6172 18.525L33.0672 30L21.6172 41.475L25.1422 45L40.1422 30L25.1422 15Z" fill="#956D84"/>
 </symbol>
 
-<symbol id="pagination-arrow-left" width="60" height="60" viewBox="0 0 61 60">
+<symbol id="pagination-arrow-left" viewBox="0 0 61 60">
 <path d="M35.0004 45L38.5254 41.475L27.0754 30L38.5254 18.525L35.0004 15L20.0004 30L35.0004 45Z" fill="#956D84"/>
 </symbol>
 
