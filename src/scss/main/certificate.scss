@@ -1,19 +1,19 @@
 .certificate {
   margin-bottom: 152px;
-  @media (max-width: 575px) {
+  @include breakpoint($md5) {
     margin-bottom: 63px;
   }
   // .certificate__wrapper
 
   &__desktop {
-    @media (max-width: 1024px) {
+    @include breakpoint($md3) {
       display: none;
     }
   }
 
   &__mobile {
     display: none;
-    @media (max-width: 1024px) {
+    @include breakpoint($md3) {
       display: block;
       padding-bottom: 30px;
     }
@@ -58,10 +58,10 @@
     position: relative;
 
     img {
-      @media (max-width: 1024px) {
+      @include breakpoint($md3) {
         width: 100%;
       }
-      @media (max-width: 375px) {
+      @include breakpoint($md6) {
         height: 271px;
       }
     }
@@ -84,15 +84,15 @@
       color: #fff;
     }
 
-    @media (max-width: 1025px) {
+    @include breakpoint($md3) {
       left: 50%;
       transform: translate(-50%);
       max-width: 100%;
     }
-    @media (max-width: 768px) {
+    @include breakpoint($md4) {
       font-size: 32px;
     }
-    @media (max-width: 575px) {
+    @include breakpoint($md5) {
       font-size: 20px;
       line-height: 25px;
       top: 38px;
@@ -107,14 +107,14 @@
     left: 264px;
     max-width: 365px;
 
-    @media (max-width: 1025px) {
+    @include breakpoint($md3) {
       left: 50%;
       transform: translate(-50%);
     }
-    @media (max-width: 768px) {
+    @include breakpoint($md4) {
       font-size: 32px;
     }
-    @media (max-width: 575px) {
+    @include breakpoint($md5) {
       font-size: 20px;
       line-height: 25px;
       width: 205px;
@@ -128,7 +128,7 @@
     position: relative;
     display: inline-block;
 
-    @media (max-width: 1024px) {
+    @include breakpoint($md3) {
       width: 100%;
     }
   }
@@ -140,7 +140,7 @@
     bottom: 0;
     right: 0;
 
-    @media (max-width: 1024px) {
+    @include breakpoint($md3) {
       width: 100%;
     }
   }
@@ -165,7 +165,7 @@
   justify-content: center;
   gap: 20px;
 
-  @media (max-width: 575px) {
+  @include breakpoint($md5) {
     display: none;
   }
 
@@ -332,7 +332,7 @@
 
 .bottom-sertificate-mobile {
   display: none;
-  @media (max-width: 575px) {
+  @include breakpoint($md5) {
     display: block;
     display: flex;
     justify-content: space-between;
@@ -353,7 +353,7 @@
     font-weight: 400;
     line-height: 15px;
 
-    @media (max-width: 400px) {
+    @include breakpoint($md5) {
       font-size: 10px;
     }
   }
@@ -412,26 +412,26 @@
   text-align: center;
 }
 
-.flowers-right {
-  @media (max-width: 1765px) {
-    right: -85px !important;
-  }
-  @media (max-width: 1625px) {
-    right: -135px !important;
-  }
-  @media (max-width: 1525px) {
-    display: none;
-  }
-}
+// .flowers-right {
+//   @media (max-width: 1765px) {
+//     right: -85px !important;
+//   }
+//   @media (max-width: 1625px) {
+//     right: -135px !important;
+//   }
+//   @media (max-width: 1525px) {
+//     display: none;
+//   }
+// }
 
-.flowers-left {
-  @media (max-width: 1765px) {
-    left: -85px !important;
-  }
-  @media (max-width: 1625px) {
-    left: -135px !important;
-  }
-  @media (max-width: 1525px) {
-    display: none;
-  }
-}
+// .flowers-left {
+//   @media (max-width: 1765px) {
+//     left: -85px !important;
+//   }
+//   @media (max-width: 1625px) {
+//     left: -135px !important;
+//   }
+//   @media (max-width: 1525px) {
+//     display: none;
+//   }
+// }

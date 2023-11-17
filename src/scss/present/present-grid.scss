@@ -6,14 +6,14 @@
     padding-right: 14px;
     margin-bottom: 78px;
 
-    @media (max-width:1024px) {
+    @include breakpoint($md3) {
         grid-template-columns: 1fr;
         grid-template-rows: 396px 396px 396px 396px;
         padding-right: 0;
         gap: 13px;
     }
 
-    @media (max-width:768px) {
+    @include breakpoint($md4) {
         grid-template-rows: 271px 271px 271px 271px;
         margin-bottom: 58px;
     }
@@ -27,7 +27,7 @@
             line-height: 50px;
             letter-spacing: 1.4px;
 
-            @media (max-width:768px) {
+            @include breakpoint($md4) {
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 25px;
@@ -53,7 +53,7 @@
                 margin-left: auto;
                 padding-right: 40px;
 
-                @media (max-width:768px) {
+                @include breakpoint($md4) {
                     padding-top: 44px;
                     max-width: 426px;
                     padding-left: 51px;
@@ -100,7 +100,7 @@
                 padding-left: 32px;
                 max-width: 404px;
 
-                @media (max-width:768px) {
+                @include breakpoint($md4) {
                     padding-top: 38px;
                     padding-left: 15px;
                     padding-right: 94px;
@@ -121,7 +121,7 @@
                 padding-left: 34px;
                 max-width: 497px;
 
-                @media (max-width:768px) {
+                @include breakpoint($md4) {
                     padding-top: 42px;
                     padding-left: 17px;
                     padding-right: 20px;

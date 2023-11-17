@@ -6,7 +6,7 @@
     letter-spacing: 0.69px;
     background: transparent;
 
-    @media (max-width:768px) {
+    @include breakpoint($md4) {
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 0.5px;
@@ -17,7 +17,7 @@
         color: $mainDarkColor;
         margin-bottom: 35px;
 
-        @media (max-width:768px) {
+        @include breakpoint($md4) {
             margin-bottom: 25px;
         }
     }
@@ -36,7 +36,7 @@
                 color: var(--ffffff, #FFF);
                 font-size: 24px;
 
-                @media (max-width:768px) {
+                @include breakpoint($md4) {
                     padding: 20px 16px 20px 36px;
                     font-size: 16px;
                 }
@@ -65,7 +65,7 @@
                     padding-bottom: 38px;
                     padding-top: 32px;
 
-                    @media (max-width:768px) {
+                    @include breakpoint($md4) {
                         padding-bottom: 3px;
                         padding-top: 24px;
                         letter-spacing: 0.2px;
@@ -78,7 +78,7 @@
     &__last-text {
         margin-top: 51px;
 
-        @media (max-width:768px) {
+        @include breakpoint($md4) {
             margin-top: 25px;
         }
     }

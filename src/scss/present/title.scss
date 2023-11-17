@@ -10,7 +10,7 @@
         letter-spacing: 2px;
         margin-bottom: 77px;
 
-        @media (max-width:768px) {
+        @include breakpoint($md4) {
             font-size: 24px;
             margin-top: 8px;
             margin-bottom: 44px;

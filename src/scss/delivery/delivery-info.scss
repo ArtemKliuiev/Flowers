@@ -6,7 +6,7 @@
     line-height: 30px;
     letter-spacing: 0.6px;
 
-    @media (max-width:768px) {
+    @include breakpoint($md4) {
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 0.4px;
@@ -19,7 +19,7 @@
         color: $mainDarkColor;
         margin-bottom: 42px;
 
-        @media (max-width:768px) {
+        @include breakpoint($md4) {
             gap: 20px;
             margin-bottom: 16px;
         }
@@ -63,7 +63,7 @@
         color: $mainDarkColor;
         margin-bottom: 93px;
 
-        @media (max-width:768px) {
+        @include breakpoint($md4) {
             gap: 19px;
             margin-bottom: 33px;
         }
@@ -74,12 +74,12 @@
         }
 
         .contacts__contact:nth-child(3) {
-            @media (max-width:768px) {
+            @include breakpoint($md4) {
                 max-width: 155px;
             }
 
             a:last-child {
-                @media (max-width:768px) {
+                @include breakpoint($md4) {
                     margin-left: 35px;
                 }
             }

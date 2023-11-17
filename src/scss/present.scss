@@ -15,39 +15,39 @@
                 top: -125px;
                 right: 0;
 
-                @media (max-width:1760px) {
-                    right: -90px;
-                }
+                // @media (max-width:1760px) {
+                //     right: -90px;
+                // }
 
-                @media (max-width:1515px) {
-                    display: none;
-                }
+                // @media (max-width:1515px) {
+                //     display: none;
+                // }
             }
 
             &__second {
                 left: 0;
                 top: 43px;
 
-                @media (max-width:1760px) {
-                    left: -105px;
-                }
+                // @media (max-width:1760px) {
+                //     left: -105px;
+                // }
 
-                @media (max-width:1515px) {
-                    display: none;
-                }
+                // @media (max-width:1515px) {
+                //     display: none;
+                // }
             }
 
             &__third {
                 right: 0;
                 top: 575px;
 
-                @media (max-width:1760px) {
-                    right: -80px;
-                }
+                // @media (max-width:1760px) {
+                //     right: -80px;
+                // }
 
-                @media (max-width:1515px) {
-                    display: none;
-                }
+                // @media (max-width:1515px) {
+                //     display: none;
+                // }
             }
         }
     }

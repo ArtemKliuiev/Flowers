@@ -1,7 +1,7 @@
 .stock {
   position: relative;
   margin-bottom: 162px;
-  @media(max-width: 575px) {
+  @include breakpoint($md5) {
     margin-bottom: 44px;
   }
 
@@ -14,7 +14,7 @@
     line-height: 18px;
     margin-bottom: 74px;
 
-    @media (max-width: 575px) {
+    @include breakpoint($md5) {
       font-size: 24px;
       margin-bottom: 50px;
     }
@@ -22,7 +22,7 @@
 
   &__swiper-pagination {
     display: none;
-    @media(max-width: 768px) {
+    @include breakpoint($md4) {
       display: block;
     }
   }
@@ -33,7 +33,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    @media (max-width: 768px) {
+    @include breakpoint($md4) {
       display: none;
     }
   }

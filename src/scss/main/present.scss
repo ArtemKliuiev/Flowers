@@ -1,7 +1,7 @@
 .present {
   position: relative;
   margin-bottom: 173px;
-  @media (max-width: 575px) {
+  @include breakpoint($md5) {
     margin-bottom: 83px;
   }
 
@@ -15,7 +15,7 @@
     margin-bottom: 74px;
     padding-top: 15px;
 
-    @media (max-width: 575px) {
+    @include breakpoint($md5) {
       font-size: 24px;
       margin-bottom: 50px;
     }
@@ -28,10 +28,10 @@
     row-gap: 20px;
     column-gap: 20px;
 
-    @media (max-width: 768px) {
+    @include breakpoint($md4) {
       padding-bottom: 42px;
     }
-    @media (max-width: 575px) {
+    @include breakpoint($md5) {
       row-gap: 9px;
       column-gap: 9px;
     }
@@ -43,7 +43,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    @media(max-width: 768px) {
+    @include breakpoint($md4) {
         display: none;
     }
   }
@@ -57,7 +57,7 @@
 
   &__swiper-pagination {
     display: none;
-    @media (max-width: 768px) {
+    @include breakpoint($md4) {
       display: block;
     }
   }

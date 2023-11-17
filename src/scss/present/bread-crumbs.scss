@@ -18,7 +18,7 @@
         }
     }
 
-    @media (max-width:768px) {
+    @include breakpoint($md4) {
         display: none;
     }
 }

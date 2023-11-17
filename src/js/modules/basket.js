@@ -1,13 +1,15 @@
 
 async function basket() {
     const productCards = document.querySelectorAll('.product-card');
-    const basketNumEl = document.querySelector('.basket-amount p');
+    const basketNumEl = document.querySelectorAll('.basket-amount p');
     const basketWrapper = document.querySelector('.basket__wrapper');
     const basketMessage = document.querySelector('.basket__message');
 
     let basketNum = 0;
     let imgSrc = null;
     let productName = null;
+    let newPrice = null;
+    let oldPrice = null;
 
     const storedBasket = sessionStorage.getItem('basket');
     if (storedBasket) {
@@ -16,6 +18,8 @@ async function basket() {
         imgSrc = parsedBasket.imgSrc;
         basketNumEl.textContent = basketNum;
         productName = parsedBasket.productName;
+        newPrice = parsedBasket.newPrice;
+        oldPrice = parsedBasket.oldPrice;
     }
 
     productCards.forEach((productCard) => {
@@ -26,13 +30,15 @@ async function basket() {
             basketNumEl.textContent = basketNum;
 
             const productEl = e.target.parentNode.parentNode.parentNode;
-            console.log(productEl);
 
             imgSrc = productEl.querySelector('.product-card__img img').src;
             productName = productEl.querySelector('.product-card__bottom-name').textContent;
-            
-
-            const dataToStore = { basketNum, imgSrc , productName};
+            newPrice = productEl.querySelector('.product-card__bottom-price').
+            textContent.replace('грн', '');
+            oldPrice = productEl.querySelector('.product-card__bottom-old-price').textContent.
+            textContent.replace('грн', '');
+              
+            const dataToStore = { basketNum, imgSrc , productName, newPrice, oldPrice};
             sessionStorage.setItem('basket', JSON.stringify(dataToStore));
 
         });
@@ -57,8 +63,8 @@ async function basket() {
                       <p>${productName}</p>
                     </div>
                     <div class="basket__card-price">
-                      <p class="basket__card-new-price">795 ₴</p>
-                      <p class="basket__card-old-price">995 ₴</p>
+                      <p class="basket__card-new-price">${newPrice} ₴</p>
+                      <p class="basket__card-old-price">${oldPrice} ₴</p>
                     </div>
                     <div class="basket__card-num-wrapper">
                       <div class="basket__card-arrow-left">
