@@ -214,3 +214,19 @@
   $result: math.div($px, 16) + rem;
   @return $result;
 }
+
+
+// mixin for breakpoint:
+
+$md1: 1650px;
+$md2: 1420px;
+$md3: 1024px;
+$md4: 768px;
+$md5: 576px;
+$md6: 375px;
+
+@mixin breakpoint($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

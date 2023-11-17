@@ -325,13 +325,13 @@
     right: 0;
     top: 352px;
 
-    @media (max-width: 1765px) {
+    @include breakpoint($md1){
       right: -50px;
     }
-    @media (max-width: 1625px) {
+    @media ($md2) {
       right: -85px;
     }
-    @media (max-width: 1525px) {
+    @media ($md3) {
       display: none;
     }
   }
@@ -364,5 +364,9 @@
     @media (max-width: 1525px) {
       display: none;
     }
+  }
+
+  &__message {
+    display: none;
   }
 }

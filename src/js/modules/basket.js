@@ -3,6 +3,7 @@ async function basket() {
     const productCards = document.querySelectorAll('.product-card');
     const basketNumEl = document.querySelector('.basket-amount p');
     const basketWrapper = document.querySelector('.basket__wrapper');
+    const basketMessage = document.querySelector('.basket__message');
 
     let basketNum = 0;
     let imgSrc = null;
@@ -26,6 +27,7 @@ async function basket() {
 
             const productEl = e.target.parentNode.parentNode.parentNode;
             console.log(productEl);
+
             imgSrc = productEl.querySelector('.product-card__img img').src;
             productName = productEl.querySelector('.product-card__bottom-name').textContent;
             
@@ -36,7 +38,8 @@ async function basket() {
         });
     });
 
-    let template = `
+    if (basketNum > 0) {
+        let template = `
     <div class="basket__wrapper-left">
                 <div class="basket__wrapper-text">
                   <p>Название</p>
@@ -131,12 +134,20 @@ async function basket() {
 
     const orderButton = document.querySelector('.product-card__bottom-button-desktop.order__button-wrapper');
     if (orderButton) {
+
         orderButton.addEventListener('click', (e) => {
             e.preventDefault();
             sessionStorage.removeItem('basket');
             window.location.href = './order.html';
         });
     }
+    } else {
+        if(basketMessage) {
+            basketMessage.style.display = 'block';
+        }
+        
+    }
+    
 }
 
 export default basket;

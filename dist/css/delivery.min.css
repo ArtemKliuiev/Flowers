@@ -5077,17 +5077,17 @@ body._lock {
   right: 0;
   top: 352px;
 }
-@media (max-width: 1765px) {
+@media (max-width: 1650px) {
   .basket__flowers-right {
     right: -50px;
   }
 }
-@media (max-width: 1625px) {
+@media (1420px) {
   .basket__flowers-right {
     right: -85px;
   }
 }
-@media (max-width: 1525px) {
+@media (1024px) {
   .basket__flowers-right {
     display: none;
   }
@@ -5131,6 +5131,9 @@ body._lock {
   .basket__flowers-left-bottom {
     display: none;
   }
+}
+.basket__message {
+  display: none;
 }
 
 .recomendation {
