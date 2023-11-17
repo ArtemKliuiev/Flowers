@@ -4920,6 +4920,10 @@ body._lock {
   width: 21px;
   height: 19px;
 }
+.basket__like svg {
+  width: 21px;
+  height: 19px;
+}
 .basket__right-nav {
   display: flex;
   gap: 23px;

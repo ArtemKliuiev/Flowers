@@ -4,13 +4,37 @@ async function basket() {
     const basketNumEl = document.querySelectorAll('.basket-amount p');
     const basketWrapper = document.querySelector('.basket__wrapper');
     const basketMessage = document.querySelector('.basket__message');
-
+    
     let basketNum = 0;
     let imgSrc = null;
     let productName = null;
     let newPrice = null;
     let oldPrice = null;
 
+    let quantNum = 1;
+
+    function quantProduct () {
+      const buttonWrapper = document.querySelector('.basket__card-num-wrapper');
+      const quantNumberEl = document.querySelector('.basket__card-num p');
+      
+      if (buttonWrapper && quantNumberEl) {
+        buttonWrapper.addEventListener('click', (e) => {
+          const clickEl = e.target.parentNode;
+
+          if (clickEl.classList.contains('basket__card-arrow-left')) {
+            quantNum -= 1;
+            console.log(quantNum); 
+          } else if (clickEl.classList.contains('basket__card-arrow-right')) {
+            quantNum += 1;
+          }
+          
+          quantNumberEl.textContent = quantNum;
+        })
+      }
+      
+    }
+
+    
     const storedBasket = sessionStorage.getItem('basket');
     if (storedBasket) {
         const parsedBasket = JSON.parse(storedBasket);
@@ -35,7 +59,7 @@ async function basket() {
             productName = productEl.querySelector('.product-card__bottom-name').textContent;
             newPrice = productEl.querySelector('.product-card__bottom-price').
             textContent.replace('грн', '');
-            oldPrice = productEl.querySelector('.product-card__bottom-old-price').textContent.
+            oldPrice = productEl.querySelector('.product-card__bottom-old-price').
             textContent.replace('грн', '');
               
             const dataToStore = { basketNum, imgSrc , productName, newPrice, oldPrice};
@@ -71,7 +95,7 @@ async function basket() {
                         <svg ><use xlink:href="./images/Sprite.svg#basket-arrow-left"></use></svg>
                       </div>
                       <div class="basket__card-num">
-                        <p>2</p>
+                        <p>${quantNum}</p>
                       </div>
                       <div class="basket__card-arrow-right">
                         <svg ><use xlink:href="./images/Sprite.svg#basket-arrow-right"></use></svg>
@@ -150,10 +174,10 @@ async function basket() {
     } else {
         if(basketMessage) {
             basketMessage.style.display = 'block';
-        }
-        
+        }   
     }
     
+    quantProduct();
 }
 
 export default basket;
