@@ -8,8 +8,8 @@ pagination(22);
 class Catalog{
     constructor(){
         this.menuLeft = document.querySelector('.left-menu');
-        this.itemsFiler = document.querySelectorAll('.left-menu__menu-item');
-        this.itemsSortAdaptive = document.querySelectorAll('.left-menu__adaptive-sort-item');
+        this.itemsFiler = document.querySelectorAll('.left-menu__item');
+        this.itemsSortAdaptive = document.querySelectorAll('.sort-adaptive__main');
         this.leftMenuBtn = document.querySelector('.button-for-left-menu');
         this.deletFilterBtn = document.querySelector('.left-menu__adaptive-delete-filters');
         this.exitApativeLeftMenu = document.querySelector('.left-menu__adaptive-back');
@@ -35,18 +35,18 @@ class Catalog{
     }
     tabsFilter(){
         function removeActive(el){                         //active - модификатор
-            document.querySelectorAll('.left-menu__menu-item-title-active').forEach(item => {
-                const title = item.querySelector('.left-menu__menu-item-title');
+            document.querySelectorAll('.left-menu__title_active').forEach(item => {
+                const title = item.querySelector('.left-menu__title');
                 if(el !== title){
-                    item.classList.remove('left-menu__menu-item-title-active');
+                    item.classList.remove('left-menu__title_active');
                 }    
             });
         };
         this.itemsFiler.forEach(item => {
-            const title = item.querySelector('.left-menu__menu-item-title');
+            const title = item.querySelector('.left-menu__title');
             title.addEventListener('click', (e) => {
                 removeActive(e.target);
-                item.classList.toggle('left-menu__menu-item-title-active');
+                item.classList.toggle('left-menu__title_active');
             })
         })
     }
@@ -57,24 +57,24 @@ class Catalog{
             if(e.target.classList[0] === 'left-menu__adaptive-back'){
                 menuLeft.classList.remove('left-menu_sort-active');
                 this.itemsSortAdaptive.forEach(item => {
-                    item.classList.remove('left-menu__adaptive-sort-item_active')
+                    item.classList.remove('sort-adaptive__main_active')
                 });
             }
         })
         function closeWindow(item){
-            item.querySelectorAll('.left-menu__sort-item-menu-point').forEach(point => {
+            item.querySelectorAll('.sort-adaptive__point').forEach(point => {
                 point.addEventListener('click', () => {
                     menuLeft.classList.remove('left-menu_sort-active');
-                    item.classList.remove('left-menu__adaptive-sort-item_active');
-                    item.querySelector('.left-menu__sort-item-info').innerHTML = point.textContent;
+                    item.classList.remove('sort-adaptive__main_active');
+                    item.querySelector('.sort-adaptive__info').innerHTML = point.textContent;
                 })
             })
         }
         this.itemsSortAdaptive.forEach(item => {
             item.addEventListener('click', (e) => {
-                if(e.target.classList[0] !== 'left-menu__sort-item-menu-point'){
+                if(e.target.classList[0] !== 'sort-adaptive__point'){
                     menuLeft.classList.add('left-menu_sort-active');
-                    item.classList.add('left-menu__adaptive-sort-item_active');
+                    item.classList.add('sort-adaptive__main_active');
                 }
             });
             closeWindow(item);
@@ -82,7 +82,7 @@ class Catalog{
     }
     deletFilter(){
         this.deletFilterBtn.addEventListener('click', () => {
-            document.querySelectorAll('.left-menu__sort-item-info').forEach(item => {
+            document.querySelectorAll('.sort-adaptive__info').forEach(item => {
                 item.innerHTML = ''
             });
             this.menuLeft.querySelectorAll('input').forEach(input => {
