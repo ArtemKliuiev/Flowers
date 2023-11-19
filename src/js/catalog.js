@@ -34,7 +34,7 @@ class Catalog{
         });
     }
     tabsFilter(){
-        function removeActive(el){                         //active - модификатор
+        function removeActive(el){                         
             document.querySelectorAll('.left-menu__title_active').forEach(item => {
                 const title = item.querySelector('.left-menu__title');
                 if(el !== title){
@@ -51,34 +51,29 @@ class Catalog{
         })
     }
     
-    tabsSortAdaptive(){//Рефакторинг функции
+    tabsSortAdaptive(){
         const menuLeft = this.menuLeft;
-        menuLeft.addEventListener('click', (e) => {
-            if(e.target.classList[0] === 'left-menu__adaptive-back'){
-                menuLeft.classList.remove('left-menu_sort-active');
-                this.itemsSortAdaptive.forEach(item => {
-                    item.classList.remove('sort-adaptive__main_active')
-                });
-            }
-        })
-        function closeWindow(item){
-            item.querySelectorAll('.sort-adaptive__point').forEach(point => {
-                point.addEventListener('click', () => {
-                    menuLeft.classList.remove('left-menu_sort-active');
-                    item.classList.remove('sort-adaptive__main_active');
-                    item.querySelector('.sort-adaptive__info').innerHTML = point.textContent;
+        this.itemsSortAdaptive.forEach(item => {
+            item.querySelector('.sort-adaptive__btn').addEventListener('click', () => {
+                menuLeft.classList.add('left-menu_sort-active');
+                item.classList.add('sort-adaptive__main_active');
+                item.querySelectorAll('.sort-adaptive__point').forEach(point => {
+                    point.addEventListener('click', () => {
+                        item.querySelector('.sort-adaptive__info').innerHTML = point.textContent
+                        remove(item);
+                    })
                 })
             })
-        }
-        this.itemsSortAdaptive.forEach(item => {
-            item.addEventListener('click', (e) => {
-                if(e.target.classList[0] !== 'sort-adaptive__point'){
-                    menuLeft.classList.add('left-menu_sort-active');
-                    item.classList.add('sort-adaptive__main_active');
+            window.addEventListener('click', (e) => {
+                if(!document.querySelector('.sort-adaptive').contains(e.target)){
+                    remove(item);
                 }
-            });
-            closeWindow(item);
-        })
+            })
+        });
+        function remove(item){
+            menuLeft.classList.remove('left-menu_sort-active');
+            item.classList.remove('sort-adaptive__main_active');
+        }
     }
     deletFilter(){
         this.deletFilterBtn.addEventListener('click', () => {
