@@ -61,13 +61,6 @@
             color: $whiteColor;
         }
 
-        &_hide{
-            transition: all 0.7s ease 0s;//
-            width: 0;
-            opacity: 0;
-            margin-right: 0;
-        }
-
         &:hover{
             background: $cheryColor;
             color: $whiteColor;
@@ -79,6 +72,13 @@
             height: 38px;
             font-size: 16px;
             line-height: 45px;
+        }
+
+        &_hide{
+            transition: all 0.7s ease 0s;//
+            width: 0;
+            opacity: 0;
+            margin-right: 0;
         }
     }
     @media (max-width:1024px) {

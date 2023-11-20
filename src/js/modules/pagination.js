@@ -1,101 +1,113 @@
-export default function pagination (quantityPages){
-    const letfBtn = document.querySelector('.pagination__arrow_left');
-    const rightBtn = document.querySelector('.pagination__arrow_right');
-    const arrowActive = 'pagination__arrow_active';
-    const pointActive = 'pagination__point_active';
-    const pointContainer = document.querySelector('.pagination__points');
-
-    let currentPoint = 0;
-    let maxPoint = 7;
-    let hideNum = 0;
-    let lostPage = maxPoint;
-    if(window.innerWidth < 768){
-        maxPoint = 5
+export default class Pagination{
+    constructor(pages){
+        this.pages = pages
+        this.letfBtn = document.querySelector('.pagination__arrow_left');
+        this.rightBtn = document.querySelector('.pagination__arrow_right');
+        this.pointContainer = document.querySelector('.pagination__points');
+        this.current = 1
+        this.addPoints(this.pages);
+        this.startLoadPage();
+        this.buttons();
+        this.clickPoint();
+        this.currentPages(this.current);
+        this.sendUrl(this.current);
     }
-
-    function opacityArrow(index){
-        if(index === 0){
-            letfBtn.classList.remove(arrowActive);
-            rightBtn.classList.add(arrowActive);
-        }else if (index > (quantityPages - 2)){
-            letfBtn.classList.add(arrowActive);
-            rightBtn.classList.remove(arrowActive);
-        }else{
-            letfBtn.classList.add(arrowActive);
-            rightBtn.classList.add(arrowActive);
+    startLoadPage(){
+        const url = new URL(window.location.href);
+        const page = url.searchParams.get('point');
+        const maxPoint = this.getMaxPoint()
+        if(page && page < this.pages){
+            this.current = page
+        }
+        if(page >= maxPoint && page < this.pages){
+            const hidePage = page - this.getMaxPoint()
+            for(let i = 0; i < hidePage; i++){
+                this.getAllPoint()[i].classList.add('pagination__point_hide')
+            }
         }
     }
-
-    function removeActive(){
-        document.querySelectorAll('.' + pointActive).forEach(item => {
-            item.classList.remove(pointActive)
+    getAllPoint(){
+        return document.querySelectorAll('.pagination__point');
+    }
+    sendUrl(currentPages){
+        const url = new URL(window.location.href);
+        url.searchParams.set('point', currentPages);
+        window.history.replaceState({}, '', url);
+    }
+    opacityArrow(currentPoint){
+        this.arrowActive = 'pagination__arrow_active';
+        if(this.pages == 1){
+            this.letfBtn.classList.remove(this.arrowActive);
+            this.rightBtn.classList.remove(this.arrowActive);
+        }else if(currentPoint == 1){
+            this.letfBtn.classList.remove(this.arrowActive);
+            this.rightBtn.classList.add(this.arrowActive);
+        }else if (currentPoint > (this.pages - 1)){
+            this.letfBtn.classList.add(this.arrowActive);
+            this.rightBtn.classList.remove(this.arrowActive);
+        }else{
+            this.letfBtn.classList.add(this.arrowActive);
+            this.rightBtn.classList.add(this.arrowActive);
+        }
+    }
+    getMaxPoint(){
+        if(window.innerWidth > 768){
+            return 7
+        }else{
+            return 5
+        }
+    }
+    currentPages(currentPoint){
+        const pointActive = 'pagination__point_active';
+        this.getAllPoint().forEach(point => {
+            point.classList.remove(pointActive)
+        })
+        this.getAllPoint()[currentPoint - 1].classList.add(pointActive)
+        this.opacityArrow(currentPoint)
+        this.hidePoint(currentPoint);
+        this.sendUrl(currentPoint);
+    }
+    buttons(){
+        this.letfBtn.addEventListener('click', () => {
+            if(this.current > 1){
+                this.current--;
+                this.currentPages(this.current);
+            }
+        });
+        this.rightBtn.addEventListener('click', () => {
+            if(this.current < this.pages){
+                this.current++;
+                this.currentPages(this.current);
+            }
         })
     }
-
-    function addActive(index){
-        const allBtn = document.querySelectorAll('.pagination__point');
-        const currenHide = document.querySelectorAll('.pagination__point_hide').length;
-        removeActive();
-        allBtn[index].classList.add(pointActive);
-        opacityArrow(index);
-
-
-        if(index  >= (maxPoint - 1) && index < (quantityPages - 1)){
-            hideNum = (index - maxPoint) + 1
-            // lostPage = hideNum + maxPoint
-            for(let i = 0; i <= hideNum; i++){
-                allBtn[hideNum].classList.add('pagination__point_hide')
-            }
-        }
-        
-        if(currenHide >= (index -1) && index > 0){
-            allBtn[index - 1].classList.remove('pagination__point_hide')
-            // console.log(index - 1)
-        }
-        // console.log(currenHide, 'h')
-        // console.log(currenHide >= (index -1))
-
-
-
-
-    }
-
-    function addClick(){
-        const allBtn = document.querySelectorAll('.pagination__point');
-        letfBtn.addEventListener('click', () => {
-            if(currentPoint > 0){
-                currentPoint--;
-                addActive(currentPoint);   
-            }
-        });
-        rightBtn.addEventListener('click', () => {
-            if(currentPoint < (quantityPages - 1)){
-                currentPoint++;
-                addActive(currentPoint);
-            }
-        });
-        allBtn.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                currentPoint = index;
-                addActive(index);
+    clickPoint(){
+        this.getAllPoint().forEach((point, index) => {
+            point.addEventListener('click', () => {
+                if(!point.classList.contains('pagination__point_hide')){
+                    this.currentPages(index + 1)
+                    this.current = index + 1;
+                }
             })
-        });
+        })
     }
-
-    function addPoints(num){
-        pointContainer.innerHTML = '';
-        let hide = '';
-        for(let i = 1; i <= num; i++){
-            if(i > maxPoint){
-                hide = 'pagination__point_hide'
-            }
-            pointContainer.innerHTML += `
-            <li class="pagination__point">${i}</li>
+    addPoints(pages){
+        this.pointContainer.innerHTML = '';
+        for(let i = 1; i <= pages; i++){
+            this.pointContainer.innerHTML += `
+                <li class="pagination__point ">${i}</li>
             `;
         }
-        addClick();
-        addActive(currentPoint);
     }
-
-    addPoints(quantityPages)
+    hidePoint(current){
+        const allPoint = this.getAllPoint();
+        const maxPoint = this.getMaxPoint()
+        if(current > (maxPoint - 1) && current < this.pages){
+            allPoint[current - maxPoint].classList.add('pagination__point_hide');
+        }
+        if(current > 1){
+            allPoint[current - 2].classList.remove('pagination__point_hide');
+        }
+    }
 }
+

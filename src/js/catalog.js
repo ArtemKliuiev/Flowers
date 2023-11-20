@@ -1,7 +1,8 @@
 import Dropdown from './modules/dropdown';
-import pagination from './modules/pagination';
+import Pagination from './modules/pagination';
 
-pagination(22);
+const pagination = new Pagination(5)
+
 
 
 
