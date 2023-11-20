@@ -118,8 +118,7 @@ async function basket() {
     }
 
     function renderAllPrice(item) {
-      const allPrice = document.querySelectorAll('.basket__wrapper-right-price');
-      console.log(allPrice);
+      const allPrice = document.querySelector('.basket__wrapper-right-price');
     
       if (allPrice && item) {
         allPrice.textContent = item.newPrice * item.quantNum + ' ₴';
