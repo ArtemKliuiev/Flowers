@@ -33,11 +33,16 @@
     margin-bottom: 100px;
   }
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
   // .basket__wrapper
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   // .basket__wrapper-left
