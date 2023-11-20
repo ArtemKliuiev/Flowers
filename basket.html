@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231119200327">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231120210017">
   <title>Flowers</title>
 </head>
 
@@ -1076,9 +1076,51 @@
   </div>
   <h1 class="basket__title">Корзина</h1>
   <h2 class="basket__message">Корзина пуста!</h2>
-  <div class="basket__wrapper">
-    
+  <div class="basket__inner">
+    <div class="basket__wrapper">
+      <div class="basket__wrapper-text">
+        <p>Название</p>
+        <p>Цена за шт.</p>
+        <p>Кол-во</p>
+        <p>Итог</p>
+      </div>
+    </div>
+    <div class="basket__wrapper-right">
+      <div class="basket__right-nav">
+          <a href="#">Продолжить покупки</a>
+          <svg><use xlink:href="./images/Sprite.svg#basket-nav-arrow"></use></svg>
+        </div>
+        <div class="basket__wrapper-right-content">
+          <h2 class="basket__wrapper-right-title">Ваш заказ</h2>
+    <div class="basket__wrapper-right-inner">
+      <div class="basket__wrapper-right-prices">
+        <div class="basket__wrapper-right-products">
+          <p>Товары</p>
+        </div>
+        <p class="basket__wrapper-right-price">5 558 ₴</p>
+      </div>
+      <div class="basket__wrapper-right-stock">
+        <div class="basket__wrapper-right-products">
+          <p>Скидка</p>
+        </div>
+        <p>254 ₴</p>
+      </div>
+    </div>
+    <div class="basket__wrapper-right-all">
+      <p class="basket__wrapper-right-all-text">Всего</p>
+      <p>5 304 ₴</p>
+    </div>
+    <a href="./order.html">
+      <div class="order__button-wrapper product-card__bottom-button-desktop">
+        Оформить заказ
+        <img src="./images/main/stock/button-branch.png" alt="button-branch">
+      </div>
+    </a>
   </div>
+    
+  </div> 
+  </div>
+  
 </section>
 
           <section class="recomendation">
@@ -1516,5 +1558,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231119200327"></script>
+  <script src="js/main.min.js?_v=20231120210017"></script>
 </html>
