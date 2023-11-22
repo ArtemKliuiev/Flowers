@@ -16,18 +16,31 @@
   <h2 class="basket__message">Корзина пуста!</h2>
   <div class="basket__inner">
     <div class="basket__wrapper">
-      <div class="basket__wrapper-text">
-        <p>Название</p>
-        <p>Цена за шт.</p>
-        <p>Кол-во</p>
-        <p>Итог</p>
+      <div class="basket__wrapper-navs">
+        <div class="basket__wrapper-text">
+          <p>Название</p>
+          <p>Цена за шт.</p>
+          <p>Кол-во</p>
+          <p>Итог</p>
+          
+        </div>
+        <div class="basket__wrapper-text-mobile">
+          <div class="basket__right-nav">
+            <a href="#">Продолжить покупки</a>
+            <svg ><use xlink:href="./images/Sprite.svg#basket-nav-arrow"></use></svg>
+          </div>
+        </div>
       </div>
+      
     </div>
     <div class="basket__wrapper-right">
-      <div class="basket__right-nav">
+      <div class="basket__right-nav-desktop">
+        <div class="basket__right-nav">
           <a href="#">Продолжить покупки</a>
           <svg ><use xlink:href="./images/Sprite.svg#basket-nav-arrow"></use></svg>
         </div>
+      </div>
+      
         <div class="basket__wrapper-right-content">
           <h2 class="basket__wrapper-right-title">Ваш заказ</h2>
     <div class="basket__wrapper-right-inner">
@@ -41,12 +54,12 @@
         <div class="basket__wrapper-right-products">
           <p>Скидка</p>
         </div>
-        <p>254 ₴</p>
+        <p id="allStock">254 ₴</p>
       </div>
     </div>
     <div class="basket__wrapper-right-all">
       <p class="basket__wrapper-right-all-text">Всего</p>
-      <p>5 304 ₴</p>
+      <p id="allCost">5 304 ₴</p>
     </div>
     <a href="./order.html">
       <div class="product-card__bottom-button-desktop order__button-wrapper">

@@ -1,12 +1,20 @@
 .basket {
   margin-top: 9px;
   margin-bottom: 127px;
+
+  @include breakpoint($md5) {
+    margin-bottom: 66px;
+  }
   // .basket__nav
 
   &__nav {
     display: flex;
     gap: 37px;
     margin-bottom: 47px;
+
+    @include breakpoint($md4) {
+      display: none;
+    }
     a {
       color: #828282;
       font-family: AguafinaScript;
@@ -31,11 +39,24 @@
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 100px;
+
+    @include breakpoint($md4) {
+      font-size: 40px;
+    }
+    @include breakpoint($md5) {
+      font-size: 24px;
+      margin-bottom: 53px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint($md1) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   // .basket__wrapper
@@ -43,6 +64,21 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+  }
+
+  &__wrapper-navs {
+    @include breakpoint($md1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include breakpoint($md3) {
+      justify-content: flex-end;
+    }
   }
 
   // .basket__wrapper-left
@@ -57,12 +93,26 @@
     padding-left: 170px;
     gap: 145px;
     margin-bottom: 11px;
+
+    @include breakpoint($md1) {
+      padding-left: 0;
+    }
+    @include breakpoint($md3) {
+      display: none;
+    }
     p {
       color: #bdbdbd;
       font-family: Acme;
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
+    }
+  }
+
+  &__wrapper-text-mobile {
+    display: none;
+    @include breakpoint($md1) {
+      display: block;
     }
   }
 
@@ -74,7 +124,19 @@
   &__card-center-wrapper {
     display: flex;
     align-items: center;
-    gap: 120px;
+    gap: 94px;
+
+    @include breakpoint($md3) {
+      gap: 40px;
+    }
+    @include breakpoint($md4) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include breakpoint($md5) {
+      gap: 7px;
+      justify-content: start;
+    }
   }
 
   // .basket__card
@@ -86,32 +148,80 @@
     width: 980px;
     justify-content: space-between;
     margin-bottom: 13px;
+
+    @include breakpoint($md3) {
+      max-width: 980px;
+      width: 100%;
+    }
+    @include breakpoint($md4) {
+      padding-right: 15px;
+    }
+    @include breakpoint($md5) {
+      padding: 13px 15px 13px 9px;
+    }
+  }
+
+  &__card-all-price-wrapper {
+    display: flex;
+    gap: 58px;
+
+    @include breakpoint($md3) {
+      gap: 0;
+    }
+    @include breakpoint($md4) {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
   }
 
   // .basket__card-img
 
   &__card-img {
+    @include breakpoint($md3) {
+      margin-right: 20px;
+    }
     img {
       width: 83px;
       height: 104px;
+      object-fit: contain;
+
+      @include breakpoint($md5) {
+        width: 45px;
+        height: 62px;
+      }
     }
   }
 
   // .basket__card-name
 
   &__card-name {
+    width: 192px;
+    @include breakpoint($md4) {
+      text-align: center;
+    }
+    @include breakpoint($md5) {
+      width: 140px;
+      text-align: left;
+    }
     p {
       color: #333;
       font-family: Actor;
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
+
+      @include breakpoint($md5) {
+        font-size: 12px;
+      }
     }
   }
 
   // .basket__card-price
 
   &__card-price {
+    @include breakpoint($md4) {
+      display: none;
+    }
   }
 
   // .basket__card-new-price
@@ -145,6 +255,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+
+    @include breakpoint($md3) {
+      margin-right: 25px;
+    }
+    @include breakpoint($md5) {
+      width: 83px;
+      height: 29px;
+    }
   }
 
   // .basket__card-arrow-left
@@ -167,6 +285,10 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 18px;
+
+      @include breakpoint($md5) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -186,12 +308,25 @@
   &__card-all-price {
     display: flex;
     align-items: center;
+    width: 60px;
+
+    @include breakpoint($md3) {
+      margin-right: 25px;
+    }
+    @include breakpoint($md4) {
+      margin-right: 0;
+    }
     p {
       color: #333;
       font-family: Actor;
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
+
+      @include breakpoint($md4) {
+        display: flex;
+        gap: 5px;
+      }
     }
   }
 
@@ -220,9 +355,20 @@
     width: 21px;
     height: 19px;
 
+    @include breakpoint($md4) {
+      top: 4px;
+      right: -6px;
+    }
+
     svg {
       width: 21px;
       height: 19px;
+    }
+  }
+
+  &__right-nav-desktop {
+    @include breakpoint($md1) {
+      display: none;
     }
   }
 
@@ -234,6 +380,10 @@
     justify-content: flex-end;
     margin-bottom: 11px;
 
+    @include breakpoint($md5) {
+      margin-bottom: 30px;
+    }
+
     a {
       color: #bdbdbd;
       font-family: AguafinaScript;
@@ -241,6 +391,10 @@
       font-weight: 400;
       line-height: 18px;
       text-decoration-line: underline;
+
+      @include breakpoint($md5) {
+        font-size: 14px;
+      }
     }
 
     svg {
@@ -249,10 +403,21 @@
     }
   }
 
+  &__wrapper-right {
+    @include breakpoint($md5) {
+      width: 100%;
+    }
+  }
+
   &__wrapper-right-content {
     width: 415px;
     border: 1px solid #828282;
     padding: 59px 85px 30px 73px;
+
+    @include breakpoint($md5) {
+      width: 100%;
+      padding: 35px 17px 26px 17px;
+    }
   }
 
   // .basket__wrapper-right-title
@@ -264,6 +429,11 @@
     font-weight: 400;
     line-height: 18px;
     padding-bottom: 70px;
+
+    @include breakpoint($md5) {
+      font-size: 24px;
+      padding-bottom: 30px;
+    }
   }
 
   // .basket__wrapper-right-inner
@@ -304,6 +474,11 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 58px;
+
+    @include breakpoint($md5) {
+      padding-bottom: 38px;
+    }
+
     p {
       color: #333;
       font-family: Acme;
@@ -319,6 +494,10 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 64px;
+
+    @include breakpoint($md5) {
+      padding-bottom: 40px;
+    }
     p {
       color: #333;
       font-family: Actor;
@@ -336,6 +515,10 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 18px;
+
+    @include breakpoint($md5) {
+      font-size: 16px !important;
+    }
   }
 
   &__flowers-right {
@@ -346,10 +529,7 @@
     @include breakpoint($md1) {
       right: -70px;
     }
-    @media ($md2) {
-      right: -85px;
-    }
-    @media ($md3) {
+    @include breakpoint($md2) {
       display: none;
     }
   }
@@ -386,5 +566,6 @@
 
   &__message {
     display: none;
+    text-align: center;
   }
 }

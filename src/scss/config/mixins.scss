@@ -226,7 +226,7 @@ $md5: 576px;
 $md6: 375px;
 
 @mixin breakpoint($breakpoint) {
-  @media (max-width: $breakpoint) {
+  @media (max-width: #{$breakpoint + 1px}) {
     @content;
   }
 }
