@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231120210017">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231122185349">
   <title>Flowers</title>
 </head>
 
@@ -1078,18 +1078,31 @@
   <h2 class="basket__message">Корзина пуста!</h2>
   <div class="basket__inner">
     <div class="basket__wrapper">
-      <div class="basket__wrapper-text">
-        <p>Название</p>
-        <p>Цена за шт.</p>
-        <p>Кол-во</p>
-        <p>Итог</p>
+      <div class="basket__wrapper-navs">
+        <div class="basket__wrapper-text">
+          <p>Название</p>
+          <p>Цена за шт.</p>
+          <p>Кол-во</p>
+          <p>Итог</p>
+          
+        </div>
+        <div class="basket__wrapper-text-mobile">
+          <div class="basket__right-nav">
+            <a href="#">Продолжить покупки</a>
+            <svg><use xlink:href="./images/Sprite.svg#basket-nav-arrow"></use></svg>
+          </div>
+        </div>
       </div>
+      
     </div>
     <div class="basket__wrapper-right">
-      <div class="basket__right-nav">
+      <div class="basket__right-nav-desktop">
+        <div class="basket__right-nav">
           <a href="#">Продолжить покупки</a>
           <svg><use xlink:href="./images/Sprite.svg#basket-nav-arrow"></use></svg>
         </div>
+      </div>
+      
         <div class="basket__wrapper-right-content">
           <h2 class="basket__wrapper-right-title">Ваш заказ</h2>
     <div class="basket__wrapper-right-inner">
@@ -1103,12 +1116,12 @@
         <div class="basket__wrapper-right-products">
           <p>Скидка</p>
         </div>
-        <p>254 ₴</p>
+        <p id="allStock">254 ₴</p>
       </div>
     </div>
     <div class="basket__wrapper-right-all">
       <p class="basket__wrapper-right-all-text">Всего</p>
-      <p>5 304 ₴</p>
+      <p id="allCost">5 304 ₴</p>
     </div>
     <a href="./order.html">
       <div class="order__button-wrapper product-card__bottom-button-desktop">
@@ -1127,6 +1140,38 @@
     <h2 class="recomendation__title">
         Рекомендации
     </h2>
+    <div class="recomendation__swiper">
+
+    <div class="stock-swiper swiper">
+        
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="product-card__wrapper"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card__wrapper"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card__wrapper"></div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="stock__swiper-pagination"></div>
+      <div class="stock__swiper-buttons">
+        <div class="swiper-btn stock__swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
+            <path d="M0.574136 13.0104L12.6137 1.30589C13.3796 0.560961 14.6213 0.560961 15.3868 1.30589C16.1523 2.05016 16.1523 3.25729 15.3868 4.0015L4.73361 14.3582L15.3865 24.7145C16.152 25.459 16.152 26.6661 15.3865 27.4103C14.6209 28.1549 13.3793 28.1549 12.6134 27.4103L0.573826 15.7057C0.19105 15.3334 -0.00012207 14.8459 -0.00012207 14.3582C-0.00012207 13.8703 0.191422 13.3825 0.574136 13.0104Z" fill="#956D84"/>
+          </svg>
+        </div>
+        <div class="swiper-btn stock__swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
+            <path d="M15.3868 13.0104L3.34723 1.30589C2.58137 0.560961 1.33965 0.560961 0.574164 1.30589C-0.191388 2.05016 -0.191388 3.25729 0.574164 4.0015L11.2273 14.3582L0.574474 24.7145C-0.191078 25.459 -0.191078 26.6661 0.574474 27.4103C1.34003 28.1549 2.58168 28.1549 3.34754 27.4103L15.3871 15.7057C15.7699 15.3334 15.9611 14.8459 15.9611 14.3582C15.9611 13.8703 15.7695 13.3825 15.3868 13.0104Z" fill="#956D84"/>
+          </svg>
+        </div>
+    </div>
+    </div>
 </section>
 
         </div>
@@ -1558,5 +1603,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231120210017"></script>
+  <script src="js/main.min.js?_v=20231122185349"></script>
 </html>
