@@ -4,6 +4,7 @@ async function basket() {
   const basketWrapper = document.querySelector('.basket__wrapper');
   const basketWrapperRight = document.querySelector('.basket__wrapper-right');
   const basketWrapperText = document.querySelector('.basket__wrapper-text');
+  const basketWrapperTextMobile = document.querySelector('.basket__wrapper-text-mobile');
   const basketMessage = document.querySelector('.basket__message');
 
   let basketNum = 0;
@@ -41,8 +42,9 @@ async function basket() {
                 </div>
               </div>
             </div>
+            <div class="basket__card-all-price-wrapper">
             <div class="basket__card-all-price">
-              <p>${item.newPrice * item.quantNum} ₴</p>
+              <p>${item.newPrice * item.quantNum} <span>₴</span></p>
             </div>
             <div class="basket__card-del-wrapper">
               <div class="basket__card-del">
@@ -54,6 +56,7 @@ async function basket() {
                   <svg ><use xlink:href="./images/Sprite.svg#basket-like-active"></use></svg>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -78,6 +81,7 @@ async function basket() {
       if (parsedBasket && basketWrapperRight) {
         basketWrapperRight.style.display = 'none';
         basketWrapperText.style.display = 'none';
+        basketWrapperTextMobile.style.display = 'none';
         basketMessage.style.display = 'block';
       }
     }
@@ -146,7 +150,6 @@ async function basket() {
       });
 
       allPrice.textContent = totalPrice + ' ₴';
-      console.log(allPrice);
     }
 
     if (allStock) {
