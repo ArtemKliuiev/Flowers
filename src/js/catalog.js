@@ -1,4 +1,5 @@
 import Dropdown from './modules/dropdown';
+import Firebase from './modules/catalog/firebase';
 import Pagination from './modules/pagination';
 
 const pagination = new Pagination(5)
@@ -18,6 +19,7 @@ class Catalog{
         this.dropdown = new Dropdown('.drop-color');
         this.dropdown = new Dropdown('.drop-reason');
         this.dropdown = new Dropdown('.drop-sort');
+        this.firebase = new Firebase();
         this.adaptiveFilter()
         this.tabsFilter();
         this.tabsSortAdaptive();
