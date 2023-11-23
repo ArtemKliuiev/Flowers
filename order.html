@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231122185349">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231123161040">
   <title>Flowers</title>
 </head>
 
@@ -1085,6 +1085,7 @@
             <div class="order__form-name-wrap">
               <span>Имя получателя *</span>
               <input type="text" placeholder="Иван Иванов" id="orderRecipientName">
+              <p class="order__validate-text" id="recipientNameText"></p>
             </div>
 
             <div class="order__form-left-top-inner">
@@ -1095,10 +1096,12 @@
             <div class="order__form-tel-wrap">
               <span>Телефон получателя *</span>
               <input type="tel" placeholder="+380 (98) 00 00 000" id="recipientPhone">
+              <p class="order__validate-text" id="recipientPhoneText"></p>
             </div>
             <div class="order__form-address">
               <span>Адрес *</span>
-              <input type="text" placeholder="ул. Улица, 12" id="orderRecipientName">
+              <input type="text" placeholder="ул. Улица, 12" id="orderRecipientAdress">
+              <p class="order__validate-text" id="recipientAdressText"></p>
             </div>
 
             <div class="order__form-data">
@@ -1120,14 +1123,17 @@
             <div class="order__form-left-bot-name">
               <span>Имя *</span>
               <input type="text" id="orderSenderName">
+              <p class="order__validate-text" id="senderNameText"></p>
             </div>
             <div class="order__form-left-bot-tel">
               <span>Телефон *</span>
               <input type="tel" id="orderSenderTel">
+              <p class="order__validate-text" id="senderTelText"></p>
             </div>
             <div class="order__form-left-bot-mail">
               <span>Email *</span>
               <input type="mail" id="orderSenderMail">
+              <p class="order__validate-text" id="senderMailText"></p>
             </div>
           </div>
           <div class="order__form-left-bot order__form-left-bot-mobile">
@@ -1174,6 +1180,7 @@
             <div class="order__form-left-text-postcard">
               <span>Текст открытки</span>
               <input type="mail" id="orderPostcardText" placeholder="До 70 символов">
+              <p class="order__validate-text" id="textPostCardText"></p>
             </div>
           </div>
         </div>
@@ -1182,21 +1189,7 @@
         <div class="order__form-right-inner">
           <h2 class="order__form-wrapper-title">Ваш заказ</h2>
           <div class="order__you-order-wrapper">
-            <div class="order__you-order">
-              <p class="order__you-product">25 желтых тюльпанов</p>
-              <p class="order__you-num">2</p>
-              <p class="order__num order__you-price">5 558 ₴</p>
-            </div>
-            <div class="order__you-order">
-              <p class="order__you-product">25 розовых пионовидных роз</p>
-              <p class="order__you-num">1</p>
-              <p class="order__num order__you-price">254 ₴</p>
-            </div>
-            <div class="order__you-order">
-              <p class="order__you-product">Мечтательница</p>
-              <p class="order__you-num">1</p>
-              <p class="order__num order__you-price">254 ₴</p>
-            </div>
+            
           </div>
           <div class="order__you-wrappers">
             <div class="order__you-wrapper">
@@ -1219,7 +1212,7 @@
           </div>
 
           <button type="submit" class="order__button">
-            <div class="order__button-wrapper product-card__bottom-button-desktop">
+            <div class="order__button-wrapper product-card__bottom-button-desktop order__button-submit">
               Оформить заказ
               <img src="./images/main/stock/button-branch.png" alt="button-branch">
             </div>
@@ -1228,10 +1221,12 @@
         <div class="order__form-right-coupon">
           <span>Купон</span>
           <input type="num" id="orderCoupon" placeholder="Введите код купона">
+          <p class="order__validate-text" id="couponText"></p>
         </div>
         <div class="order__form-right-certificate">
           <span>Подарочный сертификат</span>
           <input type="num" id="orderCertificate" placeholder="Введите номер подарочного сертификата">
+          <p class="order__validate-text" id="certificateText"></p>
         </div>
 
         <button type="submit" class="order__form-button">
@@ -1675,5 +1670,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231122185349"></script>
+  <script src="js/main.min.js?_v=20231123161040"></script>
 </html>
