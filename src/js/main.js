@@ -12,6 +12,7 @@ import productsPresent from './modules/products/presentProduct';
 import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
 import basket from './modules/basket';
+import orderValidator from './modules/validator';
 
 
 const titles = document.querySelectorAll('.accordion__title');

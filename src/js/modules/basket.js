@@ -1,3 +1,4 @@
+
 async function basket() {
   const productCards = document.querySelectorAll('.product-card');
   const basketNumEls = document.querySelectorAll('.basket-amount p');
@@ -67,7 +68,7 @@ async function basket() {
         }
 
         const orderButton = document.querySelector(
-          '.product-card__bottom-button-desktop.order__button-wrapper'
+          '.product-card__bottom-button-desktop.order__button-wrapper.order__button-submit'
         );
         if (orderButton) {
           orderButton.addEventListener('click', (e) => {
@@ -263,10 +264,55 @@ async function basket() {
     });
   }
 
+  const orderWrapper = document.querySelector('.order__you-order-wrapper');
+
+  function order() {
+    const productNameContainer = document.querySelectorAll('.basket__card');
+    
+    if (productNameContainer) {
+      parsedBasket.forEach((item) => {
+
+        let orderTemplate = `
+          <div class="order__you-order">
+            <p class="order__you-product">${item.productName}</p>
+            <p class="order__you-num">${item.quantNum}</p>
+            <p class="order__you-price order__num">${item.newPrice * item.quantNum} ₴</p>
+          </div>
+        `
+        if (orderWrapper) {
+          orderWrapper.insertAdjacentHTML('beforeend', orderTemplate);
+        }
+      });
+
+      const orderPrice = document.querySelector('.order__sum-price');
+      const orderYouPrices = document.querySelectorAll('.order__you-price');
+      const allOrderPrice = document.querySelector('.order__our-price');
+      const orderDeliveryPriceEl = document.querySelector('.order__delivery-price');
+      const orderFotoPriceEl = document.querySelector('.order__foto-price');
+
+      if(orderDeliveryPriceEl && orderFotoPriceEl) {
+       const orderDeliveryPrice = +orderDeliveryPriceEl.textContent.replace('₴', '');
+       const orderFotoPrice = +orderFotoPriceEl.textContent.replace('₴', '');
+
+       let countYouPrice = 0;
+      orderYouPrices.forEach(orderYouPrice => {
+        const orderPriceNum = +orderYouPrice.textContent.replace('₴', '');
+        
+        countYouPrice += orderPriceNum;
+      })
+      orderPrice.textContent = countYouPrice + '₴'; 
+      allOrderPrice.textContent = (countYouPrice + orderDeliveryPrice + orderFotoPrice) + '₴';
+      console.log(allOrderPrice);
+      }
+    }
+  }
+
+
   quantProduct();
   renderOrder();
   renderBasket();
   delProduct();
+  order();
 }
 
 export default basket;
