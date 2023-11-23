@@ -604,7 +604,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
-    max-width: 165px;
+    width: 165px;
   }
   &__you-num {
     color: #333;
@@ -619,6 +619,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
+    width: 60px;
   }
 
   &__you-wrappers {
@@ -762,5 +763,12 @@
     // @media (max-width: 1525px) {
     //   display: none;
     // }
+  }
+
+  &__validate-text {
+    position: absolute;
+    font-size: 14px;
+    color: red;
+    pointer-events: none;
   }
 }
