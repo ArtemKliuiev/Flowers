@@ -1,3 +1,4 @@
+
 function orderValidator() {
   const recipientName = document.getElementById('orderRecipientName');
   const recipientTel = document.getElementById('recipientPhone');
@@ -45,6 +46,18 @@ function orderValidator() {
     return true;
   }
 
+  const form = document.querySelector('.order__form');
+
+  function onSubmitHandler(e) {
+    if (!isFormValid()) {
+      e.preventDefault(); 
+    }
+  }
+
+  if (form) {
+    form.addEventListener('submit', onSubmitHandler);
+  }
+
   function updateButtonSubmit() {
     if (isFormValid()) {
       buttonSubmit.disabled = false;
@@ -76,7 +89,7 @@ function orderValidator() {
     const couponValid = /^\d{1,10}$/;
     return couponValid.test(coupon);
   }
-
+  
   if (recipientName) {
     recipientName.addEventListener('input', () => {
       const name = recipientName.value.trim();
@@ -249,3 +262,5 @@ function orderValidator() {
   }
 }
 orderValidator();
+
+

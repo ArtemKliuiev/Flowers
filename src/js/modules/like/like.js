@@ -6,7 +6,7 @@ async function productLike() {
   const bottomHeaderLikeMobile = document.querySelector('.bottom-header__favorite-amount-mobile p');
   
   likeEl.forEach((like) => {
-    like.addEventListener('click', () => {
+    like.addEventListener('click', (e) => {
         like.classList.toggle('active');
         if(like.classList.contains('active')) {
             numLike += 1;
