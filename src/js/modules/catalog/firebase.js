@@ -17,7 +17,7 @@ export default class Firebase{
         const q = query(
             collection(db, "products"),
             where("whom", "in", categoriesToSearch),
-            // orderBy('whom')
+            // orderBy('price')
         );
 
         const querySnapshot = await getDocs(q);

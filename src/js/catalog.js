@@ -2,7 +2,7 @@ import Dropdown from './modules/dropdown';
 import Firebase from './modules/catalog/firebase';
 import Pagination from './modules/pagination';
 
-const pagination = new Pagination(7)
+const pagination = new Pagination(22)
 
 
 
