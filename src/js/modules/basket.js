@@ -17,6 +17,12 @@ async function basket() {
     parsedBasket = storedBasket ? JSON.parse(storedBasket) : [];
 
     if (parsedBasket.length > 0) {
+      if (basketMessage && basketWrapperRight && basketWrapperText) {
+        basketMessage.style.display = 'none';
+        basketWrapperRight.style.display = 'block';
+        basketWrapperText.style.display = 'flex';
+      }
+
       parsedBasket.forEach((item) => {
         renderOrder(item);
 
@@ -190,7 +196,6 @@ async function basket() {
     basketItems.forEach((item) => {
       item.remove();
     });
-    
   }
 
   productCards.forEach((productCard) => {
@@ -236,13 +241,9 @@ async function basket() {
 
       updateLocalStorage();
       updateStateBasketNum();
-
       clearBasket();
-      
       renderBasket();
       delProduct();
-      
-      console.log(parsedBasket);
     });
   });
 
@@ -340,8 +341,6 @@ async function basket() {
   delProduct();
   order();
   testProduct();
-  console.log(parsedBasket);
- 
 }
 
 export default basket;
