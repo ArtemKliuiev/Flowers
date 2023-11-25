@@ -1,19 +1,28 @@
-
 async function basket() {
   const productCards = document.querySelectorAll('.product-card');
   const basketNumEls = document.querySelectorAll('.basket-amount p');
   const basketWrapper = document.querySelector('.basket__wrapper');
   const basketWrapperRight = document.querySelector('.basket__wrapper-right');
   const basketWrapperText = document.querySelector('.basket__wrapper-text');
-  const basketWrapperTextMobile = document.querySelector('.basket__wrapper-text-mobile');
+  const basketWrapperTextMobile = document.querySelector(
+    '.basket__wrapper-text-mobile'
+  );
   const basketMessage = document.querySelector('.basket__message');
 
   let basketNum = 0;
   let parsedBasket = [];
 
   function renderBasket() {
+    const storedBasket = localStorage.getItem('basket');
+    parsedBasket = storedBasket ? JSON.parse(storedBasket) : [];
 
     if (parsedBasket.length > 0) {
+      if (basketMessage && basketWrapperRight && basketWrapperText) {
+        basketMessage.style.display = 'none';
+        basketWrapperRight.style.display = 'block';
+        basketWrapperText.style.display = 'flex';
+      }
+
       parsedBasket.forEach((item) => {
         renderOrder(item);
 
@@ -67,9 +76,8 @@ async function basket() {
           basketWrapper.insertAdjacentHTML('beforeend', template);
         }
 
-        const orderButton = document.querySelector(
-          '.product-card__bottom-button-desktop.order__button-wrapper.order__button-submit'
-        );
+        const orderButton = document.querySelector('.order__button');
+
         if (orderButton) {
           orderButton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -78,13 +86,6 @@ async function basket() {
           });
         }
       });
-    } else {
-      if (parsedBasket && basketWrapperRight) {
-        basketWrapperRight.style.display = 'none';
-        basketWrapperText.style.display = 'none';
-        basketWrapperTextMobile.style.display = 'none';
-        basketMessage.style.display = 'block';
-      }
     }
   }
 
@@ -142,12 +143,11 @@ async function basket() {
 
     if (allPrice) {
       parsedBasket.forEach((item) => {
-        if(item.oldPrice) {
+        if (item.oldPrice) {
           totalPrice += item.oldPrice * item.quantNum;
         } else {
           totalPrice += item.newPrice * item.quantNum;
         }
-        
       });
 
       allPrice.textContent = totalPrice + ' ₴';
@@ -157,14 +157,13 @@ async function basket() {
       parsedBasket.forEach((item) => {
         if (item.oldPrice) {
           totalStock +=
-          item.oldPrice * item.quantNum - item.newPrice * item.quantNum;
+            item.oldPrice * item.quantNum - item.newPrice * item.quantNum;
         } else {
           totalStock += 0;
-        }  
+        }
       });
 
       allStock.textContent = totalStock + ' ₴';
-      
     }
 
     if (allCost) {
@@ -191,6 +190,14 @@ async function basket() {
 
   updateStateBasketNum();
 
+  function clearBasket() {
+    const basketItems = document.querySelectorAll('.basket__card');
+
+    basketItems.forEach((item) => {
+      item.remove();
+    });
+  }
+
   productCards.forEach((productCard) => {
     const button = productCard.querySelector(
       '.product-card__bottom-button-desktop'
@@ -210,8 +217,12 @@ async function basket() {
             .textContent.replace('грн', '')
         ),
         oldPrice: (() => {
-          const oldPriceElement = productEl.querySelector('.product-card__bottom-old-price');
-          return oldPriceElement ? parseFloat(oldPriceElement.textContent.replace('грн', '')) : 0;
+          const oldPriceElement = productEl.querySelector(
+            '.product-card__bottom-old-price'
+          );
+          return oldPriceElement
+            ? parseFloat(oldPriceElement.textContent.replace('грн', ''))
+            : 0;
         })(),
         quantNum: 1,
       };
@@ -230,6 +241,9 @@ async function basket() {
 
       updateLocalStorage();
       updateStateBasketNum();
+      clearBasket();
+      renderBasket();
+      delProduct();
     });
   });
 
@@ -250,14 +264,11 @@ async function basket() {
           if (delIndex !== -1) {
             parsedBasket.splice(delIndex, 1);
 
-            if (parsedBasket.length === 0) {
-              renderBasket();
-            }
-
             delEl.remove();
             updateLocalStorage();
             updateStateBasketNum();
             renderOrder();
+            testProduct();
           }
         }
       });
@@ -268,17 +279,18 @@ async function basket() {
 
   function order() {
     const productNameContainer = document.querySelectorAll('.basket__card');
-    
+
     if (productNameContainer) {
       parsedBasket.forEach((item) => {
-
         let orderTemplate = `
           <div class="order__you-order">
             <p class="order__you-product">${item.productName}</p>
             <p class="order__you-num">${item.quantNum}</p>
-            <p class="order__you-price order__num">${item.newPrice * item.quantNum} ₴</p>
+            <p class="order__you-price order__num">${
+              item.newPrice * item.quantNum
+            } ₴</p>
           </div>
-        `
+        `;
         if (orderWrapper) {
           orderWrapper.insertAdjacentHTML('beforeend', orderTemplate);
         }
@@ -287,32 +299,48 @@ async function basket() {
       const orderPrice = document.querySelector('.order__sum-price');
       const orderYouPrices = document.querySelectorAll('.order__you-price');
       const allOrderPrice = document.querySelector('.order__our-price');
-      const orderDeliveryPriceEl = document.querySelector('.order__delivery-price');
+      const orderDeliveryPriceEl = document.querySelector(
+        '.order__delivery-price'
+      );
       const orderFotoPriceEl = document.querySelector('.order__foto-price');
 
-      if(orderDeliveryPriceEl && orderFotoPriceEl) {
-       const orderDeliveryPrice = +orderDeliveryPriceEl.textContent.replace('₴', '');
-       const orderFotoPrice = +orderFotoPriceEl.textContent.replace('₴', '');
+      if (orderDeliveryPriceEl && orderFotoPriceEl) {
+        const orderDeliveryPrice = +orderDeliveryPriceEl.textContent.replace(
+          '₴',
+          ''
+        );
+        const orderFotoPrice = +orderFotoPriceEl.textContent.replace('₴', '');
 
-       let countYouPrice = 0;
-      orderYouPrices.forEach(orderYouPrice => {
-        const orderPriceNum = +orderYouPrice.textContent.replace('₴', '');
-        
-        countYouPrice += orderPriceNum;
-      })
-      orderPrice.textContent = countYouPrice + '₴'; 
-      allOrderPrice.textContent = (countYouPrice + orderDeliveryPrice + orderFotoPrice) + '₴';
-      console.log(allOrderPrice);
+        let countYouPrice = 0;
+        orderYouPrices.forEach((orderYouPrice) => {
+          const orderPriceNum = +orderYouPrice.textContent.replace('₴', '');
+
+          countYouPrice += orderPriceNum;
+        });
+        orderPrice.textContent = countYouPrice + '₴';
+        allOrderPrice.textContent =
+          countYouPrice + orderDeliveryPrice + orderFotoPrice + '₴';
       }
     }
   }
 
+  function testProduct() {
+    if (parsedBasket.length === 0) {
+      if (parsedBasket && basketWrapperRight) {
+        basketWrapperRight.style.display = 'none';
+        basketWrapperText.style.display = 'none';
+        basketWrapperTextMobile.style.display = 'none';
+        basketMessage.style.display = 'block';
+      }
+    }
+  }
 
   quantProduct();
   renderOrder();
   renderBasket();
   delProduct();
   order();
+  testProduct();
 }
 
 export default basket;

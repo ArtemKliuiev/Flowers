@@ -51,8 +51,8 @@ async function go() {
   await seasonProduct.loadCards();
   await presentProduct.loadCards();
 
-  let likeProduct = await productLike();
   let basketEl = await basket();
+  let likeProduct = await productLike();
 
 }
 

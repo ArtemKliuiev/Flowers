@@ -8,7 +8,6 @@ function order() {
         
         
       });
-      console.log(parsedBasket);
     }
   }
 
