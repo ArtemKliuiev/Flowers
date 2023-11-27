@@ -1,5 +1,4 @@
-import Dropdown from './modules/dropdown';
-import Firebase from './modules/catalog/firebase';
+import Menu from './modules/catalog/left-menu';
 import Pagination from './modules/pagination';
 
 const pagination = new Pagination(22)
@@ -15,11 +14,7 @@ class Catalog{
         this.leftMenuBtn = document.querySelector('.button-for-left-menu');
         this.deletFilterBtn = document.querySelector('.left-menu__adaptive-delete-filters');
         this.exitApativeLeftMenu = document.querySelector('.left-menu__adaptive-back');
-        this.dropdown = new Dropdown('.drop-person');
-        this.dropdown = new Dropdown('.drop-color');
-        this.dropdown = new Dropdown('.drop-reason');
-        this.dropdown = new Dropdown('.drop-sort');
-        this.firebase = new Firebase();
+        this.menu = new Menu();
         this.adaptiveFilter()
         this.tabsFilter();
         this.tabsSortAdaptive();
