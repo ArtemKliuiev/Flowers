@@ -61,3 +61,21 @@ function forumSwiper() {
   });
 }
 forumSwiper();
+
+function previewsSwiper() {
+  let swiper = new Swiper('.reviews__swiper', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.reviews__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.reviews__swiper-button-next',
+      prevEl: '.reviews__swiper-button-prev',
+    },
+  });
+}
+previewsSwiper();
