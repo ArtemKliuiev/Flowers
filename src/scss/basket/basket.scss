@@ -524,50 +524,7 @@
       font-size: 16px !important;
     }
   }
-
-  &__flowers-right {
-    position: absolute;
-    right: 0;
-    top: 352px;
-
-    @include breakpoint($md1) {
-      right: -70px;
-    }
-    @include breakpoint($md2) {
-      display: none;
-    }
-  }
-  &__flowers-left-top {
-    position: absolute;
-    left: 0;
-    top: -64px;
-
-    @media (max-width: 1765px) {
-      left: -30px;
-    }
-    @media (max-width: 1625px) {
-      left: -50px;
-    }
-    @media (max-width: 1525px) {
-      display: none;
-    }
-  }
-  &__flowers-left-bottom {
-    position: absolute;
-    left: 0;
-    top: 828px;
-
-    @media (max-width: 1765px) {
-      left: -30px;
-    }
-    @media (max-width: 1625px) {
-      left: -50px;
-    }
-    @media (max-width: 1525px) {
-      display: none;
-    }
-  }
-
+  
   &__message {
     display: none;
     text-align: center;

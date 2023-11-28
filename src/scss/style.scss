@@ -25,6 +25,7 @@
 @import 'main/season';
 @import 'main/present';
 @import 'main/forum';
+@import 'main/background-main';
 
 //about-us
 @import 'about-us/bread-crumbs';
@@ -54,11 +55,15 @@
 
 //order
 @import 'order/order';
+@import 'order/background-order';
 
 //basket
 @import 'basket/basket';
 @import 'basket/recomendation';
+@import 'basket/background-basket';
 
 @import 'reviews/reviews';
+@import 'reviews/background-reviews';
 
 @import 'photo/photo';
+@import 'photo/background-photo';

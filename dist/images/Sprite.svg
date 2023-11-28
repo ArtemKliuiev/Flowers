@@ -42,6 +42,12 @@
 <path d="M3.5 3L0.468911 -5.70966e-07L6.53109 -4.09935e-08L3.5 3Z"/>
 </symbol>
 
+<symbol id="photo-arrow" viewBox="0 0 60 60" fill="none">
+<g opacity="0.4">
+<path d="M35.0004 45L38.5254 41.475L27.0754 30L38.5254 18.525L35.0004 15L20.0004 30L35.0004 45Z" fill="#956D84"/>
+</g>
+</symbol>
+
 <symbol id="basket-arrow-left" viewBox="0 0 7 11" fill="none">
 <path d="M6.12636 1L2 5.5L6.12636 10" stroke="#BDBDBD" stroke-width="1.5"/>
 </symbol>

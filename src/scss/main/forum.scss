@@ -84,7 +84,6 @@
       }
     }
     @include breakpoint($md4) {
-      width: 287px;
       height: 324px;
     }
   }
@@ -196,13 +195,6 @@
     }
   }
 
-
-
-  &__flowers-right {
-    position: absolute;
-    left: 0;
-    bottom: 16px;
-  }
 }
 
 .forum__swiper-pagination .swiper-pagination-bullet {
