@@ -14,17 +14,18 @@ export default class Menu{
 
 
         this.category = {
-            whom: ['Бабушке', "Белые розы"],
-            color: ['Бабушке', "Белые розы"],
-            occasion: ['Бабушке', "Белые розы"],
-            bouquets: ['Бабушке', "Белые розы"],
-            roses: ['Бабушке', "Белые розы"],
-            inBox: ['Бабушке', "Белые розы"],
-            compositions: ['Бабушке', "Белые розы"],
-            gift: ['Бабушке', "Белые розы"],
-            giftBasket: ['Бабушке', "Белые розы"],
-            forBride: ['Бабушке', "Белые розы"],
-            delicious: ['Бабушке', "Белые розы"],
+            bouquets: [''],
+            roses: [''],
+            inBox: [''],
+            compositions: [''],
+            gift: [''],
+            giftBasket: [''],
+            forBride: [''],
+            delicious: [''],
+            color: '',
+            whom: '',
+            occasion: '',
+            sort: '',
         }
 
         this.addListener();
@@ -46,19 +47,24 @@ export default class Menu{
     update(){
         const thisClass = this;
         for(const key in this.category){
-            this.category[key] = [''];
+            if(this.category[key] != this.category.whom){
+                this.category[key] = [''];
+            }
+
         }
 
         const everDrop = (drop, num) => {
             if(drop !== 'Выбрать'){
                 this.data(num, drop)
+            }else{
+                this.data(num, '')
             }
 
         }
         everDrop(this.dropdownPerson.state(), 9);
         everDrop(this.dropdownColor.state(), 10);
         everDrop(this.dropdownReason.state(), 11);
-        // everDrop(this.dropdownSort, 12);
+        everDrop(this.dropdownSort.state(), 12);
 
         this.mainItem.forEach(item => {
             const input = item.querySelector('input');
@@ -100,13 +106,16 @@ export default class Menu{
                 this.category.delicious.push(item)
                 break;
             case 9:
-                this.category.whom.push(item)
+                this.category.whom = item;
                 break;
             case 10:
-                this.category.color.push(item)
+                this.category.color = item;
                 break;
             case 11:
-                this.category.occasion.push(item)
+                this.category.occasion = item;
+                break;
+            case 12:
+                this.category.sort = item;
                 break;
         }
     }
