@@ -79,3 +79,21 @@ function previewsSwiper() {
   });
 }
 previewsSwiper();
+
+function photoSwiper() {
+  let swiper = new Swiper('.photo__swiper', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.photo__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.photo__swiper-button-next',
+      prevEl: '.photo__swiper-button-prev',
+    },
+  });
+}
+photoSwiper();
