@@ -46,5 +46,8 @@ export default class Dropdown {
             });
         }
     }
+    state(){
+        return this.dropThisItem.textContent;
+    }
 }
 

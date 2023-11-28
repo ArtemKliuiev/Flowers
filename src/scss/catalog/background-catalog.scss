@@ -7,52 +7,51 @@
     width: 100%;
     height: 100%;
     bottom: 0;
-    @media (max-width:1920px) {
+    @include breakpoint($md0){
         width: 1920px;
     }
-    @media (max-width:1024px) {
+    @include breakpoint($md3) {
         display: none;
     }
     &__image {
         position: absolute;
     }
     &__left {
-        &_one {
+        &-one {
             bottom: 820px;
             left: -310px;
         }
-        &_two {
+        &-two {
             bottom: 1696px;
             transform: rotate(-4deg);
             left: -169px;
         }
-        &_three {
+        &-three {
             bottom: 2474px;
             left: -333px;
         }
-        &_four {
+        &-four {
             bottom: 3260px;
             left: -320px;
         }
     }
     &__right {
-        &_one {
+        &-one {
             bottom: 311px;
             right: -309px;
         }
-        &_two {
+        &-two {
             bottom: 1344px;
             right: -339px;
         }
-        &_three {
+        &-three {
             bottom: 2214px;
             right: -339px;
         }
-        &_four {
+        &-four {
             bottom: 2970px;
             right: -339px;
         }
     }
 }
 
-//миксины (для брекпоинтов)
