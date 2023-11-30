@@ -15,6 +15,7 @@ import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
 import basket from './modules/basket';
 import orderValidator from './modules/validator';
+import stickyHeader from './modules/stickyHeader';
 
 
 const titles = document.querySelectorAll('.accordion__title');

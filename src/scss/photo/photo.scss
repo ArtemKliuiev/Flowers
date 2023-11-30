@@ -1,9 +1,10 @@
 .photo {
-  margin-top: 9px;
+  margin-top: 262px;
   margin-bottom: 104px;
 
   @include breakpoint($md6) {
     margin-bottom: 60px;
+    margin-top: 156px;
   }
   // .reviews__nav
 
