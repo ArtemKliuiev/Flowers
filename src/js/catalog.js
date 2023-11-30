@@ -12,7 +12,7 @@ class Catalog{
         this.itemsFiler = document.querySelectorAll('.left-menu__item');
         this.itemsSortAdaptive = document.querySelectorAll('.sort-adaptive__main');
         this.leftMenuBtn = document.querySelector('.button-for-left-menu');
-        this.deletFilterBtn = document.querySelector('.left-menu__adaptive-delete-filters');
+        this.deletFilterBtn = document.querySelector('.left-menu__delete-filters');
         this.exitApativeLeftMenu = document.querySelector('.left-menu__adaptive-back');
         this.menu = new Menu();
         this.adaptiveFilter()
@@ -50,6 +50,7 @@ class Catalog{
     }
     
     tabsSortAdaptive(){
+        const menu = this.menu
         const menuLeft = this.menuLeft;
         this.itemsSortAdaptive.forEach(item => {
             item.querySelector('.sort-adaptive__btn').addEventListener('click', () => {
@@ -59,6 +60,7 @@ class Catalog{
                     point.addEventListener('click', () => {
                         item.querySelector('.sort-adaptive__info').innerHTML = point.textContent
                         remove(item);
+                        menu.update();
                     })
                 })
             })
@@ -74,6 +76,7 @@ class Catalog{
         }
     }
     deletFilter(){
+        const menu = this.menu
         this.deletFilterBtn.addEventListener('click', () => {
             document.querySelectorAll('.sort-adaptive__info').forEach(item => {
                 item.innerHTML = ''
@@ -81,6 +84,7 @@ class Catalog{
             this.menuLeft.querySelectorAll('input').forEach(input => {
                 input.checked = false;
             });
+            menu.update();
         })
     }
 }

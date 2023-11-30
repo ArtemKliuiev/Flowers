@@ -1,13 +1,11 @@
 .cards {
     margin-bottom: 113px;
     &__items {
-        height: 2277px;
+        display: grid;
+        grid-template: 554px / 1fr 1fr 1fr;
+        gap: 20px;
+        min-height: 2246px;
         margin-bottom: 75px;
-
-        @media (max-width:768px) {
-            height: 1692px;
-            margin-bottom: 75px;
-        }
     }
     &__button {
         max-width: 220px;
@@ -31,6 +29,8 @@
         @media (max-width:768px) {
             font-size: 16px;
         }
+    }
+    &__pagination{
     }
     &__button-info {}
     @media (max-width:768px) {

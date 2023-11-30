@@ -61,8 +61,6 @@
         grid-row: 1;
     }
     &__cards{
-        width: 100%;
-        height: 100%;
         grid-column: 3;
         grid-row: 3;
         @media (max-width: 768px) {
