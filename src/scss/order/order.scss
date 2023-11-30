@@ -1,9 +1,15 @@
 .order {
-  margin-top: 8px;
+  margin-top: 264px;
   margin-bottom: 40px;
+
   @include breakpoint($md5) {
     margin-bottom: 34px;
   }
+
+  @include breakpoint($md6) {
+    margin-top: 160px;
+  }
+
   &__navs {
     display: flex;
     gap: 37px;

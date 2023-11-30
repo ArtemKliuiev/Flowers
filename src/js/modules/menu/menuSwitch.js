@@ -11,7 +11,9 @@ function menuSwitch() {
   mobileMenuClose.addEventListener('click', () => {
     categoryMenu.classList.remove('_active');
     menuClose.style.display = 'block';
-  })
+  });
+  
+
 }
 
 menuSwitch();
