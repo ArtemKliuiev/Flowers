@@ -7,6 +7,7 @@ import presentSwiper from './modules/swiper';
 import previewsSwiper from './modules/swiper';
 import photoSwiper from './modules/swiper';
 import forumSwiper from './modules/swiper';
+import newsSwiper from './modules/swiper';
 import productLike from "./modules/like/like";
 import productsStock from './modules/products/stockProduct';
 import productsSeason from './modules/products/seasonProduct';
@@ -16,6 +17,7 @@ import menuSwitch from "./modules/menu/menuSwitch";
 import basket from './modules/basket';
 import orderValidator from './modules/validator';
 import stickyHeader from './modules/stickyHeader';
+import dropdownHandler from './modules/orderDropdown';
 
 
 const titles = document.querySelectorAll('.accordion__title');

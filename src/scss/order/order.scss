@@ -729,48 +729,18 @@
     position: absolute;
     right: 0;
     top: 354px;
-
-    // @media (max-width: 1765px) {
-    //   right: -50px;
-    // }
-    // @media (max-width: 1625px) {
-    //   right: -85px;
-    // }
-    // @media (max-width: 1525px) {
-    //   display: none;
-    // }
   }
 
   &__flowers-left-top {
     position: absolute;
     left: 0;
     top: -64px;
-
-    // @media (max-width: 1765px) {
-    //   left: -30px;
-    // }
-    // @media (max-width: 1625px) {
-    //   left: -50px;
-    // }
-    // @media (max-width: 1525px) {
-    //   display: none;
-    // }
   }
 
   &__flowers-left-bottom {
     position: absolute;
     left: 0;
     top: 827px;
-
-    // @media (max-width: 1765px) {
-    //   left: -30px;
-    // }
-    // @media (max-width: 1625px) {
-    //   left: -85px;
-    // }
-    // @media (max-width: 1525px) {
-    //   display: none;
-    // }
   }
 
   &__validate-text {
@@ -779,4 +749,54 @@
     color: red;
     pointer-events: none;
   }
+}
+
+.order-region__dropdown-label, .order-time__dropdown-label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.order-region__dropdown-menu, .order-time__dropdown-menu  {
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  list-style: none;
+  font-family: Acme;
+  width: 118px;
+  max-height: 500px;
+  border-radius: 8px;
+  padding: 0;
+  margin-top: 5px;
+  position: absolute;
+  background-color: rgba(109, 101, 101, 0.5);
+  z-index: 1;
+  text-align: center;
+  transition: all 0.2s ease;
+
+  a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+.order-region__dropdown-menu.active, .order-time__dropdown-menu.active  {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: none;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  width: 100%;
+  left: 0;
+  top: 50px;
+}
+
+.order-region__dropdown-label.active svg, .order-time__dropdown-label.active svg {
+  transform: translateY(-50%) rotate(180deg);
 }

@@ -97,3 +97,21 @@ function photoSwiper() {
   });
 }
 photoSwiper();
+
+function newsSwiper() {
+  let swiper = new Swiper('.news__swiper', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.news__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.news__swiper-button-next',
+      prevEl: '.news__swiper-button-prev',
+    },
+  });
+}
+newsSwiper();
