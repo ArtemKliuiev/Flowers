@@ -3,7 +3,6 @@ import Dropdown from '../dropdown';
 
 export default class Menu{
     constructor(){
-
         this.firebase = new loadFirebase();
         this.dropdownPerson = new Dropdown('.drop-person');
         this.dropdownColor = new Dropdown('.drop-color');
