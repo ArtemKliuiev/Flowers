@@ -1,10 +1,8 @@
 @import './product-list';
 
 .header {
-  position: fixed;
   min-height: 214px;
-  width: 100%;
-  z-index: 2;
+
 
   @include breakpoint($md5) {
     min-height: 127px;
@@ -277,7 +275,7 @@
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
     overflow: auto;
     transition: $standartTrans;
-    z-index: 1;
+    z-index: 2;
     display: block; //!!!!!
 
     &::-webkit-scrollbar {
@@ -964,20 +962,3 @@
   }
 }
 
-.header-scroll {
-  background: #333;
-  opacity: 0.5;
-  transition: all 0.2s ease;
-
-  .pull-down__title, .menu__item a {
-    color: #fff;
-  }
-
-  @media (min-width: 998px) {
-    &:hover {
-      background: #333;
-      opacity: 1;
-      z-index: 11;
-    }
-  }
-}

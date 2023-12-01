@@ -5,7 +5,6 @@ const pagination = new Pagination(22)
 
 
 
-
 class Catalog{
     constructor(){
         this.menuLeft = document.querySelector('.left-menu');

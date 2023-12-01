@@ -1,0 +1,47 @@
+.backgroung-news {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  pointer-events: none;
+  @include breakpoint($md0) {
+    width: 1920px;
+  }
+  @include breakpoint($md3) {
+    display: none;
+  }
+  &__image {
+    position: absolute;
+  }
+  &__left {
+    &-one {
+      bottom: 136px;
+      left: -341px;
+    }
+    &-two {
+      bottom: 1054px;
+      left: -374px;
+    }
+    &-three {
+      bottom: 1748px;
+      left: -381px;
+    }
+  }
+  &__right {
+    &-one {
+      bottom: -60px;
+      right: -271px;
+    }
+    &-two {
+      bottom: 661px;
+      right: -330px;
+    }
+    &-three {
+      bottom: 1591px;
+      right: -351px;
+    }
+  }
+}

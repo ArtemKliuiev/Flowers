@@ -18,6 +18,7 @@
 @import 'components/product-list';
 @import 'components/mainMenu/mainMenu';
 @import 'components/categoryMenu/categoryMenu';
+@import 'components/dropdown';
 
 //main
 @import 'main/certificate';
@@ -67,3 +68,6 @@
 
 @import 'photo/photo';
 @import 'photo/background-photo';
+
+@import 'news/news';
+@import 'news/background-news';

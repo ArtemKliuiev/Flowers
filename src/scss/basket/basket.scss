@@ -1,13 +1,12 @@
 .basket {
-  margin-top: 9px;
   margin-bottom: 127px;
-  margin-top: 263px;
+  margin-top: 49px;
 
   @include breakpoint($md5) {
     margin-bottom: 66px;
   }
   @include breakpoint($md6) {
-    margin-top: 159px;
+    margin-top: 32px;
   }
   // .basket__nav
 

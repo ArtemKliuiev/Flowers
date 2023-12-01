@@ -21,10 +21,37 @@
               <p class="order__validate-text" id="recipientNameText"></p>
             </div>
 
-            <div class="order__form-left-top-inner">
+            <div class="order__form-left-top-inner order__form-region">
               <p>Регион *</p>
-              <span>Киев</span>
-              <svg ><use xlink:href="./images/Sprite.svg#order-arrow"></use></svg>
+              <label for="dropdown-toggle" class="order-region__dropdown-label">
+                <span class="order-region__label-text">Киев</span>
+                <svg>
+                  <use xlink:href="./images/Sprite.svg#order-arrow"></use>
+                </svg>
+              </label>
+
+              <ul class="order-region__dropdown-menu">
+                <a href="#">
+                  <li>
+                    <span>Киев</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Харьков</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Днепр</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Львов</span>
+                  </li>
+                </a>
+              </ul>
             </div>
             <div class="order__form-tel-wrap">
               <span>Телефон получателя *</span>
@@ -52,13 +79,31 @@
                 placeholder="Дата доставки"
                 id="deliveryDate"
               />
-              <svg ><use xlink:href="./images/Sprite.svg#order-data"></use></svg>
+              <svg><use xlink:href="./images/Sprite.svg#order-data"></use></svg>
             </div>
 
-            <div class="order__form-left-top-inner">
+            <div class="order__form-left-top-inner order__form-time">
               <p>Время доставки</p>
-              <span>6:00 - 9:00</span>
-              <svg ><use xlink:href="./images/Sprite.svg#order-arrow"></use></svg>
+              <label for="dropdown-toggle" class="order-time__dropdown-label">
+                <span class="order-time__label-text">6:00 - 9:00</span>
+                <svg>
+                  <use xlink:href="./images/Sprite.svg#order-arrow"></use>
+                </svg>
+              </label>
+              <ul class="order-time__dropdown-menu">
+                <li>
+                  <span>6:00 - 9:00</span>
+                </li>
+                <li>
+                  <span>7:00 - 10:00</span>
+                </li>
+                <li>
+                  <span>8:00 - 11:00</span>
+                </li>
+                <li>
+                  <span>9:00 - 12:00</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -113,7 +158,7 @@
                 <span>Открытка</span>
               </div>
             </div>
-            
+
             <div class="order__form-left-buttons-close">
               <div class="order__form-left-button-wrapper">
                 <input type="checkbox" class="order__form-check" />
@@ -147,8 +192,7 @@
       <div class="order__form-wrapper-right">
         <div class="order__form-right-inner">
           <h2 class="order__form-wrapper-title">Ваш заказ</h2>
-          <div class="order__you-order-wrapper">
-          </div>
+          <div class="order__you-order-wrapper"></div>
           <div class="order__you-wrappers">
             <div class="order__you-wrapper">
               <p class="order__sum order__text">Сумма заказа</p>
