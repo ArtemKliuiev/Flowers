@@ -1,10 +1,10 @@
 .news {
-  margin-top: 262px;
+  margin-top: 48px;
   margin-bottom: 80px;
 
   @include breakpoint($md6) {
     margin-bottom: 60px;
-    margin-top: 156px;
+    margin-top: 23px;
   }
   // .reviews__nav
 
@@ -89,7 +89,7 @@
         display: none;
       }
 
-      @include breakpoint($md6) {
+      @include breakpoint($md5) {
         width: 287px;
         height: 231px;
         margin-top: 22px;
@@ -108,18 +108,15 @@
     bottom: 140px;
     text-align: center;
 
-    @include breakpoint($md6) {
+    @include breakpoint($md5) {
       bottom: 90px;
     }
 
     img {
       @include breakpoint($md5) {
         width: 100%;
-        max-width: 380px;
         object-fit: cover;
         height: 214px;
-      }
-      @include breakpoint($md6) {
         max-width: 260px;
       }
     }
@@ -139,7 +136,7 @@
       font-size: 14px;
       bottom: 83px;
       left: 3px;
-      max-width: 269px;
+      max-width: 255px;
     }
   }
 
@@ -155,7 +152,7 @@
     max-width: 400px;
     @include breakpoint($md5) {
       font-size: 12px;
-      bottom: 65px;
+      bottom: 74px;
       left: 6px;
       max-width: 264px;
     }
@@ -170,7 +167,7 @@
     position: relative;
     bottom: 63px;
     left: 12px;
-    @include breakpoint($md6) {
+    @include breakpoint($md5) {
       display: none;
     }
   }

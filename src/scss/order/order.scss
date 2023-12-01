@@ -1,5 +1,5 @@
 .order {
-  margin-top: 264px;
+  margin-top: 48px;
   margin-bottom: 40px;
 
   @include breakpoint($md5) {
@@ -7,7 +7,7 @@
   }
 
   @include breakpoint($md6) {
-    margin-top: 160px;
+    margin-top: 21px;
   }
 
   &__navs {
@@ -749,54 +749,59 @@
     color: red;
     pointer-events: none;
   }
+
+  &__dropdown-info {
+    width: 100%;
+  }
 }
 
-.order-region__dropdown-label, .order-time__dropdown-label {
+.order-region__dropdown-label,
+.order-time__dropdown-label {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
 
-.order-region__dropdown-menu, .order-time__dropdown-menu  {
-  opacity: 0;
-  overflow: hidden;
-  visibility: hidden;
-  list-style: none;
-  font-family: Acme;
-  width: 118px;
-  max-height: 500px;
-  border-radius: 8px;
-  padding: 0;
-  margin-top: 5px;
+.order-region__dropdown-menu,
+.order-time__dropdown-menu {
+  transition: opacity 0s ease 0s;
   position: absolute;
-  background-color: rgba(109, 101, 101, 0.5);
-  z-index: 1;
-  text-align: center;
-  transition: all 0.2s ease;
+  z-index: -10;
+  opacity: 0;
+  width: 100%;
+  color: black;
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid $cheryColor;
+  background: $whiteColor;
+  top: 58px;
+  left: 0;
 
-  a {
-    color: #333;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+  li {
+    cursor: pointer;
+    padding: 17px 0 16px 15px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: $whiteColor;
+    &:hover {
+      background: $cheryColor;
+      color: $whiteColor;
+    }
   }
 }
 
-.order-region__dropdown-menu.active, .order-time__dropdown-menu.active  {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  border-top: none;
-  position: absolute;
+.order-region__dropdown-menu.active,
+.order-time__dropdown-menu.active {
+  transition: opacity 100ms ease 0s;
+  z-index: 16;
   opacity: 1;
-  visibility: visible;
-  overflow: visible;
-  width: 100%;
-  left: 0;
-  top: 50px;
 }
 
-.order-region__dropdown-label.active svg, .order-time__dropdown-label.active svg {
+.order-region__dropdown-label.active svg,
+.order-time__dropdown-label.active svg {
   transform: translateY(-50%) rotate(180deg);
+  transform-origin: center;
 }

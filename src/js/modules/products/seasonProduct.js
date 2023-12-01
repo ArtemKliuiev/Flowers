@@ -7,22 +7,10 @@ export default class productsSeason {
     this.db = firebase.getFirestore();
   }
   async loadCards() {
-    const allCards = query(
-      collection(this.db, 'products'),
-      where('price', '!=', null)
-    );
-    const filterSale = query(
-      collection(this.db, 'products'),
-      where('sale', '!=', null)
-    );
     const filterSeason = query(
       collection(this.db, 'products'),
       where('sale', '==', null),
       where('present', '==', null)
-    );
-    const filterPresent = query(
-      collection(this.db, 'products'),
-      where('present', '==', '')
     );
 
     const querySnapshot = await getDocs(filterSeason);
