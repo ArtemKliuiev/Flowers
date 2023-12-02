@@ -13,6 +13,9 @@ import productsStock from './modules/products/stockProduct';
 import productsSeason from './modules/products/seasonProduct';
 import productsPresent from './modules/products/presentProduct';
 import newsCard from './modules/news/news';
+import photoCard from './modules/photo/photo';
+import forumCard from './modules/forum/forum';
+import reviewsCard from './modules/reviews/reviews';
 
 import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
@@ -54,11 +57,18 @@ async function go() {
   const seasonProduct = new productsSeason();
   const presentProduct = new productsPresent();
   const productNews = new newsCard();
+  const productPhoto = new photoCard();
+  const productForum = new forumCard();
+  const productReviews = new reviewsCard();
 
+  await productReviews.loadCards();
   await stockProduct.loadCards();
   await seasonProduct.loadCards();
   await presentProduct.loadCards();
   await productNews.loadCards();
+  await productPhoto.loadCards();
+  await productForum.loadCards();
+  
 
   let basketEl = await basket();
   let likeProduct = await productLike();
@@ -66,4 +76,5 @@ async function go() {
 }
 
 go();
+
 
