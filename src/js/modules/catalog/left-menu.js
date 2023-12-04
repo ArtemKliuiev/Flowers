@@ -31,8 +31,9 @@ export default class Menu{
         }
 
         this.addListener();
-        this.firebase.load(this.category)
+        this.firebase.load(this.category);
     }
+
     addListener(){
         this.mainItem.forEach(item => {
             item.querySelector('input').addEventListener('change', () => {
@@ -49,7 +50,6 @@ export default class Menu{
             this.quantity += 3;
         })
     }
-
     update(){
         const thisClass = this;
         for(const key in this.category){
@@ -96,7 +96,7 @@ export default class Menu{
             }
         });
 
-        this.firebase.load(this.category)
+        this.firebase.load(this.category);
     }
 
     data(category, item){
@@ -140,5 +140,4 @@ export default class Menu{
                 break;
         }
     }
-
 }

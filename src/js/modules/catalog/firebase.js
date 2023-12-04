@@ -4,6 +4,7 @@ import { collection, query, orderBy, where, startAfter, getDocs, or, and, limit 
 export default class loadFirebase{
     constructor(){
         this.productCardWrapper = document.querySelector('.cards__items');
+        this.quantityItems = 0;
     }
     async load(info, quantity = 12, deletFilter = true){
         if(deletFilter){
@@ -69,19 +70,30 @@ export default class loadFirebase{
                 const querySnapshot = await getDocs(startQuery);
                 querySnapshot.forEach((doc) => {
                     this.createGoods(doc.data())
-                    console.log(doc.id, " => ", doc.data(), this);
+                    // console.log(doc.id, " => ", doc.data(), this);
                 });
+                this.loadMoreBtn();
             }else{
                 const querySnapshot = await getDocs(addQuery);
                 querySnapshot.forEach((doc) => {
                     this.createGoods(doc.data())
-                    console.log(doc.id, " => ", doc.data(), this);
+                    // console.log(doc.id, " => ", doc.data(), this);
                 });
+                this.loadMoreBtn();
             }
         }catch(error){
             const countQuery = +error.message.replace(/\D/g, '').slice(0, -2);
             const overkill = countQuery - 30;
             alert(`Выбранно слишком много категорий, убрерите пожалуйста : ${overkill} категории`)
+        }
+    }
+    loadMoreBtn(){
+        const info = document.querySelectorAll('.product-card');
+        console.log(info)
+        if(info.length >= 12){
+            document.querySelector('.cards__btn').style.display = 'block'
+        }else{
+            document.querySelector('.cards__btn').style.display = 'none'
         }
     }
     createGoods(product){
