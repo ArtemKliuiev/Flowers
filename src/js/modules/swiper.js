@@ -98,6 +98,24 @@ function photoSwiper() {
 }
 photoSwiper();
 
+function videoSwiper() {
+  let swiper = new Swiper('.video__swiper', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.video__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.video__swiper-button-next',
+      prevEl: '.video__swiper-button-prev',
+    },
+  });
+}
+videoSwiper();
+
 function newsSwiper() {
   let swiper = new Swiper('.news__swiper', {
     slidesPerView: 'auto',

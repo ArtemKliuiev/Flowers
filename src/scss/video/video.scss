@@ -1,4 +1,4 @@
-.photo {
+.video {
   margin-top: 48px;
   margin-bottom: 104px;
 
@@ -11,7 +11,7 @@
   &__nav {
     display: flex;
     gap: 37px;
-    margin-bottom: 38px;
+    margin-bottom: 50px;
 
     @include breakpoint($md4) {
       display: none;
@@ -60,12 +60,12 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
-    row-gap: 124px;
+    row-gap: 142px;
     justify-content: center;
     position: relative;
 
     @include breakpoint($md6) {
-      row-gap: 121px;
+      row-gap: 104px;
     }
   }
 
@@ -93,8 +93,8 @@
       }
 
       @include breakpoint($md6) {
-        width: 289px;
-        height: 286px;
+        width: 288px;
+        height: 299px;
         margin-top: 22px;
       }
     }
@@ -108,17 +108,34 @@
 
   &__card-img {
     position: relative;
-    bottom: 140px;
+    bottom: 118px;
+    text-align: center;
 
     @include breakpoint($md6) {
-      bottom: 122px;
+      bottom: 90px;
     }
 
     img {
+      width: 303px;
+      height: 322px;
+      object-fit: cover;
       @include breakpoint($md6) {
-        width: 275px;
-        height: 292px;
+        width: 245px;
+        height: 260px;
       }
+    }
+  }
+
+  &__card-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 84px;
+      height: 84px;
+      cursor: pointer;
     }
   }
 
@@ -129,13 +146,13 @@
     font-weight: 400;
     line-height: 18px;
     position: relative;
-    bottom: 123px;
+    bottom: 102px;
     left: 12px;
 
     @include breakpoint($md6) {
       font-size: 12px;
-      bottom: 115px;
-      left: 21px;
+      bottom: 81px;
+      left: 2px;
     }
   }
 
@@ -147,27 +164,11 @@
     line-height: 25px;
     position: relative;
     text-align: center;
-    bottom: 106px;
+    bottom: 82px;
 
     @include breakpoint($md6) {
       font-size: 18px;
-    }
-  }
-
-  &__card-by {
-    color: #fff;
-    font-family: Actor;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    text-decoration-line: underline;
-    text-align: center;
-    position: relative;
-    bottom: 77px;
-
-    @include breakpoint($md6) {
-      font-size: 14px;
-      bottom: 82px;
+      bottom: 72px;
     }
   }
 
@@ -175,7 +176,7 @@
     display: flex;
     justify-content: center;
     gap: 470px;
-    margin-top: 67px;
+    margin-top: 40px;
 
     @include breakpoint($md4) {
       width: 100%;
@@ -285,14 +286,14 @@
   }
 }
 
-.photo__swiper-button-next.swiper-button-disabled svg path {
+.video__swiper-button-next.swiper-button-disabled svg path {
   fill: gray;
 }
-.photo__swiper-button-prev.swiper-button-disabled svg path {
+.video__swiper-button-prev.swiper-button-disabled svg path {
   fill: gray;
 }
 
-.photo__swiper-pagination .swiper-pagination-bullet {
+.video__swiper-pagination .swiper-pagination-bullet {
   cursor: pointer;
   font-family: AguafinaScript;
   font-size: 16px;
@@ -301,7 +302,7 @@
   width: 0 !important;
 }
 
-.photo__swiper-pagination .swiper-pagination-bullet-active {
+.video__swiper-pagination .swiper-pagination-bullet-active {
   color: #fff;
   z-index: 2;
   &::after {
@@ -321,7 +322,7 @@
   }
 }
 
-.photo__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+.video__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px;
 
   @include breakpoint($md6) {

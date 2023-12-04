@@ -204,6 +204,7 @@
   &__swiper-button-prev {
     position: relative;
     z-index: 1000;
+    cursor: pointer;
 
     svg path {
       fill: black;
@@ -226,6 +227,7 @@
     position: relative;
     z-index: 1000;
     transform: rotate(180deg);
+    cursor: pointer;
 
     svg path {
       fill: black;

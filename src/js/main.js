@@ -6,6 +6,7 @@ import seasonSwiper from './modules/swiper';
 import presentSwiper from './modules/swiper';
 import previewsSwiper from './modules/swiper';
 import photoSwiper from './modules/swiper';
+import videoSwiper from './modules/swiper';
 import forumSwiper from './modules/swiper';
 import newsSwiper from './modules/swiper';
 import productLike from "./modules/like/like";
@@ -16,6 +17,7 @@ import newsCard from './modules/news/news';
 import photoCard from './modules/photo/photo';
 import forumCard from './modules/forum/forum';
 import reviewsCard from './modules/reviews/reviews';
+import videoCard from './modules/video/video';
 
 import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
@@ -60,6 +62,7 @@ async function go() {
   const productPhoto = new photoCard();
   const productForum = new forumCard();
   const productReviews = new reviewsCard();
+  const productVideo = new videoCard();
 
   await productReviews.loadCards();
   await stockProduct.loadCards();
@@ -68,6 +71,7 @@ async function go() {
   await productNews.loadCards();
   await productPhoto.loadCards();
   await productForum.loadCards();
+  await productVideo.loadCards();
   
 
   let basketEl = await basket();
