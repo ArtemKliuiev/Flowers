@@ -1,11 +1,14 @@
+
 import firebase from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+
 const videoCardWrapper = document.querySelectorAll('.video__card-wrapper');
 
-export default class videoCard {
+export default class VideoCard {
   constructor() {
     this.db = firebase.getFirestore();
   }
+
   async loadCards() {
     const filterVideo = query(
       collection(this.db, 'video'),
@@ -17,18 +20,47 @@ export default class videoCard {
       const product = doc.data();
       const { data, link, img, name } = product;
       let template = `
-            <div class="video__card">
-                <div class="video__card-img">
-                    <img src="${img.default}" alt="video" />
-                    <div class="video__card-play">
-                        <svg ><use xlink:href="./images/Sprite.svg#review-play"></use></svg>    
-                    </div>
-                </div>
-                <p class="video__card-data">${data}</p>
-                <h4 class="video__card-name">Видео отзыв <br /> ${name}</h4>
-            </div>`;
-            videoCardWrapper.forEach((slide) => {
+        <div class="video__card" data-link="${link}">
+          <div class="video__card-img">
+            <picture>
+              <source srcset="${img.webP}" type="image/webp">
+              <img src="${img.default}" alt="video" />
+            </picture>
+            <div class="video__card-play">
+              <svg ><use xlink:href="./images/Sprite.svg#review-play"></use></svg>    
+            </div>
+          </div>
+          <p class="video__card-data">${data}</p>
+          <h4 class="video__card-name">Видео отзыв <br /> ${name}</h4>
+        </div>`;
+
+      videoCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
+      });
+    });
+
+    const videoCards = document.querySelectorAll('.video__card');
+    videoCards.forEach((videoCard) => {
+      videoCard.addEventListener('click', () => {
+        const cardLink = videoCard.getAttribute('data-link');
+        const youTubeLink = cardLink.split('/');
+        const youTubeId = youTubeLink[youTubeLink.length - 1];
+
+        const youTubeIdSplit = youTubeId.split('=');
+        const youTubeIdLink = youTubeIdSplit[youTubeIdSplit.length -1];
+        const videoLink = `https://www.youtube.com/embed/${youTubeIdLink}`;
+      
+        const cardContent = videoCard.querySelector('.video__card-img');
+        
+        cardContent.innerHTML = `<iframe 
+        width="303" 
+        height="322" 
+        src="${videoLink}" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>`;
+        
       });
     });
   }

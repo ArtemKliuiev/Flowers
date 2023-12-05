@@ -20,7 +20,10 @@ export default class forumCard {
             <div class="forum__card">
                 <div class="forum__card-top">
                     <div class="forum__card-img">
+                      <picture>
+                        <source srcset="${img.webP}" type="image/webp">
                         <img src="${img.default}" alt="flowers" />
+                      </picture>     
                     </div>
                 </div>
                 <div class="forum__card-bottom">

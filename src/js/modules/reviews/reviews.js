@@ -20,7 +20,10 @@ export default class reviewsCard {
       <div class="reviews__card">
       <div class="reviews__user-info">
         <div class="reviews__user-photo">
-          <img src="${img.default}" alt="user" />
+          <picture>
+            <source srcset="${img.webP}" type="image/webp">
+            <img src="${img.default}" alt="user" />
+          </picture>        
         </div>
         <p class="reviews__user-name">${name}</p>
       </div>

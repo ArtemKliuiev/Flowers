@@ -27,7 +27,10 @@ export default class productsSeason {
       <div data-id='${id}' class="product-card">
       <div class="product-card__top">
           <div class="product-card__img">
+            <picture>
+              <source srcset="${img.webP}" type="image/webp">
               <img src="${img.default}" alt="flowers">
+            </picture> 
           </div>
           <div class="product-card__top-like">
             <svg ><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>

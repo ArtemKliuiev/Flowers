@@ -19,7 +19,10 @@ export default class photoCard {
       let template = `
             <div class="photo__card">
                 <div class="photo__card-img">
-                    <img src="${img.default}" alt="user-photo">
+                  <picture>
+                    <source srcset="${img.webP}" type="image/webp">
+                    <img src="${img.default}" alt="user-photo" />
+                  </picture>
                 </div>
                 <p class="photo__card-data">${data}</p>
                 <h4 class="photo__card-name">${title}</h4>

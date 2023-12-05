@@ -73,7 +73,6 @@ async function go() {
   await productForum.loadCards();
   await productVideo.loadCards();
   
-
   let basketEl = await basket();
   let likeProduct = await productLike();
 
