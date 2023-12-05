@@ -1,21 +1,18 @@
 import firebase from '../firebase';
-import { collection, query, orderBy, where, startAfter, getDocs, or, and, limit } from "firebase/firestore";
+import { collection, query, orderBy, where, getCountFromServer, startAfter, getDocs, or, and, limit } from "firebase/firestore";
 
 export default class loadFirebase{
     constructor(){
         this.productCardWrapper = document.querySelector('.cards__items');
-        this.quantityItems = 0;
     }
-    async load(info, quantity = 12, deletFilter = true){
-        if(deletFilter){
-            this.productCardWrapper.innerHTML = '';
-        }
+    async filters(info){
+
         const db = firebase.getFirestore();
-        const colect = collection(db, "products");
+        this.colect = collection(db, "products");
 
-        let sort = [];
+        this.sort = [];
 
-        const filters = [
+        this.filter = [
             or(
                 where("bouquets", "in", info.bouquets),
                 where("roses", "in", info.roses),
@@ -29,73 +26,102 @@ export default class loadFirebase{
         ];
 
         if(info.whom.length != 0){
-            filters.push(where("whom", "==", info.whom))
+            this.filter.push(where("whom", "==", info.whom))
         }
         if(info.color.length != 0){
-            filters.push(where("color", "==", info.color))
+            this.filter.push(where("color", "==", info.color))
         }
         if(info.occasion.length != 0){
-            filters.push(where("occasion", "==", info.occasion))
+            this.filter.push(where("occasion", "==", info.occasion))
         }
 
         if(info.sort === 'Цена(вверх)'){
-            sort = ['price']
+            this.sort = ['price']
         }else if(info.sort === 'Цена(вниз)'){
-            sort = ['price', 'desc'];
+            this.sort = ['price', 'desc'];
         }else if(info.sort === 'Популярность'){
-            sort = ['popular'];
+            this.sort = ['popular'];
         }else{
-            sort = ['price']
+            this.sort = ['price']
         }
+        const mainQuery = query(
+                this.colect,
+                and(...this.filter),
+                orderBy(...this.sort),
+                limit(12),
+        );
+        this.loadGoods(mainQuery);
 
-
-
-        const startQuery = query(
-                colect,
-                and(...filters),
-                orderBy(...sort),
-                limit(quantity),
+        this.infoQuery = query(
+            this.colect,
+            and(...this.filter),
+            orderBy(...this.sort),
         );
 
-        const addQuery = query(
-                colect,
-                and(...filters),
-                orderBy(...sort),
-                limit(3),
-                startAfter(quantity),
-        );
 
-        try{
-            if(deletFilter){
-                const querySnapshot = await getDocs(startQuery);
-                querySnapshot.forEach((doc) => {
-                    this.createGoods(doc.data())
-                    // console.log(doc.id, " => ", doc.data(), this);
-                });
-                this.loadMoreBtn();
-            }else{
-                const querySnapshot = await getDocs(addQuery);
-                querySnapshot.forEach((doc) => {
-                    this.createGoods(doc.data())
-                    // console.log(doc.id, " => ", doc.data(), this);
-                });
-                this.loadMoreBtn();
-            }
-        }catch(error){
-            const countQuery = +error.message.replace(/\D/g, '').slice(0, -2);
-            const overkill = countQuery - 30;
-            alert(`Выбранно слишком много категорий, убрерите пожалуйста : ${overkill} категории`)
-        }
     }
-    loadMoreBtn(){
-        const info = document.querySelectorAll('.product-card');
-        console.log(info)
-        if(info.length >= 12){
+
+    loadMore(){
+        this.loadMoreQuery = query(
+            this.colect,
+            and(...this.filter),
+            orderBy(...this.sort),
+            startAfter(this.quantityNow + 1),
+            limit(3),
+        );
+        console.log(this.quantityNow)
+        this.loadGoods(this.loadMoreQuery, false);
+    }
+
+    async loadMoreBtn(){
+        //Информация о кoличестве
+        const snapshotTwo = await getCountFromServer(this.infoQuery);
+        this.quantityAll = snapshotTwo.data().count;
+        this.quantityLeft = this.quantityAll - this.quantityNow;
+        if(this.quantityLeft >= 3){
+            this.quantityAddMore = 3;
+            console.log('1')
+        }else if(this.quantityLeft > 0){
+            this.quantityAddMore = this.quantityLeft;
+            console.log('2')
+        }else if(this.quantityLeft <= 0){
+            this.quantityAddMore = 0;
+        }
+        console.log("осталось " + this.quantityLeft)
+
+        document.querySelector('.cards__button-info').textContent = this.quantityAddMore;
+
+        if(this.quantityAll > 12 && this.quantityLeft > 0){
             document.querySelector('.cards__btn').style.display = 'block'
         }else{
             document.querySelector('.cards__btn').style.display = 'none'
         }
     }
+
+    async loadGoods(mainQuery, deletFil = true){
+        if(deletFil){
+            this.productCardWrapper.innerHTML = '';
+        }
+        try{
+            const querySnapshot = await getDocs(mainQuery);
+            querySnapshot.forEach((doc) => {
+                this.createGoods(doc.data())
+                // console.log(doc.id, " => ", doc.data(), this);
+            });
+        }catch(error){
+            const errorText = 'Too many disjunctions after normalization';
+            if(error.message.includes(errorText)){
+                const countQuery = +error.message.replace(/\D/g, '').slice(0, -2);
+                const overkill = countQuery - 30;
+                alert(`Выбранно слишком много категорий, убрерите пожалуйста : ${overkill} категории`)
+            }else{
+                console.log(error)
+            }
+        }
+        this.quantityNow = document.querySelectorAll('.product-card').length;
+        this.loadMoreBtn();
+    }
+
     createGoods(product){
     const { name, stars, price, sale, img, oldPrice, id } = product;
 
@@ -162,11 +188,30 @@ export default class loadFirebase{
             </div>`;
 
         this.productCardWrapper.insertAdjacentHTML('beforeend', template);
-
-        console.log(this.productCardWrapper)
     }
 }
 
+// const addQuery = query(
+//     colect,
+//     and(...filters),
+//     orderBy(...sort),
+//     limit(3),
+//     startAfter(quantity),
+// );
+// const querySnapshot = await getDocs(addQuery);
+// querySnapshot.forEach((doc) => {
+// this.createGoods(doc.data())
+// // console.log(doc.id, " => ", doc.data(), this);
+// });
+// this.loadMoreBtn();
 
 
-
+// loadMoreBtn(){
+//     const info = document.querySelectorAll('.product-card');
+//     console.log(info)
+//     if(info.length >= 12){
+//         document.querySelector('.cards__btn').style.display = 'block'
+//     }else{
+//         document.querySelector('.cards__btn').style.display = 'none'
+//     }
+// }

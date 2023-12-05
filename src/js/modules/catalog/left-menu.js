@@ -13,13 +13,12 @@ export default class Menu{
         this.adaptiveSort = document.querySelectorAll('.sort-adaptive__main');
         this.deletFilterBtn = document.querySelector('.left-menu__delete-filters');
         this.loadMore = document.querySelector('.cards__btn');
-        this.quantity = 12;
 
         this.category = {
             bouquets: [''],
             roses: [''],
             inBox: [''],
-            compositions: [''],
+            compositions: ['Букеты', 'Корзины с цветами', 'Горшечные растения', 'Цветочные арки', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'],
             gift: [''],
             giftBasket: [''],
             forBride: [''],
@@ -31,13 +30,22 @@ export default class Menu{
         }
 
         this.addListener();
-        this.firebase.load(this.category);
+        this.update();
     }
+
+    // btnLoadMore(){
+    //     if(this.firebase.quantity >= 12){
+    //         document.querySelector('.cards__btn').style.display = 'block'
+    //     }else{
+    //         document.querySelector('.cards__btn').style.display = 'none'
+    //     }
+    //     console.log(this.firebase.quantity)
+    // }
 
     addListener(){
         this.mainItem.forEach(item => {
             item.querySelector('input').addEventListener('change', () => {
-                this.update();
+                this.update(true);
             })
         })
         this.sortLine.forEach(item => {
@@ -46,17 +54,16 @@ export default class Menu{
             })
         })
         this.loadMore.addEventListener('click', () => {
-            this.firebase.load(this.category, this.quantity, false);
-            this.quantity += 3;
+            this.firebase.loadMore()
         })
     }
-    update(){
-        const thisClass = this;
-        for(const key in this.category){
-            if(this.category[key] != this.category.whom){
-                this.category[key] = [''];
+    update(delFilters = false){
+        if(delFilters){
+            for(const key in this.category){
+                if(this.category[key] != this.category.whom){
+                    this.category[key] = [''];
+                }
             }
-
         }
 
         const everDrop = (drop, num) => {
@@ -96,7 +103,7 @@ export default class Menu{
             }
         });
 
-        this.firebase.load(this.category);
+        this.firebase.filters(this.category);
     }
 
     data(category, item){
