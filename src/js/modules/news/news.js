@@ -19,7 +19,10 @@ export default class newsCard {
         let template = `
             <div class="news__card">
              <div class="news__card-img">
-                <img src="${img.default}" alt="user-photo">
+                <picture>
+                  <source srcset="${img.webP}" type="image/webp">
+                  <img src="${img.default}" alt="user-photo">
+                </picture>     
             </div>
             <h5 class="news__card-title">${title}</h5>
             <h4 class="news__card-text">${text}</h4>

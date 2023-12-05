@@ -24,6 +24,7 @@ async function basket() {
 
       parsedBasket.forEach((item) => {
         renderOrder(item);
+        console.log(item);
 
         let template = `
           <div class="basket__wrapper-left">   
@@ -333,11 +334,6 @@ async function basket() {
       }
     }
   }
-
-  // if (window.innerWidth < 1024) {
-  //   basketWrapperText.style.display = 'none';
-  // }
-
 
   quantProduct();
   renderOrder();
