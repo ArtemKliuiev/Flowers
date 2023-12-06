@@ -1,7 +1,5 @@
 import Menu from './modules/catalog/left-menu';
-import Pagination from './modules/pagination';
 
-const pagination = new Pagination(22)
 
 
 

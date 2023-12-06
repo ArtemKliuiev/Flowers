@@ -1,15 +1,17 @@
 import firebase from '../firebase';
-import { collection, query, orderBy, where, getCountFromServer, startAfter, getDocs, or, and, limit } from "firebase/firestore";
+import { collection, query, orderBy, where, getCountFromServer, startAfter, endAt, getDocs, or, and, limit } from "firebase/firestore";
+import Pagination from '../pagination';
+
+
 
 export default class loadFirebase{
     constructor(){
         this.productCardWrapper = document.querySelector('.cards__items');
+
     }
     async filters(info){
-
         const db = firebase.getFirestore();
         this.colect = collection(db, "products");
-
         this.sort = [];
 
         this.filter = [
@@ -26,14 +28,12 @@ export default class loadFirebase{
         ];
 
         if(info.whom.length != 0){
-            this.filter.push(where("whom", "==", info.whom))
-        }
+            this.filter.push(where("whom", "==", info.whom))}
         if(info.color.length != 0){
-            this.filter.push(where("color", "==", info.color))
-        }
+            this.filter.push(where("color", "==", info.color))}
         if(info.occasion.length != 0){
-            this.filter.push(where("occasion", "==", info.occasion))
-        }
+            this.filter.push(where("occasion", "==", info.occasion))}
+
 
         if(info.sort === 'Цена(вверх)'){
             this.sort = ['price']
@@ -44,6 +44,7 @@ export default class loadFirebase{
         }else{
             this.sort = ['price']
         }
+
         const mainQuery = query(
                 this.colect,
                 and(...this.filter),
@@ -57,37 +58,54 @@ export default class loadFirebase{
             and(...this.filter),
             orderBy(...this.sort),
         );
+    }
 
+    async getInfo(){
+        const snapshotTwo = await getCountFromServer(this.infoQuery);
+        this.quantityAll = snapshotTwo.data().count;
+        this.quantityLeft = this.quantityAll - this.quantityNow;
+        this.quantityPages = Math.ceil(this.quantityAll / this.quantityNow);
+        if(this.quantityLeft >= 3){
+            this.quantityAddMore = 3;
+        }else if(this.quantityLeft > 0){
+            this.quantityAddMore = this.quantityLeft;
+        }else if(this.quantityLeft <= 0){
+            this.quantityAddMore = 0;
+        }
+        //КОНСОЛЬ
+        // console.clear();
+        // console.table({
+        //     "Количество страниц": this.quantityPages,
+        //     "Всего карточек": this.quantityAll,
+        //     "На странице": this.quantityNow,
+        //     "Осталось": this.quantityLeft,
+        // });
+        const pagination = new Pagination(this.quantityPages)
+        this.loadMoreBtn();
+    }
 
+    pages(info){
+        console.log(info)
     }
 
     loadMore(){
+        let limitCard = 3
+        if(this.quantityLeft < 3){
+            limitCard = this.quantityLeft
+        } 
+        
         this.loadMoreQuery = query(
             this.colect,
             and(...this.filter),
             orderBy(...this.sort),
-            startAfter(this.quantityNow + 1),
-            limit(3),
+            startAfter(this.quantityNow),
+            limit(limitCard),
         );
-        console.log(this.quantityNow)
+
         this.loadGoods(this.loadMoreQuery, false);
     }
 
-    async loadMoreBtn(){
-        //Информация о кoличестве
-        const snapshotTwo = await getCountFromServer(this.infoQuery);
-        this.quantityAll = snapshotTwo.data().count;
-        this.quantityLeft = this.quantityAll - this.quantityNow;
-        if(this.quantityLeft >= 3){
-            this.quantityAddMore = 3;
-            console.log('1')
-        }else if(this.quantityLeft > 0){
-            this.quantityAddMore = this.quantityLeft;
-            console.log('2')
-        }else if(this.quantityLeft <= 0){
-            this.quantityAddMore = 0;
-        }
-        console.log("осталось " + this.quantityLeft)
+     loadMoreBtn(){
 
         document.querySelector('.cards__button-info').textContent = this.quantityAddMore;
 
@@ -119,7 +137,11 @@ export default class loadFirebase{
             }
         }
         this.quantityNow = document.querySelectorAll('.product-card').length;
-        this.loadMoreBtn();
+
+        this.getInfo();
+        document.addEventListener('paginationEvent', (e) => {
+            this.pages(e.detail.page)
+        });
     }
 
     createGoods(product){
@@ -190,28 +212,3 @@ export default class loadFirebase{
         this.productCardWrapper.insertAdjacentHTML('beforeend', template);
     }
 }
-
-// const addQuery = query(
-//     colect,
-//     and(...filters),
-//     orderBy(...sort),
-//     limit(3),
-//     startAfter(quantity),
-// );
-// const querySnapshot = await getDocs(addQuery);
-// querySnapshot.forEach((doc) => {
-// this.createGoods(doc.data())
-// // console.log(doc.id, " => ", doc.data(), this);
-// });
-// this.loadMoreBtn();
-
-
-// loadMoreBtn(){
-//     const info = document.querySelectorAll('.product-card');
-//     console.log(info)
-//     if(info.length >= 12){
-//         document.querySelector('.cards__btn').style.display = 'block'
-//     }else{
-//         document.querySelector('.cards__btn').style.display = 'none'
-//     }
-// }

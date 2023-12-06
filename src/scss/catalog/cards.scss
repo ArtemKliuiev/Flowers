@@ -3,6 +3,7 @@
     &__items {
         display: grid;
         grid-template: 554px / 1fr 1fr 1fr;
+        grid-auto-rows: 554px;
         gap: 20px;
         min-height: 2246px;
         margin-bottom: 75px;
