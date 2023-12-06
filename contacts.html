@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/catalog.min.css?_v=20231206192623">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231206192623">
   <title>Flowers</title>
 </head>
 
@@ -1063,501 +1063,70 @@
 
       <main class="page">
         <div class="page__container">
-            <section class="catalog">
-                <div class="catalog__link-row">
-                    <div class="links-row">
-    <a href="./index.html" class="links-row__link links-row__main">Главная</a>
-    <a href="#" class="links-row__link links-row__this-page">Каталог</a>
-</div>
-                </div>
-                <div class="catalog__title">Каталог товаров</div>
-                <section class="catalog__main">
-                    <nav class="catalog__menu left-menu">
-    <div class="left-menu__adaptive-top">
-        <div class="left-menu__adaptive-title">Фильтр</div>
-        <div class="left-menu__adaptive-back"></div>
+          <section class="contacts">
+  <div class="contacts__nav">
+    <a href="./index.html">Главная</a>
+    <a href="#">Информация</a>
+    <a href="#">Корпоративным клиентам</a>
+  </div>
+  <h1 class="contacts__title">Контакты</h1>
+
+  <div class="contacts__info">
+    <div class="contacts__info-left">
+      <h2 class="contacts__info-title">Свяжитесь с нами</h2>
+      <p class="contacts__info-left-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+        lacus vel facilisis.
+      </p>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#gps"></use></svg>
+        <p>м.Миколаїв</p>
+      </div>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#contacts-tel"></use></svg>
+        <p>+380 99 123 1234</p>
+      </div>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#contacts-clock"></use></svg>
+        <p>Пн - Пт: 09:00 - 20:00 Сб - Вс 09:00 - 15:00</p>
+      </div>
     </div>
-    <div class="left-menu__button">
-        <button class="btn left-menu__delete-filters">Скинуть фильтр</button>
+    <div class="contacts__info-right">
+      <h2 class="contacts__info-title">Заполните форму для обратной связи</h2>
+
+      <form action="#" class="contacts__form" id="contactsForm">
+        <div class="contacts__form-el">
+          <span>Ваше имя</span>
+          <input type="text" placeholder="Иван Иванов" id="contactsName">
+        </div>
+        <div class="contacts__form-el">
+          <span>E-Mail адрес</span>
+          <input type="mail" id="contactsMail">
+        </div>
+        <div class="contacts__form-el">
+          <span>Ваше сообщение</span>
+          <input type="text" id="contactsText">
+        </div>
+
+        <button type="submit" class="contacts__button">
+          Отправить
+          <img src="./images/main/stock/button-branch.png" alt="button-branch">
+        </button>
+      </form>
     </div>
-    <ul class="left-menu__sort-adaptive sort-adaptive">
-        <li class="sort-adaptive__main">
-            <button class="sort-adaptive__btn">
-                <span class="sort-adaptive__title">Кому</span>
-                <span class="sort-adaptive__info"></span>
-            </button>
-            <ul class="sort-adaptive__menu">
-                <li class="sort-adaptive__menu-title">Кому</li>
-                <li class="sort-adaptive__point">Бабушке</li>
-                <li class="sort-adaptive__point">Коллеге</li>
-                <li class="sort-adaptive__point">Начальнице</li>
-                <li class="sort-adaptive__point">Ребенку</li>
-                <li class="sort-adaptive__point">Бизнес партнеру</li>
-                <li class="sort-adaptive__point">Маме</li>
-                <li class="sort-adaptive__point">Папе</li>
-                <li class="sort-adaptive__point">Учителю</li>
-                <li class="sort-adaptive__point">Девушке</li>
-                <li class="sort-adaptive__point">Начальнику</li>
-                <li class="sort-adaptive__point">Подруге</li>
-            </ul>
-        </li>
-        <li class="sort-adaptive__main">
-            <button class="sort-adaptive__btn">
-                <span class="sort-adaptive__title">По цвету</span>
-                <span class="sort-adaptive__info"></span>
-            </button>
-            <ul class="sort-adaptive__menu">
-                <li class="sort-adaptive__menu-title">По цвету</li>
-                <li class="sort-adaptive__point">Белые розы</li>
-                <li class="sort-adaptive__point">Кремовые розы</li>
-                <li class="sort-adaptive__point">Синие/голубые розы</li>
-                <li class="sort-adaptive__point">Красные розы</li>
-                <li class="sort-adaptive__point">Оранжевые розы</li>
-                <li class="sort-adaptive__point">Розовые розы</li>
-                <li class="sort-adaptive__point">Жёлтые розы</li>
-                <li class="sort-adaptive__point">Черные розы</li>
-            </ul>
-        </li>
-        <li class="sort-adaptive__main">
-            <button class="sort-adaptive__btn">
-                <span class="sort-adaptive__title">Повод</span>
-                <span class="sort-adaptive__info"></span>
-            </button>
-            <ul class="sort-adaptive__menu">
-                <li class="sort-adaptive__menu-title">Повод</li>
-                <li class="sort-adaptive__point">День Рождения</li>
-                <li class="sort-adaptive__point">Свадьба</li>
-                <li class="sort-adaptive__point">Юбилей</li>
-                <li class="sort-adaptive__point">День Матери</li>
-                <li class="sort-adaptive__point">День Влюбленных</li>
-                <li class="sort-adaptive__point">Новоселье</li>
-                <li class="sort-adaptive__point">Выпускной</li>
-                <li class="sort-adaptive__point">Извинения</li>
-            </ul>
-        </li>
-    </ul>
-    <ul class="left-menu__main">
-        <li class="left-menu__item">
-            <span class="left-menu__title">Букеты</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-1">
-                    <label for="check-1-1">Букеты из роз</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-2">
-                    <label for="check-1-2">Букеты из хризантем</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-3">
-                    <label for="check-1-3">Букеты из альтромерии</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-4">
-                    <label for="check-1-4">Букеты из гербер</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-5">
-                    <label for="check-1-5">Букеты из ирисов</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-6">
-                    <label for="check-1-6">Букеты из пионов</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-7">
-                    <label for="check-1-7">Букеты из эустомы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-8">
-                    <label for="check-1-8">Букеты из тюльпонов</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-9">
-                    <label for="check-1-9">Букеты из фрезий</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-10">
-                    <label for="check-1-10">Букеты из орхидей</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-11">
-                    <label for="check-1-11">Букеты из гортензии</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-12">
-                    <label for="check-1-12">Букеты из лилий</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-13">
-                    <label for="check-1-13">Букеты из гвоздик</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-14">
-                    <label for="check-1-14">Дизайнерские букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-15">
-                    <label for="check-1-15">Бизнес букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-16">
-                    <label for="check-1-16">Букеты любимой</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-17">
-                    <label for="check-1-17">Букеты для мужчины</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-18">
-                    <label for="check-1-18">Весение букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-1-19">
-                    <label for="check-1-19">Летние букеты</label>
-                </div>
-            </ul>
-        </li>
-        
-        <li class="left-menu__item">
-            <span class="left-menu__title">Розы</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-1">
-                    <label for="check-2-1">Белые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-2">
-                    <label for="check-2-2">Кремовые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-3">
-                    <label for="check-2-3">Синие/голубые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-4">
-                    <label for="check-2-4">Голландские розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-5">
-                    <label for="check-2-5">Красные розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-6">
-                    <label for="check-2-6">Оранжевые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-7">
-                    <label for="check-2-7">Кустовая роза</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-8">
-                    <label for="check-2-8">Метровые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-9">
-                    <label for="check-2-9">Розовые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-10">
-                    <label for="check-2-10">Жёлтые розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-11">
-                    <label for="check-2-11">Черные розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-12">
-                    <label for="check-2-12">Пионовидные розы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-13">
-                    <label for="check-2-13">11 роз</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-14">
-                    <label for="check-2-14">19 роз</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-15">
-                    <label for="check-2-15">25 роз</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-2-16">
-                    <label for="check-2-16">51 роза</label>
-                </div>
-            </ul>
-        </li>
-        
-        
-        <li class="left-menu__item">
-            <span class="left-menu__title">Цветы в коробке</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-1">
-                    <label for="check-3-1">Цветы в коробке с пироженым Macarons</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-2">
-                    <label for="check-3-2">Цветы в коробке сердце</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-3">
-                    <label for="check-3-3">Цветы в прямоугольной коробке</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-4">
-                    <label for="check-3-4">Цветы в шляпной коробке</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-5">
-                    <label for="check-3-5">Розы в коробке</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-3-6">
-                    <label for="check-3-6">Пионы в коробке</label>
-                </div>
-            </ul>
-        </li>
-        <li class="left-menu__item">
-            <span class="left-menu__title">Композиции</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-1">
-                    <label for="check-4-1">Букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-2">
-                    <label for="check-4-2">Корзины с цветами</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-3">
-                    <label for="check-4-3">Горшечные растения</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-4">
-                    <label for="check-4-4">Цветочные арки</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-5">
-                    <label for="check-4-5">Цветочные букеты для невесты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-6">
-                    <label for="check-4-6">Гирлянды из цветов</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-4-7">
-                    <label for="check-4-7">Цветочные короны</label>
-                </div>
-            </ul>
-        </li>
-        <li class="left-menu__item">
-            <span class="left-menu__title">Подарки</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-1">
-                    <label for="check-5-1">Букеты подарочные</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-2">
-                    <label for="check-5-2">Цветочные композиции</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-3">
-                    <label for="check-5-3">Романтические цветы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-4">
-                    <label for="check-5-4">Цветы для поздравлений</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-5">
-                    <label for="check-5-5">Цветы на заказ</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-6">
-                    <label for="check-5-6">Цветы с сердцем</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-5-7">
-                    <label for="check-5-7">Букеты для особых дней</label>
-                </div>
-            </ul>
-        </li>
-        <li class="left-menu__item">
-            <span class="left-menu__title">Подарочные корзины</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-6-1">
-                    <label for="check-6-1">Цветочные корзины</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-6-2">
-                    <label for="check-6-2">Розы в корзинах</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-6-3">
-                    <label for="check-6-3">Букеты в корзинах</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-6-4">
-                    <label for="check-6-4">Цветочные наборы</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-6-5">
-                    <label for="check-6-5">Корзины с романтичными цветами</label>
-                </div>
-            </ul>
-        </li>
-        <li class="left-menu__item">
-            <span class="left-menu__title">Букеты невесты</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-7-1">
-                    <label for="check-7-1">Свадебные букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-7-2">
-                    <label for="check-7-2">Букет невесты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-7-3">
-                    <label for="check-7-3">Букет невесты</label>
-                </div>
-            </ul>
-        </li>
-        <li class="left-menu__item">
-            <span class="left-menu__title">Вкусные букеты</span>
-            <ul class="left-menu__list">
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-8-1">
-                    <label for="check-8-1">Шоколадные букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-8-2">
-                    <label for="check-8-2">Фруктовые букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-8-3">
-                    <label for="check-8-3">Сладкие букеты</label>
-                </div>
-                <div class="left-menu__point">
-                    <input type="checkbox" id="check-8-4">
-                    <label for="check-8-4">Фруктовые композиции</label>
-                </div>
-            </ul>
-        </li>
-    </ul>
-</nav>
-<button class="btn button-for-left-menu">Фильтр</button>
-                    <div class="catalog__sort sort">
-        <div class="dropdown sort__drop drop-person">
-    <div class="dropdown__btn">
-        <span class="dropdown__btn-info">
-            <span class="dropdown__prev-info">Кому</span>
-            <span class="dropdown__this-item"></span>
-            <svg class="dropdown__arrow"><use xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
-        </span>
-    </div>
-    <ul class="dropdown__list">
-        <li>Выбрать</li><li>Маме</li><li>Бабушке</li><li>Начальнику</li><li>Ребенку</li><li>Ребенку</li><li>Бизнес партнеру</li>
-    </ul>
-</div>
+  </div>
+</section>
 
-
-        <div class="dropdown sort__drop drop-color">
-    <div class="dropdown__btn">
-        <span class="dropdown__btn-info">
-            <span class="dropdown__prev-info">По цвету</span>
-            <span class="dropdown__this-item"></span>
-            <svg class="dropdown__arrow"><use xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
-        </span>
-    </div>
-    <ul class="dropdown__list">
-        <li>Выбрать</li><li>Красные розы</li><li>Белые розы</li><li>Кремовые розы</li><li>Синие/голубые розы</li><li>Оранжевые розы</li><li>Розовые розы</li><li>Жёлтые розы</li><li>Черные розы</li>
-    </ul>
-</div>
-
-
-        <div class="dropdown sort__drop drop-reason">
-    <div class="dropdown__btn">
-        <span class="dropdown__btn-info">
-            <span class="dropdown__prev-info">Повод</span>
-            <span class="dropdown__this-item"></span>
-            <svg class="dropdown__arrow"><use xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
-        </span>
-    </div>
-    <ul class="dropdown__list">
-        <li>Выбрать</li><li>8 марта</li><li>Свадьба</li><li>Юбилей</li><li>День Матери</li><li>День Влюбленных</li><li>Новоселье</li><li>Выпускной</li><li>Извинения</li>
-    </ul>
-</div>
-
-
-        <div class="dropdown sort__drop drop-sort sort__drop-sort">
-    <div class="dropdown__btn">
-        <span class="dropdown__btn-info">
-            <span class="dropdown__prev-info">Сортировака</span>
-            <span class="dropdown__this-item"></span>
-            <svg class="dropdown__arrow"><use xlink:href="./images/Sprite.svg#full-down-arrow"></use></svg> 
-        </span>
-    </div>
-    <ul class="dropdown__list">
-        <li>Популярность</li><li>Цена(вверх)</li><li>Цена(вниз)</li>
-    </ul>
-</div>
-
-
-</div>            
-
-
-
-
-                    <div class="cards catalog__cards">
-    <div class="cards__items"></div>
-    <div class="cards__button">
-        <button class="btn cards__btn">Еще <span class="cards__button-info"> </span> товаров</button>
-    </div>
-    <div class="cards__pagination">
-        <div class="pagination">
-    <div class="pagination__arrow pagination__arrow_left"><svg><use xlink:href="./images/Sprite.svg#pagination-arrow-left"></use></svg> </div>
-    <ul class="pagination__points">
-    </ul>
+          
+          <div class="backgroung-contacts">
     
-    <div class="pagination__arrow pagination__arrow_right"><svg><use xlink:href="./images/Sprite.svg#pagination-arrow-right"></use></svg> </div>
-</div>
-    </div>
-</div>
-
-
-                </section>
-                <div class="bottom-info">
-    <p class="bottom-info__text bottom-info__text_top">Как же прекрасна роза! Несмотря на существование огромного количества сортов декоративных растений, «королева» остаётся самой востребованной и любимой. Букет из роз – однозначно беспроигрышный вариант. Он покорит сердце как девушки, так и зрелой женщины. Чем больше единиц в композиции, тем сильнее эмоции у представительниц прекрасного пола! Оформление и внешний вид растений играют тоже не последнюю роль. Всегда чувствуется, когда букет составлен профессионально и с любовь. Хотите сделать приятный сюрприз и вызвать бурный восторг? Смело заказывайте букет из роз с доставкой к порогу любимой женщины. Наши флористы с любовью создают композиции, вкладывая частичку своего сердца и души. Цветочный подарок от компании Flowers состоит только из свежесрезанных растений и излучает положительную энергетику.</p>
-    <h2 class="bottom-info__title">Когда уместно заказать букет роз?</h2>
-    <p class="bottom-info__text bottom-info__text_bottom">то может быть лучше момента, когда курьер стоит у порога с огромным букетом роз? В такой ситуации на лице возникает удивление, а в голове – вопрос: «Кто же заказал на дом эти прекрасные цветы?». Радость – вот внутреннее состояние получателя. Заказать букет роз с доставкой на конкретный адрес в том или ином городе Украины можно с поводом или без. Он станет красивым жестом от мужчины, подтверждением знаменательности даты и величия торжества. </p>
-    <div class="bottom-info__read-more">
-        <a href="" class="bottom-info__link">Читать далее</a>
-    </div>
-</div>
-            </section>
-            <div class="backgroung">
-    
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__left-one" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__left-two" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__left-three" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__left-four" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-contacts__image backgroung-contacts__left-one" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
 
      
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__right-one" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung-contacts__image backgroung-contacts__right-one" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
 
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__right-two" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__right-three" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung__image backgroung__right-four" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
 </div>
         </div>
       </main>
@@ -1994,5 +1563,5 @@
 
     </div>
   </body>
-  <script src="js/catalog.min.js?_v=20231206192623"></script>
+  <script src="js/main.min.js?_v=20231206192623"></script>
 </html>
