@@ -1,0 +1,39 @@
+.backgroung-forum-accordion {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  pointer-events: none;
+  @include breakpoint($md0) {
+    width: 1920px;
+  }
+  @include breakpoint($md3) {
+    display: none;
+  }
+  &__image {
+    position: absolute;
+  }
+  &__left {
+    &-one {
+      bottom: -267px;
+      left: -373px;
+    }
+    &-two {
+      bottom: 429px;
+      left: -382px;
+    }
+  }
+  &__right {
+    &-one {
+      bottom: -268px;
+      right: -308px;
+    }
+    &-two {
+      bottom: 272px;
+      right: -352px;
+    }
+  }
+}

@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/head.html', { 'title': 'Подарок каждому клиенту', 'srcStyle': 'present' })
-
-<body>
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'main' })
+  <body>
     <div class="wrapper">
-        @@include('html/header.html')
-        <main class="page">
-            <div class="page__bg">
-                <img src="images/present/bg-1.svg" class="bg__first">
-                <img src="images/present/bg-2.svg" class="bg__second">
-                <img src="images/present/bg-3.svg" class="bg__third">
-            </div>
-            <div class="page__container">
-                @@include('html/present/bread-crumbs.html')
-                @@include('html/present/title.html')
-                @@include('html/present/present-grid.html')
-            </div>
-        </main>
-        @@include('html/footer.html')
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+          @@include('html/present/present-grid.html')
+          
+          @@include('html/present/background-present-grid.html')
+        </div>
+      </main>
+      @@include('html/footer.html') @@include('html/svg-sprite.html')
     </div>
-</body>
-<script src="js/main.min.js"></script>
-
+  </body>
+  <script src="js/main.min.js"></script>
 </html>

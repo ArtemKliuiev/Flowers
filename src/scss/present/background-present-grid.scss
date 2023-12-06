@@ -1,0 +1,35 @@
+.backgroung-present-grid {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  pointer-events: none;
+  @include breakpoint($md0) {
+    width: 1920px;
+  }
+  @include breakpoint($md3) {
+    display: none;
+  }
+  &__image {
+    position: absolute;
+  }
+  &__left {
+    &-one {
+      bottom: 475px;
+      left: -350px;
+    }
+  }
+  &__right {
+    &-one {
+      bottom: -33px;
+      right: -344px;
+    }
+    &-two {
+      bottom: 669px;
+      right: -322px;
+    }
+  }
+}

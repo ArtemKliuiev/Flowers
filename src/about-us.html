@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/head.html', { 'title': 'О нас', 'srcStyle': 'about-us' })
-
-<body>
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'main' })
+  <body>
     <div class="wrapper">
-        @@include('html/header.html')
-        <main class="page">
-            <div class="page__bg">
-                <img src="images/about-us/bg-1.svg" class="bg__first">
-                <img src="images/about-us/bg-2.svg" class="bg__second">
-                <img src="images/about-us/bg-3.svg" class="bg__third">
-                <img src="images/about-us/bg-4.svg" class="bg__fourth">
-                <img src="images/about-us/bg-5.svg" class="bg__fiveth">
-                <img src="images/about-us/bg-6.svg" class="bg__sixth">
-            </div>
-            <div class="page__container">
-                @@include('html/about-us/bread-crumbs.html')
-                @@include('html/about-us/title.html')
-
-                @@include('html/about-us/about-us.html')
-            </div>
-        </main>
-        @@include('html/footer.html')
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+          @@include('html/about-us/about-us.html')
+          
+          @@include('html/about-us/background-about-us.html')
+        </div>
+      </main>
+      @@include('html/footer.html') @@include('html/svg-sprite.html')
     </div>
-</body>
-<script src="js/main.min.js"></script>
-
+  </body>
+  <script src="js/main.min.js"></script>
 </html>

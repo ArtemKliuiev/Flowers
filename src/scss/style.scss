@@ -29,25 +29,20 @@
 @import 'main/background-main';
 
 //about-us
-@import 'about-us/bread-crumbs';
-@import 'about-us/title';
-@import 'components/flowers-grid';
 @import 'about-us/about-us';
+@import 'about-us/background-about-us';
 
 //delivery
-@import 'delivery/bread-crumbs';
-@import 'delivery/title';
 @import 'delivery/delivery-info';
+@import 'delivery/background-delivery-info';
 
 //forum
-@import 'forum/bread-crumbs';
-@import 'forum/title';
 @import 'forum/forum-accordion';
+@import 'forum/background-forum-accordion';
 
 //present
-@import 'present/bread-crumbs';
-@import 'present/title';
 @import 'present/present-grid';
+@import 'present/background-present-grid';
 
 //order
 @import 'order/order';
@@ -69,3 +64,6 @@
 
 @import 'video/video';
 @import 'video/background-video';
+
+@import 'contacts/contacts';
+@import 'contacts/background-contacts';

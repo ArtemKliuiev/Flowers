@@ -5,11 +5,61 @@
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.6px;
+    margin-top: 46px;
 
     @include breakpoint($md4) {
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 0.4px;
+    }
+    @include breakpoint($md6) {
+        margin-top: 25px;
+    }
+
+    &__bread-crumbs {
+        display: flex;
+        gap: 30px;
+        font-family: Aguafina Script, sans-serif;
+        margin-top: 9px;
+        margin-bottom: 45px;
+        background: transparent;
+    
+        a {
+            color: $gray3Color;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.1px;
+    
+            &:not(:last-child) {
+                text-decoration: underline;
+            }
+        }
+    
+        @include breakpoint($md4) {
+            display: none;
+        }
+    }
+
+    &__title {
+        background: transparent;
+    
+        h1 {
+            color: $mainDarkColor;
+            text-align: center;
+            font-family: Actor, sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 94px;
+    
+            @include breakpoint($md4) {
+                font-size: 24px;
+                margin-top: 17px;
+                margin-bottom: 43px;
+                padding: 0 20px;
+            }
+        }
     }
 
     &__advantages {
@@ -61,7 +111,7 @@
         flex-direction: column;
         gap: 30px;
         color: $mainDarkColor;
-        margin-bottom: 93px;
+        margin-bottom: 94px;
 
         @include breakpoint($md4) {
             gap: 19px;
