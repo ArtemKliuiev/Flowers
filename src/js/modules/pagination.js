@@ -11,6 +11,7 @@ export default class Pagination{
         this.clickPoint();
         this.currentPages(this.current);
         this.sendUrl(this.current);
+
     }
     startLoadPage(){
         const url = new URL(window.location.href);
@@ -49,6 +50,11 @@ export default class Pagination{
             this.letfBtn.classList.add(this.arrowActive);
             this.rightBtn.classList.add(this.arrowActive);
         }
+
+        // window.scroll({
+        //     top: 500,
+        // });
+
     }
     getMaxPoint(){
         if(window.innerWidth > 768){
@@ -66,6 +72,13 @@ export default class Pagination{
         this.opacityArrow(currentPoint)
         this.hidePoint(currentPoint);
         this.sendUrl(currentPoint);
+
+        this.customEvent = new CustomEvent('paginationEvent', {
+            detail: {
+              page: +this.current
+            }
+        });
+        document.dispatchEvent(this.customEvent);
     }
     buttons(){
         this.letfBtn.addEventListener('click', () => {
@@ -85,8 +98,8 @@ export default class Pagination{
         this.getAllPoint().forEach((point, index) => {
             point.addEventListener('click', () => {
                 if(!point.classList.contains('pagination__point_hide')){
-                    this.currentPages(index + 1)
                     this.current = index + 1;
+                    this.currentPages(index + 1)
                 }
             })
         })
@@ -110,4 +123,3 @@ export default class Pagination{
         }
     }
 }
-
