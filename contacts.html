@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231206192623">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231207141405">
   <title>Flowers</title>
 </head>
 
@@ -531,6 +531,15 @@
               </li>
               <li class="pull-down__list-item">
                 <a href="./present.html">Подарок каждому клиенту</a>
+              </li>
+              <li class="pull-down__list-item">
+                <a href="./recomendation.html">Рекомендации</a>
+              </li>
+              <li class="pull-down__list-item">
+                <a href="./photo.html">Фото доставок</a>
+              </li>
+              <li class="pull-down__list-item">
+                <a href="./video.html">Видео отчеты</a>
               </li>
               <li class="pull-down__list-item">
                 <a href="#">Политика конфиденциальности</a>
@@ -1073,7 +1082,7 @@
 
   <div class="contacts__info">
     <div class="contacts__info-left">
-      <h2 class="contacts__info-title">Свяжитесь с нами</h2>
+      <h2 class="contacts__info-title contacts__info-top-title">Свяжитесь с нами</h2>
       <p class="contacts__info-left-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
@@ -1096,18 +1105,18 @@
     <div class="contacts__info-right">
       <h2 class="contacts__info-title">Заполните форму для обратной связи</h2>
 
-      <form action="#" class="contacts__form" id="contactsForm">
+      <form action="#" class="contacts__form" id="contactsForm" autocomplete="off">
         <div class="contacts__form-el">
           <span>Ваше имя</span>
-          <input type="text" placeholder="Иван Иванов" id="contactsName">
+          <input type="text" placeholder="Иван Иванов" id="contactsName" autocomplete="off" name="name">
         </div>
         <div class="contacts__form-el">
           <span>E-Mail адрес</span>
-          <input type="mail" id="contactsMail">
+          <input type="mail" id="contactsMail" autocomplete="off" name="email">
         </div>
         <div class="contacts__form-el">
           <span>Ваше сообщение</span>
-          <input type="text" id="contactsText">
+          <input type="text" id="contactsText" autocomplete="off" name="message">
         </div>
 
         <button type="submit" class="contacts__button">
@@ -1563,5 +1572,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231206192623"></script>
+  <script src="js/main.min.js?_v=20231207141405"></script>
 </html>
