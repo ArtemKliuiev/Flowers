@@ -118,12 +118,12 @@
             margin-bottom: 33px;
         }
 
-        .contacts__title {
+        .delivery-info__contacts-title {
             color: $cheryColor;
             font-family: Actor, sans-serif;
         }
 
-        .contacts__contact:nth-child(3) {
+        .delivery-info__contacts-contact:nth-child(3) {
             @include breakpoint($md4) {
                 max-width: 155px;
             }

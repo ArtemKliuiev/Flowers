@@ -8,7 +8,7 @@
 
   <div class="contacts__info">
     <div class="contacts__info-left">
-      <h2 class="contacts__info-title">Свяжитесь с нами</h2>
+      <h2 class="contacts__info-title contacts__info-top-title">Свяжитесь с нами</h2>
       <p class="contacts__info-left-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
@@ -31,18 +31,18 @@
     <div class="contacts__info-right">
       <h2 class="contacts__info-title">Заполните форму для обратной связи</h2>
 
-      <form action="#" class="contacts__form" id="contactsForm">
+      <form action="#" class="contacts__form" id="contactsForm" autocomplete="off">
         <div class="contacts__form-el">
           <span>Ваше имя</span>
-          <input type="text" placeholder="Иван Иванов" id="contactsName" />
+          <input type="text" placeholder="Иван Иванов" id="contactsName" autocomplete="off" name="name" />
         </div>
         <div class="contacts__form-el">
           <span>E-Mail адрес</span>
-          <input type="mail" id="contactsMail" />
+          <input type="mail" id="contactsMail" autocomplete="off" name="email" />
         </div>
         <div class="contacts__form-el">
           <span>Ваше сообщение</span>
-          <input type="text" id="contactsText" />
+          <input type="text" id="contactsText" autocomplete="off" name="message"  />
         </div>
 
         <button type="submit" class="contacts__button">

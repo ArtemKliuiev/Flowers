@@ -1,6 +1,10 @@
 .contacts {
   margin-top: 49px;
   margin-bottom: 40px;
+
+  @include breakpoint($md6) {
+    margin-top: 22px;
+  }
   // .contacts__nav
 
   &__nav {
@@ -41,7 +45,7 @@
     }
 
     @include breakpoint($md6) {
-      margin-bottom: 27px;
+      margin-bottom: 47px;
     }
   }
 
@@ -51,6 +55,11 @@
     display: flex;
     justify-content: space-between;
     max-width: 1343px;
+
+    @include breakpoint($md2) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   // .contacts__info-left
@@ -67,6 +76,26 @@
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 42px;
+
+    @include breakpoint($md2) {
+      text-align: center;
+    }
+
+    @include breakpoint($md4) {
+      font-size: 18px;
+    }
+
+    @include breakpoint($md6) {
+      max-width: 250px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info-top-title {
+    @include breakpoint($md6) {
+      margin-bottom: 28px;
+    }
   }
 
   // .contacts__info-left-text
@@ -80,6 +109,13 @@
     max-width: 460px;
     margin-top: 50px;
     margin-bottom: 3px;
+
+    @include breakpoint($md6) {
+      font-size: 12px;
+      margin-top: 28px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   // .contacts__info-left-contacts
@@ -90,19 +126,41 @@
     gap: 30px;
     margin-bottom: 37px;
 
+    @include breakpoint($md6) {
+      margin-bottom: 17px;
+    }
+
     svg {
       width: 40px;
       height: 40px;
+
+      @include breakpoint($md6) {
+        width: 18px;
+        height: 22px;
+      }
     }
 
     p {
       max-width: 174px;
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      @include breakpoint($md6) {
+        font-size: 14px;
+        max-width: 140px;
+      }
     }
   }
 
   // .contacts__info-right
 
   &__info-right {
+    @include breakpoint($md3) {
+      width: 100%;
+    }
   }
 
   // .contacts__form
@@ -111,6 +169,19 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include breakpoint($md2) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+
+    @include breakpoint($md6) {
+      gap: 32px;
+      margin-bottom: 56px;
+    }
   }
 
   // .contacts__form-name-wrap
@@ -125,6 +196,15 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+
+    @include breakpoint($md6) {
+      height: 54px;
+      padding: 8px 56px;
+    }
 
     span {
       position: absolute;
@@ -141,6 +221,15 @@
       @include breakpoint($md5) {
         left: 33px;
       }
+
+      @include breakpoint($md6) {
+        max-width: 78px;
+        top: -20px;
+      }
+    }
+
+    input {
+      width: 100%;
     }
 
     input::placeholder {
@@ -180,10 +269,13 @@
     margin-bottom: 49px;
     transition: all 0.2s ease;
 
+    @include breakpoint($md2) {
+      margin: 0 auto;
+    }
+
     @include breakpoint($md6) {
       width: 100%;
       height: 50px;
-      margin-top: 68px;
     }
 
     img {

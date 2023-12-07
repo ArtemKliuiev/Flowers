@@ -18,6 +18,8 @@ import photoCard from './modules/photo/photo';
 import forumCard from './modules/forum/forum';
 import reviewsCard from './modules/reviews/reviews';
 import videoCard from './modules/video/video';
+import justValidateRecomendation from './modules/justValidate';
+import justValidateContacts from './modules/justValidate';
 
 import burger from './modules/menu/burger';
 import menuSwitch from "./modules/menu/menuSwitch";
