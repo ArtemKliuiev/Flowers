@@ -1,17 +1,19 @@
 export default class Pagination{
-    constructor(pages){
-        this.pages = pages
+    constructor(){
         this.letfBtn = document.querySelector('.pagination__arrow_left');
         this.rightBtn = document.querySelector('.pagination__arrow_right');
         this.pointContainer = document.querySelector('.pagination__points');
         this.current = 1
+
+    }
+    quantityPages(num){
+        this.pages = num
         this.addPoints(this.pages);
         this.startLoadPage();
         this.buttons();
         this.clickPoint();
         this.currentPages(this.current);
         this.sendUrl(this.current);
-
     }
     startLoadPage(){
         const url = new URL(window.location.href);
@@ -50,11 +52,6 @@ export default class Pagination{
             this.letfBtn.classList.add(this.arrowActive);
             this.rightBtn.classList.add(this.arrowActive);
         }
-
-        // window.scroll({
-        //     top: 500,
-        // });
-
     }
     getMaxPoint(){
         if(window.innerWidth > 768){
@@ -63,7 +60,23 @@ export default class Pagination{
             return 5
         }
     }
-    currentPages(currentPoint){
+    event(){
+        this.customEvent = new CustomEvent('paginationEvent', {
+            detail: {
+              page: +this.current
+            }
+        });
+        document.dispatchEvent(this.customEvent);
+
+        window.scroll({
+            top: 500,
+        });
+    }
+    getPage(){
+        return +this.current
+    }
+    currentPages(currentPoint = 1){
+        this.current = currentPoint;
         const pointActive = 'pagination__point_active';
         this.getAllPoint().forEach(point => {
             point.classList.remove(pointActive)
@@ -73,24 +86,20 @@ export default class Pagination{
         this.hidePoint(currentPoint);
         this.sendUrl(currentPoint);
 
-        this.customEvent = new CustomEvent('paginationEvent', {
-            detail: {
-              page: +this.current
-            }
-        });
-        document.dispatchEvent(this.customEvent);
     }
     buttons(){
         this.letfBtn.addEventListener('click', () => {
             if(this.current > 1){
                 this.current--;
                 this.currentPages(this.current);
+                this.event()
             }
         });
         this.rightBtn.addEventListener('click', () => {
             if(this.current < this.pages){
                 this.current++;
                 this.currentPages(this.current);
+                this.event()
             }
         })
     }
@@ -100,11 +109,15 @@ export default class Pagination{
                 if(!point.classList.contains('pagination__point_hide')){
                     this.current = index + 1;
                     this.currentPages(index + 1)
+                    this.event()
                 }
             })
         })
     }
     addPoints(pages){
+        if(pages < 1){
+            pages = 1
+        }
         this.pointContainer.innerHTML = '';
         for(let i = 1; i <= pages; i++){
             this.pointContainer.innerHTML += `

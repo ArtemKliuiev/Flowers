@@ -1,5 +1,5 @@
 import firebase from '../firebase';
-import { collection, query, orderBy, where, getCountFromServer, startAfter, endAt, getDocs, or, and, limit } from "firebase/firestore";
+import { collection, query, orderBy, where, getCountFromServer, startAfter, startAt,endAt, getDocs, or, and, limit } from "firebase/firestore";
 import Pagination from '../pagination';
 
 
@@ -7,7 +7,10 @@ import Pagination from '../pagination';
 export default class loadFirebase{
     constructor(){
         this.productCardWrapper = document.querySelector('.cards__items');
-
+        this.pagination = new Pagination();
+        document.addEventListener('paginationEvent', (e) => {
+            this.pages(e.detail.page)
+        });
     }
     async filters(info){
         const db = firebase.getFirestore();
@@ -51,7 +54,7 @@ export default class loadFirebase{
                 orderBy(...this.sort),
                 limit(12),
         );
-        this.loadGoods(mainQuery);
+        this.loadGoods(mainQuery, true, true);
 
         this.infoQuery = query(
             this.colect,
@@ -60,17 +63,18 @@ export default class loadFirebase{
         );
     }
 
-    async getInfo(){
+    async getInfo(startOne){
         const snapshotTwo = await getCountFromServer(this.infoQuery);
         this.quantityAll = snapshotTwo.data().count;
-        this.quantityLeft = this.quantityAll - this.quantityNow;
-        this.quantityPages = Math.ceil(this.quantityAll / this.quantityNow);
-        if(this.quantityLeft >= 3){
-            this.quantityAddMore = 3;
-        }else if(this.quantityLeft > 0){
-            this.quantityAddMore = this.quantityLeft;
-        }else if(this.quantityLeft <= 0){
-            this.quantityAddMore = 0;
+
+        const querySnapshot = await getDocs(this.infoQuery);
+        this.lastVisible = querySnapshot.docs
+
+
+
+
+        if(this.quantityPages < 1 || this.quantityLeft === 0){
+            this.quantityPages = 1
         }
         //КОНСОЛЬ
         // console.clear();
@@ -80,15 +84,44 @@ export default class loadFirebase{
         //     "На странице": this.quantityNow,
         //     "Осталось": this.quantityLeft,
         // });
-        const pagination = new Pagination(this.quantityPages)
+        this.quantityPages = Math.ceil(this.quantityAll / 12);
+        this.pagination.quantityPages(this.quantityPages);
+        if(startOne){
+            this.pagination.currentPages(1);
+        }
+
+        this.currentPage = this.pagination.getPage()
+
+        this.quantityLeft = this.quantityAll - ((this.currentPage * 12) - 12) - this.quantityNow;
+
+        if(this.quantityLeft >= 3){
+            this.quantityAddMore = 3;
+        }else if(this.quantityLeft > 0){
+            this.quantityAddMore = this.quantityLeft;
+        }else if(this.quantityLeft <= 0){
+            this.quantityAddMore = 0;
+        }
+        
         this.loadMoreBtn();
     }
 
-    pages(info){
-        console.log(info)
+
+            // [querySnapshot.docs.length-1]
+
+    pages(page){
+        this.start = this.lastVisible[(page * 12) - 12]
+        this.loadPage = query(
+            this.colect,
+            and(...this.filter),
+            orderBy(...this.sort),
+            startAt(this.start),
+            limit(12),
+        );
+        this.loadGoods(this.loadPage, true);
     }
 
     loadMore(){
+
         let limitCard = 3
         if(this.quantityLeft < 3){
             limitCard = this.quantityLeft
@@ -98,17 +131,16 @@ export default class loadFirebase{
             this.colect,
             and(...this.filter),
             orderBy(...this.sort),
-            startAfter(this.quantityNow),
+            startAt(this.lastVisible[this.quantityNow + ((12 * this.currentPage) - 12)]),
             limit(limitCard),
         );
-
         this.loadGoods(this.loadMoreQuery, false);
     }
 
      loadMoreBtn(){
 
         document.querySelector('.cards__button-info').textContent = this.quantityAddMore;
-
+        
         if(this.quantityAll > 12 && this.quantityLeft > 0){
             document.querySelector('.cards__btn').style.display = 'block'
         }else{
@@ -116,7 +148,7 @@ export default class loadFirebase{
         }
     }
 
-    async loadGoods(mainQuery, deletFil = true){
+    async loadGoods(mainQuery, deletFil = true, startOne = false){
         if(deletFil){
             this.productCardWrapper.innerHTML = '';
         }
@@ -138,10 +170,9 @@ export default class loadFirebase{
         }
         this.quantityNow = document.querySelectorAll('.product-card').length;
 
-        this.getInfo();
-        document.addEventListener('paginationEvent', (e) => {
-            this.pages(e.detail.page)
-        });
+        this.getInfo(startOne);
+
+
     }
 
     createGoods(product){
