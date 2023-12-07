@@ -33,15 +33,6 @@ export default class Menu{
         this.update();
     }
 
-    // btnLoadMore(){
-    //     if(this.firebase.quantity >= 12){
-    //         document.querySelector('.cards__btn').style.display = 'block'
-    //     }else{
-    //         document.querySelector('.cards__btn').style.display = 'none'
-    //     }
-    //     console.log(this.firebase.quantity)
-    // }
-
     addListener(){
         this.mainItem.forEach(item => {
             item.querySelector('input').addEventListener('change', () => {
