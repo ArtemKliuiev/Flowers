@@ -13,6 +13,8 @@ export default class loadFirebase{
         });
     }
     async filters(info){
+
+        console.log(info)
         const db = firebase.getFirestore();
         this.colect = collection(db, "products");
         this.sort = [];
@@ -30,19 +32,19 @@ export default class loadFirebase{
             )
         ];
 
-        if(info.whom.length != 0){
-            this.filter.push(where("whom", "==", info.whom))}
-        if(info.color.length != 0){
-            this.filter.push(where("color", "==", info.color))}
-        if(info.occasion.length != 0){
-            this.filter.push(where("occasion", "==", info.occasion))}
+        if(info.whom[0] != ''){
+            this.filter.push(where("whom", "==", info.whom[0]))}
+        if(info.color[0] != ''){
+            this.filter.push(where("color", "==", info.color[0]))}
+        if(info.occasion[0] != ''){
+            this.filter.push(where("occasion", "==", info.occasion[0]))}
 
 
-        if(info.sort === 'Цена(вверх)'){
+        if(info.sort[0] === 'Цена(вверх)'){
             this.sort = ['price']
-        }else if(info.sort === 'Цена(вниз)'){
+        }else if(info.sort[0] === 'Цена(вниз)'){
             this.sort = ['price', 'desc'];
-        }else if(info.sort === 'Популярность'){
+        }else if(info.sort[0] === 'Популярность'){
             this.sort = ['popular'];
         }else{
             this.sort = ['price']
@@ -76,15 +78,7 @@ export default class loadFirebase{
         if(this.quantityPages < 1 || this.quantityLeft === 0){
             this.quantityPages = 1
         }
-        //КОНСОЛЬ
-        // console.clear();
-        // console.table({
-        //     "Количество страниц": this.quantityPages,
-        //     "Всего карточек": this.quantityAll,
-        //     "На странице": this.quantityNow,
-        //     "Осталось": this.quantityLeft,
-        // });
-        this.quantityPages = Math.ceil(this.quantityAll / 12);
+        this.quantityPages = Math.ceil(this.quantityAll / ((this.quantityNow >= 12) ? this.quantityNow : 12 ));
         this.pagination.quantityPages(this.quantityPages);
         if(startOne){
             this.pagination.currentPages(1);
@@ -103,6 +97,14 @@ export default class loadFirebase{
         }
         
         this.loadMoreBtn();
+        //КОНСОЛЬ
+        // console.clear();
+        // console.table({
+        //     "Количество страниц": this.quantityPages,
+        //     "Всего карточек": this.quantityAll,
+        //     "На странице": this.quantityNow,
+        //     "Осталось": this.quantityLeft,
+        // });
     }
 
 
@@ -171,8 +173,6 @@ export default class loadFirebase{
         this.quantityNow = document.querySelectorAll('.product-card').length;
 
         this.getInfo(startOne);
-
-
     }
 
     createGoods(product){

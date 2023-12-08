@@ -114,8 +114,11 @@ export default class Pagination{
             })
         })
     }
+    
     addPoints(pages){
-        if(pages < 1){
+        if(isNaN(pages)){
+            pages = 1
+        }else if(pages < 1){
             pages = 1
         }
         this.pointContainer.innerHTML = '';

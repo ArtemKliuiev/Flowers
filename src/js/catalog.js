@@ -73,16 +73,7 @@ class Catalog{
         }
     }
     deletFilter(){
-        const menu = this.menu
-        this.deletFilterBtn.addEventListener('click', () => {
-            document.querySelectorAll('.sort-adaptive__info').forEach(item => {
-                item.innerHTML = ''
-            });
-            this.menuLeft.querySelectorAll('input').forEach(input => {
-                input.checked = false;
-            });
-            menu.update();
-        })
+
     }
 }
 const catalog = new Catalog();

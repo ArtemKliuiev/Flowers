@@ -3,37 +3,112 @@ import Dropdown from '../dropdown';
 
 export default class Menu{
     constructor(){
+        this.catalTITLE = document.querySelector('.catalog__title')
+
         this.firebase = new loadFirebase();
         this.dropdownPerson = new Dropdown('.drop-person');
         this.dropdownColor = new Dropdown('.drop-color');
         this.dropdownReason = new Dropdown('.drop-reason');
         this.dropdownSort = new Dropdown('.drop-sort');
         this.sortLine = document.querySelectorAll('.sort li');
+        this.allCategory = document.querySelectorAll('.left-menu__item')
         this.mainItem = document.querySelectorAll('.left-menu__point');
         this.adaptiveSort = document.querySelectorAll('.sort-adaptive__main');
         this.deletFilterBtn = document.querySelector('.left-menu__delete-filters');
         this.loadMore = document.querySelector('.cards__btn');
-
         this.category = {
             bouquets: [''],
             roses: [''],
             inBox: [''],
-            compositions: ['Букеты', 'Корзины с цветами', 'Горшечные растения', 'Цветочные арки', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'],
+            compositions: [''],
             gift: [''],
             giftBasket: [''],
             forBride: [''],
             delicious: [''],
-            color: '',
-            whom: '',
-            occasion: '',
-            sort: '',
+            color: [''],
+            whom: [''],
+            occasion: [''],
+            sort: [''],
         }
+        this.getUrl();
 
         this.addListener();
+
         this.update();
     }
 
+    setUrl(){
+        const url = new URL(window.location.href);
+        for(const key in this.category){
+            url.searchParams.set(key, this.category[key])
+        }
+        window.history.replaceState({}, '', url);
+    }
+
+    getUrl(){
+        const url = new URL(window.location.href);
+        if(url.searchParams.size != 0){
+            this.allCategory.forEach(el => {
+                const li = el.querySelectorAll('.left-menu__point');
+                const id = el.id;
+                const res = url.searchParams.get(el.id).split(',');
+                if(res.length > 0 ){
+                    li.forEach(el => {
+                        const input = el.querySelector('input')
+                        const elem = el.querySelector('label').textContent
+                        if(res.includes(elem)){
+                            input.checked = true
+                        }
+                    })
+                }
+            });
+            const personUrl = url.searchParams.get('whom');
+            const colorUrl = url.searchParams.get('color');
+            const reasonUrl = url.searchParams.get('occasion');
+            const sortUrl = url.searchParams.get('sort');
+
+            if(personUrl != ''){
+                this.dropdownPerson.changeValue(personUrl);
+            }
+            if(colorUrl != ''){
+                this.dropdownColor.changeValue(colorUrl);
+            }
+            if(reasonUrl != ''){
+                this.dropdownReason.changeValue(reasonUrl);
+            }
+            if(sortUrl != ''){
+                this.dropdownSort.changeValue(sortUrl);
+            }
+        }else{
+            this.category.compositions = ['Букеты', 'Цветочные арки', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'];
+        }
+    };
+
+    delFilters(){
+        console.log('clean filters')
+        document.querySelectorAll('.sort-adaptive__info').forEach(item => {
+            item.innerHTML = ''
+        });
+
+        this.mainItem.forEach(item => {
+            item.querySelector('input').checked = false
+        });
+        this.dropdownPerson.changeValue('Выбрать');
+        this.dropdownColor.changeValue('Выбрать');
+        this.dropdownReason.changeValue('Выбрать');
+        this.dropdownSort.changeValue('Популярность');
+        this.update(true);
+    }
+
     addListener(){
+        this.catalTITLE.addEventListener('click', () => {
+            this.delFilters();
+        });
+
+        this.deletFilterBtn.addEventListener('click', () => {
+            this.delFilters();
+        });
+
         this.mainItem.forEach(item => {
             item.querySelector('input').addEventListener('change', () => {
                 this.update(true);
@@ -51,9 +126,7 @@ export default class Menu{
     update(delFilters = false){
         if(delFilters){
             for(const key in this.category){
-                if(this.category[key] != this.category.whom){
-                    this.category[key] = [''];
-                }
+                this.category[key] = [''];
             }
         }
 
@@ -63,13 +136,11 @@ export default class Menu{
             }else{
                 this.data(num, '')
             }
-
         }
         if(window.innerWidth > 768){
             everDrop(this.dropdownPerson.state(), 9);
             everDrop(this.dropdownColor.state(), 10);
             everDrop(this.dropdownReason.state(), 11);
-            everDrop(this.dropdownSort.state(), 12);
         }else{
             this.adaptiveSort.forEach(item => {
                 const nameItem = item.querySelector('.sort-adaptive__title').textContent;
@@ -84,6 +155,7 @@ export default class Menu{
                 }
             })
         };
+        everDrop(this.dropdownSort.state(), 12);
 
         this.mainItem.forEach(item => {
             const input = item.querySelector('input');
@@ -93,8 +165,9 @@ export default class Menu{
                 this.data(numCategory, lable.textContent)
             }
         });
-
+        // console.log(this.category)
         this.firebase.filters(this.category);
+        this.setUrl();
     }
 
     data(category, item){
@@ -125,16 +198,16 @@ export default class Menu{
                 this.category.delicious.push(item)
                 break;
             case 9:
-                this.category.whom = item;
+                this.category.whom = [item];
                 break;
             case 10:
-                this.category.color = item;
+                this.category.color = [item];
                 break;
             case 11:
-                this.category.occasion = item;
+                this.category.occasion = [item];
                 break;
             case 12:
-                this.category.sort = item;
+                this.category.sort = [item];
                 break;
         }
     }

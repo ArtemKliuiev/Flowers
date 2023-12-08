@@ -49,5 +49,8 @@ export default class Dropdown {
     state(){
         return this.dropThisItem.textContent;
     }
+    changeValue(info){
+        this.dropThisItem.textContent = info;
+    }
 }
 

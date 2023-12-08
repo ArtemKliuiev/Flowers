@@ -15,7 +15,7 @@
 
 .catalog {
     height: 100%;
-    margin: 263px 0 90px 0;
+    margin: 48px 0 90px 0;
     &__link-row {
         margin: 9px 0 34px 0;
         @media (max-width: 768px) {
@@ -69,6 +69,6 @@
         }
     }
     @media (max-width: 768px) {
-        margin-bottom: 54px;
+        margin: 23px 0 54px 0;
     }
 }
