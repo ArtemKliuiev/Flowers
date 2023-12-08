@@ -1,22 +1,27 @@
 import firebase from '../firebase';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs, limit } from 'firebase/firestore';
 const newsCardWrapper = document.querySelectorAll('.news__card-wrapper');
 
 export default class newsCard {
-    constructor() {
-      this.db = firebase.getFirestore();  
-    }
-    async loadCards() {
-      const filterNews = query(
-        collection(this.db, 'news'),
-        where('price', '==', null)
-      );
+  constructor() {
+    this.db = firebase.getFirestore();
+  }
+  async loadCards() {
+    const filterNews = query(
+      collection(this.db, 'news'),
+      where('price', '==', null),
+      limit(6)
+    );
 
-      const querySnapshot = await getDocs(filterNews);
-      querySnapshot.forEach((doc) => {
-        const product = doc.data();
-        const { text, title, img } = product;
-        let template = `
+    let productArr = [];
+
+    const querySnapshot = await getDocs(filterNews);
+    querySnapshot.forEach((doc) => {
+      const product = doc.data();
+      productArr.push(product);
+
+      const { text, title, img } = product;
+      let template = `
             <div class="news__card">
              <div class="news__card-img">
                 <picture>
@@ -30,10 +35,14 @@ export default class newsCard {
                 <p class="news__card-link">Читать далее...</p>
             </a>
             </div>`;
-        newsCardWrapper.forEach((slide) => {
-          slide.insertAdjacentHTML('beforeend', template);
-        });
+      newsCardWrapper.forEach((slide) => {
+        slide.insertAdjacentHTML('beforeend', template);
       });
+    });
+
+    const buttonText = document.querySelector('.news__button-text');
+    if (buttonText) {
+      buttonText.textContent = `Еще ${productArr.length} новостей`;
     }
   }
-
+}

@@ -7,6 +7,8 @@ const videoCardWrapper = document.querySelectorAll('.video__card-wrapper');
 export default class VideoCard {
   constructor() {
     this.db = firebase.getFirestore();
+    this.currentlyOpenVideo = null;
+    this.previewContent = null;
   }
 
   async loadCards() {
@@ -16,6 +18,8 @@ export default class VideoCard {
     );
 
     const querySnapshot = await getDocs(filterVideo);
+    const videoCardsWrapperArray = Array.from(videoCardWrapper);
+
     querySnapshot.forEach((doc) => {
       const product = doc.data();
       const { data, link, img, name } = product;
@@ -34,7 +38,7 @@ export default class VideoCard {
           <h4 class="video__card-name">Видео отзыв <br /> ${name}</h4>
         </div>`;
 
-      videoCardWrapper.forEach((slide) => {
+      videoCardsWrapperArray.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
       });
     });
@@ -47,20 +51,31 @@ export default class VideoCard {
         const youTubeId = youTubeLink[youTubeLink.length - 1];
 
         const youTubeIdSplit = youTubeId.split('=');
-        const youTubeIdLink = youTubeIdSplit[youTubeIdSplit.length -1];
+        const youTubeIdLink = youTubeIdSplit[youTubeIdSplit.length - 1];
         const videoLink = `https://www.youtube.com/embed/${youTubeIdLink}`;
-      
+
         const cardContent = videoCard.querySelector('.video__card-img');
-        
+
+        if (this.currentlyOpenVideo !== null) {
+          const otherVideoIframe = this.currentlyOpenVideo.querySelector('iframe');
+          if (otherVideoIframe) {
+            otherVideoIframe.src = '';
+          }
+          this.currentlyOpenVideo.querySelector('.video__card-img').innerHTML = this.previewContent;
+        }
+
+        this.previewContent = cardContent.innerHTML;
+
         cardContent.innerHTML = `<iframe 
-        width="303" 
-        height="322" 
-        src="${videoLink}" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>`;
-        
+          width="303" 
+          height="322" 
+          src="${videoLink}" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>`;
+
+        this.currentlyOpenVideo = videoCard;
       });
     });
   }
