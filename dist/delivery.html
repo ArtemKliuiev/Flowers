@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231209114250">
   <title>Flowers</title>
 </head>
 
@@ -121,7 +121,7 @@
         <div class="bottom-header__burger-box"><span></span></div>
         <a href="./index.html">
           <div class="bottom-header__logo-box">
-            <img src="images/logo.png" alt="Logotype" class="bottom-header__logo">
+            <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Logotype" class="bottom-header__logo"></picture>
           </div>
         </a>
         <div class="bottom-header__icon-wrapper">
@@ -1107,13 +1107,13 @@
 </section>
           
           <div class="backgroung-delivery-info">
-    <!-- Левая сторона -->
-    <img class="backgroung-delivery-info__image backgroung-delivery-info__left-one" src="./images/bg/left-flowers.png" alt="bg-img">
+    
+    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-delivery-info__image backgroung-delivery-info__left-one" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
 
-    <img class="backgroung-delivery-info__image backgroung-delivery-info__left-two" src="./images/bg/left-flowers.png" alt="bg-img">
+    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-delivery-info__image backgroung-delivery-info__left-two" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
 
-    <!-- Правая сторона --> 
-    <img class="backgroung-delivery-info__image backgroung-delivery-info__right-one" src="./images/bg/right-flowers.png" alt="bg-img">
+     
+    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung-delivery-info__image backgroung-delivery-info__right-one" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
 
 </div>
         </div>
@@ -1256,12 +1256,12 @@
                     <div class="last-line__payment-methods">
                         <p>Способы оплаты:</p>
                         <div class="payment-methods__images">
-                            <img src="images/footer/privat.png">
-                            <img src="images/footer/liqpay.png">
-                            <img src="images/footer/mastercard.png">
-                            <img src="images/footer/maestro.png">
-                            <img src="images/footer/vosa-electron.png">
-                            <img src="images/footer/visa.png">
+                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img src="images/footer/privat.png"></picture>
+                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img src="images/footer/liqpay.png"></picture>
+                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img src="images/footer/mastercard.png"></picture>
+                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img src="images/footer/maestro.png"></picture>
+                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img src="images/footer/vosa-electron.png"></picture>
+                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img src="images/footer/visa.png"></picture>
                         </div>
                     </div>
                 </div>
@@ -1271,7 +1271,7 @@
         <div class="footer__links links__adaptive">
             <div class="__container">
                 <div class="links__logo">
-                    <img src="images/footer/footer-logo.png" alt="">
+                    <picture><source srcset="images/footer/footer-logo.webp" type="image/webp"><img src="images/footer/footer-logo.png" alt=""></picture>
                 </div>
                 <div class="links__menu accordions">
                     <div class="menu__footer accordion">
@@ -1321,12 +1321,12 @@
                 <div class="links__last-line">
                     <div class="last-line__payment-methods">
                         <div class="payment-methods__images">
-                            <img src="images/footer/mastercard.png">
-                            <img src="images/footer/maestro.png">
-                            <img src="images/footer/vosa-electron.png">
-                            <img src="images/footer/visa.png">
-                            <img src="images/footer/privat.png">
-                            <img src="images/footer/liqpay.png" class="liqpay">
+                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img src="images/footer/mastercard.png"></picture>
+                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img src="images/footer/maestro.png"></picture>
+                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img src="images/footer/vosa-electron.png"></picture>
+                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img src="images/footer/visa.png"></picture>
+                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img src="images/footer/privat.png"></picture>
+                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img src="images/footer/liqpay.png" class="liqpay"></picture>
                         </div>
                     </div>
                     <p class="last-line__protection-of-rights">Copyright © 2021. Все права защищены</p>
@@ -1334,12 +1334,7 @@
             </div>
         </div>
     </div>
-</footer> <!-- 
-Поприбирав не всі width і height. 
-Залишилися в clipPath та інших елементах svg. 
-Є ймовірність, що це буде обмежувати адаптивність. 
-При потребі можна спробувати їх прибрати
- -->
+</footer> 
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="delivery" viewBox="0 0 22 22">
     <g clip-path="url(#clip0_0_674)">
@@ -1556,5 +1551,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js?_v=20231209114250"></script>
 </html>
