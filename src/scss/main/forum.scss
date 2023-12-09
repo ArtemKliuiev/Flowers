@@ -28,6 +28,7 @@
     display: none;
     @include breakpoint($md4) {
       display: block;
+      padding-top: 42px;
       p {
         color: #956d84;
         text-align: center;
@@ -37,6 +38,9 @@
         line-height: 18px;
         text-decoration-line: underline;
       }
+    }
+    @include breakpoint($md5) {
+      padding-top: 0;
     }
   }
 
@@ -222,6 +226,9 @@
 }
 
 .forum__swiper-pagination {
+  @include breakpoint($md4) {
+    bottom: 36px !important;
+  }
   @include breakpoint($md5) {
     bottom: 54px !important;
   }

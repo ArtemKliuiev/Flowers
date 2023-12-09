@@ -1,11 +1,16 @@
 import firebase from '../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+
 const seasonCardWrapper = document.querySelectorAll('.season__wrapper');
 
-export default class productsSeason {
+export default class productsStock {
   constructor() {
     this.db = firebase.getFirestore();
+    this.smallWidth = false;
+    this.bigWidth = false;
+    this.productsArray = [];
   }
+
   async loadCards() {
     const filterSeason = query(
       collection(this.db, 'products'),
@@ -16,7 +21,37 @@ export default class productsSeason {
     const querySnapshot = await getDocs(filterSeason);
     querySnapshot.forEach((doc) => {
       const product = doc.data();
-      const { name, stars, price, img, id} = product;
+      this.productsArray.push(product);
+    });
+
+    window.addEventListener('resize', () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 768 && !this.smallWidth) {
+        this.smallWidth = true;
+        this.bigWidth = false;
+        this.renderProducts();
+      } else if (screenWidth >= 768 && !this.bigWidth) {
+        this.bigWidth = true;
+        this.smallWidth = false;
+        this.renderProducts();
+      }
+    });
+
+    this.renderProducts();
+  }
+
+  renderProducts() {
+    const screenWidth = window.innerWidth;
+    const productArr =
+      screenWidth < 768 ? this.productsArray.slice(0, 4) : this.productsArray;
+
+    seasonCardWrapper.forEach((slide) => {
+      slide.innerHTML = '';
+    });
+
+    productArr.forEach((product) => {
+      const { name, stars, price, img, id } = product;
 
       let star = '';
       for (let i = 0; i < stars; i++) {
@@ -24,58 +59,59 @@ export default class productsSeason {
       }
 
       let template = `
-      <div data-id='${id}' class="product-card">
-      <div class="product-card__top">
-          <div class="product-card__img">
-            <picture>
-              <source srcset="${img.webP}" type="image/webp">
-              <img src="${img.default}" alt="flowers">
-            </picture> 
-          </div>
-          <div class="product-card__top-like">
-            <svg ><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>
-                  <div class="product-card__top-like_active">
-                  <svg ><use xlink:href="./images/Sprite.svg#product-card-like_active"></use></svg>
-              </div>
-          </div>
-          <div class="product-card__top-sign">
-              TOP
-          </div>
-      </div>
-      <div class="product-card__bottom">
-          <div class="product-card__bottom-stars">
-          `;
+            <div data-id='${id}' class="product-card">
+            <div class="product-card__top">
+                <div class="product-card__img">
+                  <picture>
+                    <source srcset="${img.webP}" type="image/webp">
+                    <img src="${img.default}" alt="flowers">
+                  </picture>
+                </div>
+                <div class="product-card__top-like">
+                  <svg ><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>
+                        <div class="product-card__top-like_active">
+                        <svg ><use xlink:href="./images/Sprite.svg#product-card-like_active"></use></svg>
+                    </div>
+                </div>
+                <div class="product-card__top-sign">
+                    TOP
+                </div>
+            </div>
+            <div class="product-card__bottom">
+                <div class="product-card__bottom-stars">
+                `;
       for (let i = 0; i < stars; i++) {
         template += `
-              <img src="./images/main/stock/Star.svg" alt="star">`;
+                    <img src="./images/main/stock/Star.svg" alt="star">`;
       }
       template += `
-          </div>
-          <div class="product-card__bottom-name-price">
-              <div class="product-card__bottom-name">
-                  ${name}
-              </div>
-              <div class="product-card__bottom-prices">
-                  <div class="product-card__bottom-price">${price} грн</div>
-              </div>
-          </div>
-          <div class="product-card__bottom-buttons">
-          <a href="#" class="product-card__bottom-button-desktop">
-                  Заказать
-                  <img src="./images/main/stock/button-branch.png" alt="button-branch">
-              </a>    
-          <a href="#">
-              <div class="product-card__bottom-button-mobile">
-                  <img src="./images/main/stock/button-mobile.png" alt="button-branch"> 
-              </div>
-          </a>
-          <a href="#">
-              <div class="product-card__bottom-order">Быстрый заказ</div>
-          </a>
-          </div>
-      </div>
-  </div>`;
-        seasonCardWrapper.forEach((slide) => {
+                </div>
+                <div class="product-card__bottom-name-price">
+                    <div class="product-card__bottom-name">
+                        ${name}
+                    </div>
+                    <div class="product-card__bottom-prices">
+                        <div class="product-card__bottom-price">${price} грн</div>
+                    </div>
+                </div>
+                <div class="product-card__bottom-buttons">
+                <a href="#" class="product-card__bottom-button-desktop">
+                        Заказать
+                        <img src="./images/main/stock/button-branch.png" alt="button-branch">
+                    </a>
+                <a href="#">
+                    <div class="product-card__bottom-button-mobile">
+                        <img src="./images/main/stock/button-mobile.png" alt="button-branch">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="product-card__bottom-order">Быстрый заказ</div>
+                </a>
+                </div>
+            </div>
+        </div>`;
+
+      seasonCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
       });
     });
