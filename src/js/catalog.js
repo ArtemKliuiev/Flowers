@@ -9,13 +9,11 @@ class Catalog{
         this.itemsFiler = document.querySelectorAll('.left-menu__item');
         this.itemsSortAdaptive = document.querySelectorAll('.sort-adaptive__main');
         this.leftMenuBtn = document.querySelector('.button-for-left-menu');
-        this.deletFilterBtn = document.querySelector('.left-menu__delete-filters');
         this.exitApativeLeftMenu = document.querySelector('.left-menu__adaptive-back');
         this.menu = new Menu();
         this.adaptiveFilter()
         this.tabsFilter();
         this.tabsSortAdaptive();
-        this.deletFilter();
     }
     adaptiveFilter(){
         this.leftMenuBtn.addEventListener('click', () => {
@@ -71,9 +69,6 @@ class Catalog{
             menuLeft.classList.remove('left-menu_sort-active');
             item.classList.remove('sort-adaptive__main_active');
         }
-    }
-    deletFilter(){
-
     }
 }
 const catalog = new Catalog();

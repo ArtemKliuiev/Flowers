@@ -83,6 +83,6 @@
     "just-validate": "^4.3.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.7"
   }
 }
