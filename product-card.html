@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231211180544">
+  <link rel="stylesheet" href="css/product-card.min.css?_v=20231211180544">
   <title>Flowers</title>
 </head>
 
@@ -1036,210 +1036,211 @@
 
       <main class="page">
         <div class="page__container">
-          <section class="about-us">
-  <div class="about-us__bread-crumbs">
-    <a href="index.html">Главная</a>
-    <a href="#">Информация</a>
-    <a href="about-us.html">О нас</a>
-  </div>
-  <div class="about-us__title">
-    <h1>Цветочный интернет магазин</h1>
-  </div>
-  <div class="about-us__top-block">
-    <div class="flowers-grid__content">
-    <div class="flowers-grid">
-        <div class="flowers-grid__img-first">
-            <picture><source srcset="images/about-us/grid-first-img1.webp" type="image/webp"><img src="images/about-us/grid-first-img1.jpg"></picture>
+            <section class="product">
+    <div class="links-row">
+        <a href="./index.html" class="links-row__link links-row__main">Главная</a>
+        <a href="./catalog.html" class="links-row__link links-row__this-page">Каталог</a>
+        <a href="#" class="links-row__link links-row__this-page">Товар</a>
+    </div>
+    <section class="inform">
+
+        <div class="inform__picture">
+            <div class="inform__image inform__main-image main-image">
+                <div class="main-image__sale">
+                    <svg><use xlink:href="./images/Sprite.svg#product-card-round-sales"></use></svg>
+                    <span>10%</span>
+                </div>
+                <div class="main-image__like">
+                    <svg><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>
+                    <svg><use xlink:href="./images/Sprite.svg#product-card-like_active"></use></svg>
+                </div>
+                <div class="inform__image main-image__picture"></div>
+            </div>
+            <div class="inform__image inform__more-image inform__image-one">
+                <picture>
+                    <source class="one-img-webp" srcset="" type="image/webp">
+                    <img class="one-img-png" src="" alt="PNG Image">
+                </picture>
+            </div>
+            <div class="inform__image inform__more-image inform__image-two">
+                <picture>
+                    <source class="two-img-webp" srcset="" type="image/webp">
+                    <img class="two-img-png" src="" alt="PNG Image">
+                </picture>
+            </div>
+            <div class="inform__image inform__more-image inform__image-three">
+                <picture>
+                    <source class="three-img-webp" srcset="" type="image/webp">
+                    <img class="three-img-png" src="" alt="PNG Image">
+                </picture>
+            </div>
         </div>
+
+        <div class="inform__main">
+            <a href="#" class="inform__categoty"><span class="categoty"></span><svg><use xlink:href="./images/Sprite.svg#product-card-category-arrow"></use></svg></a>
+
+            <h2 class="inform__title"></h2>
+
+            <div class="inform__product-info">
+                <div class="inform__status-line">
+                    <span class="inform__status">В наличии</span>
+                    <div class="inform__stars"></div>
+                </div>
     
-        <div class="flowers-grid__img-second">
-            <picture><source srcset="images/about-us/grid-first-img2.webp" type="image/webp"><img src="images/about-us/grid-first-img2.jpg"></picture>
+                <div class="inform__price">
+                    <div class="inform__this-price"><span data-price="" id="price"></span><span>.00грн.</span></div>
+                    <div class="inform__old-price"><span id="old-price">995</span><span>.00грн.</span></div>
+                </div>
+            </div>
+
+            <ul class="inform__info">
+                <li class="inform__info-item">
+                    <span>Цветы</span>
+                    <span class="inform__info-flowers"></span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Размер</span>
+                    <span class="inform__info-size">50-60 см</span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Материалы</span>
+                    <span class="inform__info-material">Декоративный флористический материал</span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Дополнительно</span>
+                    <span class="inform__info-more">Оформление</span>
+                </li>
+            </ul>
+
+            <div class="btn-row inform__btn-row">
+
+                <div class="btn-row__counter counter">
+                    <div class="counter__arrow counter__arrow-left"><svg><use xlink:href="./images/Sprite.svg#product-card-option-arrow"></use></svg></div>
+                    <input class="counter__number" type="number">
+                    <div class="counter__arrow counter__arrow-right"><svg><use xlink:href="./images/Sprite.svg#product-card-option-arrow"></use></svg></div>
+                </div>
+
+                <div class="btn btn-row__btn">В корзину</div>
+            </div>
+
+            <div class="fast-order inform__fast-order">
+                <h3 class="fast-order__title">Быстрый заказ</h3>
+                <div class="fast-order__input-line">
+                    <input class="fast-order__input" type="number">
+                    <button class="btn fast-order__btn"><span>Быстрый заказ</span><svg class="fast-order__btn-arrow"><use xlink:href="./images/Sprite.svg#product-card-btn-arrow"></use></svg></button>
+                </div>
+            </div>
+            <div class="inform__tabs tabs tabs_description">
+                <ul class="tabs__line">
+                    <li class="tabs__btn tabs__btn-delivery">Доставка<svg class="tabs__btn-delivery"><use class="tabs__btn-delivery" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                    <li class="tabs__btn tabs__btn-description">Описание<svg class="tabs__btn-description"><use class="tabs__btn-description" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                    <li class="tabs__btn tabs__btn-reviews">Отзывы(<span class="tabs__reviews-quantity"></span>)<svg class="tabs__btn-reviews"><use class="tabs__btn-reviews" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                </ul>
+                <div class="tabs__info tabs__info-delivery"></div>
+                <div class="tabs__info tabs__info-description"></div>
+                <div class="tabs__info tabs__info-reviews">
+                    <div class="reviews-container"></div>
+                    <a href="./reviews.html" class="tabs__more-reviews">Посмотреть все коментарии</a>
+                </div>
+            </div>
         </div>
-    
-        <div class="flowers-grid__img-third">
-            <picture><source srcset="images/about-us/grid-first-img3.webp" type="image/webp"><img src="images/about-us/grid-first-img3.jpg"></picture>
-        </div>
-    </div>
-</div>
-    <div class="about-us__text">
-      <p>
-        Осуществляем продажу цветов с доставкой по указанному адресу на
-        территории Киева и всей Украины !
-      </p>
-
-      <p>
-        Цветы можно заказать через наш простой в использовании и
-        профессиональный интернет-магазин (поддержка всех возможных способов
-        он-лайн оплаты) с предложением честно описанных и сфотографированных
-        букетов. Принимаем заказы по телефону, электронной почте и в офисе нашей
-        компании..
-      </p>
-
-      <p>
-        Обеспечиваем хороший контакт с нашей компанией с клиентом, вежливое
-        обслуживание и профессиональное выполнение заказа.
-        <br>Гарантируем анонимность и поддержку для наших клиентов.
-      </p>
-    </div>
-    <div class="about-us__text">
-      <p>
-        В нашем цветочном интернет-магазине Flowers.com вы найдете прекрасные
-        цветочные композиции отвечающие последним европейским тенденциям. Также
-        следует отметить, что все букеты прежде всего созданы со страстью,
-        потому что флористика для наших сотрудников это искусство которым они
-        увлекаются не первый год.
-      </p>
-
-      <p>
-        Наш магазин цветов прилагает все усилия, чтобы каждая композиция была
-        собрана из специально подобранных цветов, с особой тщательностью и
-        точностью, а доставка цветов производилась в указанный срок.
-      </p>
-    </div>
-  </div>
-  <div class="about-us__text">
-    <p>
-      Вы можете смело заказать букет в Киев, так как мы гарантируем высокое
-      качество, свежесть и долговечность наших цветочных композиций чтобы вы
-      могли как можно дольше наслаждаться приобретенными цветами. Кроме того,
-      букет с доставкой в Киев- это не единственное направление на котором мы
-      действуем. Мы располагаем широким спектром дополнительных позиций, таких
-      как:
-    </p>
-
-    <ul>
-      <li>плетеные корзинки со сладостями;</li>
-      <li>коробки с цветами и сладостями;</li>
-      <li>небольшие подарки, которые вы можете отправить вместе с букетом.</li>
-    </ul>
-
-    <p>
-      В нашем магазине цветов есть предложение- поздравительные открытки,
-      которые по вашему желанию наш курьер вручит вместе с цветами получателю.
-    </p>
-
-    <p>
-      Мы заботимся о том, чтобы доставка букета в Киев, которую мы предоставляем
-      Вам, была оперативной, а ассортимент разнообразным. Наш цветочный интернет
-      магазин имеет возможность составлять композиции в соответствии с вашими
-      ожиданиями, с учетом индивидуальных вкусов.
-    </p>
-
-    <p>
-      Обслуживаем индивидуальных клиентов которые знают как важно вовремя
-      заказать букет в Киеве чтобы выражать свои чувства, углублять отношения,
-      передавать пожелания и подчеркивать личное отношение при помощи нашей
-      службы доставки цветов.
-    </p>
-  </div>
-  <div class="about-us__last-block">
-    <div class="about-us__text">
-      <p>
-        Сотрудничаем с компаниями которые заинтересованы в поддержании
-        соответствующего уровня контактов. Многие предприятия таким образом
-        проявляют уважение по отношению к своим сотрудникам, по случаю дней
-        рождения, по праздникам или на корпоративных вечеринках.
-      </p>
-
-      <p>
-        Вы можете заказать цветы с доставкой в киеве как в будние дни, так и по
-        субботам и воскресеньям. Интернет магазин роз работает 7 дней в неделю и
-        24 часа в сутки. Благодаря индивидуальному и профессиональному подходу к
-        каждому клиенту много довольных людей снова и снова возвращаются к нам
-        чтобы заказать цветы в Киеве и Украине, при этом круг довольных клиентов
-        расширяется с каждым днем.
-      </p>
-
-      <p>
-        Осуществляем продажу срезанных цветов, горшечных и искусственных. Наше
-        предложение включает, среди прочего:
-      </p>
-
-      <ul>
-        <li>букеты праздничные, декоративные,</li>
-        <li>свадебные букеты, украшения для церквей, автомобилей,</li>
-        <li>букеты новогодние, рождественские, пасхальные,</li>
-        <li>
-          цветочные корзины, новогодние корзины, а также фруктовые корзины,
-        </li>
-        <li>
-          цветы горшечные и срезанные, в частности: лилия, фиалка, хризантема,
-          гладиолусы, анютины глазки, ирис, нарцисс, георгины, многолетники,
-          пеларгония, пион, астра, папоротник, кактус, алоэ, плющ, каллы, фикусы
-          и т.д.
-        </li>
-      </ul>
-    </div>
-    <div class="flowers-grid__content">
-    <div class="flowers-grid">
-        <div class="flowers-grid__img-first">
-            <picture><source srcset="images/about-us/grid-second-img1.webp" type="image/webp"><img src="images/about-us/grid-second-img1.jpg"></picture>
-        </div>
-    
-        <div class="flowers-grid__img-second">
-            <picture><source srcset="images/about-us/grid-second-img2.webp" type="image/webp"><img src="images/about-us/grid-second-img2.jpg"></picture>
-        </div>
-    
-        <div class="flowers-grid__img-third">
-            <picture><source srcset="images/about-us/grid-second-img3.webp" type="image/webp"><img src="images/about-us/grid-second-img3.jpg"></picture>
-        </div>
-    </div>
-</div>
-  </div>
-
-  <h2>Почему стоит воспользоваться нашим магазином цветов?</h2>
-
-  <div class="about-us__text">
-    <p>
-      Мы предоставляем лучшее качество продукции, прилежное обслуживание,
-      своевременную доставку и конкурентоспособные цены, внушающие исключительно
-      доброжелательные улыбки у наших клиентов и получателей. Постоянно повышаем
-      качество оказываемых услуг.
-    </p>
-
-    <p>Мы к вашим услугам 365 дней в году!</p>
-
-    <ol>
-      <li>
-        ФЛОРИСТ С ОПЫТОМ РАБОТЫ. Мы имеем большой опыт в продажах цветов онлайн,
-        поэтому каждый наш клиент остается довольным и возвращается снова к нам.
-        За время работы мы узнали как преодолевать трудности, поэтому все цветы
-        доставляем в срок.
-      </li>
-      <li>
-        МЫ ЗНАЕМ СВОИХ КЛИЕНТОВ. Мы знаем, что цветы, подаренные важному
-        человеку должны быть красивыми, потому что самое главное для вас это его
-        счастье. Поэтому мы заботимся о том, чтобы этот момент был чем-то
-        сакральным, чем-то большим, а наши цветы высокого качества этому
-        гарантия. Можете смело воспользоваться услугами нашего цветочного
-        интернет магазина.
-      </li>
-      <li>
-        УДОБНАЯ ОПЛАТА. Вы можете быстро и безопасно оплатить заказ через
-        популярные платежные системы.
-      </li>
-    </ol>
-  </div>
+    </section>
 </section>
 
-          
-          <div class="backgroung-about-us">
-    
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__left-one" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
 
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__left-two" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__left-three" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
-
-     
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__right-one" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__right-two" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
-
-    <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="backgroung-about-us__image backgroung-about-us__right-three" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
-
-</div>
+            <section class="first-slider">
+    <div class="slider__title first-slider__title">
+        <span>Сопутствующие товары</span>
+        <div class="slider__btn first-slider__btn first-slider__btn-next slider__btn-next"><svg><use xlink:href="./images/Sprite.svg#product-card-swiper-arrow"></use></svg></div>
+        <div class="slider__btn first-slider__btn first-slider__btn-prev slider__btn-prev"><svg><use xlink:href="./images/Sprite.svg#product-card-swiper-arrow"></use></svg></div>
+    </div>
+        
+    <div class="swiper first-slider__swiper">
+        <div class="swiper-wrapper first-slider__wrapper">
         </div>
+    </div>
+</section>
+
+<section class="second-slider">
+    <div class="slider__title second-slider__title">
+        <span>Вы просматривали</span>
+        <div class="slider__btn second-slider__btn second-slider__btn-next slider__btn-next"><svg><use xlink:href="./images/Sprite.svg#product-card-swiper-arrow"></use></svg></div>
+        <div class="slider__btn second-slider__btn second-slider__btn-prev slider__btn-prev"><svg><use xlink:href="./images/Sprite.svg#product-card-swiper-arrow"></use></svg></div>
+    </div>
+        
+    <div class="swiper second-slider__swiper">
+        <div class="swiper-wrapper second-slider__wrapper">
+        </div>
+    </div>
+</section>
+
+<section class="third-slider">
+    <div class="slider__title third-slider__title">
+        <span>Рекомендации</span>
+    </div>
+        
+    <div class="swiper third-slider__swiper">
+        <div class="swiper-wrapper third-slider__wrapper">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>     
       </main>
       <footer class="footer">
     <div class="footer__bg">
@@ -1674,5 +1675,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231211180544"></script>
+  <script src="js/productCard.min.js?_v=20231211180544"></script>
 </html>
