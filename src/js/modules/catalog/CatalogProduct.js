@@ -4,7 +4,7 @@ export default class CatalogProduct {
         const product = oneItem;
         const { name, stars, price, sale, img, oldPrice, id } = product;
 
-        const checkOldPrice = oldPrice? oldPrice + ' грн': ''
+        const checkOldPrice = oldPrice? oldPrice + ' грн': '';
   
         let star = '';
         for (let i = 0; i < stars; i++) {
