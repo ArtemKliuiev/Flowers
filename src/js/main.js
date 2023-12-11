@@ -1,5 +1,6 @@
 import headerDropdown from './modules/headerDropdown';
 import headerDropdownMobile from './modules/headerDropdown';
+import headerCategoriesDropdown from './modules/headerDropdown';
 import certificateSwiper from './modules/swiper';
 import stockSwiper from './modules/swiper';
 import seasonSwiper from './modules/swiper';
@@ -70,7 +71,6 @@ async function go() {
   await stockProduct.loadCards();
   await seasonProduct.loadCards();
   await presentProduct.loadCards();
-  await productNews.loadCards();
   await productPhoto.loadCards();
   await productForum.loadCards();
   await productVideo.loadCards();

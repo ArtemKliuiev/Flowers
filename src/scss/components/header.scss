@@ -934,7 +934,7 @@
   }
 
   &__item--type--categories {
-    &:hover {
+    &.active {
       .pull-down__list {
         opacity: 1;
         overflow: visible;

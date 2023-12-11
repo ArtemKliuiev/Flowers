@@ -1,21 +1,51 @@
 import firebase from '../firebase';
-import { collection, query, where, getDocs, limit } from 'firebase/firestore';
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  limit,
+  collectionData,
+} from 'firebase/firestore';
+
 const newsCardWrapper = document.querySelectorAll('.news__card-wrapper');
 
 export default class newsCard {
   constructor() {
     this.db = firebase.getFirestore();
+    this.itemsPerPage = 9;
+    this.loadedItems = 0;
   }
+
+  async getTotalItems() {
+    const allNews = query(
+      collection(this.db, 'news'),
+      where('price', '==', null)
+    );
+
+    const querySnapshot = await getDocs(allNews);
+    return querySnapshot.size;
+  }
+
   async loadCards() {
+    const totalItems = await this.getTotalItems();
+
+    const remainingItems = totalItems - this.loadedItems;
+    const itemsToLoad = Math.min(remainingItems, this.itemsPerPage);
+
+    if (itemsToLoad <= 0) {
+      return;
+    }
+
     const filterNews = query(
       collection(this.db, 'news'),
       where('price', '==', null),
-      limit(6)
+      limit(itemsToLoad)
     );
 
-    let productArr = [];
-
     const querySnapshot = await getDocs(filterNews);
+    const productArr = [];
+
     querySnapshot.forEach((doc) => {
       const product = doc.data();
       productArr.push(product);
@@ -40,9 +70,26 @@ export default class newsCard {
       });
     });
 
+    this.loadedItems += productArr.length;
+
     const buttonText = document.querySelector('.news__button-text');
     if (buttonText) {
-      buttonText.textContent = `Еще ${productArr.length} новостей`;
+      buttonText.textContent = `Еще ${remainingItems - itemsToLoad} новостей`;
+    }
+  }
+
+  init() {
+    this.loadCards();
+
+    const newsButton = document.querySelector('.news__button');
+    if (newsButton) {
+      newsButton.addEventListener('click', async (e) => {
+        e.preventDefault();
+        await this.loadCards();
+      });
     }
   }
 }
+
+const myNewsCard = new newsCard();
+myNewsCard.init();
