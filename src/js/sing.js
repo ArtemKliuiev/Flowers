@@ -14,10 +14,12 @@ class Sing{
         const ruleLogin = [
             {
                 rule: 'required',
-                errorMessage: '1'
+                errorMessage: 'Введите логин'
             },
             {
-                rule: 'email',
+                rule: 'customRegexp',
+                value: /(^[a-zA-Z0-9][a-zA-Z0-9.-]{1,20}[a-zA-Z0-9]@[a-zA-Zа-яА-Я0-9][a-zA-Zа-яА-Я0-9.-]{1,15}[a-zA-Zа-яА-Я0-9]\.[a-z]{1,10})/,
+                errorMessage: 'Невалидный email',
             },
         ];
         const settingLogin = {
@@ -43,17 +45,19 @@ class Sing{
                 errorMessage: 'Максимум 20 символов',
             },
             {
+                rule: 'customRegexp',
+                value: /^(?:(.)(?!\1\1))+$/,
+                errorMessage: 'Максиуму 2 одинаковых символа подряд',
+            },
+            {
                 rule: 'password',
-                errorMessage: 'Пароль не валидный (допустимо: буквы A-Z, цыфры 0-9,и точка ".")',
+                errorMessage: 'Можно только (a-z,A-Z,0-9,- и .)',
             },
         ];
         const settingPassword = {
             errorsContainer: '.label__password',
             errorLabelCssClass: ['invalid'],
             errorFieldCssClass: ['error-focus'],
-            tooltip: {
-                position: 'top',
-            },
         }
         this.validate.addField(this.password, rulePassword,settingPassword);
 
