@@ -2,13 +2,16 @@
     <a href="./index.html" class="links-row__link links-row__main">Главная</a>
     <a href="#" class="links-row__link links-row__this-page">Регистрация</a>
 </div>
-<section class="sing">
-    <h1 class="sing__title">Регистрация</h1>
-    <input type="text" class="sing__login input" id="login" placeholder="Введите имя">
-    <label for="login" class="label__login"></label>
-    <input type="text" class="sing__login input" placeholder="Введите почту">
-    <input type="text" class="sing__password input" placeholder="Введите пароль">
-    <input type="text" class="sing__password input" placeholder="Проверте пароль">
-    <button class="sing__btn btn">Зарегистрироваться</button>
-    <a href="./sing.html" class="sing__link">Вход</a>
-</section>
+<form class="registration">
+    <h1 class="registration__title">Регистрация</h1>
+    <input type="text" class="registration__name input" id="name" placeholder="Введите имя">
+    <label for="name" class="label label__name"></label>
+    <input type="text" class="registration__email input" id="email" placeholder="Введите почту">
+    <label for="email" class="label label__email"></label>
+    <input type="text" class="registration__password input" id="password" placeholder="Введите пароль">
+    <label for="password" class="label label__password"></label>
+    <input type="text" class="registration__check-password input" id="check-password" placeholder="Проверте пароль">
+    <label for="check-password" class="label label__check-password"></label>
+    <button class="registration__btn btn">Зарегистрироваться</button>
+    <a href="./sing.html" class="registration__link">Вход</a>
+</form>
