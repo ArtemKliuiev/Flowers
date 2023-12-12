@@ -113,6 +113,8 @@
       color: #fff;
     }
     .pull-down__secondary-list {
+      max-height: 300px;
+      overflow-y: auto !important;
       opacity: 1;
       overflow: visible;
       visibility: visible;

@@ -345,6 +345,8 @@ body._lock {
   color: #fff;
 }
 #menuHover.active .pull-down__secondary-list {
+  max-height: 300px;
+  overflow-y: auto !important;
   opacity: 1;
   overflow: visible;
   visibility: visible;
@@ -1208,6 +1210,28 @@ body._lock {
   color: #956D84;
 }
 
+#arrowSecondary.active {
+  transform: rotate(180deg);
+}
+
+.pull-down__secondary-list::-webkit-scrollbar {
+  width: 10px;
+  height: 392px;
+  opacity: 0.1;
+  background: #956d84;
+}
+
+.pull-down__secondary-list::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 71px;
+  opacity: 0.5;
+  background: #956d84;
+}
+
+.pull-down__secondary-list::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
+}
+
 .footer {
   font-size: 16px;
   font-weight: 400;
@@ -2056,6 +2080,8 @@ body._lock {
   color: #fff;
 }
 #menuHover.active .pull-down__secondary-list {
+  max-height: 300px;
+  overflow-y: auto !important;
   opacity: 1;
   overflow: visible;
   visibility: visible;

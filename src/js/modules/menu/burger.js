@@ -5,9 +5,10 @@ function burger() {
 
   if (burgerButton) {
     burgerButton.addEventListener('click', () => {
-      burgerButton.classList.toggle("_active")
+      burgerButton.classList.toggle("_active");
+      
       showMenu.classList.toggle('_active');
-      body.classList.toggle("_lock")
+      body.classList.toggle("_lock");
 
     });
   }

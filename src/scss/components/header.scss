@@ -962,3 +962,27 @@
   }
 }
 
+
+#arrowSecondary {
+  &.active {
+    transform: rotate(180deg);
+  }
+}
+
+.pull-down__secondary-list::-webkit-scrollbar {
+  width: 10px;
+  height: 392px;
+  opacity: 0.1;
+  background: #956d84;
+}
+
+.pull-down__secondary-list::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 71px;
+  opacity: 0.5;
+  background: #956d84;
+}
+
+.pull-down__secondary-list::-webkit-scrollbar-track {
+  background-color: #ecf0f1; 
+}

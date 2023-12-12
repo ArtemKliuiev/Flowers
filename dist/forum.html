@@ -60,7 +60,7 @@
               </div>
               <div class="drop-down__selected-list-item">Киев</div>
               <div class="drop-down__arrow">
-                <svg><use xlink:href="images/Sprite.svg#header-dropdown-arrow"></use></svg>
+                <svg><use xlink:href="./images/Sprite.svg#header-dropdown-arrow"></use></svg>
               </div>
             </div>
             <div class="drop-down__list">
@@ -208,7 +208,7 @@
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Букеты</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -277,7 +277,7 @@
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Розы</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -285,26 +285,59 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%91%D0%B5%D0%BB%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Белые розы </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%80%D0%B5%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Кремовые розы </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A1%D0%B8%D0%BD%D0%B8%D0%B5%2F%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Синие/голубые розы </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%93%D0%BE%D0%BB%D0%BB%D0%B0%D0%BD%D0%B4%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Голландские розы </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Красные розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9E%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Оранжевые розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%83%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D1%80%D0%BE%D0%B7%D0%B0&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Кустовая роза </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9C%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Метровые розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A0%D0%BE%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Розовые розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%96%D1%91%D0%BB%D1%82%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Жёлтые розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Черные розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9F%D0%B8%D0%BE%D0%BD%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Пионовидные розы </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C11+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> 11 роз </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C19+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> 19 роз </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C25+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> 25 роз </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C51+%D1%80%D0%BE%D0%B7%D0%B0&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> 51 роза </a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Цветы в коробке</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -312,26 +345,29 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5+%D1%81+%D0%BF%D0%B8%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D1%8B%D0%BC+Macarons&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы в коробке с пироженым Macarons </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5+%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы в коробке сердце </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы в прямоугольной коробке </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D1%88%D0%BB%D1%8F%D0%BF%D0%BD%D0%BE%D0%B9+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы в шляпной коробке </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A0%D0%BE%D0%B7%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Розы в коробке </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%9F%D0%B8%D0%BE%D0%BD%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Пионы в коробке </a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Композиции</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -339,26 +375,32 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Букеты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B+%D1%81+%D1%86%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Корзины с цветами </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%93%D0%BE%D1%80%D1%88%D0%B5%D1%87%D0%BD%D1%8B%D0%B5+%D1%80%D0%B0%D1%81%D1%82%D0%B5%D0%BD%D0%B8%D1%8F&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Горшечные растения </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%B0%D1%80%D0%BA%D0%B8&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные арки </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные букеты для невесты </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%93%D0%B8%D1%80%D0%BB%D1%8F%D0%BD%D0%B4%D1%8B+%D0%B8%D0%B7+%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Гирлянды из цветов </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные короны </a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Подарки</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -366,26 +408,32 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B5&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Букеты подарочные </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные композиции </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Романтика </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BF%D0%BE%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы для поздравлений </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%BD%D0%B0+%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы на заказ </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D1%81+%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5%D0%BC&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветы с сердцем </a>
+      </li>
+      <li class="pull-down__secondary-list-item">
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%D1%85+%D0%B4%D0%BD%D0%B5%D0%B9&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Букеты для особых дней </a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Подарочные корзины</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -393,26 +441,26 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные корзины </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A0%D0%BE%D0%B7%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%D1%85&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Розы в корзинах </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A0%D0%BE%D0%B7%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%D1%85%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%D1%85&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Букеты в корзинах </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%8B&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Цветочные наборы </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B+%D1%81+%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8+%D1%86%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Корзины с романтичными цветами </a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Букеты невесты</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -420,26 +468,20 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Свадебные букеты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82+%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Букет невесты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
-      </li>
-      <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
-      </li>
-      <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%AD%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Эксклюзивные букеты</a>
       </li>
     </ul>
   </li>
   <li class="categories-list__category" id="menuHover" data-category="">
     <div class="pull-down__header">
       <div class="pull-down__title">Вкусные букеты</div>
-      <div class="pull-down__arrow">
+      <div class="pull-down__arrow" id="arrowSecondary">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none">
           <path d="M8.73633 1.01377L1.98633 8.37499L8.73633 15.7362" stroke="#333333" stroke-width="1.5"/>
         </svg>
@@ -447,19 +489,16 @@
     </div>
     <ul class="pull-down__secondary-list">
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке с пироженым Macarons </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Шоколадные букеты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в коробке сердце </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A4%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Фруктовые букеты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Цветы в прямоугольной коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A1%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Сладкие букеты </a>
       </li>
       <li class="pull-down__secondary-list-item">
-        <a href="#"> Розы в коробке </a>
-      </li>
-      <li class="pull-down__secondary-list-item">
-        <a href="#"> Пионы в коробке </a>
+        <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A4%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1"> Фруктовые композиции </a>
       </li>
     </ul>
   </li>
@@ -630,35 +669,100 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D1%80%D0%BE%D0%B7&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Букеты из роз
                   </li>
                  
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D1%85%D1%80%D0%B8%D0%B7%D0%B0%D0%BD%D1%82%D0%B5%D0%BC&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Букеты из хризантем
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%B0%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%BC%D0%B5%D1%80%D0%B8%D0%B8&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Букеты из альтромерии 
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%B3%D0%B5%D1%80%D0%B1%D0%B5%D1%80&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
+                    Букеты из гербер
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%B8%D1%80%D0%B8%D1%81%D0%BE%D0%B2&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
+                    Букеты из ирисов 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%BF%D0%B8%D0%BE%D0%BD%D0%BE%D0%B2&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Букеты из пионов  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D1%8D%D1%83%D1%81%D1%82%D0%BE%D0%BC%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из эустомы 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D1%82%D1%8E%D0%BB%D1%8C%D0%BF%D0%BE%D0%BD%D0%BE%D0%B2&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из тюльпонов  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D1%84%D1%80%D0%B5%D0%B7%D0%B8%D0%B9&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из фрезий 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%BE%D1%80%D1%85%D0%B8%D0%B4%D0%B5%D0%B9&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из орхидей  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%B3%D0%BE%D1%80%D1%82%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из гортензии  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%BB%D0%B8%D0%BB%D0%B8%D0%B9&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из лилий 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B8%D0%B7+%D0%B3%D0%B2%D0%BE%D0%B7%D0%B4%D0%B8%D0%BA&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты из гвоздик 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Дизайнерские букеты  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Бизнес букеты  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%BB%D1%8E%D0%B1%D0%B8%D0%BC%D0%BE%D0%B9&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты любимой  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BC%D1%83%D0%B6%D1%87%D0%B8%D0%BD%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты для мужчины  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%92%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Весение букеты
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=%2C%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Летние букеты 
                   </li>
                 </a>
               
@@ -670,34 +774,84 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%91%D0%B5%D0%BB%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Белые розы
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%80%D0%B5%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Кремовые розы
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A1%D0%B8%D0%BD%D0%B8%D0%B5%2F%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Синие/голубые розы
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%93%D0%BE%D0%BB%D0%BB%D0%B0%D0%BD%D0%B4%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
+                    Голландские розы
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
+                    Красные розы 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9E%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Оранжевые розы 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9A%D1%83%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D1%80%D0%BE%D0%B7%D0%B0&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Кустовая роза 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9C%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Метровые розы 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A0%D0%BE%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Розовые розы  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%96%D1%91%D0%BB%D1%82%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Жёлтые розы  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Черные розы 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C%D0%9F%D0%B8%D0%BE%D0%BD%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5+%D1%80%D0%BE%D0%B7%D1%8B&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Пионовидные розы  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C11+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    11 роз 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C19+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    19 роз 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C25+%D1%80%D0%BE%D0%B7&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    25 роз  
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=%2C51+%D1%80%D0%BE%D0%B7%D0%B0&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    51 роза  
                   </li>
                 </a>
               
@@ -709,32 +863,32 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5+%D1%81+%D0%BF%D0%B8%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D1%8B%D0%BC+Macarons&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
                     Цветы в коробке с пироженым Macarons
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5+%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
                     Цветы в коробке сердце
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
                   Цветы в прямоугольной коробке 
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B2+%D1%88%D0%BB%D1%8F%D0%BF%D0%BD%D0%BE%D0%B9+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
                     Цветы в шляпной коробке 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%A0%D0%BE%D0%B7%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
                     Розы в коробке 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=%2C%D0%9F%D0%B8%D0%BE%D0%BD%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B5&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
                     Пионы в коробке  
                   </li>
@@ -748,34 +902,39 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Букеты
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B+%D1%81+%D1%86%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Корзины с цветами
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%93%D0%BE%D1%80%D1%88%D0%B5%D1%87%D0%BD%D1%8B%D0%B5+%D1%80%D0%B0%D1%81%D1%82%D0%B5%D0%BD%D0%B8%D1%8F&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Горшечные растения
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%B0%D1%80%D0%BA%D0%B8&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
+                    Цветочные арки
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
+                    Цветочные букеты для невесты
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%93%D0%B8%D1%80%D0%BB%D1%8F%D0%BD%D0%B4%D1%8B+%D0%B8%D0%B7+%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Гирлянды из цветов 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D1%8B&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Цветочные короны 
                   </li>
                 </a>
               
@@ -787,34 +946,39 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B5&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Букеты подарочные
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Цветочные композиции
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Романтика
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BF%D0%BE%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
+                    Цветы для поздравлений
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D0%BD%D0%B0+%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
+                    Цветы на заказ 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%A6%D0%B2%D0%B5%D1%82%D1%8B+%D1%81+%D1%81%D0%B5%D1%80%D0%B4%D1%86%D0%B5%D0%BC&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Цветы с сердцем 
+                  </li>
+                </a>
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%D1%85+%D0%B4%D0%BD%D0%B5%D0%B9&giftBasket=&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
+                  <li class="mobile-menu-dropdowns__item-second--witharrow">
+                    Букеты для особых дней  
                   </li>
                 </a>
               
@@ -827,34 +991,29 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Цветочные корзины
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A0%D0%BE%D0%B7%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%D1%85&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Розы в корзинах
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82%D1%8B+%D0%B2+%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%D1%85&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Букеты в корзинах 
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%A6%D0%B2%D0%B5%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B5+%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%8B&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
+                    Цветочные наборы 
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=%2C%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B+%D1%81+%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8+%D1%86%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8&forBride=&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Корзины с романтичными цветами 
                   </li>
                 </a>
               
@@ -866,36 +1025,21 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Свадебные букеты
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82+%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Букет невесты
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%AD%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Эксклюзивные букеты
                 </li>
                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
-                  </li>
-                </a>
               
               </ul>
             </li>
@@ -905,37 +1049,22 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Свадебные букеты
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%91%D1%83%D0%BA%D0%B5%D1%82+%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Букет невесты
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=%2C%D0%AD%D0%BA%D1%81%D0%BA%D0%BB%D1%8E%D0%B7%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&delicious=&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Эксклюзивные букеты
                 </li>
                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
-                  </li>
-                </a>
-              
+                
               </ul>
             </li>
             <li class="mobile-menu-dropdowns__item mobile-menu-dropdowns__item--witharrow">
@@ -944,34 +1073,24 @@
                 <svg><use xlink:href="./images/Sprite.svg#category-menu-arrow"></use></svg>
               </button>
               <ul class="mobile-menu-dropdowns__body-second">
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке с пироженым Macarons
+                    Шоколадные букеты
                   </li>
                 </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A4%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в коробке сердце
+                    Фруктовые букеты
                   </li>
                 </a>
-               <a href="#">
+               <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A1%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8%D0%B5+%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                 <li class="mobile-menu-dropdowns__item-second--witharrow">
-                  Цветы в прямоугольной коробке 
+                  Сладкие букеты
                 </li>
                </a>
-                <a href="#">
+                <a href="https://artemkliuiev.github.io/Flowers/catalog.html?bouquets=&roses=&inBox=&compositions=&gift=&giftBasket=&forBride=&delicious=%2C%D0%A4%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D1%8B%D0%B5+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8&color=&whom=&occasion=&sort=%D0%9F%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%8C&point=1">
                   <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Цветы в шляпной коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Розы в коробке 
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="mobile-menu-dropdowns__item-second--witharrow">
-                    Пионы в коробке  
+                    Фруктовые композиции
                   </li>
                 </a>
               
