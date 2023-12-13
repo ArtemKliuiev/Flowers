@@ -1,6 +1,5 @@
-
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from 'firebase/database';
 
@@ -34,7 +33,30 @@ class Firebase {
     getDatabase() {
       return getDatabase(this.app);
     }
+
+    getSinged(){
+      return new Promise((resolve, reject) => {
+          const auth = getAuth();
+          onAuthStateChanged(auth, (user) => {
+              if (user) {
+                  resolve(user);
+              } else {
+                  reject('Вход не выполнене')
+              }
+          });
+        })
+    }
+    exit(){
+      const auth = getAuth();
+      signOut(auth).then(() => {
+      }).catch((error) => {
+          console.log(error)
+      });
+    }
   }
+
+
+
   
   const firebase = new Firebase();
   

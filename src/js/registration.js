@@ -1,5 +1,8 @@
-import JustValidate, { Rules } from 'just-validate';
-
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import firebase from './modules/firebase';
+import JustValidate from 'just-validate';
+import burger from './modules/menu/burger';
+import menuSwitch from "./modules/menu/menuSwitch";
 class Registration{
     constructor(){
         this.form = document.querySelector('form');
@@ -9,7 +12,48 @@ class Registration{
         this.checkPassword = document.querySelector('.registration__check-password');
         this.btn = document.querySelector('.registration__btn');
         this.validate = new JustValidate(this.form);
+        this.auth = firebase.getAuth()
         this.validation();
+        this.getUser()
+    }
+    getUser(){
+        firebase.getSinged().then(info =>{
+            const confirmInfo = confirm("Чтобы заново зарегистрироваться, сначала нужно выйти со своего аккаунта! Выполнить выход из вашего аккаунта?");
+            if(confirmInfo){
+                firebase.exit();
+                this.cleanForm();
+            }else{
+                window.location.href = './index.html'
+            }
+        }).catch(info => {
+            console.log(info)
+        })
+    }
+    newUser(email, password){
+        const name = this.name.value
+        createUserWithEmailAndPassword(this.auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user.auth.currentUser;
+            updateProfile(user, {
+              displayName: name,
+            });
+        }).then(() =>{
+            window.location.href = './index.html'
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          if(errorCode === 'auth/email-already-in-use'){
+              alert('Данный пользователь уже зарегистрирован');
+              this.cleanForm();
+          }
+        });
+    }
+    cleanForm(){
+        this.name.value = '';
+        this.email.value = '';
+        this.password.value = '';
+        this.checkPassword.value = '';
     }
     validation(){
         //Имя      
@@ -81,8 +125,13 @@ class Registration{
             },
             {
                 rule: 'customRegexp',
-                value: /^(?:(.)(?!\1\1))+$/,
-                errorMessage: 'Максиуму 2 одинаковых символа подряд',
+                value: /^(?:(.)(?!\1\1\1))+$/,
+                errorMessage: 'Максиуму 3 одинаковых символа подряд',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[0-9]/,
+                errorMessage: 'Минимум одна цыфра',
             },
             {
                 rule: 'password',
@@ -94,7 +143,7 @@ class Registration{
             errorLabelCssClass: ['invalid'],
             errorFieldCssClass: ['error-focus'],
         }
-        this.validate.addField(this.password, rulePassword,settingPassword);
+        this.validate.addField(this.password, rulePassword, settingPassword);
         //Второй ввод пароля
         const ruleCheckPassword = [
             {
@@ -113,12 +162,23 @@ class Registration{
             },
             {
                 rule: 'customRegexp',
-                value: /^(?:(.)(?!\1\1))+$/,
-                errorMessage: 'Максиуму 2 одинаковых символа подряд',
+                value: /^(?:(.)(?!\1\1\1))+$/,
+                errorMessage: 'Максиуму 3 одинаковых символа подряд',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[0-9]/,
+                errorMessage: 'Минимум одна цыфра',
             },
             {
                 rule: 'password',
                 errorMessage: 'Можно только (a-z,A-Z,0-9,- и .)',
+            },
+            {
+                validator: value => {
+                    return value === this.password.value;
+                },
+                errorMessage: 'Пароли не совпадают',
             },
         ];
         const settingCheckPassword = {
@@ -127,6 +187,10 @@ class Registration{
             errorFieldCssClass: ['error-focus'],
         }
         this.validate.addField(this.checkPassword, ruleCheckPassword,settingCheckPassword);
+
+        this.validate.onSuccess( event => {
+            this.newUser(this.email.value, this.password.value);
+        });
     }
 }
 

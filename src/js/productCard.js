@@ -1,4 +1,5 @@
-
+import burger from './modules/menu/burger';
+import menuSwitch from "./modules/menu/menuSwitch";
 import ProductFirebase from './modules/product-card/ProductFirebase';
 
 class ProductCard{

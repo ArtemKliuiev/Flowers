@@ -1,3 +1,5 @@
+import burger from './modules/menu/burger';
+import menuSwitch from "./modules/menu/menuSwitch";
 import Menu from './modules/catalog/left-menu';
 
 

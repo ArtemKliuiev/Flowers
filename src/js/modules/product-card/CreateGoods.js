@@ -3,7 +3,15 @@ export default class CreateGoods{
         const productCardWrapper = document.querySelectorAll(container);
         const product = data;
         const { name, stars, price, sale, img, oldPrice, id } = product;
-
+        let onSale = '';
+        if(sale){
+            onSale = `
+            <div class="product-card__top-sales">
+            <svg ><use xlink:href="./images/Sprite.svg#product-card-round-sales"></use></svg>
+                <p class="product-card__top-sale">-${sale}%</p>
+            </div>
+            `;
+        }
         const checkOldPrice = oldPrice? oldPrice + ' грн': '';
   
         let star = '';
@@ -20,10 +28,7 @@ export default class CreateGoods{
                 <img src="${img.default}" alt="flowers">
               </picture>    
             </div>
-            <div class="product-card__top-sales">
-            <svg ><use xlink:href="./images/Sprite.svg#product-card-round-sales"></use></svg>
-                <p class="product-card__top-sale">-${sale}%</p>
-            </div>
+            ${onSale}
             <div class="product-card__top-like">
                 <svg ><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>
                     <div class="product-card__top-like_active">
@@ -64,7 +69,7 @@ export default class CreateGoods{
                     <img src="./images/main/stock/button-mobile.png" alt="button-branch"> 
                 </div>
             </a>
-            <a href="#">
+            <a href="/product-card.html?id=${id}">
                 <div class="product-card__bottom-order">Быстрый заказ</div>
             </a>
             </div>

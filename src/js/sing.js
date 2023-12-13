@@ -1,4 +1,8 @@
-import JustValidate, { Rules } from 'just-validate';
+import {signInWithEmailAndPassword } from "firebase/auth";
+import firebase from './modules/firebase';
+import JustValidate from 'just-validate';
+import burger from './modules/menu/burger';
+import menuSwitch from "./modules/menu/menuSwitch";
 
 class Sing{
     constructor(){
@@ -8,6 +12,38 @@ class Sing{
         this.btn = document.querySelector('.sing__btn');
         this.validate = new JustValidate(this.form);
         this.validation();
+        this.getUser();
+    }
+    getUser(){
+        firebase.getSinged().then(info =>{
+            const confirmInfo = confirm("Чтобы зайти на другой аккаунт сначала нужно выйти из текущего! Выпонить выход ?");
+            if(confirmInfo){
+                firebase.exit();
+                this.cleanForm();
+            }else{
+                window.location.href = './index.html'
+            }
+        }).catch(info => {
+            console.log(info)
+        })
+    }
+    singIn(email, password){
+        const auth = firebase.getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            window.location.href = './index.html'
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            if(errorCode === 'auth/invalid-login-credentials'){
+                alert('Логин или пароль указан неверно');
+                this.cleanForm();
+            }
+        });
+    }
+    cleanForm(){
+        this.login.value = '';
+        this.password.value = '';
     }
     validation(){
         //Логин         
@@ -46,8 +82,13 @@ class Sing{
             },
             {
                 rule: 'customRegexp',
-                value: /^(?:(.)(?!\1\1))+$/,
-                errorMessage: 'Максиуму 2 одинаковых символа подряд',
+                value: /^(?:(.)(?!\1\1\1))+$/,
+                errorMessage: 'Максиуму 3 одинаковых символа подряд',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[0-9]/,
+                errorMessage: 'Минимум одна цыфра',
             },
             {
                 rule: 'password',
@@ -61,7 +102,13 @@ class Sing{
         }
         this.validate.addField(this.password, rulePassword,settingPassword);
 
+        this.validate.onSuccess( event => {
+            this.singIn(this.login.value, this.password.value)
+        });
     }
 }
 
 const sing = new Sing();
+
+
+

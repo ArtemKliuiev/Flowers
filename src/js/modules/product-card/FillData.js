@@ -22,6 +22,9 @@ export default class FillData{
         this.tabReviews = document.querySelector('.tabs__info-reviewsv');
         this.reviewsQuatity = document.querySelector('.tabs__reviews-quantity');
         this.reviewContainer = document.querySelector('.reviews-container');
+        this.infoOldPrice = document.querySelector('.inform__old-price');
+        this.sale = document.querySelector('#sale');
+        this.saleWrapper = document.querySelector('.main-image__sale');
     }
     fill(data){
         console.log(data);
@@ -46,7 +49,13 @@ export default class FillData{
         this.stars(data.stars);
         this.change();
         this.reviews(data.reviews)
-
+        if(data.oldPrice){
+            this.infoOldPrice.style.display = 'block';
+        }
+        if(data.sale){
+            this.saleWrapper.style.display = 'block';
+            this.sale.textContent = data.sale;
+        }
     }
     reviews(data){
         for(let i = 0; i < data.length; i++){
