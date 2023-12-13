@@ -1,6 +1,6 @@
-import burger from './modules/menu/burger';
-import menuSwitch from "./modules/menu/menuSwitch";
+import app from './app';
 import ProductFirebase from './modules/product-card/ProductFirebase';
+import JustValidate from 'just-validate';
 
 class ProductCard{
     constructor(){
@@ -12,6 +12,8 @@ class ProductCard{
         this.input = document.querySelector('.fast-order__input');
         this.moreImages = document.querySelectorAll('.inform__more-image');
         this.mainPicture = document.querySelector('.main-image__picture');
+        this.validate = new JustValidate(document.querySelector('.fast-order'));
+        this.phoneInput = document.querySelector('.fast-order__input');
         this.firebase = new ProductFirebase();
         this.tabs();
         this.counter();
@@ -19,6 +21,31 @@ class ProductCard{
         this.focus();
         this.imageTabs();
         this.zoom();
+        this.fastOrderVal();
+    }
+    fastOrderVal(){
+        const rule = [
+            {
+                rule: 'required',
+                errorMessage: 'Введите номер телефона'
+            },
+            {
+                rule: 'customRegexp',
+                value: /(^[0-9]{9}$)/,
+                errorMessage: 'Номер не валидный',
+            },
+        ];
+        const setting = {
+            errorsContainer: '.fast-order__error',
+            errorLabelCssClass: ['invalid'],
+            errorFieldCssClass: ['error-focus'],
+        }
+        this.validate.addField(this.phoneInput, rule, setting);
+
+        this.validate.onSuccess( event => {
+            alert('Ваш заказ принят) мы скоро с вами свяжемся')
+        });
+        this.phoneInput.value = '';
     }
     clickLike(){
         this.like.addEventListener('click', () => {

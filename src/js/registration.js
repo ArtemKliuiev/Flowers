@@ -1,8 +1,8 @@
+import app from './app';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import firebase from './modules/firebase';
 import JustValidate from 'just-validate';
-import burger from './modules/menu/burger';
-import menuSwitch from "./modules/menu/menuSwitch";
+
 class Registration{
     constructor(){
         this.form = document.querySelector('form');
