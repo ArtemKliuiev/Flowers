@@ -16,20 +16,65 @@ function headerDropdown() {
 
 headerDropdown();
 
+function searchDropdown() {
+  const searchDropDown = document.querySelectorAll('.search-drop-down__header');
+
+  searchDropDown.forEach((item) => {
+    const menuSearch = item.querySelector('.search-dropdown');
+    const menuArrow = item.querySelector('.search-drop-down__header-arrow');
+
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      closeAllDropdowns();
+
+      menuSearch.classList.add('active');
+      if (menuArrow) {
+        menuArrow.classList.add('active');
+      }
+    });
+  });
+
+  document.addEventListener('click', () => {
+    closeAllDropdowns();
+  });
+
+  function closeAllDropdowns() {
+    searchDropDown.forEach((item) => {
+      const menuSearch = item.querySelector('.search-dropdown');
+      const menuArrow = item.querySelector('.search-drop-down__header-arrow');
+
+      menuSearch.classList.remove('active');
+      if (menuArrow) {
+        menuArrow.classList.remove('active');
+      }
+    });
+  }
+}
+
+searchDropdown();
+
 function headerDropdownMobile() {
-  const dropdownItems = document.querySelectorAll('.mobile-menu-dropdowns__item--witharrow');
+  const dropdownItems = document.querySelectorAll(
+    '.mobile-menu-dropdowns__item--witharrow'
+  );
   let currentDropdown = null;
 
   dropdownItems.forEach((dropdownItem) => {
     const arrow = dropdownItem.querySelector('svg');
-    const dropdown = dropdownItem.querySelector('.mobile-menu-dropdowns__body-second');
+    const dropdown = dropdownItem.querySelector(
+      '.mobile-menu-dropdowns__body-second'
+    );
 
     dropdownItem.addEventListener('click', (e) => {
       e.preventDefault();
 
       if (currentDropdown && currentDropdown !== dropdown) {
         currentDropdown.classList.remove('active');
-        currentDropdown.closest('.mobile-menu-dropdowns__item--witharrow').querySelector('svg').classList.remove('active');
+        currentDropdown
+          .closest('.mobile-menu-dropdowns__item--witharrow')
+          .querySelector('svg')
+          .classList.remove('active');
       }
 
       if (dropdown) {
@@ -54,7 +99,7 @@ function headerCategoriesDropdown() {
   const dropdown = document.querySelector('.menu__item--type--categories');
   const arrow = document.querySelector('.pull-down__arrow');
   const secondMenuHovers = document.querySelectorAll('#menuHover');
-  
+
   let prevMenuHover = null;
   let prevArrowSecondary = null;
 
