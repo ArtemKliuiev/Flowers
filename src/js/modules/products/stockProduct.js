@@ -102,7 +102,7 @@ export default class productsStock {
                   <img src="./images/main/stock/button-mobile.png" alt="button-branch"> 
                 </div>
               </a>
-              <a href="/product-card.html?id=${id}">
+              <a href="./product-card.html?id=${id}">
                 <div class="product-card__bottom-order">Быстрый заказ</div>
               </a>
             </div>
