@@ -101,7 +101,9 @@
     cursor: pointer;
     &:hover {
       background-color: #956d84;
-      color: #fff;
+      a {
+        color: #fff;
+      }
     }
   }
 }
@@ -119,6 +121,12 @@
       overflow: visible;
       visibility: visible;
       pointer-events: auto;
+    }
+  }
+  &:hover {
+    background-color: #956d84;
+    .pull-down__title {
+      color: #fff;
     }
   }
 }

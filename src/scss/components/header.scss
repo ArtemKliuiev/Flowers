@@ -3,7 +3,6 @@
 .header {
   min-height: 214px;
 
-
   @include breakpoint($md5) {
     min-height: 127px;
   }
@@ -291,10 +290,6 @@
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
 
-    &:hover {
-      background: $cheryColor;
-      color: $whiteColor;
-    }
   }
 
   &__header-title--device-type--desktop {
@@ -619,6 +614,7 @@
     .search-drop-down {
       &__header {
         justify-content: flex-start;
+        position: relative;
       }
 
       &__label {
@@ -835,6 +831,10 @@
     margin: 0rem 0.5714rem 0rem 0rem;
     align-self: center;
 
+    &.active {
+      transform: rotate(180deg);
+    }
+
     svg {
       display: block;
       width: 100%;
@@ -865,7 +865,7 @@
     max-width: 100%;
     width: 100%;
     min-width: max-content;
-    max-height: 0;
+    height: 0;
     padding: 0px 0px 0px 0px;
     border: 1px solid $cheryColor;
     border-top: unset;
@@ -877,17 +877,38 @@
     display: block;
 
     &::-webkit-scrollbar {
-      width: 0em;
+      width: 10px;
+      height: 300px;
+      opacity: 0.1;
+      background: #956d84;
     }
 
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
+    ::-webkit-scrollbar-thumb {
+      width: 10px;
+      height: 70px;
+      opacity: 0.5;
+      background: #956d84;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #ecf0f1;
+    }
+
+    &.active {
+      height: 300px;
+      overflow-y: auto;
+      &__arrow {
+        transform-origin: center 30%;
+        transform: rotateZ(180deg);
+      }
+
     }
   }
 
   &__list-item {
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
+
   }
 
   &__loupe-icon {
@@ -896,21 +917,6 @@
     svg {
       width: 19px;
       height: 19px;
-    }
-  }
-
-  &.open,
-  &:hover {
-    .search-drop-down {
-      &__arrow {
-        transform-origin: center 30%;
-        transform: rotateZ(180deg);
-      }
-
-      &__list {
-        max-height: 145px;
-        //padding: 17px 23px 15px 14px;
-      }
     }
   }
 }
@@ -936,6 +942,7 @@
   &__item--type--categories {
     &.active {
       .pull-down__list {
+        border: 1px solid #956d84;
         opacity: 1;
         overflow: visible;
         visibility: visible;
@@ -947,10 +954,14 @@
   &__item--type--information {
     &:hover {
       .pull-down__list {
+        border: 1px solid #956d84;
         opacity: 1;
         overflow: visible;
         visibility: visible;
         pointer-events: unset;
+      }
+      .pull-down__arrow {
+        transform: rotate(180deg);
       }
     }
   }
@@ -961,7 +972,6 @@
     }
   }
 }
-
 
 #arrowSecondary {
   &.active {
@@ -984,5 +994,15 @@
 }
 
 .pull-down__secondary-list::-webkit-scrollbar-track {
-  background-color: #ecf0f1; 
+  background-color: #ecf0f1;
+}
+
+.pull-down {
+  &__list-item {
+    &:hover {
+      a {
+        color: #fff;
+      }
+    }
+  }
 }

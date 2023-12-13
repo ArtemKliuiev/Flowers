@@ -193,17 +193,9 @@
                   placeholder="Поиск по категориям"
                 />
               </div>
+              @@include('./component/searchDropDown.html')
             </div>
-            <div class="search-drop-down__list">
-              <div class="search-drop-down__list-item">Все букеты</div>
-              <div class="search-drop-down__list-item">Розы</div>
-              <div class="search-drop-down__list-item">Цветы в коробке</div>
-              <div class="search-drop-down__list-item">Композиции</div>
-              <div class="search-drop-down__list-item">Подарки</div>
-              <div class="search-drop-down__list-item">Подарочные корзины</div>
-              <div class="search-drop-down__list-item">Букеты невесты</div>
-              <div class="search-drop-down__list-item">Вкусные букеты</div>
-            </div>
+          
           </div>
           <div class="bottom-header__search-by-product-block search-drop-down">
             <div class="search-drop-down__header">
@@ -219,19 +211,36 @@
                   placeholder="Поиск по товарам"
                 />
               </div>
+              @@include('./component/searchProductsDropDown.html')
               <div class="search-drop-down__loupe-icon">
                 <svg ><use xlink:href="./images/Sprite.svg#header-search"></use></svg>
               </div>
             </div>
-            <div class="search-drop-down__list">
-              <div class="search-drop-down__list-item">Все букеты</div>
-              <div class="search-drop-down__list-item">Розы</div>
-              <div class="search-drop-down__list-item">Цветы в коробке</div>
-              <div class="search-drop-down__list-item">Композиции</div>
-              <div class="search-drop-down__list-item">Подарки</div>
-              <div class="search-drop-down__list-item">Подарочные корзины</div>
-              <div class="search-drop-down__list-item">Букеты невесты</div>
-              <div class="search-drop-down__list-item">Вкусные букеты</div>
+            <div class="pull-down__list">
+              <a href="#">
+                <div class="search-drop-down__list-item">Все букеты</div>
+              </a>  
+              <a href="#">
+                <div class="search-drop-down__list-item">Розы</div>
+              </a>
+              <a href="#">
+                <div class="search-drop-down__list-item">Цветы в коробке</div>
+              </a>  
+              <a href="#">
+                <div class="search-drop-down__list-item">Композиции</div>
+              </a>
+              <a href="#">
+                <div class="search-drop-down__list-item">Подарки</div>
+              </a>
+              <a href="#">
+                <div class="search-drop-down__list-item">Подарочные корзины</div>
+              </a>
+              <a href="#">
+                <div class="search-drop-down__list-item">Букеты невесты</div>
+              </a>
+              <a href="#">
+                <div class="search-drop-down__list-item">Вкусные букеты</div>
+              </a>
             </div>
             
           </div>
@@ -362,7 +371,6 @@
                 </div>
               </div>
             </a>
-            <div class="bottom-header__basket-sum">₴ 1 520</div>
           </div>
         </div>
       </div>
