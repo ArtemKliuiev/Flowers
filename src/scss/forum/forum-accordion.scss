@@ -75,6 +75,7 @@
     &__accordions {
         .accordion {
             margin-bottom: 21px;
+            cursor: pointer;
 
             &__title {
                 display: flex;
