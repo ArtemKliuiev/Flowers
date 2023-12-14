@@ -20,6 +20,7 @@ async function basket() {
       if (basketMessage && basketWrapperRight && basketWrapperText) {
         basketMessage.style.display = 'none';
         basketWrapperRight.style.display = 'block';
+        basketWrapperText.style.display = 'flex';
       }
 
       parsedBasket.forEach((item) => {

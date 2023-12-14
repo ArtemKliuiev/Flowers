@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'main' })
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'news' })
   <body>
     <div class="wrapper">
       @@include('html/header.html')
@@ -8,11 +8,11 @@
         <div class="page__container">
           @@include('html/news/news.html')
 
-          @@include('html/news/background-news.html')
+          @@include('html/background.html')
         </div>   
       </main>
       @@include('html/footer.html') @@include('html/svg-sprite.html')
     </div>
   </body>
-  <script src="js/main.min.js"></script>
+  <script src="js/news.min.js"></script>
 </html>
