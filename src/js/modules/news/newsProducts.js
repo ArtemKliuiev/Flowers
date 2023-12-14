@@ -10,6 +10,7 @@ import {
 
 const newsCardWrapper = document.querySelectorAll('.news__card-wrapper');
 
+
 export default class newsCard {
   constructor() {
     this.db = firebase.getFirestore();
