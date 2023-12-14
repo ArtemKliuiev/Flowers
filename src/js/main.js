@@ -9,7 +9,7 @@ import seasonSwiper from './modules/swiper';
 import presentSwiper from './modules/swiper';
 import previewsSwiper from './modules/swiper';
 import photoSwiper from './modules/swiper';
-import videoSwiper from './modules/swiper';
+// import videoSwiper from './modules/swiper';
 import forumSwiper from './modules/swiper';
 // import newsSwiper from './modules/swiper';
 import productLike from "./modules/like/like";
@@ -20,13 +20,13 @@ import productsPresent from './modules/products/presentProduct';
 import photoCard from './modules/photo/photoProduct';
 import forumCard from './modules/forum/forum';
 import reviewsCard from './modules/reviews/reviews';
-import videoCard from './modules/video/video';
+// import videoCard from './modules/video/videoProducts';
 import justValidateRecomendation from './modules/justValidate';
 import justValidateContacts from './modules/justValidate';
 
-import burger from './modules/menu/burger';
-import menuSwitch from "./modules/menu/menuSwitch";
-import basket from './modules/basket';
+// import burger from './modules/menu/burger';
+// import menuSwitch from "./modules/menu/menuSwitch";
+// import basket from './modules/basket';
 import orderValidator from './modules/validator';
 import dropdownHandler from './modules/orderDropdown';
 
@@ -67,7 +67,7 @@ async function go() {
   const productPhoto = new photoCard();
   const productForum = new forumCard();
   const productReviews = new reviewsCard();
-  const productVideo = new videoCard();
+  // const productVideo = new videoCard();
 
   await productReviews.loadCards();
   await stockProduct.loadCards();

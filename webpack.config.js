@@ -19,6 +19,7 @@ export const webpackConfig = (isMode) => {
       registration: path.join(paths.src, 'js/registration.js'),
       sing: path.join(paths.src, 'js/sing.js'),
       news: path.join(paths.src, 'js/news.js'),
+      video: path.join(paths.src, 'js/video.js'),
     },
 
     mode: isMode ? 'development' : 'production',
