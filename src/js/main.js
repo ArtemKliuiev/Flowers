@@ -26,7 +26,7 @@ import justValidateContacts from './modules/justValidate';
 
 // import burger from './modules/menu/burger';
 // import menuSwitch from "./modules/menu/menuSwitch";
-// import basket from './modules/basket';
+import basket from './modules/basket';
 import orderValidator from './modules/validator';
 import dropdownHandler from './modules/orderDropdown';
 
@@ -75,7 +75,7 @@ async function go() {
   await presentProduct.loadCards();
   await productPhoto.loadCards();
   await productForum.loadCards();
-  await productVideo.loadCards();
+  // await productVideo.loadCards();
   
   
   let likeProduct = await productLike();
