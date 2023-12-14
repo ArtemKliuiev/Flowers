@@ -1,6 +1,7 @@
 import background from './modules/background';
 import burger from './modules/menu/burger';
 import menuSwitch from './modules/menu/menuSwitch';
+import basket from './modules/basket';
 import searchDropdown from './modules/headerDropdown';
 import headerDropdown from './modules/headerDropdown';
 import headerDropdownMobile from './modules/headerDropdown';
