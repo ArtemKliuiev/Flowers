@@ -197,7 +197,6 @@ body._lock {
 
 .background {
   position: absolute;
-  z-index: -5;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
