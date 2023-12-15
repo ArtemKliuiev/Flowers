@@ -2,6 +2,8 @@
 import app from './app';
 import ProductFirebase from './modules/product-card/ProductFirebase';
 import JustValidate from 'just-validate';
+import basket from './modules/basket';
+import productLike from "./modules/like/like";
 
 
 // import Cleave from 'cleave.js';
@@ -138,3 +140,5 @@ class ProductCard{
 }
 
 const productClass = new ProductCard();
+
+let basketEl = basket();

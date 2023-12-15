@@ -9,8 +9,6 @@ async function basket() {
   );
   const basketMessage = document.querySelector('.basket__message');
 
-  console.log(productCards);
-
   let basketNum = 0;
   let parsedBasket = [];
 
@@ -200,53 +198,51 @@ async function basket() {
     });
   }
 
+  function handleProductClick(productEl, nameSelector, priceSelector, oldPriceSelector, imgSelector) {
+    const newBasketItem = {
+      imgSrc: productEl.querySelector(imgSelector).src,
+      productName: productEl.querySelector(nameSelector).textContent,
+      newPrice: parseFloat(productEl.querySelector(priceSelector).textContent.replace('грн', '')),
+      oldPrice: (() => {
+        const oldPriceElement = productEl.querySelector(oldPriceSelector);
+        return oldPriceElement ? parseFloat(oldPriceElement.textContent.replace('грн', '')) : 0;
+      })(),
+      quantNum: 1,
+    };
+  
+    const existingItemIndex = parsedBasket.findIndex(item => item.imgSrc === newBasketItem.imgSrc);
+  
+    if (existingItemIndex !== -1) {
+      parsedBasket[existingItemIndex].quantNum += 1;
+    } else {
+      parsedBasket.push(newBasketItem);
+    }
+  
+    sessionStorage.setItem('basket', JSON.stringify(parsedBasket));
+    updateLocalStorage();
+    updateStateBasketNum();
+    clearBasket();
+    renderBasket();
+    delProduct();
+  }
+  
+  const productButton = document.querySelector('.btn-row__btn');
+  
+  if (productButton) {
+    productButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const productEl = e.target.parentNode.parentNode.parentNode;
+      handleProductClick(productEl, '.inform__info-flowers', '#price', '#old-price', '.inform__image img');
+    });
+  }
+  
   productCards.forEach((productCard) => {
-    const button = productCard.querySelector(
-      '.product-card__bottom-button-desktop'
-    );
-    
+    const button = productCard.querySelector('.product-card__bottom-button-desktop');
+  
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('da');
       const productEl = e.target.parentNode.parentNode.parentNode;
-
-      const newBasketItem = {
-        imgSrc: productEl.querySelector('.product-card__img img').src,
-        productName: productEl.querySelector('.product-card__bottom-name')
-          .textContent,
-        newPrice: parseFloat(
-          productEl
-            .querySelector('.product-card__bottom-price')
-            .textContent.replace('грн', '')
-        ),
-        oldPrice: (() => {
-          const oldPriceElement = productEl.querySelector(
-            '.product-card__bottom-old-price'
-          );
-          return oldPriceElement
-            ? parseFloat(oldPriceElement.textContent.replace('грн', ''))
-            : 0;
-        })(),
-        quantNum: 1,
-      };
-
-      const existingItemIndex = parsedBasket.findIndex(
-        (item) => item.imgSrc === newBasketItem.imgSrc
-      );
-
-      if (existingItemIndex !== -1) {
-        parsedBasket[existingItemIndex].quantNum += 1;
-      } else {
-        parsedBasket.push(newBasketItem);
-      }
-
-      sessionStorage.setItem('basket', JSON.stringify(parsedBasket));
-
-      updateLocalStorage();
-      updateStateBasketNum();
-      clearBasket();
-      renderBasket();
-      delProduct();
+      handleProductClick(productEl, '.product-card__bottom-name', '.product-card__bottom-price', '.product-card__bottom-old-price', '.product-card__img img');
     });
   });
 
