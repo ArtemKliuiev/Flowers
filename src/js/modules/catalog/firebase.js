@@ -4,7 +4,6 @@ import Pagination from '../pagination';
 import CatalogProduct from './catalogProduct';
 
 
-
 export default class loadFirebase{
     constructor(){
         this.catalogProduct = new CatalogProduct();

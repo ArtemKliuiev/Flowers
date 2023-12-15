@@ -24,6 +24,10 @@ export const webpackConfig = (isMode) => {
       aboutUs: path.join(paths.src, 'js/aboutUs.js'),
       delivery: path.join(paths.src, 'js/delivery.js'),
       present: path.join(paths.src, 'js/present.js'),
+      recomendation: path.join(paths.src, 'js/recomendation.js'),
+      photo: path.join(paths.src, 'js/photo.js'),
+      reviews: path.join(paths.src, 'js/reviews.js'),
+      contacts: path.join(paths.src, 'js/contacts.js'),
     },
 
     mode: isMode ? 'development' : 'production',

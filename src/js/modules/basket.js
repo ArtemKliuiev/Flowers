@@ -9,6 +9,8 @@ async function basket() {
   );
   const basketMessage = document.querySelector('.basket__message');
 
+  console.log(productCards);
+
   let basketNum = 0;
   let parsedBasket = [];
 
@@ -38,7 +40,7 @@ async function basket() {
               </div>
               <div class="basket__card-price">
                 <p class="basket__card-new-price">${item.newPrice} ₴</p>
-                <p class="basket__card-old-price">${item.oldPrice} ₴</p>
+                <p class="basket__card-old-price">${item.oldPrice !== null ? item.oldPrice + ' ₴' : '0 ₴'}</p>
               </div>
               <div class="basket__card-num-wrapper">
                 <div class="basket__card-arrow-left">
@@ -202,9 +204,10 @@ async function basket() {
     const button = productCard.querySelector(
       '.product-card__bottom-button-desktop'
     );
+    
     button.addEventListener('click', (e) => {
       e.preventDefault();
-
+      console.log('da');
       const productEl = e.target.parentNode.parentNode.parentNode;
 
       const newBasketItem = {

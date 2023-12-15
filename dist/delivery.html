@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/delivery.min.css?_v=20231214143506">
+  <link rel="stylesheet" href="css/delivery.min.css">
   <title>Flowers</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="top-header__bg"></div>
     <div class="top-header__container">
       <div class="top-header__options-list">
-        <div class="top-header__list-item top-header__list-item--type--currency">
+        <div class="top-header__list-item top-header__list-item-type-currency">
           <div class="drop-down top-header__drop-down">
             <div class="drop-down__header">
               <div class="drop-down__header-title">Валюта</div>
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="top-header__list-item top-header__list-item--type--lang">
+        <div class="top-header__list-item top-header__list-item-type-lang">
           <div class="drop-down top-header__drop-down">
             <div class="drop-down__header">
               <div class="drop-down__header-title">Язык</div>
@@ -49,13 +49,13 @@
             </div>
           </div>
         </div>
-        <div class="top-header__list-item top-header__list-item--type--city">
+        <div class="top-header__list-item top-header__list-item-type-city">
           <div class="drop-down top-header__drop-down">
             <div class="drop-down__header">
-              <div class="drop-down__header-title drop-down__header-title--device-type--desktop">
+              <div class="drop-down__header-title drop-down__header-title-device-type-desktop">
                 Город
               </div>
-              <div class="drop-down__header-title drop-down__header-title--device-type--mobile">
+              <div class="drop-down__header-title drop-down__header-title-device-type-mobile">
                 Выбрать город
               </div>
               <div class="drop-down__selected-list-item">Киев</div>
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-        <div class="top-header__list-item top-header__list-item--type--favorite">
+        <div class="top-header__list-item top-header__list-item-type-favorite">
           <div class="top-header__list-item-icon-box">
             <div class="top-header__list-item-icon">
               <svg><use xlink:href="./images/Sprite.svg#header-top-like"></use></svg>
@@ -81,33 +81,32 @@
           </div>
           <a href="#" class="top-header__list-item-title">Закладки</a>
         </div>
-        <div class="top-header__list-item top-header__list-item--type--delivery">
+        <div class="top-header__list-item top-header__list-item-type-delivery">
           <div class="top-header__list-item-icon-box">
             <div class="top-header__list-item-icon">
               <svg><use xlink:href="./images/Sprite.svg#header-top-car"></use></svg>
             </div>
           </div>
-          <a href="" class="top-header__list-item-title">Доставка и оплата</a>
+          <a href="./delivery.html" class="top-header__list-item-title">Доставка и оплата</a>
         </div>
-        <div class="top-header__list-item top-header__list-item--type--contacts">
+        <div class="top-header__list-item top-header__list-item-type-contacts">
           <div class="top-header__list-item-icon-box">
             <svg class="top-header__list-item-icon">
               <use xlink:href="#phone"></use>
             </svg>
           </div>
-          <a href="" class="top-header__list-item-title">Контакты</a>
+          <a href="./contacts.html" class="top-header__list-item-title">Контакты</a>
         </div>
       </div>
       <div class="account top-header__account">
         <div class="account__icon">
           <svg><use xlink:href="./images/Sprite.svg#header-top-account"></use></svg>
         </div>
-        <div class="account__title">Личный кабинет</div>
         <div class="account__link-block">
-          <a href="./sing.html" class="account__sign-in account__sign-in--device-type--desktop">
+          <a href="./sing.html" class="account__sign-in account__sign-in-device-type-desktop">
             Вход
           </a>
-          <a href="./sing.html" class="account__sign-in account__sign-in--device-type--mobile">
+          <a href="./sing.html" class="account__sign-in account__sign-in-device-type-mobile">
             Войти
           </a>
           <a href="./registration.html" class="account__registration"> Регистрация </a>
@@ -121,7 +120,7 @@
         <div class="bottom-header__burger-box"><span></span></div>
         <a href="./index.html">
           <div class="bottom-header__logo-box">
-            <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Logotype" class="bottom-header__logo"></picture>
+            <img src="images/logo.png" alt="Logotype" class="bottom-header__logo">
           </div>
         </a>
         <div class="bottom-header__icon-wrapper">
@@ -446,7 +445,7 @@
           </div>
         </div>
         <ul class="bottom-header__menu menu">
-          <li class="menu__item pull-down menu__item--type--categories">
+          <li class="menu__item pull-down menu__item-type-categories">
             <div class="pull-down__header">
               <div class="pull-down__title" id="headerCategoriesDropdown">Каталог товаров</div>
               <div class="pull-down__arrow">
@@ -766,7 +765,7 @@
           <li class="menu__item">
             <a href="./news.html" class="menu__link">Новости</a>
           </li>
-          <li class="menu__item pull-down menu__item--type--information">
+          <li class="menu__item pull-down menu__item-type-information">
             <div class="pull-down__header">
               <div class="pull-down__title">Информация</div>
               <div class="pull-down__arrow">
@@ -1438,23 +1437,23 @@
 </section>
           
           <div class="background">
-    
+    <!-- Левая сторона -->
     <div class="background__left">
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img">
         
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img">
         
     </div>
 
-     
+    <!-- Правая сторона --> 
     <div class="background__right">
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img">
     </div>
 </div>
         </div>
@@ -1597,12 +1596,12 @@
                     <div class="last-line__payment-methods">
                         <p>Способы оплаты:</p>
                         <div class="payment-methods__images">
-                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img src="images/footer/privat.png"></picture>
-                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img src="images/footer/liqpay.png"></picture>
-                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img src="images/footer/mastercard.png"></picture>
-                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img src="images/footer/maestro.png"></picture>
-                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img src="images/footer/vosa-electron.png"></picture>
-                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img src="images/footer/visa.png"></picture>
+                            <img src="images/footer/privat.png">
+                            <img src="images/footer/liqpay.png">
+                            <img src="images/footer/mastercard.png">
+                            <img src="images/footer/maestro.png">
+                            <img src="images/footer/vosa-electron.png">
+                            <img src="images/footer/visa.png">
                         </div>
                     </div>
                 </div>
@@ -1612,7 +1611,7 @@
         <div class="footer__links links__adaptive">
             <div class="__container">
                 <div class="links__logo">
-                    <picture><source srcset="images/footer/footer-logo.webp" type="image/webp"><img src="images/footer/footer-logo.png" alt=""></picture>
+                    <img src="images/footer/footer-logo.png" alt="">
                 </div>
                 <div class="links__menu accordions">
                     <div class="menu__footer accordion">
@@ -1662,12 +1661,12 @@
                 <div class="links__last-line">
                     <div class="last-line__payment-methods">
                         <div class="payment-methods__images">
-                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img src="images/footer/mastercard.png"></picture>
-                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img src="images/footer/maestro.png"></picture>
-                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img src="images/footer/vosa-electron.png"></picture>
-                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img src="images/footer/visa.png"></picture>
-                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img src="images/footer/privat.png"></picture>
-                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img src="images/footer/liqpay.png" class="liqpay"></picture>
+                            <img src="images/footer/mastercard.png">
+                            <img src="images/footer/maestro.png">
+                            <img src="images/footer/vosa-electron.png">
+                            <img src="images/footer/visa.png">
+                            <img src="images/footer/privat.png">
+                            <img src="images/footer/liqpay.png" class="liqpay">
                         </div>
                     </div>
                     <p class="last-line__protection-of-rights">Copyright © 2021. Все права защищены</p>
@@ -1675,7 +1674,12 @@
             </div>
         </div>
     </div>
-</footer> 
+</footer> <!-- 
+Поприбирав не всі width і height. 
+Залишилися в clipPath та інших елементах svg. 
+Є ймовірність, що це буде обмежувати адаптивність. 
+При потребі можна спробувати їх прибрати
+ -->
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="delivery" viewBox="0 0 22 22">
     <g clip-path="url(#clip0_0_674)">
@@ -1892,5 +1896,5 @@
 
     </div>
   </body>
-  <script src="js/delivery.min.js?_v=20231214143506"></script>
+  <script src="js/delivery.min.js"></script>
 </html>

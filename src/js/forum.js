@@ -1,4 +1,7 @@
 import app from './app';
+import basket from './modules/basket';
+
+let basketEl = basket();
 
 const titles = document.querySelectorAll('.accordion__title');
 const contents = document.querySelectorAll('.accordion__content');

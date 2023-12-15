@@ -96,7 +96,7 @@ function headerDropdownMobile() {
 headerDropdownMobile();
 
 function headerCategoriesDropdown() {
-  const dropdown = document.querySelector('.menu__item--type--categories');
+  const dropdown = document.querySelector('.menu__item-type-categories');
   const arrow = document.querySelector('.pull-down__arrow');
   const secondMenuHovers = document.querySelectorAll('#menuHover');
 

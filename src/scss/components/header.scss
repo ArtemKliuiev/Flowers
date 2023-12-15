@@ -66,7 +66,7 @@
     }
   }
 
-  &__list-item--type--currency {
+  &__list-item-type-currency {
     .drop-down {
       &__selected-list-item {
         width: 2rem;
@@ -94,7 +94,7 @@
   &__drop-down {
   }
 
-  &__list-item--type--lang {
+  &__list-item-type-lang {
     .drop-down {
       &__selected-list-item {
         width: 1.5714rem;
@@ -112,7 +112,7 @@
     }
   }
 
-  &__list-item--type--city {
+  &__list-item-type-city {
     .drop-down {
       &__selected-list-item {
         width: 3.5714rem;
@@ -124,7 +124,7 @@
     }
   }
 
-  &__list-item--type--favorite {
+  &__list-item-type-favorite {
     @include breakpoint($md2) {
       display: none;
     }
@@ -190,7 +190,7 @@
     }
   }
 
-  &__list-item--type--delivery {
+  &__list-item-type-delivery {
     @include breakpoint($md2) {
       padding: 0rem 1.4286rem 0rem 0rem;
       margin: 0rem 1.4286rem 0rem 0rem;
@@ -200,7 +200,7 @@
     }
   }
 
-  &__list-item--type--contacts {
+  &__list-item-type-contacts {
     @include breakpoint($md2) {
       display: none;
     }
@@ -289,13 +289,14 @@
   &__list-item {
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
+    cursor: pointer;
 
   }
 
-  &__header-title--device-type--desktop {
+  &__header-title-device-type-desktop {
   }
 
-  &__header-title--device-type--mobile {
+  &__header-title-device-type-mobile {
     display: none;
   }
 
@@ -346,7 +347,7 @@
   }
 
   &__sign-in {
-    &--device-type--desktop {
+    &-device-type-desktop {
       padding-right: 0.7143rem;
       margin-right: 0.7143rem;
       border-right: 0.0714rem solid $cheryColor;
@@ -360,7 +361,7 @@
       }
     }
 
-    &--device-type--mobile {
+    &-device-type-mobile {
       display: none;
       transition: color 280ms ease-in-out 0ms;
 
@@ -939,7 +940,7 @@
     line-height: 18px;
   }
 
-  &__item--type--categories {
+  &__item-type-categories {
     &.active {
       .pull-down__list {
         border: 1px solid #956d84;
@@ -951,7 +952,7 @@
     }
   }
 
-  &__item--type--information {
+  &__item-type-information {
     &:hover {
       .pull-down__list {
         border: 1px solid #956d84;

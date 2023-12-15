@@ -2,6 +2,9 @@ import app from './app';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import firebase from './modules/firebase';
 import JustValidate from 'just-validate';
+import basket from './modules/basket';
+
+let basketEl = basket();
 
 class Registration{
     constructor(){
