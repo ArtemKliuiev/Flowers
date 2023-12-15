@@ -79,8 +79,6 @@ export default class Menu{
             if(sortUrl != ''){
                 this.dropdownSort.changeValue(sortUrl);
             }
-        }else{
-            this.category.compositions = ['Букеты', 'Цветочные арки', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'];
         }
     };
 

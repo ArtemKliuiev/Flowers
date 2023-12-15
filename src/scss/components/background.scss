@@ -1,5 +1,6 @@
 .background {
     pointer-events: none;
+    user-select: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
