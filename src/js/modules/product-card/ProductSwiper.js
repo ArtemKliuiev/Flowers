@@ -51,5 +51,15 @@ export default class ProductSwiper{
                 },
             },
         });
+        this.fourthSlider = new Swiper('.inform__swiper', {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 4.5,
+            breakpoints: {
+                768: {
+                    spaceBetween: 9,
+                },
+            },
+        });
     }
 }

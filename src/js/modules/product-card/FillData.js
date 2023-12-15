@@ -1,12 +1,5 @@
 export default class FillData{
     constructor(){
-        this.oneImgPng = document.querySelector('.one-img-png');
-        this.oneImgWebP = document.querySelector('.one-img-webp');
-        this.twoImgPng = document.querySelector('.two-img-png');
-        this.twoImgWebP = document.querySelector('.two-img-webp');
-        this.threeImgPng = document.querySelector('.three-img-png');
-        this.threeImgWebP = document.querySelector('.three-img-webp');
-        this.mainPicture = document.querySelector('.main-image__picture');
         this.onePicture = document.querySelector('.inform__image-one');
         this.title = document.querySelector('.inform__title');
         this.categoty = document.querySelector('.categoty');
@@ -25,15 +18,9 @@ export default class FillData{
         this.infoOldPrice = document.querySelector('.inform__old-price');
         this.sale = document.querySelector('#sale');
         this.saleWrapper = document.querySelector('.main-image__sale');
+        this.swiperWripper = document.querySelector('.inform__wrapper');
     }
     fill(data){
-        console.log(data);
-        this.oneImgPng.src = data.img.default;
-        this.oneImgWebP.srcset = data.img.webP;
-        this.twoImgPng.src = data.moreImage.onePng;
-        this.twoImgWebP.srcset = data.moreImage.oneWebP;
-        this.threeImgPng.src = data.moreImage.twoPng;
-        this.threeImgWebP.srcset = data.moreImage.twoWebP;
         this.title.textContent = data.name;
         this.categoty.textContent = data.bouquets;
         this.price.dataset.price = data.price;
@@ -47,8 +34,8 @@ export default class FillData{
         this.tabDescription.textContent = data.description;
         this.reviewsQuatity.textContent = data.reviews.length ?? 0
         this.stars(data.stars);
-        this.change();
-        this.reviews(data.reviews)
+        this.addImages(data);
+        this.reviews(data.reviews);
         if(data.oldPrice){
             this.infoOldPrice.style.display = 'block';
         }
@@ -56,6 +43,51 @@ export default class FillData{
             this.saleWrapper.style.display = 'block';
             this.sale.textContent = data.sale;
         }
+    }
+    addImages(data){
+        const imgArr = [data.img, ...JSON.parse(data.moreImg)];
+        imgArr.forEach((obj) => {
+            this.swiperWripper.innerHTML += `
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="" type="image/webp">
+                        <img src="${obj.webP}" alt="PNG Image">
+                    </picture>
+                </div>
+            `;
+        });
+        this.changeImages();
+    }
+    changeImages(){
+        const allSlides = this.swiperWripper.querySelectorAll('.swiper-slide');
+        function change(slide){
+            const condition = !slide.classList.contains('swiper-slide_active');
+            if(condition){
+                const mainImage = document.querySelector('.main-image__picture');
+                const slidePicture = slide.querySelector('picture');
+                mainImage.innerHTML = slidePicture.innerHTML;
+                mainImage.classList.add('main-image__picture_animation');
+                setTimeout(() => {
+                    mainImage.classList.remove('main-image__picture_animation');
+                },0)
+            }
+        }
+        change(allSlides[0])
+
+        function addActive(slide){
+            allSlides.forEach(slide => {
+                slide.classList.remove('swiper-slide_active');
+            })
+            slide.classList.add('swiper-slide_active');
+        }
+
+        allSlides.forEach(item => {
+            item.addEventListener('click', () => {
+                change(item);
+                addActive(item);
+            })
+        })
+
     }
     reviews(data){
         for(let i = 0; i < data.length; i++){
@@ -91,9 +123,6 @@ export default class FillData{
         for(let i = 0 ;i < quantitySrats; i++){
             this.starsWrapper.innerHTML += `<img src="./images/main/stock/Star.svg" alt="star">`;
         }
-    }
-    change(){
-        this.mainPicture.innerHTML = this.onePicture.innerHTML;
     }
 
 }

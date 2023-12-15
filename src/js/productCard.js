@@ -1,6 +1,14 @@
+
 import app from './app';
 import ProductFirebase from './modules/product-card/ProductFirebase';
 import JustValidate from 'just-validate';
+
+
+// import Cleave from 'cleave.js';
+
+// var cleave = new Cleave('#phone', {
+
+// });
 
 class ProductCard{
     constructor(){
@@ -19,7 +27,6 @@ class ProductCard{
         this.counter();
         this.clickLike();
         this.focus();
-        this.imageTabs();
         this.zoom();
         this.fastOrderVal();
     }
@@ -67,17 +74,6 @@ class ProductCard{
                 this.tabsBlock.classList.remove('tabs_delivery');
                 this.tabsBlock.classList.remove('tabs_description');
             }
-        });
-    }
-    imageTabs(){
-        this.moreImages.forEach(img => {
-            img.addEventListener('click', () => {
-                this.mainPicture.innerHTML = img.innerHTML;
-                this.mainPicture.classList.add('main-image__picture_animation');
-                setTimeout(()=>{
-                    this.mainPicture.classList.remove('main-image__picture_animation')
-                },100)
-            });
         });
     }
     zoom(){
