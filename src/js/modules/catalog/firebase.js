@@ -14,22 +14,39 @@ export default class loadFirebase{
         });
     }
     async filters(info){
+        console.log(info)
+        const testArr = []
+        for(const key in info){
+            if(key !== 'sort' && key !== 'whom' && key !== 'occasion' && key !== 'color'){
+                testArr.push(info[key]);
+            }
+        }
+        const resTest = testArr.every(item => item == '')
+        console.log(resTest)
         const db = firebase.getFirestore();
         this.colect = collection(db, "products");
         this.sort = [];
 
-        this.filter = [
-            or(
-                where("bouquets", "in", info.bouquets),
-                where("roses", "in", info.roses),
-                where("in-box", "in", info.inBox),
-                where("compositions", "in", info.compositions),
-                where("gift", "in", info.gift),
-                where("gift-basket", "in", info.giftBasket),
-                where("for-bride", "in", info.forBride),
-                where("delicious", "in", info.delicious),
-            )
-        ];
+        const allGoods = [ 'Букеты', 'Цветочные арки', 'Корзины с цветами','Горшечные растения', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'];
+        if(resTest){
+            this.filter = [
+                where("compositions", "in", allGoods),
+            ];
+        }else{
+            this.filter = [
+                or(
+                    where("bouquets", "in", info.bouquets),
+                    where("roses", "in", info.roses),
+                    where("in-box", "in", info.inBox),
+                    where("compositions", "in", info.compositions),
+                    where("gift", "in", info.gift),
+                    where("gift-basket", "in", info.giftBasket),
+                    where("for-bride", "in", info.forBride),
+                    where("delicious", "in", info.delicious),
+                )
+            ];
+        }
+
 
         if(info.whom[0] != ''){
             this.filter.push(where("whom", "==", info.whom[0]))}

@@ -6,11 +6,14 @@ import basket from './modules/basket';
 import productLike from "./modules/like/like";
 
 
-// import Cleave from 'cleave.js';
+import Cleave from 'cleave.js';
+import 'cleave.js/dist/addons/cleave-phone.us'; 
 
-// var cleave = new Cleave('#phone', {
 
-// });
+var cleave = new Cleave('.fast-order__input', {
+    blocks: [2, 3, 2, 2],
+    numericOnly: true
+});
 
 class ProductCard{
     constructor(){
