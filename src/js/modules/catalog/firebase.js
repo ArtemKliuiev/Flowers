@@ -182,7 +182,6 @@ export default class loadFirebase{
                 console.log(error)
             }
         }
-
         this.getInfo(startOne);
     }
 }
