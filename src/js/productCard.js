@@ -43,7 +43,7 @@ class ProductCard{
             },
             {
                 rule: 'customRegexp',
-                value: /(^[0-9]{9}$)/,
+                value: /(^[0-9]{2}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}$)/,
                 errorMessage: 'Номер не валидный',
             },
         ];
@@ -55,9 +55,9 @@ class ProductCard{
         this.validate.addField(this.phoneInput, rule, setting);
 
         this.validate.onSuccess( event => {
-            alert('Ваш заказ принят) мы скоро с вами свяжемся')
+            alert('Ваш заказ принят) мы скоро с вами свяжемся');
+            this.phoneInput.value = '';
         });
-        this.phoneInput.value = '';
     }
     clickLike(){
         this.like.addEventListener('click', () => {
@@ -122,9 +122,9 @@ class ProductCard{
                 input.value = 1;
             }else if(condition === 1 && num > 1){
                 input.value = num - 1;
-            }else if (num >= 999){
-                alert('Максимальный заказ через сайт 999 букетов, если вам нужно больше обратитесь пожалуйста к администрации сайта');
-                input.value = 999;
+            }else if (num >= 99){
+                alert('Максимальный заказ через сайт 99 букетов, если вам нужно больше обратитесь пожалуйста к администрации сайта');
+                input.value = 99;
             } else if(condition === 2){
                 input.value = num + 1;
             }else if(num < 1){

@@ -9,6 +9,9 @@
         }
         margin-right: 26px;
     }
+	&__prev{
+        text-decoration-line: underline;
+    }
 	@include breakpoint($md3) {
 		margin-bottom: 40px;
     }

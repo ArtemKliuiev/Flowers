@@ -12,6 +12,7 @@ const paths = {
 export const webpackConfig = (isMode) => {
   return {
     entry: {
+      stock: path.join(paths.src, 'js/stock.js'),
       main: path.join(paths.src, 'js/main.js'),
       app: path.join(paths.src, 'js/app.js'),
       productCard: path.join(paths.src, 'js/productCard.js'),

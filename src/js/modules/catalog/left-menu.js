@@ -3,8 +3,6 @@ import Dropdown from '../dropdown';
 
 export default class Menu{
     constructor(){
-        this.catalTITLE = document.querySelector('.catalog__title')
-
         this.firebase = new loadFirebase();
         this.dropdownPerson = new Dropdown('.drop-person');
         this.dropdownColor = new Dropdown('.drop-color');
@@ -99,10 +97,6 @@ export default class Menu{
     }
 
     addListener(){
-        this.catalTITLE.addEventListener('click', () => {
-            this.delFilters();
-        });
-
         this.deletFilterBtn.addEventListener('click', () => {
             this.delFilters();
         });

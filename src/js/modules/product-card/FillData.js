@@ -19,8 +19,10 @@ export default class FillData{
         this.sale = document.querySelector('#sale');
         this.saleWrapper = document.querySelector('.main-image__sale');
         this.swiperWripper = document.querySelector('.inform__wrapper');
+        this.categotyLink = document.querySelector('.inform__categoty');
     }
     fill(data){
+        this.categotyLink.href = `./${data.categoryLink}`;
         this.title.textContent = data.name;
         this.categoty.textContent = data.bouquets;
         this.price.dataset.price = data.price;
