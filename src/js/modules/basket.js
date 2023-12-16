@@ -11,6 +11,7 @@ async function basket() {
 
   let basketNum = 0;
   let parsedBasket = [];
+  let counterNum = null;
 
   function renderBasket() {
     const storedBasket = localStorage.getItem('basket');
@@ -25,6 +26,7 @@ async function basket() {
 
       parsedBasket.forEach((item) => {
         renderOrder(item);
+        console.log(item);
 
         let template = `
           <div class="basket__wrapper-left">   
@@ -38,7 +40,9 @@ async function basket() {
               </div>
               <div class="basket__card-price">
                 <p class="basket__card-new-price">${item.newPrice} ₴</p>
-                <p class="basket__card-old-price">${item.oldPrice !== null ? item.oldPrice + ' ₴' : '0 ₴'}</p>
+                <p class="basket__card-old-price">${
+                  item.oldPrice !== null ? item.oldPrice + ' ₴' : '0 ₴'
+                }</p>
               </div>
               <div class="basket__card-num-wrapper">
                 <div class="basket__card-arrow-left">
@@ -107,7 +111,10 @@ async function basket() {
             if (clickEl.classList.contains('basket__card-arrow-left')) {
               currentItem.quantNum = Math.max(1, currentItem.quantNum - 1);
             } else if (clickEl.classList.contains('basket__card-arrow-right')) {
-              currentItem.quantNum += 1;
+
+              if (currentItem.quantNum < 99) {
+                currentItem.quantNum += 1;
+              }
             }
 
             const quantNumberEl = basketCard.querySelector(
@@ -198,26 +205,41 @@ async function basket() {
     });
   }
 
-  function handleProductClick(productEl, nameSelector, priceSelector, oldPriceSelector, imgSelector) {
+  function handleProductClick(
+    productEl,
+    nameSelector,
+    priceSelector,
+    oldPriceSelector,
+    imgSelector,
+    counterNum
+  ) {
     const newBasketItem = {
       imgSrc: productEl.querySelector(imgSelector).src,
       productName: productEl.querySelector(nameSelector).textContent,
-      newPrice: parseFloat(productEl.querySelector(priceSelector).textContent.replace('грн', '')),
+      newPrice: counterNum ? parseFloat(
+        productEl.querySelector(priceSelector).textContent.replace('грн', '')
+      ) / counterNum : parseFloat(
+        productEl.querySelector(priceSelector).textContent.replace('грн', '')
+      ),
       oldPrice: (() => {
         const oldPriceElement = productEl.querySelector(oldPriceSelector);
-        return oldPriceElement ? parseFloat(oldPriceElement.textContent.replace('грн', '')) : 0;
+        return oldPriceElement
+          ? parseFloat(oldPriceElement.textContent.replace('грн', ''))
+          : 0;
       })(),
-      quantNum: 1,
+      quantNum: counterNum ? counterNum : 1,
     };
-  
-    const existingItemIndex = parsedBasket.findIndex(item => item.imgSrc === newBasketItem.imgSrc);
-  
+
+    const existingItemIndex = parsedBasket.findIndex(
+      (item) => item.imgSrc === newBasketItem.imgSrc
+    );
+
     if (existingItemIndex !== -1) {
       parsedBasket[existingItemIndex].quantNum += 1;
     } else {
       parsedBasket.push(newBasketItem);
     }
-  
+
     sessionStorage.setItem('basket', JSON.stringify(parsedBasket));
     updateLocalStorage();
     updateStateBasketNum();
@@ -225,24 +247,49 @@ async function basket() {
     renderBasket();
     delProduct();
   }
-  
+
   const productButton = document.querySelector('.btn-row__btn');
-  
+
   if (productButton) {
     productButton.addEventListener('click', (e) => {
       e.preventDefault();
+
+      const price = +document.querySelector('#price').textContent;
+      console.log(price);
+
+      counterNum = parseInt(
+        document.querySelector('.counter__number').value,
+        10
+      );
+
       const productEl = e.target.parentNode.parentNode.parentNode;
-      handleProductClick(productEl, '.inform__info-flowers', '#price', '#old-price', '.inform__image img');
+      handleProductClick(
+        productEl,
+        '.inform__info-flowers',
+        '#price',
+        '#old-price',
+        '.inform__image img',
+        counterNum
+      );
+      console.log(counterNum);
     });
   }
-  
+
   productCards.forEach((productCard) => {
-    const button = productCard.querySelector('.product-card__bottom-button-desktop');
-  
+    const button = productCard.querySelector(
+      '.product-card__bottom-button-desktop'
+    );
+
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const productEl = e.target.parentNode.parentNode.parentNode;
-      handleProductClick(productEl, '.product-card__bottom-name', '.product-card__bottom-price', '.product-card__bottom-old-price', '.product-card__img img');
+      handleProductClick(
+        productEl,
+        '.product-card__bottom-name',
+        '.product-card__bottom-price',
+        '.product-card__bottom-old-price',
+        '.product-card__img img'
+      );
     });
   });
 
@@ -343,4 +390,3 @@ async function basket() {
 }
 
 export default basket;
-
