@@ -82,6 +82,9 @@ export default class loadFirebase{
     }
 
     async getInfo(startOne){
+        this.quantityNow = document.querySelectorAll('.product-card').length;
+        this.checkEmpyGoods();
+
         const snapshotTwo = await getCountFromServer(this.infoQuery);
         this.quantityAll = snapshotTwo.data().count;
 
@@ -110,6 +113,14 @@ export default class loadFirebase{
         }
         
         this.loadMoreBtn();
+    }
+
+    checkEmpyGoods(){
+        if(this.quantityNow < 1){
+            this.productCardWrapper.classList.add('cards__items_empy');
+        }else{
+            this.productCardWrapper.classList.remove('cards__items_empy');
+        }
     }
 
     pages(page){
@@ -171,7 +182,6 @@ export default class loadFirebase{
                 console.log(error)
             }
         }
-        this.quantityNow = document.querySelectorAll('.product-card').length;
 
         this.getInfo(startOne);
     }
