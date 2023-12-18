@@ -290,7 +290,6 @@
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
     cursor: pointer;
-
   }
 
   &__header-title-device-type-desktop {
@@ -902,14 +901,12 @@
         transform-origin: center 30%;
         transform: rotateZ(180deg);
       }
-
     }
   }
 
   &__list-item {
     padding: 12px 14px 12px 14px;
     transition: $standartTrans;
-
   }
 
   &__loupe-icon {
@@ -943,6 +940,18 @@
   &__item-type-categories {
     &.active {
       .pull-down__list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        pointer-events: unset;
+        border: 1px solid #956d84;
+      }
+    }
+  }
+
+  &__item-type-information {
+    .pull-down__list {
+      &.active {
         border: 1px solid #956d84;
         opacity: 1;
         overflow: visible;
@@ -950,18 +959,8 @@
         pointer-events: unset;
       }
     }
-  }
-
-  &__item-type-information {
-    &:hover {
-      .pull-down__list {
-        border: 1px solid #956d84;
-        opacity: 1;
-        overflow: visible;
-        visibility: visible;
-        pointer-events: unset;
-      }
-      .pull-down__arrow {
+    .pull-down__arrow {
+      &.active {
         transform: rotate(180deg);
       }
     }

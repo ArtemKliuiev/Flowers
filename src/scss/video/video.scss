@@ -110,6 +110,7 @@
     position: relative;
     bottom: 118px;
     text-align: center;
+    max-height: 322px;
 
     @include breakpoint($md6) {
       bottom: 90px;

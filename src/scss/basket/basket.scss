@@ -383,6 +383,7 @@
     gap: 23px;
     justify-content: flex-end;
     margin-bottom: 11px;
+    align-items: center;
 
     @include breakpoint($md5) {
       margin-bottom: 30px;

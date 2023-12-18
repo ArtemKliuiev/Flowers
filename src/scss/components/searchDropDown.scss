@@ -33,7 +33,6 @@
   &__list-item {
     a {
       color: #333;
-      font-family: Acme;
       padding: 14px 17px;
       font-size: 16px;
       font-style: normal;
@@ -42,6 +41,7 @@
       min-height: 38px;
       display: flex;
       align-items: center;
+      transition: all 280ms ease-in-out 0ms;
       &:hover {
         color: #fff;
         background: var(--956D84, #956d84);

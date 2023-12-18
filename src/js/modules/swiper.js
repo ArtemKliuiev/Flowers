@@ -13,6 +13,7 @@ certificateSwiper();
 function stockSwiper() {
   let swiper = new Swiper('.stock-swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.stock__swiper-pagination',
     },
@@ -27,6 +28,7 @@ stockSwiper();
 function seasonSwiper() {
   let swiper = new Swiper('.season-swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.season__swiper-pagination',
     },
@@ -41,6 +43,7 @@ seasonSwiper();
 function presentSwiper() {
   let swiper = new Swiper('.present-swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.present__swiper-pagination',
     },
@@ -55,6 +58,7 @@ presentSwiper();
 function forumSwiper() {
   let swiper = new Swiper('.forum-swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.forum__swiper-pagination',
     },
@@ -65,6 +69,7 @@ forumSwiper();
 function previewsSwiper() {
   let swiper = new Swiper('.reviews__swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.reviews__swiper-pagination',
       clickable: true,
@@ -83,6 +88,7 @@ previewsSwiper();
 function photoSwiper() {
   let swiper = new Swiper('.photo__swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.photo__swiper-pagination',
       clickable: true,
@@ -101,6 +107,7 @@ photoSwiper();
 function videoSwiper() {
   let swiper = new Swiper('.video__swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.video__swiper-pagination',
       clickable: true,
@@ -119,6 +126,7 @@ videoSwiper();
 function newsSwiper() {
   let swiper = new Swiper('.news__swiper', {
     slidesPerView: 'auto',
+    speed: 1100,
     pagination: {
       el: '.news__swiper-pagination',
       clickable: true,

@@ -148,3 +148,31 @@ function headerCategoriesDropdown() {
 }
 
 headerCategoriesDropdown();
+
+function headerInformationDropdown() {
+  const dropdownWrapper = document.querySelector('.menu__item-type-information');
+  const dropdown = dropdownWrapper.querySelector('.pull-down__header');
+  const dropdownList = dropdownWrapper.querySelector('.pull-down__list');
+  const arrow = dropdownWrapper.querySelector('.pull-down__arrow');
+  
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownList.classList.toggle('active');
+    arrow.classList.toggle('active');
+  });
+
+  const closeDropdown = () => {
+    dropdownList.classList.remove('active');
+    arrow.classList.remove('active');
+  };
+
+  document.addEventListener('click', (e) => {
+    const clickDropdown = dropdownWrapper.contains(e.target);
+    if (!clickDropdown) {
+      closeDropdown();
+    }
+  });
+
+}
+
+headerInformationDropdown();

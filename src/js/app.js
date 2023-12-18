@@ -5,5 +5,7 @@ import searchDropdown from './modules/headerDropdown';
 import headerDropdown from './modules/headerDropdown';
 import headerDropdownMobile from './modules/headerDropdown';
 import headerCategoriesDropdown from './modules/headerDropdown';
+import headerInformationDropdown from './modules/headerDropdown';
+
 
 
