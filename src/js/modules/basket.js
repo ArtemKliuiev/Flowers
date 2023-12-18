@@ -26,7 +26,6 @@ async function basket() {
 
       parsedBasket.forEach((item) => {
         renderOrder(item);
-        console.log(item);
 
         let template = `
           <div class="basket__wrapper-left">   
@@ -253,9 +252,6 @@ async function basket() {
   if (productButton) {
     productButton.addEventListener('click', (e) => {
       e.preventDefault();
-
-      const price = +document.querySelector('#price').textContent;
-      console.log(price);
 
       counterNum = parseInt(
         document.querySelector('.counter__number').value,
