@@ -53,3 +53,11 @@ body {
     pointer-events: none;
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $cheryColor;
+  border-radius: 3px;
+}

@@ -69,7 +69,7 @@ export default class Pagination{
         document.dispatchEvent(this.customEvent);
 
         window.scroll({
-            top: 500,
+            top: 200,
         });
     }
     getPage(){

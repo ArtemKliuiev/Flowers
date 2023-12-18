@@ -8,7 +8,7 @@ function leftImages() {
     if(addImage > 0 ){
         for(let i = 0; i < addImage; i++){
             imageWrapper.innerHTML += `
-                <img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img">
+                <img class="background__left-img" loading="lazy" src="./images/bg/left-flowers.png" alt="bg-img">
             `;
         }
     }
@@ -31,7 +31,7 @@ function rightImages() {
     if(addImage > 0 ){
         for(let i = 0; i < addImage; i++){
             imageWrapper.innerHTML += `
-                <img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img">
+                <img class="background__right-img" loading="lazy" src="./images/bg/right-flowers.png" alt="bg-img">
             `;
         }
     }
