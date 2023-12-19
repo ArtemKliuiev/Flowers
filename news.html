@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/news.min.css?_v=20231219172918">
+  <link rel="stylesheet" href="css/news.min.css?_v=20231219175922">
   <title>Flowers</title>
 </head>
 
@@ -793,7 +793,7 @@
                 <a href="./video.html">Видео отчеты</a>
               </li>
               <li class="pull-down__list-item">
-                <a href="#">Политика конфиденциальности</a>
+                <a href="./404.html">Политика конфиденциальности</a>
               </li>
             </ul>
           </li>
@@ -850,16 +850,16 @@
         <div class="mobile-menu-dropdowns mobile-menu__dropdowns">
           <ul class="mobile-menu-dropdowns__body">
             <li class="mobile-menu-dropdowns__item">
-              <a href="/">Форум</a>
+              <a href="./forum.html">Форум</a>
             </li>
             <li class="mobile-menu-dropdowns__item">
               <a href="./reviews.html">Отзывы</a>
             </li>
             <li class="mobile-menu-dropdowns__item">
-              <a href="/">Акции</a>
+              <a href="./stock.html">Акции</a>
             </li>
             <li class="mobile-menu-dropdowns__item">
-              <a href="/">Новости</a>
+              <a href="./news.html">Новости</a>
             </li>
             <li class="mobile-menu-dropdowns__item">
               <a href="/">Информация</a>
@@ -1404,48 +1404,55 @@
       <main class="page">
         <div class="page__container">
           <section class="news">
-    <div class="news__nav">
-      <a href="./index.html">Главная</a>
-      <a href="#">Новости</a>
-    </div>
-    <h1 class="news__title">Новости</h1>
+  <div class="news__nav">
+    <a href="./index.html">Главная</a>
+    <a href="#">Новости</a>
+  </div>
+  <h1 class="news__title">Новости</h1>
+  
+  <div class="news__swiper swiper">
     
-    <div class="news__swiper swiper">
+    <div class="swiper-wrapper">
       
-      <div class="swiper-wrapper">
-        
-        <div class="swiper-slide">
-          <div class="news__card-wrapper"></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="news__card-wrapper">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="news__card-wrapper">
-          </div>
-        </div>
+      <div class="swiper-slide">
+        <div class="news__card-wrapper"></div>
       </div>
-      <div class="news__button">
-        <a href="#">
-          <p class="news__button-text">Еще 16 новостей</p>
-          <picture><source srcset="./images/previews/button-flowers.webp" type="image/webp"><img src="./images/previews/button-flowers.png" alt="button-branch"></picture>
-        </a>
+      <div class="swiper-slide">
+        <div class="news__card-wrapper"></div>
       </div>
-      
-      <div class="news__swiper-pagination-wrapper">
-        <div class="news__swiper-button-prev">
-          <svg><use xlink:href="./images/Sprite.svg#photo-arrow"></use></svg>
-        </div>
-  
-        <div class="news__swiper-pagination"></div>
-  
-        <div class="news__swiper-button-next">
-          <svg><use xlink:href="./images/Sprite.svg#photo-arrow"></use></svg>
-        </div>
+      <div class="swiper-slide">
+        <div class="news__card-wrapper"></div>
       </div>
     </div>
-  </section>
+    <div class="news__button">
+      <a href="#">
+        <p class="news__button-text">Еще 16 новостей</p>
+        <picture><source srcset="./images/previews/button-flowers.webp" type="image/webp"><img src="./images/previews/button-flowers.png" alt="button-branch"></picture>
+      </a>
+    </div>
+    
+    <div class="news__swiper-pagination-wrapper">
+      <div class="news__swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <g opacity="0.4">
+            <path d="M35 45L38.525 41.475L27.075 30L38.525 18.525L35 15L20 30L35 45Z" fill="#956D84"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="news__swiper-pagination"></div>
+
+      <div class="news__swiper-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <g opacity="0.4">
+            <path d="M35 45L38.525 41.475L27.075 30L38.525 18.525L35 15L20 30L35 45Z" fill="#956D84"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
 
           <div class="background">
     
@@ -1903,5 +1910,5 @@
 
     </div>
   </body>
-  <script src="js/news.min.js?_v=20231219172918"></script>
+  <script src="js/news.min.js?_v=20231219175922"></script>
 </html>
