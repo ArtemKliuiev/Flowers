@@ -51,6 +51,7 @@
     overflow: hidden;
     visibility: hidden;
     pointer-events: none;
+    border: 1px solid #956d84;
 
     &::-webkit-scrollbar {
       width: 0em;
@@ -63,7 +64,7 @@
 
   &__list-item {
     padding: 12px 14px 12px 14px;
-    transition: $standartTrans;
+    transition: all 0.2s ease;
 
     &:hover {
       background: $cheryColor;

@@ -26,6 +26,7 @@ async function basket() {
 
       parsedBasket.forEach((item) => {
         renderOrder(item);
+        console.log(item.imgSrc);
 
         let template = `
           <div class="basket__wrapper-left">   
@@ -40,7 +41,7 @@ async function basket() {
               <div class="basket__card-price">
                 <p class="basket__card-new-price">${item.newPrice} ₴</p>
                 <p class="basket__card-old-price">${
-                  item.oldPrice !== null ? item.oldPrice + ' ₴' : '0 ₴'
+                  item.oldPrice !== null ? item.oldPrice + ' ₴' : ''
                 }</p>
               </div>
               <div class="basket__card-num-wrapper">
@@ -79,12 +80,13 @@ async function basket() {
           basketWrapper.insertAdjacentHTML('beforeend', template);
         }
 
-        const orderButton = document.querySelector('.order__button');
+        const orderButton = document.querySelector('.order__button-wrapper');
 
         if (orderButton) {
           orderButton.addEventListener('click', (e) => {
             e.preventDefault();
             sessionStorage.removeItem('basket');
+            localStorage.removeItem('basket');
             window.location.href = './order.html';
           });
         }
@@ -106,6 +108,7 @@ async function basket() {
           const currentItem = parsedBasket.find(
             (item) => item.imgSrc === productId
           );
+          
           if (currentItem) {
             if (clickEl.classList.contains('basket__card-arrow-left')) {
               currentItem.quantNum = Math.max(1, currentItem.quantNum - 1);
@@ -224,17 +227,21 @@ async function basket() {
         const oldPriceElement = productEl.querySelector(oldPriceSelector);
         return oldPriceElement
           ? parseFloat(oldPriceElement.textContent.replace('грн', ''))
-          : 0;
+          : null;
       })(),
       quantNum: counterNum ? counterNum : 1,
     };
 
     const existingItemIndex = parsedBasket.findIndex(
-      (item) => item.imgSrc === newBasketItem.imgSrc
+      (item) => item.productName === newBasketItem.productName
     );
+    console.log(existingItemIndex);
 
     if (existingItemIndex !== -1) {
-      parsedBasket[existingItemIndex].quantNum += 1;
+      if (parsedBasket[existingItemIndex].quantNum < 99) {
+        parsedBasket[existingItemIndex].quantNum += 1;
+      }
+      
     } else {
       parsedBasket.push(newBasketItem);
     }
@@ -267,7 +274,6 @@ async function basket() {
         '.inform__image img',
         counterNum
       );
-      console.log(counterNum);
     });
   }
 
@@ -386,3 +392,4 @@ async function basket() {
 }
 
 export default basket;
+
