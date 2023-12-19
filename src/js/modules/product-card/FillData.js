@@ -29,9 +29,9 @@ export default class FillData{
         this.price.textContent = data.price;
         this.oldPrice.textContent = data.oldPrice;
         this.infoFlower.textContent = data.name;
-        this.infoSize = data.size;
-        this.infoMaterian = data.material;
-        this.infoMore = data.Additionally;
+        this.infoSize.textContent = data.size;
+        this.infoMaterian.textContent = data.material;
+        this.infoMore.textContent = data.Additionally;
         this.tabDelovery.textContent = data.delivery;
         this.tabDescription.textContent = data.description;
         this.reviewsQuatity.textContent = data.reviews.length ?? 0

@@ -3,7 +3,7 @@ import Menu from './modules/stock/left-menu';
 import basket from './modules/basket';
 import productLike from "./modules/like/like";
 
-class Catalog {
+class Stock {
   constructor() {
     this.menuLeft = document.querySelector('.left-menu');
     this.itemsFiler = document.querySelectorAll('.left-menu__item');
@@ -77,7 +77,7 @@ class Catalog {
   }
 }
 
-const catalog = new Catalog();
+const stock = new Stock();
 
 setTimeout(() => {
   basket();
