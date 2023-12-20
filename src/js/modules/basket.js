@@ -23,10 +23,9 @@ async function basket() {
         basketWrapperRight.style.display = 'block';
         basketWrapperText.style.display = 'flex';
       }
-
+      console.log(parsedBasket);
       parsedBasket.forEach((item) => {
         renderOrder(item);
-        console.log(item.imgSrc);
 
         let template = `
           <div class="basket__wrapper-left">   
@@ -217,7 +216,7 @@ async function basket() {
   ) {
     const newBasketItem = {
       imgSrc: productEl.querySelector(imgSelector).src,
-      productName: productEl.querySelector(nameSelector).textContent,
+      productName: productEl.querySelector(nameSelector).textContent.replace(/\s/g, ''),
       newPrice: counterNum ? parseFloat(
         productEl.querySelector(priceSelector).textContent.replace('грн', '')
       ) / counterNum : parseFloat(
@@ -235,7 +234,6 @@ async function basket() {
     const existingItemIndex = parsedBasket.findIndex(
       (item) => item.productName === newBasketItem.productName
     );
-    console.log(existingItemIndex);
 
     if (existingItemIndex !== -1) {
       if (parsedBasket[existingItemIndex].quantNum < 99) {
