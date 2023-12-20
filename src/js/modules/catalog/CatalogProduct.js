@@ -25,7 +25,7 @@ export default class CatalogProduct {
             <div class="product-card__img">
               <picture>
                 <source srcset="${img.webP}" type="image/webp">
-                <img src="${img.default}" alt="flowers">
+                <img src="${img.default}" width="300" height="300" alt="flowers">
               </picture>    
             </div>
             ${onSale}

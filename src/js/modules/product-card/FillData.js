@@ -53,7 +53,7 @@ export default class FillData{
                 <div class="swiper-slide">
                     <picture>
                         <source srcset="" type="image/webp">
-                        <img src="${obj.webP}" alt="PNG Image">
+                        <img width="300" height="300" src="${obj.webP}" alt="PNG Image">
                     </picture>
                 </div>
             `;
