@@ -25,7 +25,7 @@ export default class CreateGoods{
             <div class="product-card__img">
               <picture>
                 <source srcset="${img.webP}" type="image/webp">
-                <img loading="lazy" src="${img.default}" alt="flowers">
+                <img loading="lazy" width="300" height="300" src="${img.default}" alt="flowers">
               </picture>    
             </div>
             ${onSale}
