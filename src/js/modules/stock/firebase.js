@@ -179,7 +179,7 @@ export default class loadFirebase{
             if(error.message.includes(errorText)){
                 const countQuery = +error.message.replace(/\D/g, '').slice(0, -2);
                 const overkill = countQuery - 30;
-                alert(`Выбранно слишком много категорий, убрерите пожалуйста : ${overkill} категории`)
+                alert(`Выбранно слишком много категорий, уберите пожалуйста : ${overkill} категории`)
             }else{
                 console.log(error)
             }

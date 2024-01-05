@@ -91,7 +91,12 @@ class Sing{
             {
                 rule: 'customRegexp',
                 value: /[0-9]/,
-                errorMessage: 'Минимум одна цыфра',
+                errorMessage: 'Минимум одна цифра',
+            },
+            {
+                rule: 'customRegexp',
+                value: /^(?!.*\s)/,
+                errorMessage: 'Пробелы недопустимы',
             },
             {
                 rule: 'password',
