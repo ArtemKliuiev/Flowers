@@ -229,9 +229,9 @@
     line-height: 112.5%;
     transition: color 280ms ease-in-out 0ms;
 
-    &:hover {
-      color: $cheryColor;
-    }
+    // &:hover {
+    //   color: $cheryColor;
+    // }
   }
 
   &__selected-list-item {
@@ -274,7 +274,7 @@
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
     overflow: auto;
     transition: $standartTrans;
-    z-index: 2;
+    z-index: 6;
     display: block; //!!!!!
 
     &::-webkit-scrollbar {
