@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231220161451">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240105185427">
   <title>Flowers</title>
 </head>
 
@@ -21,14 +21,14 @@
           <div class="drop-down top-header__drop-down">
             <div class="drop-down__header">
               <div class="drop-down__header-title">Валюта</div>
-              <div class="drop-down__selected-list-item">Грн</div>
+              <div class="drop-down__selected-list-item">UAH</div>
 
               <svg class="drop-down__arrow">
                 <use xlink:href="./images/Sprite.svg#full-down-arrow"></use>
               </svg>
             </div>
             <div class="drop-down__list">
-              <div class="drop-down__list-item">Грн</div>
+              <div class="drop-down__list-item">UAH</div>
               <div class="drop-down__list-item">USD</div>
               <div class="drop-down__list-item">EUR</div>
             </div>
@@ -801,7 +801,7 @@
         <div id="mainMenu" class="bottom-header__mobile-menu mobile-menu">
   <div class="mobile-menu__body">
     <div class="mobile-menu__top">
-      <span>Menu</span>
+      <span>Меню</span>
     </div>
     <div class="mobile-menu__wrapper">
       <div class="mobile-menu__center">
@@ -811,7 +811,7 @@
           </div>
           <div class="mobile-menu__call-right">
             <a href="#" class="mobile-menu__call-link">
-              Подзвонить
+              Позвонить
               <img src="./images/main/stock/button-branch.png" alt="button-branch">
             </a>
           </div>
@@ -865,7 +865,7 @@
               <a href="/">Информация</a>
             </li>
             <li class="mobile-menu-dropdowns__item mobile-menu-dropdowns__item--contact">
-              <a href="/"><svg class="top-header__list-item-icon">
+              <a href="./contacts.html"><svg class="top-header__list-item-icon">
                   <use xlink:href="#phone"></use>
                 </svg>
                 Контакты</a>
@@ -1408,7 +1408,6 @@
   <div class="certificate__desktop">
     <div class="certificate__wrapper">
       <div class="certificate__wrapper-left">
-        <a href="#">
           <div class="certificate__wrapper-card certificate__wrapper-big-card">
             <div class="certificate__wrapper-img">
               <picture><source srcset="./images/main/certificate/img1.webp" type="image/webp"><img src="./images/main/certificate/img1.png" alt="flowers"></picture>
@@ -1418,26 +1417,20 @@
               </p>
             </div>
           </div>
-        </a>
       </div>
       <div class="certificate__wrapper-right">
-        <a href="#">
           <div class="certificate__wrapper-card">
             <div class="certificate__wrapper-img">
               <picture><source srcset="./images/main/certificate/img2.webp" type="image/webp"><img src="./images/main/certificate/img2.png" alt="flowers"></picture>
               <p class="certificate__wrapper-img-text">Розы</p>
             </div>
           </div>
-        </a>
-        <a href="#">
           <div class="certificate__wrapper-card">
             <div class="certificate__wrapper-img">
               <picture><source srcset="./images/main/certificate/img3.webp" type="image/webp"><img src="./images/main/certificate/img3.png" alt="flowers"></picture>
               <p class="certificate__wrapper-img-text">Подарки</p>
             </div>
           </div>
-        </a>
-        <a href="#">
           <div class="certificate__wrapper-card">
             <div class="certificate__wrapper-img">
               <div class="certificate__wrapper-img-bg">
@@ -1449,8 +1442,6 @@
               <p class="certificate__wrapper-img-text">Подарочные корзины</p>
             </div>
           </div>
-        </a>
-        <a href="#">
           <div class="certificate__wrapper-card">
             <div class="certificate__wrapper-img">
               <div class="certificate__wrapper-img-bg">
@@ -1462,7 +1453,6 @@
               <p class="certificate__wrapper-img-text">Цветы в коробке</p>
             </div>
           </div>
-        </a>
       </div>
     </div>
   </div>
@@ -1517,60 +1507,67 @@
     </div>
   </div>
   <div class="bottom-sertificate">
-    <div class="bottom-sertificate__card">
-      <div class="bottom-sertificate__card-bg">
-        <svg><use xlink:href="./images/Sprite.svg#certificate-card-bg-left"></use></svg>
+    <a href="./photo.html">
+      <div class="bottom-sertificate__card">
+        <div class="bottom-sertificate__card-bg">
+          <svg><use xlink:href="./images/Sprite.svg#certificate-card-bg-left"></use></svg>
+        </div>
+        <div class="bottom-sertificate__card-photo-left">
+          <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-left"></use></svg>
+        </div>
+        <div class="bottom-sertificate__card-branch-left">
+          <picture><source srcset="./images/main/certificate/brunch-left.webp" type="image/webp"><img src="./images/main/certificate/brunch-left.png" alt="brunch"></picture>
+        </div>
+        <p class="bottom-sertificate__card-title-left">
+          Фото доставок наших букетов
+        </p>
+        <p class="bottom-sertificate__card-text-left">
+          Безупречное качество обслуживания и доставка в любую точку города
+        </p>
       </div>
-      <div class="bottom-sertificate__card-photo-left">
-        <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-left"></use></svg>
+    </a>
+    <a href="./video.html">
+      <div class="bottom-sertificate__card bottom-sertificate__card-center">
+        <div class="bottom-sertificate__card-photo-center">
+          <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-center"></use></svg>
+        </div>
+        <div class="bottom-sertificate__card-branch-center-left">
+          <img src="./images/main/certificate/brunch-center-left.png" alt="branch">
+        </div>
+        <div class="bottom-sertificate__card-branch-center-right">
+          <img src="./images/main/certificate/branch-center-right.png" alt="branch">
+        </div>
+        <p class="bottom-sertificate__card-title-center">Видео отчеты клиентов</p>
+        <p class="bottom-sertificate__card-text-center">
+          Наши счастливые клиенты с букетами от Flowers
+        </p>
       </div>
-      <div class="bottom-sertificate__card-branch-left">
-        <picture><source srcset="./images/main/certificate/brunch-left.webp" type="image/webp"><img src="./images/main/certificate/brunch-left.png" alt="brunch"></picture>
+    </a>
+    <a href="./present.html">
+      <div class="bottom-sertificate__card">
+        <div class="bottom-sertificate__card-bg-right">
+          <svg><use xlink:href="./images/Sprite.svg#certificate-card-bg-right"></use></svg>
+        </div>
+        <div class="bottom-sertificate__card-photo-right">
+          <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-right"></use></svg>
+        </div>
+        <div class="bottom-sertificate__card-branch-right">
+          <picture><source srcset="./images/main/certificate/branch-right.webp" type="image/webp"><img src="./images/main/certificate/branch-right.png" alt="branch"></picture>
+        </div>
+        <p class="bottom-sertificate__card-title-right">
+          Подарок каждому клиенту
+        </p>
+        <p class="bottom-sertificate__card-text-right">
+          К каждому заказу мы прилогаем комплимент от компании в виде маленького
+          презента
+        </p>
       </div>
-      <p class="bottom-sertificate__card-title-left">
-        Фото доставок наших букетов
-      </p>
-      <p class="bottom-sertificate__card-text-left">
-        Безупречное качество обслуживания и доставка в любую точку города
-      </p>
-    </div>
-    <div class="bottom-sertificate__card bottom-sertificate__card-center">
-      <div class="bottom-sertificate__card-photo-center">
-        <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-center"></use></svg>
-      </div>
-      <div class="bottom-sertificate__card-branch-center-left">
-        <img src="./images/main/certificate/brunch-center-left.png" alt="branch">
-      </div>
-      <div class="bottom-sertificate__card-branch-center-right">
-        <img src="./images/main/certificate/branch-center-right.png" alt="branch">
-      </div>
-      <p class="bottom-sertificate__card-title-center">Видео отчеты клиентов</p>
-      <p class="bottom-sertificate__card-text-center">
-        Наши счастливые клиенты с букетами от Flowers
-      </p>
-    </div>
-    <div class="bottom-sertificate__card">
-      <div class="bottom-sertificate__card-bg-right">
-        <svg><use xlink:href="./images/Sprite.svg#certificate-card-bg-right"></use></svg>
-      </div>
-      <div class="bottom-sertificate__card-photo-right">
-        <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-right"></use></svg>
-      </div>
-      <div class="bottom-sertificate__card-branch-right">
-        <picture><source srcset="./images/main/certificate/branch-right.webp" type="image/webp"><img src="./images/main/certificate/branch-right.png" alt="branch"></picture>
-      </div>
-      <p class="bottom-sertificate__card-title-right">
-        Подарок каждому клиенту
-      </p>
-      <p class="bottom-sertificate__card-text-right">
-        К каждому заказу мы прилогаем комплимент от компании в виде маленького
-        презента
-      </p>
-    </div>
+    </a>
   </div>
+
   <div class="bottom-sertificate-mobile">
     <div class="bottom-sertificate-mobile__card">
-      <a href="#">
+      <a href="./photo.html">
         <div class="bottom-sertificate-mobile__round">
           <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-left-mobile"></use></svg>
         </div>
@@ -1578,7 +1575,7 @@
       <p class="bottom-sertificate-mobile__card-text">Фото доставок</p>
     </div>
     <div class="bottom-sertificate-mobile__card">
-      <a href="#">
+      <a href="./video.html">
         <div class="bottom-sertificate-mobile__round">
           <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-center-mobile"></use></svg>
         </div>
@@ -1586,7 +1583,7 @@
       <p class="bottom-sertificate-mobile__card-text">Видео отчеты</p>
     </div>
     <div class="bottom-sertificate-mobile__card">
-      <a href="#">
+      <a href="./present.html">
         <div class="bottom-sertificate-mobile__round">
           <svg><use xlink:href="./images/Sprite.svg#certificate-card-photo-right-mobile"></use></svg>
         </div>
@@ -2197,5 +2194,5 @@
 
     </div>
   </body>
-  <script src="js/main.min.js?_v=20231220161451"></script>
+  <script src="js/main.min.js?_v=20240105185427"></script>
 </html>
