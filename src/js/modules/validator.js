@@ -58,7 +58,7 @@ function orderValidator() {
 
   if (form) {
     form.addEventListener('submit', onSubmitHandler);
-    updateButtonSubmit(); // Вызываем функцию для установки начального состояния кнопки
+    updateButtonSubmit(); 
   }
 
   function updateButtonSubmit() {
@@ -98,13 +98,13 @@ function orderValidator() {
       const name = recipientName.value.trim();
       if (name === '') {
         recipientName.classList.add('invalid');
-        recipientNameText.textContent = 'Please enter your name';
+        recipientNameText.textContent = 'Пожалуйста, введите ваше имя';
       } else if (name.length <= 2) {
         recipientName.classList.add('invalid');
-        recipientNameText.textContent = 'Less than 2 letters';
-      } else if (name.length > 10) {
+        recipientNameText.textContent = 'Менее 2 букв';
+      } else if (name.length > 20) {
         recipientName.classList.add('invalid');
-        recipientNameText.textContent = 'More than 10 letters';
+        recipientNameText.textContent = 'Более 20 букв';
       } else {
         recipientName.classList.remove('invalid');
         recipientNameText.textContent = '';
@@ -118,13 +118,13 @@ function orderValidator() {
           const name = senderName.value.trim();
           if (name === '') {
             senderName.classList.add('invalid');
-            senderNameText.textContent = 'Please enter your name';
+            senderNameText.textContent = 'Пожалуйста, введите ваше имя';
           } else if (name.length <= 2) {
             senderName.classList.add('invalid');
-            senderNameText.textContent = 'Less than 2 letters';
-          } else if (name.length > 10) {
+            senderNameText.textContent = 'Менее 2 букв';
+          } else if (name.length > 20) {
             senderName.classList.add('invalid');
-            senderNameText.textContent = 'More than 10 letters';
+            senderNameText.textContent = 'Более 20 букв';
           } else {
             senderName.classList.remove('invalid');
             senderNameText.textContent = '';
@@ -138,14 +138,14 @@ function orderValidator() {
           const phone = recipientTel.value.trim();
           if (phone === '') {
             recipientTel.classList.add('invalid');
-            recipientTelText.textContent = 'Please enter your phone number';
+            recipientTelText.textContent = 'Пожалуйста, введите ваш номер';
           } else if (phone.length > 13) {
             recipientTel.classList.add('invalid');
-            recipientTelText.textContent = 'More than 13 numbers';
+            recipientTelText.textContent = 'Более 13 цифр';
           } else if (!validatePhoneNumber(phone)) {
             recipientTel.classList.add('invalid');
             recipientTelText.textContent =
-              'Invalid phone number format. Use format: +1234567890';
+              'Не верный формат. Используйте формат: +1234567890';
           } else {
             recipientTel.classList.remove('invalid');
             recipientTelText.textContent = '';
@@ -159,14 +159,14 @@ function orderValidator() {
           const phone = senderTel.value.trim();
           if (phone === '') {
             senderTel.classList.add('invalid');
-            senderTelText.textContent = 'Please enter your phone number';
+            senderTelText.textContent = 'Пожалуйста, введите ваш номер';
           } else if (phone.length > 13) {
             senderTel.classList.add('invalid');
-            senderTelText.textContent = 'More than 13 numbers';
+            senderTelText.textContent = 'Более 13 цифр';
           } else if (!validatePhoneNumber(phone)) {
             senderTel.classList.add('invalid');
             senderTelText.textContent =
-              'Invalid phone number format. Use format: +1234567890';
+              'Не верный формат. Используйте формат: +1234567890';
           } else {
             senderTel.classList.remove('invalid');
             senderTelText.textContent = '';
@@ -180,14 +180,14 @@ function orderValidator() {
           const adress = recipientAdress.value.trim();
           if (adress === '') {
             recipientAdress.classList.add('invalid');
-            recipientAdressText.textContent = 'Please enter your address';
+            recipientAdressText.textContent = 'Пожалуйста, введите ваш адрес';
           } else if (adress.length > 50) {
             recipientAdress.classList.add('invalid');
-            recipientAdressText.textContent = 'More than 50 characters';
+            recipientAdressText.textContent = 'Более 50 символов';
           } else if (!validateAdress(adress)) {
             recipientAdress.classList.add('invalid');
             recipientAdressText.textContent =
-              'Invalid address format. Use format: ул.Название';
+              'Не верный формат. Используйте формат: ул.Название';
           } else {
             recipientAdress.classList.remove('invalid');
             recipientAdressText.textContent = '';
@@ -201,10 +201,10 @@ function orderValidator() {
           const email = senderMail.value.trim();
           if (email === '') {
             senderMail.classList.add('invalid');
-            senderMailText.textContent = 'Please enter your email';
+            senderMailText.textContent = 'Пожалуйста, введите вашу почту';
           } else if (!validateEmail(email)) {
             senderMail.classList.add('invalid');
-            senderMailText.textContent = 'Invalid email format';
+            senderMailText.textContent = 'Неверный формат';
           } else {
             senderMail.classList.remove('invalid');
             senderMailText.textContent = '';
@@ -218,10 +218,10 @@ function orderValidator() {
           const text = postCardText.value.trim();
           if (text === '') {
             postCardText.classList.add('invalid');
-            textPostCardText.textContent = 'Please enter your text';
+            textPostCardText.textContent = 'Пожалуйста, введите текст';
           } else if (text.length > 70) {
             postCardText.classList.add('invalid');
-            textPostCardText.textContent = 'More than 70 characters';
+            textPostCardText.textContent = 'Более 70 символов';
           } else {
             postCardText.classList.remove('invalid');
             textPostCardText.textContent = '';
@@ -235,10 +235,10 @@ function orderValidator() {
           const text = coupon.value.trim();
           if (text === '') {
             coupon.classList.add('invalid');
-            couponText.textContent = 'Please enter your coupon';
+            couponText.textContent = 'Пожалуйста, введите ваш купон';
           } else if (!validateCoupon(text)) {
             coupon.classList.add('invalid');
-            couponText.textContent = 'Invalid coupon format: not more than 10 numbers';
+            couponText.textContent = 'Неверный формат купона: не более 10 цифр';
           } else {
             coupon.classList.remove('invalid');
             couponText.textContent = '';
@@ -252,10 +252,10 @@ function orderValidator() {
           const text = certificate.value.trim();
           if (text === '') {
             certificate.classList.add('invalid');
-            certificateText.textContent = 'Please enter your certificate';
+            certificateText.textContent = 'Пожалуйста, введите ваш сертификат';
           } else if (text.length > 20) {
             certificate.classList.add('invalid');
-            certificateText.textContent = 'More than 20 characters';
+            certificateText.textContent = 'Больше 20 символов';
           } else {
             certificate.classList.remove('invalid');
             certificateText.textContent = '';

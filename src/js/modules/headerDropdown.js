@@ -105,8 +105,8 @@ function headerCategoriesDropdown() {
 
   dropdown.addEventListener('click', (e) => {
     e.stopPropagation();
-    dropdown.classList.add('active');
-    arrow.classList.add('active');
+    dropdown.classList.toggle('active');
+    arrow.classList.toggle('active');
   });
 
   secondMenuHovers.forEach((secondMenuHover) => {

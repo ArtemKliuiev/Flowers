@@ -62,9 +62,9 @@ export default class newsCard {
             </div>
             <h5 class="news__card-title">${title}</h5>
             <h4 class="news__card-text">${text}</h4>
-            <a href="#">
-                <p class="news__card-link">Читать далее...</p>
-            </a>
+        
+              <p class="news__card-link">Читать далее...</p>
+            
             </div>`;
       newsCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);
