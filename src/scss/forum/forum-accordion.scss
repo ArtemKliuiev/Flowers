@@ -86,6 +86,7 @@
         padding: 20px 48px 20px 65px;
         color: var(--ffffff, #fff);
         font-size: 24px;
+        font-family: Actor;
 
         @include breakpoint($md4) {
           padding: 20px 16px 20px 36px;

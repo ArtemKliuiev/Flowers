@@ -27,7 +27,7 @@ titles.forEach((item) =>
       arrow.classList.add('open');
       item.classList.add('active');
       activeContent.classList.add('active');
-      activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+      activeContent.style.maxHeight = '100%';
     }
   })
 );

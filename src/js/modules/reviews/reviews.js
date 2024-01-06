@@ -28,7 +28,6 @@ export default class reviewsCard {
         <p class="reviews__user-name">${name}</p>
       </div>
       <p class="reviews__user-text">${text}</p>
-      <a href="#">
         <div class="reviews__all-reviews">
           <p>Весь отзыв</p>
           <svg
@@ -45,7 +44,6 @@ export default class reviewsCard {
             />
           </svg>
         </div>
-      </a>
       <div class="reviews__stars-data">
         <svg>
           <use xlink:href="./images/Sprite.svg#product-card-stars"></use>

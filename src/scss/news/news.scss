@@ -6,12 +6,11 @@
     margin-bottom: 60px;
     margin-top: 23px;
   }
-  // .reviews__nav
 
   &__nav {
     display: flex;
     gap: 37px;
-    margin-bottom: 38px;
+    margin-bottom: 48px;
 
     @include breakpoint($md4) {
       display: none;
@@ -30,16 +29,14 @@
     }
   }
 
-  // .reviews__title
 
   &__title {
     color: #333;
     text-align: center;
-    font-family: Actor;
     font-size: 48px;
     font-weight: 400;
     line-height: 18px;
-    margin-bottom: 112px;
+    margin-bottom: 102px;
 
     @include breakpoint($md4) {
       font-size: 24px;
@@ -49,8 +46,6 @@
       margin-bottom: 27px;
     }
   }
-
-  // .reviews__swiper
 
   &__swiper {
     padding-top: 99px !important;
@@ -69,7 +64,6 @@
     }
   }
 
-  // .reviews__card
 
   &__card {
     padding: 0 5px;
@@ -160,7 +154,6 @@
 
   &__card-link {
     color: #fff;
-    font-family: AbyssinicaSIL;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
@@ -189,7 +182,6 @@
     }
   }
 
-  // .reviews__swiper-pagination
 
   &__swiper-pagination {
   }
@@ -199,8 +191,6 @@
       display: none;
     }
   }
-
-  // .reviews__swiper-button-prev
 
   &__swiper-button-prev {
     position: relative;
@@ -221,8 +211,6 @@
       }
     }
   }
-
-  // .reviews__swiper-button-next
 
   &__swiper-button-next {
     position: relative;
