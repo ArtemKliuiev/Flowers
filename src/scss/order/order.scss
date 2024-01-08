@@ -36,7 +36,6 @@
   &__title {
     color: #333;
     text-align: center;
-    font-family: Actor;
     font-size: 48px;
     font-weight: 400;
     line-height: 18px;
@@ -228,7 +227,6 @@
 
   &__form-left-top-title {
     color: #333;
-    font-family: Actor;
     font-size: 20px;
     font-weight: 400;
     line-height: 18px;
@@ -363,7 +361,7 @@
   }
 
   &__form-left-bot-mobile {
-    height: 575px;
+    height: 575px !important;
   }
 
   &__form-left-bot-name {
@@ -501,15 +499,17 @@
   &__form-left-button-wrappers {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 22px;
     @include breakpoint($md5) {
       padding-left: 19px;
-      gap: 23px;
+      gap: 20px;
     }
   }
   &__form-left-button-wrapper {
     span {
       padding-left: 14px;
+      font-family: Aclonica;
+      line-height: 18px;
 
       @include breakpoint($md5) {
         font-size: 14px;
@@ -519,7 +519,7 @@
 
   &__form-left-buttons-close {
     padding-left: 39px;
-    padding-top: 25px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -546,7 +546,6 @@
 
   &__form-wrapper-title {
     color: #956d84;
-    font-family: Actor;
     font-size: 36px;
     font-weight: 400;
     line-height: 18px;

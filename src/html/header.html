@@ -90,9 +90,7 @@
           class="top-header__list-item top-header__list-item-type-contacts"
         >
           <div class="top-header__list-item-icon-box">
-            <svg class="top-header__list-item-icon">
-              <use xlink:href="#phone"></use>
-            </svg>
+            <svg ><use xlink:href="./images/Sprite.svg#phone"></use></svg>
           </div>
           <a href="./contacts.html" class="top-header__list-item-title">Контакты</a>
         </div>
@@ -245,10 +243,10 @@
           </div>
         </div>
         <ul class="bottom-header__menu menu">
-          <li class="menu__item menu__item-type-categories pull-down">
+          <li class="menu__item menu__item-type-categories pull-down" id="second-header-dropdown">
             <div class="pull-down__header">
               <div class="pull-down__title" id="headerCategoriesDropdown">Каталог товаров</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="categories-arrow">
                 <svg ><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
@@ -270,11 +268,11 @@
           <li class="menu__item menu__item-type-information pull-down">
             <div class="pull-down__header">
               <div class="pull-down__title">Информация</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="information-arrow">
                 <svg ><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
-            <ul class="pull-down__list">
+            <ul class="pull-down__list" id="header-second-dropdown">
               <li class="pull-down__list-item">
                 <a href="./about-us.html">О нас </a>
               </li>

@@ -26,9 +26,7 @@ export default class photoCard {
                 </div>
                 <p class="photo__card-data">${data}</p>
                 <h4 class="photo__card-name">${title}</h4>
-                <a href="#">
-                    <p class="photo__card-by">Купить такой букет</p>
-                </a>
+                <p class="photo__card-by">Купить такой букет</p>
             </div>`;
       photoCardWrapper.forEach((slide) => {
         slide.insertAdjacentHTML('beforeend', template);

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/delivery.min.css?_v=20240108110343">
+  <link rel="stylesheet" href="css/delivery.min.css">
   <title>Flowers</title>
 </head>
 
@@ -92,9 +92,7 @@
         </div>
         <div class="top-header__list-item top-header__list-item-type-contacts">
           <div class="top-header__list-item-icon-box">
-            <svg class="top-header__list-item-icon">
-              <use xlink:href="#phone"></use>
-            </svg>
+            <svg><use xlink:href="./images/Sprite.svg#phone"></use></svg>
           </div>
           <a href="./contacts.html" class="top-header__list-item-title">Контакты</a>
         </div>
@@ -121,7 +119,7 @@
         <div class="bottom-header__burger-box"><span></span></div>
         <a href="./index.html">
           <div class="bottom-header__logo-box">
-            <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Logotype" class="bottom-header__logo"></picture>
+            <img src="images/logo.png" alt="Logotype" class="bottom-header__logo">
           </div>
         </a>
         <div class="bottom-header__icon-wrapper">
@@ -446,10 +444,10 @@
           </div>
         </div>
         <ul class="bottom-header__menu menu">
-          <li class="menu__item pull-down menu__item-type-categories">
+          <li class="menu__item pull-down menu__item-type-categories" id="second-header-dropdown">
             <div class="pull-down__header">
               <div class="pull-down__title" id="headerCategoriesDropdown">Каталог товаров</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="categories-arrow">
                 <svg><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
@@ -769,11 +767,11 @@
           <li class="menu__item pull-down menu__item-type-information">
             <div class="pull-down__header">
               <div class="pull-down__title">Информация</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="information-arrow">
                 <svg><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
-            <ul class="pull-down__list">
+            <ul class="pull-down__list" id="header-second-dropdown">
               <li class="pull-down__list-item">
                 <a href="./about-us.html">О нас </a>
               </li>
@@ -1438,23 +1436,23 @@
 </section>
           
           <div class="background">
-    
+    <!-- Левая сторона -->
     <div class="background__left">
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" src="./images/bg/left-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" loading="lazy" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" loading="lazy" src="./images/bg/left-flowers.png" alt="bg-img">
         
-        <picture><source srcset="./images/bg/left-flowers.webp" type="image/webp"><img class="background__left-img" loading="lazy" src="./images/bg/left-flowers.png" alt="bg-img"></picture>
+        <img class="background__left-img" loading="lazy" src="./images/bg/left-flowers.png" alt="bg-img">
         
     </div>
 
-     
+    <!-- Правая сторона --> 
     <div class="background__right">
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" src="./images/bg/right-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" loading="lazy" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" loading="lazy" src="./images/bg/right-flowers.png" alt="bg-img">
 
-        <picture><source srcset="./images/bg/right-flowers.webp" type="image/webp"><img class="background__right-img" loading="lazy" src="./images/bg/right-flowers.png" alt="bg-img"></picture>
+        <img class="background__right-img" loading="lazy" src="./images/bg/right-flowers.png" alt="bg-img">
     </div>
 </div>
         </div>
@@ -1598,12 +1596,12 @@
                     <div class="last-line__payment-methods">
                         <p>Способы оплаты:</p>
                         <div class="payment-methods__images">
-                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img loading="lazy" src="images/footer/privat.png"></picture>
-                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img loading="lazy" src="images/footer/liqpay.png"></picture>
-                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img loading="lazy" src="images/footer/mastercard.png"></picture>
-                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img loading="lazy" src="images/footer/maestro.png"></picture>
-                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img loading="lazy" src="images/footer/vosa-electron.png"></picture>
-                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img loading="lazy" src="images/footer/visa.png"></picture>
+                            <img loading="lazy" src="images/footer/privat.png">
+                            <img loading="lazy" src="images/footer/liqpay.png">
+                            <img loading="lazy" src="images/footer/mastercard.png">
+                            <img loading="lazy" src="images/footer/maestro.png">
+                            <img loading="lazy" src="images/footer/vosa-electron.png">
+                            <img loading="lazy" src="images/footer/visa.png">
                         </div>
                     </div>
                 </div>
@@ -1613,7 +1611,7 @@
         <div class="footer__links links__adaptive">
             <div class="__container">
                 <div class="links__logo">
-                    <picture><source srcset="images/footer/footer-logo.webp" type="image/webp"><img loading="lazy" src="images/footer/footer-logo.png" alt=""></picture>
+                    <img loading="lazy" src="images/footer/footer-logo.png" alt="">
                 </div>
                 <div class="links__accordions">
                     <div class="accordion">
@@ -1663,12 +1661,12 @@
                 <div class="links__last-line">
                     <div class="last-line__payment-methods">
                         <div class="payment-methods__images">
-                            <picture><source srcset="images/footer/mastercard.webp" type="image/webp"><img loading="lazy" alt="mastercard" src="images/footer/mastercard.png"></picture>
-                            <picture><source srcset="images/footer/maestro.webp" type="image/webp"><img loading="lazy" alt="maestro" src="images/footer/maestro.png"></picture>
-                            <picture><source srcset="images/footer/vosa-electron.webp" type="image/webp"><img loading="lazy" alt="vosa-electron" src="images/footer/vosa-electron.png"></picture>
-                            <picture><source srcset="images/footer/visa.webp" type="image/webp"><img loading="lazy" alt="visa" src="images/footer/visa.png"></picture>
-                            <picture><source srcset="images/footer/privat.webp" type="image/webp"><img loading="lazy" alt="privat" src="images/footer/privat.png"></picture>
-                            <picture><source srcset="images/footer/liqpay.webp" type="image/webp"><img loading="lazy" alt="liqpay" src="images/footer/liqpay.png" class="liqpay"></picture>
+                            <img loading="lazy" alt="mastercard" src="images/footer/mastercard.png">
+                            <img loading="lazy" alt="maestro" src="images/footer/maestro.png">
+                            <img loading="lazy" alt="vosa-electron" src="images/footer/vosa-electron.png">
+                            <img loading="lazy" alt="visa" src="images/footer/visa.png">
+                            <img loading="lazy" alt="privat" src="images/footer/privat.png">
+                            <img loading="lazy" alt="liqpay" src="images/footer/liqpay.png" class="liqpay">
                         </div>
                     </div>
                     <p class="last-line__protection-of-rights">Copyright © 2021. Все права защищены</p>
@@ -1679,5 +1677,5 @@
 </footer> 
     </div>
   </body>
-  <script src="js/delivery.min.js?_v=20240108110343"></script>
+  <script src="js/delivery.min.js"></script>
 </html>

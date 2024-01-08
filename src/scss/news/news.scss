@@ -279,10 +279,14 @@
     .swiper-pagination-bullet {
       cursor: pointer;
       font-family: AguafinaScript;
-      font-size: 16px;
+      font-size: 24px;
       color: #b0b9c0;
       margin-right: 50px !important;
       width: 0 !important;
+
+      @include breakpoint($md5) {
+        font-size: 16px;
+      }
     }
     .swiper-pagination-bullet-active {
       color: #fff;
