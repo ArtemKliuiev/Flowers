@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/video.min.css?_v=20240108110343">
+  <link rel="stylesheet" href="css/video.min.css?_v=20240108175148">
   <title>Flowers</title>
 </head>
 
@@ -92,9 +92,7 @@
         </div>
         <div class="top-header__list-item top-header__list-item-type-contacts">
           <div class="top-header__list-item-icon-box">
-            <svg class="top-header__list-item-icon">
-              <use xlink:href="#phone"></use>
-            </svg>
+            <svg><use xlink:href="./images/Sprite.svg#phone"></use></svg>
           </div>
           <a href="./contacts.html" class="top-header__list-item-title">Контакты</a>
         </div>
@@ -446,10 +444,10 @@
           </div>
         </div>
         <ul class="bottom-header__menu menu">
-          <li class="menu__item pull-down menu__item-type-categories">
+          <li class="menu__item pull-down menu__item-type-categories" id="second-header-dropdown">
             <div class="pull-down__header">
               <div class="pull-down__title" id="headerCategoriesDropdown">Каталог товаров</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="categories-arrow">
                 <svg><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
@@ -769,11 +767,11 @@
           <li class="menu__item pull-down menu__item-type-information">
             <div class="pull-down__header">
               <div class="pull-down__title">Информация</div>
-              <div class="pull-down__arrow">
+              <div class="pull-down__arrow" id="information-arrow">
                 <svg><use xlink:href="./images/Sprite.svg#header-nav-arrow"></use></svg>
               </div>
             </div>
-            <ul class="pull-down__list">
+            <ul class="pull-down__list" id="header-second-dropdown">
               <li class="pull-down__list-item">
                 <a href="./about-us.html">О нас </a>
               </li>
@@ -1699,5 +1697,5 @@
 </footer> 
     </div>
   </body>
-  <script src="js/video.min.js?_v=20240108110343"></script>
+  <script src="js/video.min.js?_v=20240108175148"></script>
 </html>
