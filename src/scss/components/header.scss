@@ -221,6 +221,16 @@
   display: flex;
   align-items: center;
 
+  &.active {
+    .drop-down__arrow {
+      transform-origin: center 30%;
+      transform: rotateZ(180deg);
+    }
+    .drop-down__list {
+      max-height: 145px;
+    }
+  }
+
   &__header {
     padding: 10px 0px 10px 0px;
     display: flex;
@@ -305,20 +315,19 @@
     display: none;
   }
 
-  &.open,
-  &:hover {
-    .drop-down {
-      &__arrow {
-        transform-origin: center 30%;
-        transform: rotateZ(180deg);
-      }
+  // &.open,
+  // .active {
+  //   .drop-down {
+  //     &__arrow {
+  //       transform-origin: center 30%;
+  //       transform: rotateZ(180deg);
+  //     }
 
-      &__list {
-        max-height: 145px;
-        //padding: 17px 23px 15px 14px;
-      }
-    }
-  }
+  //     &__list {
+  //       max-height: 145px;
+  //     }
+  //   }
+  // }
 }
 
 .favorite-amount {

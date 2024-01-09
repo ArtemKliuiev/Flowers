@@ -98,7 +98,7 @@
     margin-bottom: 11px;
 
     @include breakpoint($md1) {
-      padding-left: 122px;
+      padding-left: 14px;
     }
 
     @include breakpoint($md3) {
@@ -389,13 +389,14 @@
       margin-bottom: 30px;
     }
 
-    a {
+    p {
       color: #bdbdbd;
       font-family: AguafinaScript;
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
       text-decoration-line: underline;
+      cursor: pointer;
 
       @include breakpoint($md5) {
         font-size: 14px;
