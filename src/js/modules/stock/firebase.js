@@ -14,6 +14,7 @@ export default class loadFirebase{
         });
     }
     async filters(info){
+        console.log(info)
         const testArr = []
         for(const key in info){
             if(key !== 'sort' && key !== 'whom' && key !== 'occasion' && key !== 'color'){
@@ -21,6 +22,7 @@ export default class loadFirebase{
             }
         }
         const resTest = testArr.every(item => item == '')
+        console.log(resTest)
         const db = firebase.getFirestore();
         this.colect = collection(db, "products");
         this.sort = [];
@@ -28,7 +30,7 @@ export default class loadFirebase{
         const allGoods = [ 'Букеты', 'Цветочные арки', 'Корзины с цветами','Горшечные растения', 'Цветочные букеты для невесты', 'Гирлянды из цветов', 'Цветочные короны'];
         if(resTest){
             this.filter = [
-                where("sale", ">=", 1),
+                where("sale", "in", [10,19]),
             ];
         }else{
             this.filter = [
@@ -42,7 +44,7 @@ export default class loadFirebase{
                     where("for-bride", "in", info.forBride),
                     where("delicious", "in", info.delicious),
                 ),
-                where("sale", ">=", 1),
+                where("sale", "in", [10,19]),
             ];
         }
 
@@ -68,7 +70,6 @@ export default class loadFirebase{
         const mainQuery = query(
                 this.colect,
                 and(...this.filter),
-                orderBy('sale', 'asc'),
                 orderBy(...this.sort),
                 limit(12),
         );
@@ -77,7 +78,6 @@ export default class loadFirebase{
         this.infoQuery = query(
             this.colect,
             and(...this.filter),
-            orderBy('sale', 'asc'),
             orderBy(...this.sort),
         );
     }
@@ -85,9 +85,8 @@ export default class loadFirebase{
     async getInfo(startOne){
         this.quantityNow = document.querySelectorAll('.product-card').length;
         this.checkEmpyGoods();
-        
-        const snapshotTwo = await getCountFromServer(this.infoQuery);
 
+        const snapshotTwo = await getCountFromServer(this.infoQuery);
         this.quantityAll = snapshotTwo.data().count;
 
         const querySnapshot = await getDocs(this.infoQuery);
@@ -115,6 +114,14 @@ export default class loadFirebase{
         }
         
         this.loadMoreBtn();
+    }
+
+    checkEmpyGoods(){
+        if(this.quantityNow < 1){
+            this.productCardWrapper.classList.add('cards__items_empy');
+        }else{
+            this.productCardWrapper.classList.remove('cards__items_empy');
+        }
     }
 
     pages(page){
@@ -146,15 +153,7 @@ export default class loadFirebase{
         this.loadGoods(this.loadMoreQuery, false);
     }
 
-    checkEmpyGoods(){
-        if(this.quantityNow < 1){
-            this.productCardWrapper.classList.add('cards__items_empy');
-        }else{
-            this.productCardWrapper.classList.remove('cards__items_empy');
-        }
-    }
-
-    loadMoreBtn(){
+     loadMoreBtn(){
 
         document.querySelector('.cards__button-info').textContent = this.quantityAddMore;
         
@@ -177,9 +176,7 @@ export default class loadFirebase{
         }catch(error){
             const errorText = 'Too many disjunctions after normalization';
             if(error.message.includes(errorText)){
-                const countQuery = +error.message.replace(/\D/g, '').slice(0, -2);
-                const overkill = countQuery - 30;
-                alert(`Выбранно слишком много категорий, уберите пожалуйста : ${overkill} категории`)
+                alert(`Выбранно слишком много категорий, уберите пожалуйста выберите меньше категории`)
             }else{
                 console.log(error)
             }

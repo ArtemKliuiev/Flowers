@@ -110,16 +110,15 @@ class ProductCard{
             count(0);
         })
 
-        input.addEventListener('change', () => {
-            count(0);
-        })
 
         function count(condition){
             const input = document.querySelector('.counter__number')
-            const num = +input.value;
+            const num =  +input.value;
 
             if(num === 0){
                 input.value = 1;
+            }else if(num % 1 !== 0){
+                input.value = Math.floor(num);
             }else if(condition === 1 && num > 1){
                 input.value = num - 1;
             }else if (num >= 99){
