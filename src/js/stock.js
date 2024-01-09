@@ -77,9 +77,10 @@ class Stock {
   }
 }
 
-const stock = new Stock();
+const catalog = new Stock();
 
 setTimeout(() => {
   basket();
   productLike();
 }, 1000);
+
