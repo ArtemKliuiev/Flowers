@@ -1,7 +1,7 @@
 import firebase from '../firebase';
 import { collection, query, orderBy, where, getCountFromServer, startAfter, startAt,endAt, getDocs, or, and, limit } from "firebase/firestore";
 import Pagination from '../pagination';
-import CatalogProduct from './catalogProduct';
+import CatalogProduct from './CatalogProduct';
 
 
 export default class loadFirebase{
