@@ -55,6 +55,12 @@
       border: 1px solid #e0e0e0;
       padding: 20px 35px;
 
+      &.active {
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+
       @include breakpoint($md3) {
         max-width: 396px;
       }

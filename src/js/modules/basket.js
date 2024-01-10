@@ -21,14 +21,18 @@ async function basket() {
       if (basketMessage && basketWrapperRight && basketWrapperText) {
         basketMessage.style.display = 'none';
         basketWrapperRight.style.display = 'block';
+
+        if (window.innerWidth < 1651) {
+          basketWrapperTextMobile.style.display = 'block';
+        }
+        
         if (window.innerWidth > 1024) {
           basketWrapperText.style.display = 'flex';
         } else {
           basketWrapperText.style.display = 'none';
         }
-        
       }
-      console.log(parsedBasket);
+
       parsedBasket.forEach((item) => {
         renderOrder(item);
 
@@ -83,18 +87,10 @@ async function basket() {
         if (basketWrapper) {
           basketWrapper.insertAdjacentHTML('beforeend', template);
         }
-
-        const orderButton = document.querySelector('.order__button-wrapper');
-
-        if (orderButton) {
-          orderButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            sessionStorage.removeItem('basket');
-            localStorage.removeItem('basket');
-            window.location.href = './order.html';
-          });
-        }
       });
+    } else {
+      sessionStorage.removeItem('basket');
+      localStorage.removeItem('basket');
     }
   }
 
@@ -112,12 +108,11 @@ async function basket() {
           const currentItem = parsedBasket.find(
             (item) => item.imgSrc === productId
           );
-          
+
           if (currentItem) {
             if (clickEl.classList.contains('basket__card-arrow-left')) {
               currentItem.quantNum = Math.max(1, currentItem.quantNum - 1);
             } else if (clickEl.classList.contains('basket__card-arrow-right')) {
-
               if (currentItem.quantNum < 99) {
                 currentItem.quantNum += 1;
               }
@@ -147,7 +142,6 @@ async function basket() {
 
   function renderOrder(item) {
     const allPrice = document.querySelector('.basket__wrapper-right-price');
-    console.log(allPrice);
     const allStock = document.getElementById('allStock');
     const allCost = document.getElementById('allCost');
 
@@ -223,12 +217,18 @@ async function basket() {
   ) {
     const newBasketItem = {
       imgSrc: productEl.querySelector(imgSelector).src,
-      productName: productEl.querySelector(nameSelector).textContent.replace(/\s/g, ''),
-      newPrice: counterNum ? parseFloat(
-        productEl.querySelector(priceSelector).textContent.replace('грн', '')
-      ) / counterNum : parseFloat(
-        productEl.querySelector(priceSelector).textContent.replace('грн', '')
-      ),
+      productName: productEl.querySelector(nameSelector).textContent,
+      newPrice: counterNum
+        ? parseFloat(
+            productEl
+              .querySelector(priceSelector)
+              .textContent.replace('грн', '')
+          ) / counterNum
+        : parseFloat(
+            productEl
+              .querySelector(priceSelector)
+              .textContent.replace('грн', '')
+          ),
       oldPrice: (() => {
         const oldPriceElement = productEl.querySelector(oldPriceSelector);
         return oldPriceElement
@@ -246,7 +246,6 @@ async function basket() {
       if (parsedBasket[existingItemIndex].quantNum < 99) {
         parsedBasket[existingItemIndex].quantNum += 1;
       }
-      
     } else {
       parsedBasket.push(newBasketItem);
     }
@@ -287,7 +286,9 @@ async function basket() {
       '.product-card__bottom-button-desktop'
     );
 
-    const buttonMobile = productCard.querySelector('.product-card__bottom-button-mobile');
+    const buttonMobile = productCard.querySelector(
+      '.product-card__bottom-button-mobile'
+    );
 
     button.addEventListener('click', (e) => {
       e.preventDefault();
@@ -413,4 +414,3 @@ async function basket() {
 }
 
 export default basket;
-
