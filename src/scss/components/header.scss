@@ -221,6 +221,16 @@
   display: flex;
   align-items: center;
 
+  &.active {
+    .drop-down__arrow {
+      transform-origin: center 30%;
+      transform: rotateZ(180deg);
+    }
+    .drop-down__list {
+      max-height: 145px;
+    }
+  }
+
   &__header {
     padding: 10px 0px 10px 0px;
     display: flex;
@@ -305,20 +315,19 @@
     display: none;
   }
 
-  &.open,
-  &:hover {
-    .drop-down {
-      &__arrow {
-        transform-origin: center 30%;
-        transform: rotateZ(180deg);
-      }
+  // &.open,
+  // .active {
+  //   .drop-down {
+  //     &__arrow {
+  //       transform-origin: center 30%;
+  //       transform: rotateZ(180deg);
+  //     }
 
-      &__list {
-        max-height: 145px;
-        //padding: 17px 23px 15px 14px;
-      }
-    }
-  }
+  //     &__list {
+  //       max-height: 145px;
+  //     }
+  //   }
+  // }
 }
 
 .favorite-amount {
@@ -335,7 +344,7 @@
   &__icon {
     width: 1.1429rem;
     height: 1.1429rem;
-    margin-right: 0.7143rem;
+    margin-right: 7px;
 
     svg {
       display: block;
@@ -353,13 +362,21 @@
 
   &__sign-in {
     &-device-type-desktop {
-      padding-right: 0.7143rem;
-      margin-right: 0.7143rem;
-      border-right: 0.0714rem solid $cheryColor;
       color: $whiteColor;
       font-size: 1.1429rem;
       line-height: 112.5%;
       transition: color 280ms ease-in-out 0ms;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 1px;
+        background: #956D84;
+        top: 0;
+        right: 1px;
+      }
 
       &:hover {
         color: $cheryColor;

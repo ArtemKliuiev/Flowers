@@ -61,7 +61,7 @@
       @include breakpoint($md5) {
         width: 280px;
         height: 54px;
-        padding: 20px 20px 20px 54px;
+        padding: 20px 10px 20px 10px;
       }
     }
   }
@@ -499,13 +499,16 @@
   &__form-left-button-wrappers {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 24px;
     @include breakpoint($md5) {
       padding-left: 19px;
       gap: 20px;
     }
   }
   &__form-left-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3px;
     span {
       padding-left: 14px;
       font-family: Aclonica;
@@ -519,11 +522,11 @@
 
   &__form-left-buttons-close {
     padding-left: 39px;
-    padding-top: 20px;
+    padding-top: 22px;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
 
     @include breakpoint($md5) {
       gap: 23px;
@@ -724,24 +727,6 @@
     background: transparent;
   }
 
-  // &__flowers-right {
-  //   position: absolute;
-  //   right: 0;
-  //   top: 354px;
-  // }
-
-  // &__flowers-left-top {
-  //   position: absolute;
-  //   left: 0;
-  //   top: -64px;
-  // }
-
-  // &__flowers-left-bottom {
-  //   position: absolute;
-  //   left: 0;
-  //   top: 827px;
-  // }
-
   &__validate-text {
     position: absolute;
     font-size: 14px;
@@ -803,4 +788,46 @@
 .order-time__dropdown-label.active svg {
   transform: translateY(-50%) rotate(180deg);
   transform-origin: center;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.order__form-left-button-wrapper {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+
+  &.active {
+    &:before {
+      background-color: #956d84;
+      border-color: #956d84;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><g clip-path="url(%23clip0_0_2673)"><path d="M5.625 10.125L3 7.5L2.125 8.375L5.625 11.875L13.125 4.375L12.25 3.5L5.625 10.125Z" fill="%23F3F3F3"/></g><defs><clipPath id="clip0_0_2673"><rect width="15" height="15" fill="white"/></clipPath></defs></svg>');
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #956d84;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
 }

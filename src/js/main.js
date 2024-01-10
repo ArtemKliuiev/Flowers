@@ -10,8 +10,6 @@ import productsSeason from './modules/products/seasonProduct';
 import productsPresent from './modules/products/presentProduct';
 import forumCard from './modules/forum/forum';
 import basket from './modules/basket';
-import orderValidator from './modules/validator';
-import dropdownHandler from './modules/orderDropdown';
 
 async function go() {
 

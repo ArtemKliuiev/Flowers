@@ -1,6 +1,13 @@
 
 function headerDropdown() {
   const dropdownHeaders = document.querySelectorAll('.top-header__drop-down');
+  const dropdowns = document.querySelectorAll('.drop-down');
+  console.log(dropdowns);
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', () => {
+      dropdown.classList.toggle('active');
+    })
+  })
 
   dropdownHeaders.forEach((dropdownHeader) => {
     dropdownHeader.addEventListener('click', (e) => {

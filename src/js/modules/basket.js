@@ -21,7 +21,12 @@ async function basket() {
       if (basketMessage && basketWrapperRight && basketWrapperText) {
         basketMessage.style.display = 'none';
         basketWrapperRight.style.display = 'block';
-        basketWrapperText.style.display = 'flex';
+        if (window.innerWidth > 1024) {
+          basketWrapperText.style.display = 'flex';
+        } else {
+          basketWrapperText.style.display = 'none';
+        }
+        
       }
       console.log(parsedBasket);
       parsedBasket.forEach((item) => {
@@ -142,6 +147,7 @@ async function basket() {
 
   function renderOrder(item) {
     const allPrice = document.querySelector('.basket__wrapper-right-price');
+    console.log(allPrice);
     const allStock = document.getElementById('allStock');
     const allCost = document.getElementById('allCost');
 
@@ -151,6 +157,7 @@ async function basket() {
 
     if (allPrice) {
       parsedBasket.forEach((item) => {
+        console.log(parsedBasket);
         if (item.oldPrice) {
           totalPrice += item.oldPrice * item.quantNum;
         } else {
@@ -280,9 +287,25 @@ async function basket() {
       '.product-card__bottom-button-desktop'
     );
 
+    const buttonMobile = productCard.querySelector('.product-card__bottom-button-mobile');
+
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const productEl = e.target.parentNode.parentNode.parentNode;
+      console.log(productEl);
+      handleProductClick(
+        productEl,
+        '.product-card__bottom-name',
+        '.product-card__bottom-price',
+        '.product-card__bottom-old-price',
+        '.product-card__img img'
+      );
+    });
+
+    buttonMobile.addEventListener('click', (e) => {
+      e.preventDefault();
+      const productEl = e.target.parentNode.parentNode.parentNode.parentNode;
+      console.log(productEl);
       handleProductClick(
         productEl,
         '.product-card__bottom-name',
