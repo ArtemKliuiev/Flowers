@@ -12,7 +12,7 @@ export default class Menu{
         this.allCategory = document.querySelectorAll('.left-menu__item')
         this.mainItem = document.querySelectorAll('.left-menu__point');
         this.adaptiveSort = document.querySelectorAll('.sort-adaptive__main');
-        this.deletFilterBtn = document.querySelector('.left-menu__delete-filters');
+        this.deletFilterBtn = document.querySelectorAll('.delete-filters');
         this.loadMore = document.querySelector('.cards__btn');
         this.category = {
             bouquets: [''],
@@ -97,10 +97,12 @@ export default class Menu{
     }
 
     addListener(){
-        this.deletFilterBtn.addEventListener('click', () => {
-            this.delFilters();
-        });
-
+        this.deletFilterBtn.forEach(item => {
+            item.addEventListener('click', () => {
+                this.delFilters();
+            });
+        })
+        
         this.mainItem.forEach(item => {
             item.querySelector('input').addEventListener('change', () => {
                 this.update(true);
