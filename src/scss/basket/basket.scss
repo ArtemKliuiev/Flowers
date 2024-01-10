@@ -6,7 +6,7 @@
     margin-bottom: 66px;
   }
   @include breakpoint($md6) {
-    margin-top: 32px;
+    margin-top: 24px;
   }
   // .basket__nav
 
@@ -92,7 +92,7 @@
   // .basket__wrapper-text
 
   &__wrapper-text {
-    display: flex;
+    display: none;
     padding-left: 170px;
     gap: 145px;
     margin-bottom: 11px;
@@ -115,9 +115,9 @@
 
   &__wrapper-text-mobile {
     display: none;
-    @include breakpoint($md1) {
-      display: block;
-    }
+    // @include breakpoint($md1) {
+    //   display: block;
+    // }
   }
 
   // .basket__wrapper-card
@@ -174,7 +174,7 @@
     }
     @include breakpoint($md4) {
       flex-direction: column-reverse;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 
@@ -410,6 +410,7 @@
   }
 
   &__wrapper-right {
+    display: none;
     @include breakpoint($md5) {
       width: 100%;
     }
@@ -534,5 +535,43 @@
   &__message {
     display: none;
     text-align: center;
+  }
+
+  &__button-wrapper-desktop {
+    color: #fff;
+    font-family: Actor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 220px;
+    height: 63px;
+    border-radius: 7px;
+    background: #956d84;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+
+    img {
+      position: absolute;
+      right: 0;
+      pointer-events: none;
+    }
+
+    @media (min-width: 998px) {
+      &:hover {
+        background: #a16969;
+        color: $blackColor;
+      }
+    }
+
+    @include breakpoint($md2) {
+      width: unset;
+      max-width: 220px;
+    }
   }
 }

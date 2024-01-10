@@ -1,6 +1,5 @@
 function order() {
     const productNameContainer = document.querySelectorAll('.basket__card');
-    console.log('order');
     
     // if (productNameContainer) {
     //   parsedBasket.forEach((item) => {
@@ -12,14 +11,33 @@ function order() {
     // }
 
 
+    const orderButton = document.querySelector('.order__button');
+        console.log(orderButton);
 
+        if (orderButton) {
+          orderButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.removeItem('basket');
+            localStorage.removeItem('basket');
+          });
+        }
 
     const checkboxes = document.querySelectorAll('.order__form-left-button-wrapper');
-    console.log(checkboxes);
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('click', () => {
         checkbox.classList.toggle('active')
       })
+    })
+
+    const orderInputs = document.querySelectorAll('.order__form input');
+    orderInputs.forEach(orderInput => {
+      orderInput.addEventListener('focus', () => {
+        orderInput.classList.add('active');
+      })
+
+      orderInput.addEventListener('blur', () => {
+        orderInput.classList.remove('active');
+      });
     })
   }
 

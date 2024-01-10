@@ -29,7 +29,7 @@
 
   &__swiper-buttons {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     position: absolute;
     top: 0;
     right: 0;
@@ -39,15 +39,18 @@
   }
 
   &__swiper-button-next {
-    width: 16px;
-    height: 27px;
+    svg {
+      width: 12px;
+      height: 21px;
+    }
   }
 
   &__swiper-button-prev {
-    width: 16px;
-    height: 27px;
+    svg {
+      width: 12px;
+      height: 21px;
+    }
   }
-  
 }
 
 .stock-swiper {
@@ -55,15 +58,14 @@
 }
 
 .stock__swiper-pagination .swiper-pagination-bullet {
-  background: #956D84 !important; 
+  background: #956d84 !important;
   opacity: 1 !important;
   width: 4px !important;
   height: 4px !important;
-  
 }
 
 .stock__swiper-pagination .swiper-pagination-bullet-active {
-  background: #956D84 !important;
+  background: #956d84 !important;
   position: relative;
 
   &::after {
@@ -72,7 +74,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid #956D84;
+    border: 1px solid #956d84;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
