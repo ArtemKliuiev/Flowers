@@ -25,7 +25,7 @@ async function basket() {
         if (window.innerWidth < 1651) {
           basketWrapperTextMobile.style.display = 'block';
         }
-        
+
         if (window.innerWidth > 1024) {
           basketWrapperText.style.display = 'flex';
         } else {
@@ -160,6 +160,7 @@ async function basket() {
       });
 
       allPrice.textContent = totalPrice + ' ₴';
+      console.log(allPrice);
     }
 
     if (allStock) {
@@ -380,6 +381,31 @@ async function basket() {
           ''
         );
         const orderFotoPrice = +orderFotoPriceEl.textContent.replace('₴', '');
+        const orderForms = document.querySelectorAll(
+          '.order__form-left-button-wrapper'
+        );
+        orderForms.forEach((orderForm) => {
+          orderForm.addEventListener('click', () => {
+            if (orderForm.classList.contains('active')) {
+              const span = orderForm.querySelector('span[id="orderPrice"]');
+
+              if (span) {
+                const text = span.textContent;
+                const textWithoutSpzces = text.replace(/\s+/g, '');
+                const match = textWithoutSpzces.match(/\+(\d+)\s*грн/);
+
+                if (match && match[1]) {
+                  const extractedValue = +match[1];
+                  console.log(extractedValue);
+                  const priceValue = +allOrderPrice.textContent.replace('₴', '');
+
+                  console.log(priceValue);
+                  allOrderPrice.textContent = priceValue + extractedValue + '₴';
+                } 
+              }
+            }
+          });
+        });
 
         let countYouPrice = 0;
         orderYouPrices.forEach((orderYouPrice) => {
