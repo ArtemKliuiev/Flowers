@@ -3,7 +3,6 @@ import { collection, query, orderBy, where, getCountFromServer, startAfter, star
 import Pagination from '../pagination';
 import CatalogProduct from './CatalogProduct';
 
-
 export default class loadFirebase{
     constructor(){
         this.catalogProduct = new CatalogProduct();
