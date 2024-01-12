@@ -21,6 +21,7 @@ export default class FillData{
         this.swiperWripper = document.querySelector('.inform__wrapper');
         this.categotyLink = document.querySelector('.inform__categoty');
         this.thisProductLink = document.querySelector('.links-row__this-item');
+        this.nullOldPrice = document.getElementById('old-price-null');
     }
     fill(data){
         this.categotyLink.href = `./${data.categoryLink}`;
@@ -46,6 +47,9 @@ export default class FillData{
         if(data.sale){
             this.saleWrapper.style.display = 'block';
             this.sale.textContent = data.sale;
+        }
+        if(!data.oldPrice){
+            this.nullOldPrice.style.opacity = "0";
         }
     }
     addImages(data){
