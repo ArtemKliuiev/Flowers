@@ -384,25 +384,32 @@ async function basket() {
         const orderForms = document.querySelectorAll(
           '.order__form-left-button-wrapper'
         );
+
         orderForms.forEach((orderForm) => {
           orderForm.addEventListener('click', () => {
-            if (orderForm.classList.contains('active')) {
-              const span = orderForm.querySelector('span[id="orderPrice"]');
+            const span = orderForm.querySelector('span[id="orderPrice"]');
+            let extractedValue = 0;
 
-              if (span) {
-                const text = span.textContent;
-                const textWithoutSpzces = text.replace(/\s+/g, '');
-                const match = textWithoutSpzces.match(/\+(\d+)\s*грн/);
+            if (span) {
+              const text = span.textContent;
+              const textWithoutSpaces = text.replace(/\s+/g, '');
+              const match = textWithoutSpaces.match(/\+(\d+)\s*грн/);
 
-                if (match && match[1]) {
-                  const extractedValue = +match[1];
-                  console.log(extractedValue);
-                  const priceValue = +allOrderPrice.textContent.replace('₴', '');
-
-                  console.log(priceValue);
-                  allOrderPrice.textContent = priceValue + extractedValue + '₴';
-                } 
+              if (match && match[1]) {
+                extractedValue = +match[1];
               }
+            }
+
+            if (orderForm.classList.contains('active')) {
+              allOrderPrice.textContent =
+                +allOrderPrice.textContent.replace('₴', '') +
+                extractedValue +
+                '₴';
+            } else {
+              allOrderPrice.textContent =
+                +allOrderPrice.textContent.replace('₴', '') -
+                extractedValue +
+                '₴';
             }
           });
         });
