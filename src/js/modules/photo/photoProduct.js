@@ -20,7 +20,7 @@ export default class photoCard {
             <div class="photo__card">
                 <div class="photo__card-img">
                   <picture>
-                    <source srcset="${img.webP}" type="image/webp">
+                    <source srcset="${img.webP} type="image/webp">
                     <img src="${img.default}" alt="user-photo" />
                   </picture>
                 </div>

@@ -151,7 +151,6 @@ async function basket() {
 
     if (allPrice) {
       parsedBasket.forEach((item) => {
-        console.log(parsedBasket);
         if (item.oldPrice) {
           totalPrice += item.oldPrice * item.quantNum;
         } else {
@@ -160,7 +159,6 @@ async function basket() {
       });
 
       allPrice.textContent = totalPrice + ' ₴';
-      console.log(allPrice);
     }
 
     if (allStock) {
@@ -240,8 +238,9 @@ async function basket() {
     };
 
     const existingItemIndex = parsedBasket.findIndex(
-      (item) => item.productName === newBasketItem.productName
+      (item) => item.productName.replace(/\s/g, "") === newBasketItem.productName.replace(/\s/g, "")
     );
+    console.log(existingItemIndex);
 
     if (existingItemIndex !== -1) {
       if (parsedBasket[existingItemIndex].quantNum < 99) {
@@ -294,7 +293,6 @@ async function basket() {
     button.addEventListener('click', (e) => {
       e.preventDefault();
       const productEl = e.target.parentNode.parentNode.parentNode;
-      console.log(productEl);
       handleProductClick(
         productEl,
         '.product-card__bottom-name',
@@ -307,7 +305,6 @@ async function basket() {
     buttonMobile.addEventListener('click', (e) => {
       e.preventDefault();
       const productEl = e.target.parentNode.parentNode.parentNode.parentNode;
-      console.log(productEl);
       handleProductClick(
         productEl,
         '.product-card__bottom-name',
