@@ -175,7 +175,7 @@ export default class loadFirebase{
         }catch(error){
             const errorText = 'Too many disjunctions after normalization';
             if(error.message.includes(errorText)){
-                alert(`Выбранно слишком много категорий, уберите пожалуйста выберите меньше категории`)
+                alert(`Выбрано слишком много категорий, уберите пожалуйста выберите меньше категории`)
             }else{
                 console.log(error)
             }
